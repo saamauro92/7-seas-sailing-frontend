@@ -218,9 +218,37 @@ function Nav() {
                                             <li className="uk-parent  " >
                                                 <a className="uk-margin" aria-expanded="false">Courses</a>
                                                 <ul className="uk-nav-sub" hidden="">
-                                                    <li><a className="uk-margin">Coastal Skipper </a></li>
 
-                                                    <li><a className="uk-margin">Sub </a></li>
+
+                                                    <Link href={"/courses/coastal-skipper"}>
+                                                        <li className="uk-parent uk-margin">
+                                                            <a >Coastal Skipper</a>
+
+
+                                                        </li>
+                                                    </Link>
+
+                                                    <Link href={"/courses/day-skipper"}>
+                                                        <li className="uk-parent uk-margin">
+                                                            <a >Day Skipper</a>
+
+
+                                                        </li>
+                                                    </Link>
+                                                    <Link href={"/courses/day-skipper-motor"}>
+                                                        <li className="uk-parent uk-margin">
+                                                            <a >Day Skipper Motor</a>
+
+
+                                                        </li>
+                                                    </Link>
+                                                    <Link href={"/courses/yachtmaster-exam-preparation"}>
+                                                        <li className="uk-parent uk-margin">
+                                                            <a >Yachtmaster Exam Preparation </a>
+
+
+                                                        </li>
+                                                    </Link>
 
 
                                                 </ul>
