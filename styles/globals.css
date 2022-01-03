@@ -16,3 +16,18 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.uk-offcanvas-bar {
+  background: #f5f5f5;
+  color: #2a2a2a;
+}
+.uk-offcanvas-bar .uk-nav-primary > li > a,
+.uk-offcanvas-bar .uk-nav-primary .uk-nav-sub a {
+  color: #2a2a2a;
+}
+
+.uk-offcanvas-bar .uk-nav-primary .uk-nav-sub a:hover,
+.uk-offcanvas-bar .uk-nav-primary > li > a:hover {
+  color: #2a2a2a;
+  opacity: 0.7;
+}
