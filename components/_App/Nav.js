@@ -1,48 +1,48 @@
 import { React, useState, useEffect } from "react";
 import Link from "../../utils/ActiveLink";
 import logo from '../../assets/seven-seas-logo.png'
+import rya from '../../assets/rya.png'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 function Nav() {
 
 
+    const router = useRouter()
+    const currentRoute = router.pathname
+
+
     const [showBar, setShowBar] = useState(true);
-    const [showCloseButton, setShowCloseButton] = useState(true);
+
+
     const showBurguer = () => {
-        if (window.innerWidth <= 967) {
+        if (window.innerWidth <= 1200) {
             setShowBar(false);
-            setShowCloseButton(true);
+
         } else {
             setShowBar(true);
-            setShowCloseButton(false);
+
         }
     };
 
-    const closeMenu = () => {
-        if (window.innerWidth <= 967) {
-            setShowBar(false);
-        } else {
-            setShowBar(true);
-        }
-    };
+
 
     useEffect(() => {
         showBurguer();
         window.addEventListener('resize', showBurguer);
     }, []);
 
-    /*  responsive sidebar end*/
-    /*  responsive sidebar end*/
+
+
 
 
     return showBar ? (
 
 
-        /*        <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky"> */
 
 
         <nav className="uk-navbar-container uk-margin uk-navbar" uk-navbar="">
-            <div className="uk-navbar-left">
+            <div className="uk-navbar-left nav-logos">
 
 
 
@@ -51,16 +51,21 @@ function Nav() {
                         <Image src={logo} alt="logo" height={64} width={217} />
                     </a>
                 </Link>
+                <div className="uk-visible@s">
+
+                    <Image src={rya} alt="logo" height={94} width={117} />
+                </div>
+
 
             </div>
             <div className="uk-navbar-center">
 
                 <ul className="uk-navbar-nav">
-                    <li>
+                    <li className="nav-item">
 
-                        <Link href={"/courses"}>
+                        <Link href={"/courses"} activeClassName="active">
+                            <a className="nav-link">Courses</a>
 
-                            <a className="nav-link" >Courses</a>
                         </Link>
 
 
@@ -70,7 +75,7 @@ function Nav() {
 
                                 <Link href={"/courses/coastal-skipper"}>
                                     <li className="uk-parent uk-margin">
-                                        <a >Coastal Skipper</a>
+                                        <a > Coastal Skipper</a>
 
 
                                     </li>
@@ -101,7 +106,7 @@ function Nav() {
                         </div>
                     </li>
                     <li>
-                        <Link href={"/activities-and-services"}>
+                        <Link href={"/activities-and-services"} activeClassName="active">
 
                             <a className="nav-link"> Activities {"&"} Services</a>
                         </Link>
@@ -124,10 +129,10 @@ function Nav() {
                             </ul>
                         </div>
                     </li>
-                    <li>
-                        <Link href={"/aboutus"}>
+                    <li className="nav-item">
+                        <Link href={"/aboutus"} activeClassName="active">
 
-                            <a className="nav-link"> About Us</a>
+                            <a  > About Us</a>
                         </Link>
                         <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left" style={{ "left": "0px", "top": "80px" }}>
                             <ul className="uk-nav uk-navbar-dropdown-nav">
@@ -152,9 +157,9 @@ function Nav() {
                         </div>
                     </li>
                     <li>
-                        <Link href={"/news"}>
+                        <Link href={"/news"} activeClassName="active" >
 
-                            <a className="nav-link">  News</a>
+                            <a className={currentRoute === "/news" ? 'active' : ''}>  News</a>
                         </Link>
 
                     </li>
@@ -164,7 +169,7 @@ function Nav() {
 
             </div>
 
-        </nav>
+        </nav >
         /*         </div> */
     ) : (
 
@@ -179,7 +184,9 @@ function Nav() {
                         <Image src={logo} alt="logo" height={64} width={217} />
                     </a>
                 </Link>
-
+                <div className="uk-visible@s">
+                    <Image src={rya} alt="logo" height={94} width={117} />
+                </div>
             </div>
 
 
@@ -206,9 +213,10 @@ function Nav() {
                                 </svg>
                             </button>
 
-                            <div className="uk-offcanvas-bar uk-flex uk-flex-column">
-                                <Image src={logo} alt="logo" height={64} width={217} />
+                            <div className="uk-offcanvas-bar  ">
+
                                 <ul className="uk-nav uk-nav-primary uk-nav-left uk-margin-auto-vertical">
+
 
                                     <li className="uk-parent">
 
@@ -263,6 +271,31 @@ function Nav() {
 
                                                 </ul>
                                             </li>
+                                            <li className="uk-parent  " >
+                                                <Link href={"/aboutus"}>
+                                                    <a className="uk-margin" aria-expanded="false"> About us</a>
+                                                </Link>
+
+
+
+
+                                            </li>
+
+
+                                            <li className="uk-parent  " >
+                                                <Link href={"/news"}>
+                                                    <a className="uk-margin" aria-expanded="false"> News </a>
+                                                </Link>
+                                            </li>
+
+                                            <li className="uk-margin">
+                                                <Image src={logo} alt="logo" height={90} width={180} />
+                                            </li>
+                                            <li className="uk-margin">
+
+                                                <Image src={rya} alt="logo" height={90} width={160} />
+                                            </li>
+
 
 
                                         </ul>
@@ -279,7 +312,6 @@ function Nav() {
 
             </div>
 
-
         </nav >
     )
 
@@ -290,30 +322,3 @@ export default Nav
 
 
 
-/* 
-
-                   <ul className="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical uk-nav-parent-icon" uk-nav="">
-                            <li className="uk-active"><a href="#">Active</a></li>
-                            <li className="uk-parent">
-                                <a href="#" aria-expanded="false">Parent</a>
-                                <ul className="uk-nav-sub" hidden="">
-                                    <li><a href="#">Sub item</a></li>
-                                    <li><a href="#">Sub item</a></li>
-                                    <li><a href="#">Sub item</a></li>
-                                    <li><a href="#">Sub item</a></li>
-                                    <li><a href="#">Sub item</a></li>
-                                    <li><a href="#">Sub item</a>
-                                        <ul>
-                                            <li><a href="#">Sub item</a></li>
-                                            <li><a href="#">Sub item</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="#js-options">Item</a></li>
-                            <li><a href="#">Item</a></li>
-                        </ul>
-
-
-
-*/

@@ -49,7 +49,11 @@ export default function Home({ courses, homepage }) {
 
 
 
+
+
         {homepage && homepage.attributes.seo && <SEO data={homepage.attributes.seo} />}
+
+
 
 
 

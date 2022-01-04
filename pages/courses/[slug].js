@@ -1,4 +1,5 @@
 /* import ReactMarkdown from "react-markdown" */
+import Link from 'next/link'
 import SEO from '../../components/Seo/Seo'
 
 import {
@@ -22,7 +23,17 @@ const Article = ({ course, homepage }) => {
         <>
 
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={course.attributes.title} metaDescription="all courses" />}
-            <p> data..</p>
+            <ul className="uk-breadcrumb">
+                <li>
+                    <Link href={"/courses"}>
+                        <a href="">Courses</a>
+                    </Link>
+                </li>
+                <li><a href="">{course.attributes.title}</a></li>
+
+            </ul>
+
+
 
             <div
                 id="banner"

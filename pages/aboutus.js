@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 import React from 'react'
 import { fetchAPI } from '../lib/api'
 import Member from '../components/Member/Member'
@@ -26,20 +27,23 @@ const courses = ({ team, homepage, about }) => {
             <ReactMarkdown children={about.attributes.rya.description} />
 
             <h1>The Team</h1>
-
-            {
-                team.map((person, index) =>
-
-                    <div key={index} className='uk-flex uk-flex-center uk-flex-wrap'>
+            <div className="uk-container uk-flex  uk-flex-wrap">
 
 
-                        <Member data={person} />
+                {
+                    team.map((person, index) =>
+
+                        <div key={person.id} className='uk-flex uk-flex-center uk-flex-wrap'>
 
 
-                    </div>
+                            <Member data={person} />
 
-                )
-            }
+
+                        </div>
+
+                    )
+                }
+            </div>
 
 
         </>

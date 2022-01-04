@@ -27,8 +27,13 @@ class MyDocument extends Document {
                         src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js"
                     />
                     {/*           <!-- UIkit JS --> */}
-                    <script async src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit.min.js"></script>
+
                     <script async src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit-icons.min.js"></script>
+                    <script
+                        async
+                        src="uikit/dist/js/uikit-icons.min.js"></script>
+
+
                 </Head>
                 <body>
                     <Main />
