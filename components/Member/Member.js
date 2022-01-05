@@ -11,7 +11,7 @@ const Member = ({ data }) => {
             <div className="uk-card-media-top">
                 {data.attributes.image.data.attributes.url &&
 
-                    <Link href={`/team/${data.attributes.slug}`}>
+                    <Link href={`/team/${data.attributes.slug}`} passHref>
 
                         {/*   <img src={data.attributes.image.data.attributes.url} alt="" width={600} height={400} uk-cover /> */}
 

@@ -16,12 +16,12 @@ const courses = ({ team, homepage, about }) => {
             <h2>About us </h2>
 
 
-            <ReactMarkdown children={about.attributes.whatWeDo} />
+            {about && <ReactMarkdown children={about.attributes.whatWeDo} />}
 
 
-            <h2>{about.attributes.rya.title}</h2>
+            {about && <h2>{about.attributes.rya.title}</h2>}
 
-            <ReactMarkdown children={about.attributes.rya.description} />
+            {about && <ReactMarkdown children={about.attributes.rya.description} />}
 
             <h1>The Team</h1>
             <div className="uk-container uk-flex  uk-flex-wrap">
