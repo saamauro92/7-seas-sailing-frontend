@@ -16,7 +16,7 @@ const Member = ({ data }) => {
                         {/*   <img src={data.attributes.image.data.attributes.url} alt="" width={600} height={400} uk-cover /> */}
 
 
-                        <Image src={data.attributes.image.data.attributes.url} width={600} height={500} alt="profile-picture" layout="intrinsic" />
+                        <Image src={data.attributes.image.data.attributes.url} width={320} height={280} alt="profile-picture" layout="intrinsic" />
 
 
 
