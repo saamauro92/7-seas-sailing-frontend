@@ -219,8 +219,96 @@ function Nav() {
                             </a>
                         </li>
 
-
+                        {/* new off canvas  start*/}
                         <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+
+                            <div className="uk-offcanvas-bar ">
+                                <button className="uk-offcanvas-close uk-close-large uk-icon uk-close" type="button" uk-close="">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+
+                                    </svg>
+                                </button>
+
+                                <ul className="uk-nav uk-nav-primary uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon uk-nav-divider" uk-nav="multiple: true">
+
+
+                                    <li className="uk-parent">
+                                        <div className=" uk-position-absolute ">
+
+                                            <Link href="/courses"  >
+                                                <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Courses</a>
+                                            </Link>
+
+                                        </div>
+
+                                        <a href="" ></a>
+                                        <ul className="uk-nav-sub  " hidden="">
+                                            <li className="uk-flex uk-flex-start "><a href="#" uk-toggle="target: #offcanvas-nav-primary">Coastal Skipper </a></li>
+                                            <li className="uk-flex uk-flex-start"><a href="#" uk-toggle="target: #offcanvas-nav-primary">Sub item</a></li>
+                                            <li className="uk-flex uk-flex-start"><a href="#" uk-toggle="target: #offcanvas-nav-primary">Sub item</a></li>
+
+
+                                        </ul>
+                                    </li>
+                                    <li className="uk-parent">
+                                        <div className=" uk-position-absolute ">
+
+                                            <Link href="/activities-and-services">
+                                                <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Activities {"&"} Services</a>
+                                            </Link>
+
+                                        </div>
+
+                                        <a href="" ></a>
+                                        <ul className="uk-nav-sub  " hidden="">
+                                            <li className="uk-flex uk-flex-start "><a href="#" uk-toggle="target: #offcanvas-nav-primary">Coastal Skipper </a></li>
+                                            <li className="uk-flex uk-flex-start"><a href="#" uk-toggle="target: #offcanvas-nav-primary">Sub item</a></li>
+                                            <li className="uk-flex uk-flex-start"><a href="#" uk-toggle="target: #offcanvas-nav-primary">Sub item</a></li>
+
+
+                                        </ul>
+                                    </li>
+                                    <li className="uk-parent">
+                                        <div className=" uk-position-abslute  uk-margin">
+
+                                            <Link href="/aboutus">
+                                                <a className="nav-link responsive-link-font uk-margin" uk-toggle="target: #offcanvas-nav-primary">About us</a>
+                                            </Link>
+
+                                        </div>
+
+
+                                    </li>
+
+
+                                    <div className=" uk-position-abslute  uk-margin">
+
+                                        <Link href="/news">
+                                            <a className="nav-link responsive-link-font uk-margin" uk-toggle="target: #offcanvas-nav-primary">News</a>
+                                        </Link>
+
+                                    </div>
+
+
+
+                                </ul>
+
+
+
+
+
+
+                                <div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        {/* new off canvas end */}
+
+
+                        {/*  <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
                             <button className="uk-offcanvas-close uk-close-large uk-icon uk-close" type="button" uk-close="">
                                 <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 
@@ -236,11 +324,27 @@ function Nav() {
 
 
                                         <ul className="uk-nav uk-nav-primary " uk-nav="">
+                                            <li className="uk-parent">
+                                                <a href="#" aria-expanded="false">Parent</a>
+                                                <ul className="uk-nav-sub" hidden="">
+                                                    <li><a href="#">Sub item</a></li>
+                                                    <li><a href="#">Sub item</a></li>
+                                                    <li><a href="#">Sub item</a></li>
+                                                    <li><a href="#">Sub item</a></li>
+                                                    <li><a href="#">Sub item</a></li>
+                                                    <li><a href="#">Sub item</a>
+                                                        <ul>
+                                                            <li><a href="#">Sub item</a></li>
+                                                            <li><a href="#">Sub item</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
 
                                             <li className="uk-parent uk-nav-parent-icon  " >
 
 
-                                                <a className="uk-margin" aria-expanded="true">Courses</a>
+                                                <a className="uk-margin" aria-expanded="true">Coursegs</a>
 
 
                                                 <ul className="uk-nav-sub" hidden="">
@@ -323,7 +427,7 @@ function Nav() {
                                 </ul>
 
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                 </ul>
