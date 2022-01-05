@@ -243,7 +243,10 @@ function Nav() {
 
                                         <a href="" ></a>
                                         <ul className="uk-nav-sub  " hidden="">
-                                            <li className="uk-flex uk-flex-start "><a href="#" uk-toggle="target: #offcanvas-nav-primary">Coastal Skipper </a></li>
+                                            <li className="uk-flex uk-flex-start ">
+                                                <Link href="/courses/coastal-skipper"  >
+                                                    <a uk-toggle="target: #offcanvas-nav-primary">Coastal Skipper </a>
+                                                </Link></li>
                                             <li className="uk-flex uk-flex-start"><a href="#" uk-toggle="target: #offcanvas-nav-primary">Sub item</a></li>
                                             <li className="uk-flex uk-flex-start"><a href="#" uk-toggle="target: #offcanvas-nav-primary">Sub item</a></li>
 
