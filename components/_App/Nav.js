@@ -292,6 +292,11 @@ function Nav() {
 
                                     </div>
 
+                                    <div className="uk-card menu-logo-container">
+
+                                        <li> <Image src={rya} alt="logo" height={94} width={117} /></li>
+                                    </div>
+
 
 
                                 </ul>

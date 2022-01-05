@@ -62,3 +62,8 @@ a {
 .responsive-link-font:hover {
   opacity: 0.7;
 }
+
+.menu-logo-container {
+  background-color: #e5e5e5;
+  width: 40%;
+}
