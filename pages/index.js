@@ -51,7 +51,7 @@ export default function Home({ courses, homepage }) {
 
 
 
-        <Image src={courses[1].attributes.image.data.attributes.url} width={1600} height={800} alt="cover">
+        <Image src={courses[1].attributes.image.data.attributes.url} width={1620} height={860} alt="cover">
 
           {/*          <img src={courses[1].attributes.image.data.attributes.url} alt="" uk-cover  /> */}
 
