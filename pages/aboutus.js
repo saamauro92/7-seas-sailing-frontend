@@ -11,8 +11,6 @@ const courses = ({ team, homepage, about }) => {
 
     return (
 
-
-
         <>
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
             <h2>About us </h2>
@@ -30,7 +28,7 @@ const courses = ({ team, homepage, about }) => {
 
 
                 {
-                    team.map((person, index) =>
+                    team && team.map((person, index) =>
 
                         <div key={person.id} className='uk-flex uk-flex-center uk-flex-wrap'>
 
