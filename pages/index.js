@@ -49,7 +49,7 @@ export default function Home({ courses, homepage }) {
         {homepage && homepage.attributes.seo && <SEO data={homepage.attributes.seo} />}
 
 
-        <Image src={courses[1].attributes.image.data.attributes.url} alt="cover" width={800} height={500} layout="responsive" >
+        <Image src={courses[1].attributes.image.data.attributes.url} alt="cover" width={800} height={500} layout="responsive" priority>
 
           {/*          <img src={courses[1].attributes.image.data.attributes.url} alt="" uk-cover  /> */}
 

@@ -14,7 +14,7 @@ const Card = ({ data }) => {
                         {/*    <NextImage image={data.attributes.image.data.attributes.url} /> */}
                         {data.attributes.image.data.attributes.url &&
 
-                            <Image src={data.attributes.image.data.attributes.url} width={1620} height={860} alt="course-picture" layout="responsive" />
+                            <Image src={data.attributes.image.data.attributes.url} width={1620} height={860} alt="course-picture" layout="intrinsic" />
                         }
 
                         {/*    <Image src={`${data.attributes.image.data.attributes.url}`} alt="img" width={500} height={500} /> */}
