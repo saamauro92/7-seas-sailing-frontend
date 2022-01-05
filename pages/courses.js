@@ -2,7 +2,6 @@ import React from 'react'
 import { fetchAPI } from '../lib/api'
 import Card from '../components/Card/Card'
 import SEO from '../components/Seo/Seo'
-import Layout from '../components/_App/Layout'
 
 const courses = ({ courses, homepage }) => {
 
@@ -10,7 +9,7 @@ const courses = ({ courses, homepage }) => {
 
 
         <>
-            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" metaDescription="all courses" />}
+            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
             <h2>COURSES </h2>
 
             {courses.map((course, index) =>

@@ -1,4 +1,3 @@
-// Footer Component Style File Path: public/css/pages-and-components-css/footer.scss
 import React from 'react';
 import Link from 'next/link';
 import CookieConsent from "react-cookie-consent";

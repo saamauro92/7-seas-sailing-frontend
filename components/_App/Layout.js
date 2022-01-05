@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from "next/head"
-import GoTop from './GoTop'
-import Navbar from './Navbar';
+import GoTop from './GoTop';
 import FooterStyleThree from './Footer';
 import Nav from './Nav';
 /* import Preloader from './Preloader' */
@@ -23,7 +22,7 @@ const Layout = ({ children }) => {
 
                 <title>7 Seas Sailing</title>
             </Head>
-            {/*        <Navbar /> */}
+
             <Nav />
             <GoTop scrollStepInPx="100" delayInMs="10.50" />
 

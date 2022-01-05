@@ -6,8 +6,6 @@ import {
     fetchAPI,
 } from "../../lib/api"
 
-/* import Seo from "../../components/seo" */
-import { getStrapiMedia } from "../../lib/media"
 
 const MemberProfile = ({ member, homepage }) => {
     const imageUrl = member.attributes.image.data.attributes.url
@@ -22,7 +20,7 @@ const MemberProfile = ({ member, homepage }) => {
     return (
         <>
 
-            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={member.attributes.title} metaDescription="all courses" />}
+            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={member.attributes.title} />}
             <ul className="uk-breadcrumb">
                 <li>
                     <Link href={"/aboutus"}>

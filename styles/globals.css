@@ -24,8 +24,9 @@ a {
   font-weight: 700;
 }
 .uk-offcanvas-bar {
-  background: #f5f5f5;
-  color: #2a2a2a;
+  /*   background: #f5f5f5; */
+  /*   color: #2a2a2a; */
+  color: #fff;
 }
 .uk-offcanvas-bar .uk-nav-primary > li > a,
 .uk-offcanvas-bar .uk-nav-primary .uk-nav-sub a {
@@ -50,10 +51,21 @@ a {
 
 /* off canvas responsive menu bar */
 .uk-offcanvas-bar {
-  width: 100vw;
+  width: 96vw;
   top: 100px;
+  padding-top: 80px;
 }
 
 .uk-offcanvas-close {
   top: 120px;
+  right: 60px;
+}
+.uk-nav-parent-icon > .uk-parent > a::after {
+  content: "";
+  width: 1.5em;
+  height: 1.5em;
+  margin-left: auto;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22%23666%22%20stroke-width%3D%221.1%22%20points%3D%2210%201%204%207%2010%2013%22%20%2F%3E%0A%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }

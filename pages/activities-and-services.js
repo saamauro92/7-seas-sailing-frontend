@@ -1,4 +1,3 @@
-import React from 'react'
 import { fetchAPI } from '../lib/api'
 
 

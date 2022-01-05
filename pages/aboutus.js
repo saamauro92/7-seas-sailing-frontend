@@ -3,7 +3,6 @@ import React from 'react'
 import { fetchAPI } from '../lib/api'
 import Member from '../components/Member/Member'
 import SEO from '../components/Seo/Seo'
-import Layout from '../components/_App/Layout'
 import ReactMarkdown from "react-markdown"
 
 
@@ -15,7 +14,7 @@ const courses = ({ team, homepage, about }) => {
 
 
         <>
-            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" metaDescription="all courses" />}
+            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
             <h2>About us </h2>
 
 

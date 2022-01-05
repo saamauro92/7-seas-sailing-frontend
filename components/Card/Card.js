@@ -12,7 +12,10 @@ const Card = ({ data }) => {
                 <div className="uk-card uk-card-muted">
                     <div className="uk-card-media-top">
                         {/*    <NextImage image={data.attributes.image.data.attributes.url} /> */}
-                        {data.attributes.image.data.attributes.url && <img src={data.attributes.image.data.attributes.url} alt="" />}
+                        {data.attributes.image.data.attributes.url &&
+
+                            <Image src={data.attributes.image.data.attributes.url} width={1620} height={860} alt="course-picture" />
+                        }
 
                         {/*    <Image src={`${data.attributes.image.data.attributes.url}`} alt="img" width={500} height={500} /> */}
 

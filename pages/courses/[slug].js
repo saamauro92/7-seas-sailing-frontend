@@ -22,7 +22,7 @@ const Article = ({ course, homepage }) => {
     return (
         <>
 
-            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={course.attributes.title} metaDescription="all courses" />}
+            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={course.attributes.title} />}
             <ul className="uk-breadcrumb">
                 <li>
                     <Link href={"/courses"}>
@@ -67,8 +67,6 @@ const Article = ({ course, homepage }) => {
 
 export async function getStaticPaths() {
     const coursesRes = await fetchAPI("/courses", { fields: ["slug"] })
-
-    /*     const articlesRes = await getAllArticlesWithSlug() */
 
     return {
         paths: coursesRes.data.map((course) => ({

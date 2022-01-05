@@ -1,13 +1,12 @@
 import Head from 'next/head';
 
-const SEO = ({ data, metaTitle, metaDescription }) => {
+const SEO = ({ data, metaTitle }) => {
     // console.log('seo called =>', data);
-
     return (
         <Head>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             <title>{metaTitle}  7 Seas Sailing</title>
-            <meta name="description" content={metaDescription} />
+            <meta name="description" content={data.metaDescription} />
             <meta property="og:site_name" content={data.metaTitle + ' 7 Seas Sailing'} />
             <meta property="og:type" content="article" />
             <meta property="og:title" content={data.metaTitle + ' 7 Seas Sailing'} />

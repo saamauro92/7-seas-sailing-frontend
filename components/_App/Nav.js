@@ -47,7 +47,7 @@ function Nav() {
 
 
                 <Link href="/">
-                    <a className="uk-navbar-item uk-logo">
+                    <a className="uk-navbar-item uk-logo" >
                         <Image src={logo} alt="logo" height={64} width={217} />
                     </a>
                 </Link>
@@ -63,7 +63,7 @@ function Nav() {
                 <ul className="uk-navbar-nav">
                     <li className="nav-item">
 
-                        <Link href={"/courses"} activeClassName="active">
+                        <Link href="/courses" activeClassName="active">
                             <a className="nav-link">Courses</a>
 
                         </Link>
@@ -73,30 +73,35 @@ function Nav() {
                         <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left" style={{ "left": "0px", "top": "80px" }}>
                             <ul className="uk-nav uk-navbar-dropdown-nav">
 
-                                <Link href={"/courses/coastal-skipper"}>
+                                <Link href="/courses/coastal-skipper">
                                     <li className="uk-parent uk-margin">
-                                        <a > Coastal Skipper</a>
+                                        <a className="nav-link">
+                                            Coastal Skipper</a>
 
 
                                     </li>
                                 </Link>
-                                <Link href={"/courses/day-skipper"}>
+                                <Link href="/courses/day-skipper">
                                     <li className="uk-parent uk-margin">
-                                        <a >Day Skipper</a>
+                                        <a className="nav-link">
+                                            Day Skipper</a>
 
 
                                     </li>
                                 </Link>
-                                <Link href={"/courses/day-skipper-motor"}>
+                                <Link href="/courses/day-skipper-motor">
                                     <li className="uk-parent uk-margin">
-                                        <a >Day Skipper Motor</a>
+                                        <a className="nav-link">
+                                            Day Skipper Motor</a>
 
 
                                     </li>
                                 </Link>
-                                <Link href={"/courses/yachtmaster-exam-preparation"}>
+                                <Link href="/courses/yachtmaster-exam-preparation">
                                     <li className="uk-parent uk-margin">
-                                        <a >Yachtmaster Exam Preparation </a>
+                                        <a className="nav-link">
+
+                                            Yachtmaster Exam Preparation </a>
 
 
                                     </li>
@@ -106,7 +111,7 @@ function Nav() {
                         </div>
                     </li>
                     <li>
-                        <Link href={"/activities-and-services"} activeClassName="active">
+                        <Link href="/activities-and-services" activeClassName="active">
 
                             <a className="nav-link"> Activities {"&"} Services</a>
                         </Link>
@@ -114,15 +119,18 @@ function Nav() {
                             <ul className="uk-nav uk-navbar-dropdown-nav">
 
                                 <li className="uk-parent uk-margin">
-                                    <a href="#">Parent</a>
+                                    <a className="nav-link">
+                                        Parent</a>
 
                                 </li>
                                 <li className="uk-parent uk-margin">
-                                    <a href="#">Parent</a>
+                                    <a className="nav-link">
+                                        Parent</a>
 
                                 </li>
                                 <li className="uk-parent uk-margin">
-                                    <a href="#">Parent</a>
+                                    <a className="nav-link">
+                                        Parent</a>
 
                                 </li>
 
@@ -130,26 +138,30 @@ function Nav() {
                         </div>
                     </li>
                     <li className="nav-item">
-                        <Link href={"/aboutus"} activeClassName="active">
+                        <Link href="/aboutus" activeClassName="active">
 
-                            <a  > About Us</a>
+                            <a className="nav-link">
+                                About Us</a>
                         </Link>
                         <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left" style={{ "left": "0px", "top": "80px" }}>
                             <ul className="uk-nav uk-navbar-dropdown-nav">
 
-                                <Link href={"/courses/coastal-skipper"}>
+                                <Link href="/courses/coastal-skipper">
                                     <li className="uk-parent">
-                                        <a >Coastal Skipper</a>
+                                        <a className="nav-link">
+                                            Coastal Skipper</a>
 
 
                                     </li>
                                 </Link>
                                 <li className="uk-parent">
-                                    <a href="#">Parent</a>
+                                    <a className="nav-link">
+                                        Parent</a>
 
                                 </li>
                                 <li className="uk-parent">
-                                    <a href="#">Parent</a>
+                                    <a className="nav-link">
+                                        Parent</a>
 
                                 </li>
 
@@ -157,7 +169,7 @@ function Nav() {
                         </div>
                     </li>
                     <li>
-                        <Link href={"/news"} activeClassName="active" >
+                        <Link href="/news" activeClassName="active" >
 
                             <a className={currentRoute === "/news" ? 'active' : ''}>  News</a>
                         </Link>
@@ -170,7 +182,7 @@ function Nav() {
             </div>
 
         </nav >
-        /*         </div> */
+
     ) : (
 
 
@@ -196,14 +208,16 @@ function Nav() {
                 <ul className="uk-navbar-nav">
 
                     <div id="my-id" uk-offcanvas>
+                        <li>
 
-                        <a className="uk-navbar-toggle uk-icon uk-navbar-toggle-icon" uk-toggle="target: #offcanvas-nav-primary" href="#">
-                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <rect y="9" width="20" height="2"></rect><rect y="3" width="20" height="2">
-                                </rect><rect y="15" width="20" height="2">
-                                </rect>
-                            </svg>
-                        </a>
+                            <a className="uk-navbar-toggle uk-icon uk-navbar-toggle-icon" uk-toggle="target: #offcanvas-nav-primary" href="#">
+                                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="9" width="20" height="2"></rect><rect y="3" width="20" height="2">
+                                    </rect><rect y="15" width="20" height="2">
+                                    </rect>
+                                </svg>
+                            </a>
+                        </li>
 
 
                         <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
@@ -215,7 +229,7 @@ function Nav() {
 
                             <div className="uk-offcanvas-bar  ">
 
-                                <ul className="uk-nav uk-nav-primary uk-nav-left uk-margin-auto-vertical">
+                                <ul className="uk-nav uk-nav-primary uk-nav-left uk-margin-auto-vertical uk-nav-parent-icon">
 
 
                                     <li className="uk-parent">
@@ -223,36 +237,44 @@ function Nav() {
 
                                         <ul className="uk-nav uk-nav-primary " uk-nav="">
 
-                                            <li className="uk-parent  " >
-                                                <a className="uk-margin" aria-expanded="false">Courses</a>
+                                            <li className="uk-parent uk-nav-parent-icon  " >
+
+
+                                                <a className="uk-margin" aria-expanded="true">Courses</a>
+
+
                                                 <ul className="uk-nav-sub" hidden="">
 
 
-                                                    <Link href={"/courses/coastal-skipper"}>
+                                                    <Link href="/courses/coastal-skipper">
                                                         <li className="uk-parent uk-margin">
-                                                            <a >Coastal Skipper</a>
+                                                            <a className="nav-link">
+                                                                Coastal Skipper</a>
 
 
                                                         </li>
                                                     </Link>
 
-                                                    <Link href={"/courses/day-skipper"}>
+                                                    <Link href="/courses/day-skipper">
                                                         <li className="uk-parent uk-margin">
-                                                            <a >Day Skipper</a>
+                                                            <a className="nav-link">
+                                                                Day Skipper</a>
 
 
                                                         </li>
                                                     </Link>
-                                                    <Link href={"/courses/day-skipper-motor"}>
+                                                    <Link href="/courses/day-skipper-motor">
                                                         <li className="uk-parent uk-margin">
-                                                            <a >Day Skipper Motor</a>
+                                                            <a className="nav-link">
+                                                                Day Skipper Motor</a>
 
 
                                                         </li>
                                                     </Link>
-                                                    <Link href={"/courses/yachtmaster-exam-preparation"}>
+                                                    <Link href="/courses/yachtmaster-exam-preparation">
                                                         <li className="uk-parent uk-margin">
-                                                            <a >Yachtmaster Exam Preparation </a>
+                                                            <a className="nav-link">
+                                                                Yachtmaster Exam Preparation </a>
 
 
                                                         </li>
@@ -272,18 +294,15 @@ function Nav() {
                                                 </ul>
                                             </li>
                                             <li className="uk-parent  " >
-                                                <Link href={"/aboutus"}>
+                                                <Link href="/aboutus">
                                                     <a className="uk-margin" aria-expanded="false"> About us</a>
                                                 </Link>
-
-
-
 
                                             </li>
 
 
-                                            <li className="uk-parent  " >
-                                                <Link href={"/news"}>
+                                            <li className="uk-parent " >
+                                                <Link href="/news">
                                                     <a className="uk-margin" aria-expanded="false"> News </a>
                                                 </Link>
                                             </li>

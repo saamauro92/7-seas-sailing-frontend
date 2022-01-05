@@ -3,13 +3,13 @@ import { fetchAPI } from '../lib/api'
 import SEO from '../components/Seo/Seo'
 
 
-const News = ({ articles, homepage }) => {
+const News = ({ homepage }) => {
 
     return (
 
 
         <>
-            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" metaDescription="all courses" />}
+            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
             <h2>News  </h2>
 
 
@@ -23,7 +23,7 @@ export default News;
 
 export async function getStaticProps() {
 
-    const articlesRes = await fetchAPI("/articles")
+
 
     const homepageRes = await fetchAPI("/homepage", {
         populate: {
@@ -35,7 +35,6 @@ export async function getStaticProps() {
     return {
         props: {
 
-            articles: articlesRes.data,
             homepage: homepageRes.data,
         },
         revalidate: 1,
