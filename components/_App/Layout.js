@@ -5,7 +5,7 @@ import FooterStyleThree from './Footer';
 import Nav from './Nav';
 /* import Preloader from './Preloader' */
 
-const Layout = ({ children }) => {
+const Layout = ({ children, data }) => {
 
     /*     // Preloader
         const [loader, setLoader] = React.useState(true);
@@ -31,12 +31,7 @@ const Layout = ({ children }) => {
             {/*    {loader ? <Preloader /> : null} */}
 
 
-
-
-
-
-
-            <FooterStyleThree />
+            <FooterStyleThree data={data} />
         </>
     );
 }
