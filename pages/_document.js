@@ -16,10 +16,12 @@ class MyDocument extends Document {
                     />
                     <script
                         async
+                        strategy="beforeInteractive"
                         src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"
                     />
                     <script
                         async
+                        strategy="beforeInteractive"
                         src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"
                     />
 

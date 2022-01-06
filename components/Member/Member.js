@@ -19,7 +19,6 @@ const Member = ({ data }) => {
                         <Image src={data.attributes.image.data.attributes.url} width={320} height={280} alt="profile-picture" layout="intrinsic" />
 
 
-
                     </Link>
                 }
             </div>
