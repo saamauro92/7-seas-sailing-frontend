@@ -23,14 +23,12 @@ const Layout = ({ children, data, courses }) => {
                 <title>7 Seas Sailing</title>
             </Head>
 
-            <Nav courses={courses} />
-            <GoTop scrollStepInPx="100" delayInMs="10.50" />
 
             {/*         {loader ? <h5> LOADING...</h5> : null} */}
+            <Nav courses={courses} />
             {children}
 
-
-
+            <GoTop scrollStepInPx="100" delayInMs="10.50" />
             <FooterStyleThree data={data} />
         </>
     );
