@@ -23,7 +23,7 @@ const Article = ({ course, homepage }) => {
         <>
 
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={course.attributes.title} />}
-            <ul className="uk-breadcrumb">
+            <ul className="uk-breadcrumb uk-padding">
                 <li>
                     <Link href={"/courses"}>
                         <a href="">Courses</a>
