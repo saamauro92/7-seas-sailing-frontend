@@ -8,9 +8,10 @@ const courses = ({ courses, homepage }) => {
     return (
 
 
-        <>
+        <div className='uk-container uk-container-large'>
+
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
-            <h2>COURSES </h2>
+            <h2>Courses </h2>
 
             {courses.map((course, index) =>
 
@@ -22,7 +23,7 @@ const courses = ({ courses, homepage }) => {
             )}
 
 
-        </>
+        </div>
     )
 }
 

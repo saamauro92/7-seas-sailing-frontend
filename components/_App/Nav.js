@@ -38,7 +38,8 @@ function Nav({ courses }) {
 
 
 
-        <nav className="uk-navbar-container uk-margin uk-navbar uk-margin-remove" uk-navbar="">
+        <nav className="uk-navbar-container  uk-navbar uk-margin-remove" uk-navbar="">
+
             <div className="uk-navbar-left nav-logos">
 
 

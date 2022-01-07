@@ -60,7 +60,7 @@ export default function Home({ courses, homepage }) {
         ></div>
 
 
-        {courses.map((course) => <> {course.attributes.title}</>)}
+
 
       </div>
 

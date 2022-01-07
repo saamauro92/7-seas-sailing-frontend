@@ -13,14 +13,15 @@ const FooterStyleThree = (data) => {
 
     return (
         <>
-            <div className="uk-container uk-container-expand uk-padding">
+            <div className="uk-container uk-container-large uk-padding-large ">
 
 
-                <div className="uk-child-width-1-4@s uk-grid-small uk-flex  uk-flex-wrap" uk-grid>
+                <div className="uk-child-width-1-4@s uk-grid-small uk-flex  uk-flex-wrap uk-text-center " uk-grid>
 
-                    <div className="uk-card uk-card-primary ">
+                    <div className="uk-card uk-card-small ">
 
-                        <div className="uk-body uk-padding">
+                        <div className="uk-card uk-card-secondary uk-card-body uk-width-1-2@m uk-padding">
+
 
                             <h3 className="uk-card-title">Phone  </h3>
 
@@ -29,20 +30,20 @@ const FooterStyleThree = (data) => {
 
 
                     </div>
-                    <div className="uk-card uk-card-primary uk-card-large">
-                        <div className="uk-body uk-padding">
+                    <div className="uk-card  uk-card-small ">
+                        <div className="uk-card uk-card-secondary uk-card-body uk-width-1-2@m uk-padding">
                             <h3 className="uk-card-title">Email  </h3>
                             {contactInfo && <p > {contactInfo.email}</p>}
                         </div>
                     </div>
-                    <div className="uk-card uk-card-primary uk-card-large">
-                        <div className="uk-body uk-padding">
+                    <div className="uk-card  uk-card-small ">
+                        <div className="uk-card uk-card-secondary uk-card-body uk-width-1-2@m uk-padding">
                             <h3 className="uk-card-title">Address  </h3>
                             {contactInfo && <p > {contactInfo.address}</p>}
                         </div>
                     </div>
-                    <div className="uk-card uk-card-primary uk-card-large">
-                        <div className="uk-body uk-padding">
+                    <div className="uk-card uk-card-small ">
+                        <div className="uk-card uk-card-secondary uk-card-body uk-width-1-2@m uk-padding">
                             <h3 className="uk-card-title">Open Time  </h3>
                             {contactInfo && <p> {contactInfo.openTime}</p>}
                         </div>
@@ -50,22 +51,22 @@ const FooterStyleThree = (data) => {
                     </div>
 
                 </div>
+                <hr />
 
-                <div className="uk-child-width-1-4@s uk-grid-small uk-flex  uk-flex-wrap" uk-grid>
+                <div className="uk-child-width-1-4@s uk-grid-small uk-flex  uk-flex-wrap u" uk-grid>
 
-                    <div className="uk-card uk-card-secondary uk-card-small">
+                    <div className="uk-card uk-card-secondary uk-card-small ">
 
 
-                        <div className="uk-card uk-card-secondary uk-card-body uk-width-1-2@m">
+                        <div className="uk-card uk-card-secondary uk-card-body ">
                             <h3 className="uk-card-title">ABOUT US </h3>
                             <p>Whatever your interests are in the world of yachting, pleasure or commercial we are here to offer you courses from the most successful training scheme.</p>
                         </div>
 
-
                     </div>
 
-                    <div className="uk-card uk-card-secondary uk-card-small">
-                        <div className="uk-card uk-card-secondary uk-card-body uk-width-1-2@m">
+                    <div className="uk-card uk-card-secondary uk-card-small ">
+                        <div className="uk-card uk-card-secondary uk-card-body ">
                             <h3 className="uk-card-title">QUICK LINKS</h3>
                             <ul className="uk-list  ">
                                 <li>
@@ -105,7 +106,7 @@ const FooterStyleThree = (data) => {
 
                     </div>
                     <div className="uk-card uk-card-secondary uk-card-small">
-                        <div className="uk-card uk-card-secondary uk-card-body uk-width-1-2@m">
+                        <div className="uk-card uk-card-secondary uk-card-body ">
                             <h3 className="uk-card-title">LATEST NEWS </h3>
                             <ul className="uk-list  ">
                                 <li>
@@ -123,7 +124,7 @@ const FooterStyleThree = (data) => {
 
                     </div>
                     <div className="uk-card uk-card-secondary uk-card-small">
-                        <div className="uk-card uk-card-secondary uk-card-body uk-width-1-2@m">
+                        <div className="uk-card uk-card-secondary uk-card-body ">
                             <h3 className="uk-card-title">WE ARE PART OF  </h3>
                             <ul className="uk-list  ">
                                 <li>
@@ -172,7 +173,7 @@ const FooterStyleThree = (data) => {
 
                     </div>
                 </div>
-                <div className="uk-container uk-container-expand uk-flex uk-flex-around uk-padding">
+                <div className="uk-container uk-container-expand uk-flex uk-flex-around uk-padding ">
 
                     <Image src={logo} alt="logo" height={64} width={217} />
                     <Image src={rya} alt="logo" height={94} width={117} />
@@ -205,6 +206,7 @@ const FooterStyleThree = (data) => {
                     {/* <span style={{ fontSize: "10px" }}>This bit of text is smaller :O</span> */}
                 </CookieConsent>
             </div>
+
         </>
     );
 }

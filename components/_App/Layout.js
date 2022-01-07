@@ -14,7 +14,7 @@ const Layout = ({ children, data, courses }) => {
         }, [])
      */
     return (
-        <>
+        <div className=' uk-background-secondary'>
             <Head>
                 {/* Required meta tags */}
                 <meta charSet="utf-8" />
@@ -30,7 +30,7 @@ const Layout = ({ children, data, courses }) => {
 
             <GoTop scrollStepInPx="100" delayInMs="10.50" />
             <FooterStyleThree data={data} />
-        </>
+        </div>
     );
 }
 
