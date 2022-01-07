@@ -43,9 +43,6 @@ export default function Home({ courses, homepage }) {
       <div className="test-height uk-cover-container uk-light">
 
 
-
-
-
         {homepage && homepage.attributes.seo && <SEO data={homepage.attributes.seo} />}
 
 
@@ -54,13 +51,6 @@ export default function Home({ courses, homepage }) {
           {/*          <img src={courses[1].attributes.image.data.attributes.url} alt="" uk-cover  /> */}
 
         </Image>
-
-
-
-
-
-
-
 
 
 

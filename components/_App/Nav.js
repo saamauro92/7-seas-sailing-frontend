@@ -5,7 +5,7 @@ import rya from '../../assets/rya.png'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
-function Nav() {
+function Nav({ courses }) {
 
 
     const router = useRouter()
@@ -34,16 +34,12 @@ function Nav() {
 
 
 
-
-
     return showBar ? (
-
 
 
 
         <nav className="uk-navbar-container uk-margin uk-navbar" uk-navbar="">
             <div className="uk-navbar-left nav-logos">
-
 
 
                 <Link href="/">
@@ -71,41 +67,24 @@ function Nav() {
 
 
                         <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left" style={{ "left": "0px", "top": "80px" }}>
-                            <ul className="uk-nav uk-navbar-dropdown-nav">
+                            <ul className="uk-nav uk-navbar-dropdown-nav  uk-nav-divider">
 
-                                <Link href="/courses/coastal-skipper">
-                                    <li className="uk-parent uk-margin">
-                                        <a className="nav-link">
-                                            Coastal Skipper</a>
+                                {courses.map((course, index) =>
 
-
-                                    </li>
-                                </Link>
-                                <Link href="/courses/day-skipper">
-                                    <li className="uk-parent uk-margin">
-                                        <a className="nav-link">
-                                            Day Skipper</a>
+                                    <Link href={`/courses/${course.attributes.slug}`} key={index}>
+                                        <li className="uk-parent ">
+                                            <a className="nav-link">
+                                                {course.attributes.title}({course.attributes.courseCategory})
+                                            </a>
 
 
-                                    </li>
-                                </Link>
-                                <Link href="/courses/day-skipper-motor">
-                                    <li className="uk-parent uk-margin">
-                                        <a className="nav-link">
-                                            Day Skipper Motor</a>
+                                        </li>
+                                    </Link>
 
 
-                                    </li>
-                                </Link>
-                                <Link href="/courses/yachtmaster-exam-preparation">
-                                    <li className="uk-parent uk-margin">
-                                        <a className="nav-link">
 
-                                            Yachtmaster Exam Preparation </a>
+                                )}
 
-
-                                    </li>
-                                </Link>
 
                             </ul>
                         </div>
@@ -243,12 +222,18 @@ function Nav() {
 
                                         <a href="" ></a>
                                         <ul className="uk-nav-sub  " hidden="">
-                                            <li className="uk-flex uk-flex-start ">
-                                                <Link href="/courses/coastal-skipper"  >
-                                                    <a uk-toggle="target: #offcanvas-nav-primary">Coastal Skipper </a>
-                                                </Link></li>
-                                            <li className="uk-flex uk-flex-start"><a uk-toggle="target: #offcanvas-nav-primary">Sub item</a></li>
-                                            <li className="uk-flex uk-flex-start"><a uk-toggle="target: #offcanvas-nav-primary">Sub item</a></li>
+
+
+                                            {courses.map((course, index) =>
+
+
+                                                <li className="uk-flex uk-flex-start " key={index}>
+                                                    <Link href={`/courses/${course.attributes.slug}`} >
+                                                        <a uk-toggle="target: #offcanvas-nav-primary">  {course.attributes.title} ({course.attributes.courseCategory})</a>
+                                                    </Link></li>
+
+
+                                            )}
 
 
                                         </ul>

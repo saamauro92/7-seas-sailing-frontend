@@ -5,14 +5,14 @@ import FooterStyleThree from './Footer';
 import Nav from './Nav';
 /* import Preloader from './Preloader' */
 
-const Layout = ({ children, data }) => {
+const Layout = ({ children, data, courses }) => {
 
-    /*     // Preloader
-        const [loader, setLoader] = React.useState(true);
+    // Preloader
+    /*     const [loader, setLoader] = React.useState(true);
         React.useEffect(() => {
             setTimeout(() => setLoader(false), 1500);
-        }, []) */
-
+        }, [])
+     */
     return (
         <>
             <Head>
@@ -23,12 +23,12 @@ const Layout = ({ children, data }) => {
                 <title>7 Seas Sailing</title>
             </Head>
 
-            <Nav />
+            <Nav courses={courses} />
             <GoTop scrollStepInPx="100" delayInMs="10.50" />
 
+            {/*         {loader ? <h5> LOADING...</h5> : null} */}
             {children}
 
-            {/*    {loader ? <Preloader /> : null} */}
 
 
             <FooterStyleThree data={data} />

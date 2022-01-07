@@ -5,7 +5,7 @@ import CookieConsent from "react-cookie-consent";
 const FooterStyleThree = (data) => {
 
     const currentYear = new Date().getFullYear();
-    console.log(data.data.attributes.phone, "DATA FO;")
+
 
     const contactInfo = data.data.attributes;
 
