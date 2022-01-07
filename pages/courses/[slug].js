@@ -29,6 +29,7 @@ const Article = ({ course, homepage }) => {
                         <a href="">Courses</a>
                     </Link>
                 </li>
+                <li><a href="">{course.attributes.courseCategory}</a></li>
                 <li><a href="">{course.attributes.title}</a></li>
 
             </ul>

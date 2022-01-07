@@ -54,20 +54,163 @@ function Nav({ courses }) {
 
 
             </div>
+
             <div className="uk-navbar-center">
 
-                <ul className="uk-navbar-nav">
+                <ul className="uk-navbar-nav ">
                     <li className="nav-item">
+
 
                         <Link href="/courses" activeClassName="active">
                             <a className="nav-link">Courses</a>
 
                         </Link>
+                        <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2 " style={{ "left": "0px", "top": "80px" }}>
+                            <ul className="uk-nav uk-navbar-dropdown-nav  uk-nav-divider ">
+                                <li>
+                                    <ul className="uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon uk-padding-small" hidden="" uk-nav="multiple: true">
+
+
+                                        <li className="uk-parent ">
+                                            <div className=" uk-position-absolute  ">
+
+                                                <Link href="/courses">
+                                                    <a className="nav-link responsive-link-font " >Sail</a>
+                                                </Link>
+
+
+                                            </div>
+                                            <a href="" ></a>
+
+                                            <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon   " hidden="">
+
+                                                {courses.map((course, index) =>
+                                                    course.attributes.courseCategory === "Sail" ?
+
+                                                        <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                            <Link href={`/courses/${course.attributes.slug}`} >
+                                                                <a >  {course.attributes.title} </a>
+                                                            </Link></li>
+
+                                                        : null
+
+
+                                                )}
+                                            </ul>
+                                        </li>
+                                        <li className="uk-parent uk-nav-divider ">
+                                            <div className=" uk-position-absolute  ">
+
+                                                <Link href="/courses" >
+                                                    <a className="nav-link responsive-link-font " >Motor</a>
+                                                </Link>
+
+
+                                            </div>
+                                            <a href="" ></a>
 
 
 
-                        <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left" style={{ "left": "0px", "top": "80px" }}>
+                                            <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+
+                                                {courses.map((course, index) =>
+                                                    course.attributes.courseCategory === "Motor" ?
+
+                                                        <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                            <Link href={`/courses/${course.attributes.slug}`} >
+                                                                <a >  {course.attributes.title} </a>
+                                                            </Link></li>
+
+                                                        : null
+
+
+                                                )}
+                                            </ul>
+
+                                        </li>
+
+                                        <li className="uk-parent uk-nav-divider ">
+                                            <div className=" uk-position-absolute ">
+
+                                                <Link href="/courses"  >
+                                                    <a className="nav-link responsive-link-font " >Power</a>
+                                                </Link>
+
+
+                                            </div>
+                                            <a href="" ></a>
+
+
+
+                                            <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+
+                                                {courses.map((course, index) =>
+                                                    course.attributes.courseCategory === "Power" ?
+
+                                                        <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                            <Link href={`/courses/${course.attributes.slug}`} >
+                                                                <a >  {course.attributes.title} </a>
+                                                            </Link></li>
+
+                                                        : null
+
+
+                                                )}
+                                            </ul>
+
+                                        </li>
+
+                                        <li className="uk-parent  uk-nav-divider">
+                                            <div className=" uk-position-absolute ">
+
+                                                <Link href="/courses"  >
+                                                    <a className="nav-link responsive-link-font ">Mile Building</a>
+
+                                                </Link>
+
+
+                                            </div>
+                                            <a href="" ></a>
+
+
+
+                                            <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+
+                                                {courses.map((course, index) =>
+                                                    course.attributes.courseCategory === "Mile_Building" ?
+
+                                                        <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                            <Link href={`/courses/${course.attributes.slug}`} >
+                                                                <a >  {course.attributes.title} </a>
+                                                            </Link></li>
+
+                                                        : null
+
+
+                                                )}
+                                            </ul>
+
+                                        </li>
+
+
+                                    </ul>
+
+
+
+
+
+                                </li>
+                            </ul>
+
+                        </div>
+                    </li>
+
+
+
+
+                    {/*                         <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left" style={{ "left": "0px", "top": "80px" }}>
                             <ul className="uk-nav uk-navbar-dropdown-nav  uk-nav-divider">
+
 
                                 {courses.map((course, index) =>
 
@@ -86,9 +229,10 @@ function Nav({ courses }) {
                                 )}
 
 
+
                             </ul>
-                        </div>
-                    </li>
+                        </div> */}
+                    {/*     </li> */}
                     <li>
                         <Link href="/activities-and-services" activeClassName="active">
 
@@ -156,9 +300,9 @@ function Nav({ courses }) {
                     </li>
 
 
-                </ul>
+                </ul >
 
-            </div>
+            </div >
 
         </nav >
 
@@ -198,7 +342,7 @@ function Nav({ courses }) {
                             </a>
                         </li>
 
-                        {/* new off canvas  start*/}
+
                         <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
 
                             <div className="uk-offcanvas-bar ">
@@ -221,20 +365,130 @@ function Nav({ courses }) {
                                         </div>
 
                                         <a href="" ></a>
-                                        <ul className="uk-nav-sub  " hidden="">
+                                        <ul className="uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-nav-parent-icon  " hidden="" uk-nav="multiple: true">
 
 
-                                            {courses.map((course, index) =>
+                                            <li className="uk-parent  ">
+                                                <div className=" uk-position-absolute ">
+
+                                                    <Link href="/courses">
+                                                        <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Sail</a>
+                                                    </Link>
 
 
-                                                <li className="uk-flex uk-flex-start " key={index}>
-                                                    <Link href={`/courses/${course.attributes.slug}`} >
-                                                        <a uk-toggle="target: #offcanvas-nav-primary">  {course.attributes.title} ({course.attributes.courseCategory})</a>
-                                                    </Link></li>
+                                                </div>
+                                                <a href="" ></a>
 
 
-                                            )}
 
+                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+
+                                                    {courses.map((course, index) =>
+                                                        course.attributes.courseCategory === "Sail" ?
+
+                                                            <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                                <Link href={`/courses/${course.attributes.slug}`} >
+                                                                    <a uk-toggle="target: #offcanvas-nav-primary">  {course.attributes.title} </a>
+                                                                </Link></li>
+
+                                                            : null
+
+
+                                                    )}
+                                                </ul>
+
+                                            </li>
+                                            <li className="uk-parent  ">
+                                                <div className=" uk-position-absolute ">
+
+                                                    <Link href="/courses" >
+                                                        <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Motor</a>
+                                                    </Link>
+
+
+                                                </div>
+                                                <a href="" ></a>
+
+
+
+                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+
+                                                    {courses.map((course, index) =>
+                                                        course.attributes.courseCategory === "Motor" ?
+
+                                                            <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                                <Link href={`/courses/${course.attributes.slug}`} >
+                                                                    <a uk-toggle="target: #offcanvas-nav-primary">  {course.attributes.title} </a>
+                                                                </Link></li>
+
+                                                            : null
+
+
+                                                    )}
+                                                </ul>
+
+                                            </li>
+                                            <li className="uk-parent  ">
+                                                <div className=" uk-position-absolute ">
+
+                                                    <Link href="/courses"  >
+                                                        <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Power</a>
+                                                    </Link>
+
+
+                                                </div>
+                                                <a href="" ></a>
+
+
+
+                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+
+                                                    {courses.map((course, index) =>
+                                                        course.attributes.courseCategory === "Power" ?
+
+                                                            <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                                <Link href={`/courses/${course.attributes.slug}`} >
+                                                                    <a uk-toggle="target: #offcanvas-nav-primary">  {course.attributes.title} </a>
+                                                                </Link></li>
+
+                                                            : null
+
+
+                                                    )}
+                                                </ul>
+
+                                            </li>
+                                            <li className="uk-parent  ">
+                                                <div className=" uk-position-absolute ">
+
+                                                    <Link href="/courses"  >
+                                                        <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Mile Building</a>
+
+                                                    </Link>
+
+
+                                                </div>
+                                                <a href="" ></a>
+
+
+
+                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+
+                                                    {courses.map((course, index) =>
+                                                        course.attributes.courseCategory === "Mile_Building" ?
+
+                                                            <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                                <Link href={`/courses/${course.attributes.slug}`} >
+                                                                    <a uk-toggle="target: #offcanvas-nav-primary">  {course.attributes.title} </a>
+                                                                </Link></li>
+
+                                                            : null
+
+
+                                                    )}
+                                                </ul>
+
+                                            </li>
 
                                         </ul>
                                     </li>
@@ -248,8 +502,8 @@ function Nav({ courses }) {
                                         </div>
 
                                         <a href="" ></a>
-                                        <ul className="uk-nav-sub  " hidden="">
-                                            <li className="uk-flex uk-flex-start "><a uk-toggle="target: #offcanvas-nav-primary">Coastal Skipper </a></li>
+                                        <ul className="uk-nav-sub   " hidden="" >
+                                            <li className="uk-flex uk-flex-start  "><a uk-toggle="target: #offcanvas-nav-primary">Coastal Skipper </a></li>
                                             <li className="uk-flex uk-flex-start"><a uk-toggle="target: #offcanvas-nav-primary">Sub item</a></li>
                                             <li className="uk-flex uk-flex-start"><a uk-toggle="target: #offcanvas-nav-primary">Sub item</a></li>
 
@@ -298,7 +552,7 @@ function Nav({ courses }) {
                             </div>
 
                         </div>
-                        {/* new off canvas end */}
+
 
                     </div>
 
