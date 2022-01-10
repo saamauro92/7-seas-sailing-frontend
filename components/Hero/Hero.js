@@ -10,7 +10,10 @@ const Hero = ({ courses, images }) => {
         <>
 
 
-            <Image src={images.background.data.attributes.url} width={'100%'} height={'100%'} alt="bg-image" />
+            <div className="uk-height-expand uk-section uk-light uk-background-cover">
+
+                <Image src={images.background.data.attributes.url} priority alt="bg-image" layout="fill" objectFit="cover" />
+            </div>
 
 
             <div className="uk-container uk-container-large  uk-flex uk-flex-wrap uk-flex-around uk-margin  " uk-scrollspy="cls: uk-animation-fade; target: .hero-cards; delay: 400; repeat: true">
@@ -86,7 +89,7 @@ const Hero = ({ courses, images }) => {
 
 
 
-            <div className=" uk-container uk-container-xsmall uk-flex uk-flex-column uk-flex-middle   ">
+            <div className=" uk-container uk-container-xsmall uk-flex uk-flex-column uk-flex-middle uk-position-relative  ">
                 <h2 className="uk-text-bolder action-text uk-text-center ">
                     YOUR WAY AT SEA STARTS HERE!
                 </h2>
@@ -143,9 +146,8 @@ const Hero = ({ courses, images }) => {
                     </div>
                 </div>
 
+
             </div>
-
-
 
 
         </>
