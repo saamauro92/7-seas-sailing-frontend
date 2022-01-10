@@ -5,7 +5,6 @@ import Image from 'next/image'
 
 const Hero = ({ courses, images }) => {
 
-    console.log(images, 'SMALL URL');
 
     return (
         <>
@@ -21,7 +20,7 @@ const Hero = ({ courses, images }) => {
             >
 
 
-                <div className="uk-container uk-container-large  uk-flex uk-flex-wrap uk-flex-around uk-margin uk-padding " uk-scrollspy="cls: uk-animation-fade; target: .hero-cards; delay: 400; repeat: true">
+                <div className="uk-container uk-container-large  uk-flex uk-flex-wrap uk-flex-around uk-margin  " uk-scrollspy="cls: uk-animation-fade; target: .hero-cards; delay: 400; repeat: true">
 
 
 
@@ -34,10 +33,10 @@ const Hero = ({ courses, images }) => {
 
                             <ul className="sail-toggle" hidden>
 
-                                {courses.map((course, index) =>
+                                {courses.map((course, i) =>
                                     course.attributes.courseCategory === 'Sail' &&
 
-                                    <Link href={`/courses/${course.attributes.slug}`} passHref>
+                                    <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
                                         <li>
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
@@ -56,10 +55,10 @@ const Hero = ({ courses, images }) => {
 
                             <ul className="motor-toggle" hidden >
 
-                                {courses.map((course, index) =>
+                                {courses.map((course, i) =>
                                     course.attributes.courseCategory === 'Motor' &&
 
-                                    <Link href={`/courses/${course.attributes.slug}`} passHref >
+                                    <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
                                         <li>
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
@@ -77,10 +76,10 @@ const Hero = ({ courses, images }) => {
 
                             <ul className="power-toggle" hidden >
 
-                                {courses.map((course, index) =>
+                                {courses.map((course, i) =>
                                     course.attributes.courseCategory === 'Power' &&
 
-                                    <Link href={`/courses/${course.attributes.slug}`} passHref >
+                                    <Link href={`/courses/${course.attributes.slug}`} key={i} passHref >
                                         <li>
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
@@ -90,6 +89,21 @@ const Hero = ({ courses, images }) => {
                             </ul>
                         </div>
                     </div>
+                </div>
+
+
+
+                <div className=" uk-container uk-container-xsmall uk-flex uk-flex-column uk-flex-middle   ">
+                    <h2 className="uk-text-bolder action-text uk-text-center ">
+                        YOUR WAY AT SEA STARTS HERE!
+                    </h2>
+
+                    <button className="uk-button action-button uk-text-bolder uk-button-large uk-width-small uk-margin-bottom">JOIN US</button>
+                </div>
+
+
+
+                <div className="uk-container uk-container-large  uk-flex uk-flex-wrap uk-flex-around " uk-scrollspy="cls: uk-animation-fade; target: .hero-cards; delay: 400; repeat: true">
 
                     <div className="uk-inline-clip hero-cards uk-margin">
                         <Image src={images.mile_building.data.attributes.url} width={400} height={250} alt='' />
@@ -99,10 +113,10 @@ const Hero = ({ courses, images }) => {
 
                             <ul className="mile-toggle" hidden >
 
-                                {courses.map((course, index) =>
+                                {courses.map((course, i) =>
                                     course.attributes.courseCategory === 'Mile_Building' &&
 
-                                    <Link href={`/courses/${course.attributes.slug}`} passHref >
+                                    <Link href={`/courses/${course.attributes.slug}`} passHref key={i} >
                                         <li>
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
@@ -122,10 +136,10 @@ const Hero = ({ courses, images }) => {
 
                             <ul className="jet-toggle" hidden >
 
-                                {courses.map((course, index) =>
+                                {courses.map((course, i) =>
                                     course.attributes.courseCategory === 'Jet_Ski' &&
 
-                                    <Link href={`/courses/${course.attributes.slug}`} passHref >
+                                    <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
                                         <li>
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
@@ -136,12 +150,11 @@ const Hero = ({ courses, images }) => {
                         </div>
                     </div>
 
-
-
-
-
-
                 </div>
+
+
+
+
 
 
 

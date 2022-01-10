@@ -71,3 +71,14 @@ a {
 .uk-card {
   box-shadow: none;
 }
+
+/* ACTION BUTTON */
+
+.action-button {
+  background-color: #002a74;
+  color: #f2f2f2;
+}
+
+.action-text {
+  color: #002a74;
+}

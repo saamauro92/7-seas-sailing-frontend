@@ -48,13 +48,19 @@ export default function Home({ courses, homepage }) {
         {homepage && homepage.attributes.seo && <SEO data={homepage.attributes.seo} />}
 
 
+
         <Hero courses={courses} images={homepage.attributes.hero} />
 
 
 
-
-
       </div>
+
+
+
+
+
+
+
 
 
 

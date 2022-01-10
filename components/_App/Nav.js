@@ -84,10 +84,10 @@ function Nav({ courses }) {
 
                                                 <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon   " hidden="">
 
-                                                    {courses.map((course, index) =>
+                                                    {courses.map((course, i) =>
                                                         course.attributes.courseCategory === "Sail" ?
 
-                                                            <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                            <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
                                                                     <a >  {course.attributes.title} </a>
                                                                 </Link></li>
@@ -113,10 +113,10 @@ function Nav({ courses }) {
 
                                                 <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
 
-                                                    {courses.map((course, index) =>
+                                                    {courses.map((course, i) =>
                                                         course.attributes.courseCategory === "Motor" ?
 
-                                                            <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                            <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
                                                                     <a >  {course.attributes.title} </a>
                                                                 </Link></li>
@@ -144,10 +144,10 @@ function Nav({ courses }) {
 
                                                 <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
 
-                                                    {courses.map((course, index) =>
+                                                    {courses.map((course, i) =>
                                                         course.attributes.courseCategory === "Power" ?
 
-                                                            <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                            <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
                                                                     <a >  {course.attributes.title} </a>
                                                                 </Link></li>
@@ -176,10 +176,10 @@ function Nav({ courses }) {
 
                                                 <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
 
-                                                    {courses.map((course, index) =>
+                                                    {courses.map((course, i) =>
                                                         course.attributes.courseCategory === "Mile_Building" ?
 
-                                                            <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                            <li className="uk-flex uk-flex-start uk-nav-divider" key={i}>
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
                                                                     <a >  {course.attributes.title} </a>
                                                                 </Link></li>
@@ -207,10 +207,10 @@ function Nav({ courses }) {
 
                                                 <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
 
-                                                    {courses.map((course, index) =>
+                                                    {courses.map((course, i) =>
                                                         course.attributes.courseCategory === "Jet_Ski" ?
 
-                                                            <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                            <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
                                                                     <a >  {course.attributes.title} </a>
                                                                 </Link></li>
@@ -389,10 +389,10 @@ function Nav({ courses }) {
 
                                                 <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
 
-                                                    {courses.map((course, index) =>
+                                                    {courses.map((course, i) =>
                                                         course.attributes.courseCategory === "Sail" ?
 
-                                                            <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                            <li className="uk-flex uk-flex-start uk-nav-divider" key={i}>
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
                                                                     <a uk-toggle="target: #offcanvas-nav-primary">  {course.attributes.title} </a>
                                                                 </Link></li>
@@ -419,10 +419,10 @@ function Nav({ courses }) {
 
                                                 <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
 
-                                                    {courses.map((course, index) =>
+                                                    {courses.map((course, i) =>
                                                         course.attributes.courseCategory === "Motor" ?
 
-                                                            <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                            <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
                                                                     <a uk-toggle="target: #offcanvas-nav-primary">  {course.attributes.title} </a>
                                                                 </Link></li>
@@ -449,10 +449,10 @@ function Nav({ courses }) {
 
                                                 <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
 
-                                                    {courses.map((course, index) =>
+                                                    {courses.map((course, i) =>
                                                         course.attributes.courseCategory === "Power" ?
 
-                                                            <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                            <li className="uk-flex uk-flex-start uk-nav-divider" key={i}>
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
                                                                     <a uk-toggle="target: #offcanvas-nav-primary">  {course.attributes.title} </a>
                                                                 </Link></li>
@@ -480,10 +480,10 @@ function Nav({ courses }) {
 
                                                 <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
 
-                                                    {courses.map((course, index) =>
+                                                    {courses.map((course, i) =>
                                                         course.attributes.courseCategory === "Mile_Building" ?
 
-                                                            <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                            <li className="uk-flex uk-flex-start uk-nav-divider" key={i}>
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
                                                                     <a uk-toggle="target: #offcanvas-nav-primary">  {course.attributes.title} </a>
                                                                 </Link></li>
@@ -511,10 +511,10 @@ function Nav({ courses }) {
 
                                                 <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
 
-                                                    {courses.map((course, index) =>
+                                                    {courses.map((course, i) =>
                                                         course.attributes.courseCategory === "Jet_Ski" ?
 
-                                                            <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                            <li className="uk-flex uk-flex-start uk-nav-divider" key={i}>
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
                                                                     <a uk-toggle="target: #offcanvas-nav-primary">  {course.attributes.title} </a>
                                                                 </Link></li>
