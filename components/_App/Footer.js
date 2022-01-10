@@ -13,7 +13,7 @@ const FooterStyleThree = (data) => {
 
     return (
         <>
-            <div className="uk-container uk-container-large uk-padding-large uk-background-secondary">
+            <div className="uk-container uk-container-large uk-padding-large ">
 
 
                 <div className="uk-child-width-1-4@s uk-grid-small uk-flex  uk-flex-wrap uk-text-center " uk-grid>
@@ -123,7 +123,7 @@ const FooterStyleThree = (data) => {
 
 
                     </div>
-                    <div className="uk-card uk-card-secondary uk-card-small">
+                    <div className="uk-card  uk-card-small">
                         <div className="uk-card uk-card-secondary uk-card-body ">
                             <h3 className="uk-card-title">WE ARE PART OF  </h3>
                             <ul className="uk-list  ">
@@ -173,7 +173,7 @@ const FooterStyleThree = (data) => {
 
                     </div>
                 </div>
-                <div className="uk-container uk-container-expand uk-flex uk-flex-around uk-padding ">
+                <div className="uk-container uk-container-expand uk-flex uk-flex-wrap uk-flex-around uk-padding uk-light  ">
 
                     <Image src={logo} alt="logo" height={64} width={217} />
                     <Image src={rya} alt="logo" height={94} width={117} />

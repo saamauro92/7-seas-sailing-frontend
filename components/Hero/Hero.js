@@ -30,15 +30,16 @@ const Hero = ({ courses, images }) => {
                     <div className="uk-inline-clip ">
                         <Image src={images.sail.data.attributes.url} width={400} height={250} alt='' />
 
-                        <div className="uk-position-bottom uk-overlay uk-overlay-primary  " >
+                        <div className="uk-position-bottom uk-overlay uk-overlay-primary  " uk-toggle="target: .sail-toggle; mode: hover">
+
                             <h2 >Sail</h2>
 
-                            <ul  >
+                            <ul className="sail-toggle" hidden>
 
                                 {courses.map((course, index) =>
                                     course.attributes.courseCategory === 'Sail' &&
 
-                                    <Link href={`/courses/${course.attributes.slug}`} >
+                                    <Link href={`/courses/${course.attributes.slug}`} passHref>
                                         <li>
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
@@ -46,20 +47,21 @@ const Hero = ({ courses, images }) => {
 
                                 )}
                             </ul>
+
                         </div>
                     </div>
                     <div className="uk-inline-clip">
                         <Image src={images.motor.data.attributes.url} width={400} height={250} alt='' />
 
-                        <div className="uk-position-bottom uk-overlay uk-overlay-primary  " >
+                        <div className="uk-position-bottom uk-overlay uk-overlay-primary " uk-toggle="target: .motor-toggle; mode: hover" >
                             <h2 >Motor</h2>
 
-                            <ul >
+                            <ul className="motor-toggle" hidden >
 
                                 {courses.map((course, index) =>
                                     course.attributes.courseCategory === 'Motor' &&
 
-                                    <Link href={`/courses/${course.attributes.slug}`} >
+                                    <Link href={`/courses/${course.attributes.slug}`} passHref >
                                         <li>
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
@@ -72,15 +74,15 @@ const Hero = ({ courses, images }) => {
                     <div className="uk-inline-clip">
                         <Image src={images.power.data.attributes.url} width={400} height={250} alt='' />
 
-                        <div className="uk-position-bottom uk-overlay uk-overlay-primary  "  >
+                        <div className="uk-position-bottom uk-overlay uk-overlay-primary  " uk-toggle="target: .power-toggle; mode: hover" >
                             <h2 >Power</h2>
 
-                            <ul  >
+                            <ul className="power-toggle" hidden >
 
                                 {courses.map((course, index) =>
                                     course.attributes.courseCategory === 'Power' &&
 
-                                    <Link href={`/courses/${course.attributes.slug}`} >
+                                    <Link href={`/courses/${course.attributes.slug}`} passHref >
                                         <li>
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
@@ -94,15 +96,15 @@ const Hero = ({ courses, images }) => {
                     <div className="uk-inline-clip">
                         <Image src={images.mile_building.data.attributes.url} width={400} height={250} alt='' />
 
-                        <div className="uk-position-bottom uk-overlay uk-overlay-primary  "  >
+                        <div className="uk-position-bottom uk-overlay uk-overlay-primary  " uk-toggle="target: .mile-toggle; mode: hover"  >
                             <h2 >Mile Building</h2>
 
-                            <ul  >
+                            <ul className="mile-toggle" hidden >
 
                                 {courses.map((course, index) =>
                                     course.attributes.courseCategory === 'Mile_Building' &&
 
-                                    <Link href={`/courses/${course.attributes.slug}`} >
+                                    <Link href={`/courses/${course.attributes.slug}`} passHref >
                                         <li>
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
@@ -117,15 +119,15 @@ const Hero = ({ courses, images }) => {
                     <div className="uk-inline-clip">
                         <Image src={images.jet_ski.data.attributes.url} width={400} height={250} alt='' />
 
-                        <div className="uk-position-bottom uk-overlay uk-overlay-primary  "  >
+                        <div className="uk-position-bottom uk-overlay uk-overlay-primary  " uk-toggle="target: .jet-toggle; mode: hover" >
                             <h2 >Jet Ski</h2>
 
-                            <ul  >
+                            <ul className="jet-toggle" hidden >
 
                                 {courses.map((course, index) =>
                                     course.attributes.courseCategory === 'Jet_Ski' &&
 
-                                    <Link href={`/courses/${course.attributes.slug}`} >
+                                    <Link href={`/courses/${course.attributes.slug}`} passHref >
                                         <li>
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
