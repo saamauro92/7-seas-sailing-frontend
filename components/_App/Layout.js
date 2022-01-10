@@ -26,6 +26,7 @@ const Layout = ({ children, data, courses }) => {
 
             {/*         {loader ? <h5> LOADING...</h5> : null} */}
             <Nav courses={courses} />
+
             {children}
 
             <GoTop scrollStepInPx="100" delayInMs="10.50" />

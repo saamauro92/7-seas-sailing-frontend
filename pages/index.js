@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { fetchAPI } from '../lib/api'
 import SEO from '../components/Seo/Seo'
+import Hero from '../components/Hero/Hero'
 
 
 
@@ -13,7 +14,7 @@ export async function getStaticProps() {
     fetchAPI("/courses", { populate: "*" }),
     fetchAPI("/homepage", {
       populate: {
-        hero: "*",
+        hero: { populate: "*" },
         seo: { populate: "*" },
       },
     }),
@@ -35,6 +36,7 @@ export async function getStaticProps() {
 export default function Home({ courses, homepage }) {
 
 
+
   return (
 
 
@@ -46,18 +48,8 @@ export default function Home({ courses, homepage }) {
         {homepage && homepage.attributes.seo && <SEO data={homepage.attributes.seo} />}
 
 
-        {/*      <Image src={courses[1].attributes.image.data.attributes.url} alt="cover" width={800} height={500} layout="responsive" priority>
+        <Hero courses={courses} images={homepage.attributes.hero} />
 
-        </Image> * */}
-
-        <div
-          id="banner"
-          className="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light "
-          data-src={courses[1].attributes.image.data.attributes.url}
-          data-srcset={courses[1].attributes.image.data.attributes.url}
-          data-sizes="(min-width: 650px) 650px, 100vw"
-          data-uk-img
-        ></div>
 
 
 

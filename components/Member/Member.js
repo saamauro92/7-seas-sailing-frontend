@@ -16,8 +16,8 @@ const Member = ({ data }) => {
                         {/*   <img src={data.attributes.image.data.attributes.url} alt="" width={600} height={400} uk-cover /> */}
 
 
-                        <Image src={data.attributes.image.data.attributes.url} width={320} height={280} alt="profile-picture" layout="intrinsic" />
 
+                        <Image src={data.attributes.image.data.attributes.url} width={320} height={280} alt="profile-picture" layout="intrinsic" />
 
                     </Link>
                 }
@@ -26,7 +26,7 @@ const Member = ({ data }) => {
                 <h3 className="uk-card-title"> {data.attributes.name}</h3>
                 <p>{data.attributes.title}</p>
             </div>
-        </div>
+        </div >
 
 
     )

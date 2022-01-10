@@ -12,39 +12,42 @@ const courses = ({ team, homepage, about }) => {
     return (
 
         <>
-            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
-            <h2>About us </h2>
+            <div className="uk-container uk-container-large ">
 
 
-            {about && <ReactMarkdown children={about.attributes.whatWeDo} />}
+                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
+                <h2>About us </h2>
 
 
-            {about && <h2>{about.attributes.rya.title}</h2>}
-
-            {about && <ReactMarkdown children={about.attributes.rya.description} />}
-
-            <h1>The Team</h1>
-            <div className="uk-container uk-flex  uk-flex-wrap">
+                {about && <ReactMarkdown children={about.attributes.whatWeDo} />}
 
 
-                {
-                    team && team.map((person, index) =>
+                {about && <h2>{about.attributes.rya.title}</h2>}
 
-                        <div key={person.id} className='uk-flex uk-flex-center uk-flex-wrap'>
+                {about && <ReactMarkdown children={about.attributes.rya.description} />}
 
-
-                            <Member data={person} />
-
-
-                        </div>
-
-                    )
-                }
+                <h1>The Team</h1>
+                <div className=" uk-flex  uk-flex-wrap">
 
 
+                    {
+                        team && team.map((person, index) =>
 
+                            <div key={person.id} className='uk-flex uk-flex-center uk-flex-wrap'>
+
+
+                                <Member data={person} />
+
+
+                            </div>
+
+                        )
+                    }
+
+
+
+                </div>
             </div>
-
 
         </>
     )

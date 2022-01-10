@@ -19,17 +19,21 @@ const MemberProfile = ({ member, homepage }) => {
 
     return (
         <>
-
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={member.attributes.title} />}
-            <ul className="uk-breadcrumb">
-                <li>
-                    <Link href={"/aboutus"}>
-                        <a href="">About us</a>
-                    </Link>
-                </li>
-                <li><a href="">{member.attributes.title}- {member.attributes.name}</a></li>
+            <div className="uk-container uk-container-large ">
 
-            </ul>
+
+                <ul className="uk-breadcrumb">
+                    <li>
+                        <Link href={"/aboutus"}>
+                            <a href="">About us</a>
+                        </Link>
+                    </li>
+                    <li><a href="">{member.attributes.title}- {member.attributes.name}</a></li>
+
+                </ul>
+            </div>
+
 
 
             <div
@@ -41,8 +45,9 @@ const MemberProfile = ({ member, homepage }) => {
             >
                 <h1>{member.attributes.name}</h1>
             </div>
-            <div className="uk-section">
-                <div className="uk-container uk-container-small">
+            <div className="uk-container uk-container-large ">
+                <div className="uk-section">
+
                     {/*                  <ReactMarkdown
                         source={member.attributes.content}
                         escapeHtml={false}
@@ -57,6 +62,7 @@ const MemberProfile = ({ member, homepage }) => {
 
                             </p>
                         </div>
+
                     </div>
                 </div>
             </div>

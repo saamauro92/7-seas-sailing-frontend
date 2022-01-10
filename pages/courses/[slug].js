@@ -21,21 +21,20 @@ const Article = ({ course, homepage }) => {
 
     return (
         <>
-
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={course.attributes.title} />}
-            <ul className="uk-breadcrumb uk-padding">
-                <li>
-                    <Link href={"/courses"}>
-                        <a href="">Courses</a>
-                    </Link>
-                </li>
-                <li><a href="">{course.attributes.courseCategory}</a></li>
-                <li><a href="">{course.attributes.title}</a></li>
+            <div className="uk-container uk-container-large ">
 
-            </ul>
+                <ul className="uk-breadcrumb ">
+                    <li>
+                        <Link href={"/courses"}>
+                            <a href="">Courses</a>
+                        </Link>
+                    </li>
+                    <li><a href="">{course.attributes.courseCategory}</a></li>
+                    <li><a href="">{course.attributes.title}</a></li>
 
-
-
+                </ul>
+            </div>
             <div
                 id="banner"
                 className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
@@ -45,19 +44,25 @@ const Article = ({ course, homepage }) => {
             >
                 <h1>{course.attributes.title}</h1>
             </div>
-            <div className="uk-section">
-                <div className="uk-container uk-container-small">
-                    {/*                  <ReactMarkdown
+            <div className="uk-container uk-container-lage ">
+
+
+
+
+                <div className="uk-section">
+                    <div className="uk-container uk-container-small">
+                        {/*                  <ReactMarkdown
                         source={article.attributes.content}
                         escapeHtml={false}
                     /> */}
 
-                    <hr className="uk-divider-small" />
-                    <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
-                        <div className="uk-width-expand">
-                            <p className="uk-text-meta uk-margin-remove-top">
+                        <hr className="uk-divider-small" />
+                        <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
+                            <div className="uk-width-expand">
+                                <p className="uk-text-meta uk-margin-remove-top">
 
-                            </p>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

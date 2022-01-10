@@ -8,10 +8,10 @@ const News = ({ homepage }) => {
     return (
 
 
-        <>
+        <>          <div className="uk-container uk-container-large ">
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
             <h2>News  </h2>
-
+        </div>
 
 
         </>

@@ -8,8 +8,11 @@ const ActivitiesAndServices = ({ homepage }) => {
 
 
         <>
-            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Activities and Services" />}
-            <h2>Activities {"&"} Services</h2>
+            <div className="uk-container uk-container-large ">
+                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Activities and Services" />}
+                <h2>Activities {"&"} Services</h2>
+
+            </div>
 
 
 
