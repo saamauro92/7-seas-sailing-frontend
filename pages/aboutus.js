@@ -10,9 +10,10 @@ import Link from 'next/link'
 const courses = ({ team, about, homepage }) => {
     const imgBanner = homepage.attributes.hero.background.data.attributes.url;
 
+
     return (
 
-        <>
+        <div className='uk-background-muted'>
             <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                 data-src={imgBanner}
                 data-srcset={imgBanner}
@@ -33,7 +34,7 @@ const courses = ({ team, about, homepage }) => {
 
 
             </div>
-            <div className="uk-container uk-container-large uk-padding ">
+            <div className="uk-container uk-container-large uk-padding  ">
 
 
                 {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
@@ -51,30 +52,82 @@ const courses = ({ team, about, homepage }) => {
 
                 {about && <ReactMarkdown children={about.attributes.rya.description} />}
 
-                <h1>The Team</h1>
-                <div className=" uk-flex  uk-flex-wrap">
+            </div>
+
+            <div className="uk-container uk-container-medium  uk-flex  uk-flex-wrap uk-padding-remove">
 
 
-                    {
-                        team && team.map((person, index) =>
-
-                            <div key={person.id} className='uk-flex uk-flex-center uk-flex-wrap'>
+                <h1>Meet Our Team</h1>
 
 
-                                <Member data={person} />
+
+                <div className="uk-slider-container-offset uk-padding uk-background-muted" uk-slider="finite: true">
+
+                    <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1">
+                        <ul className="uk-slider-items uk-child-width-1-4@s uk-grid">
+                            {
+                                team && team.map((person) =>
+
+                                    person.attributes.category === 'Team' ?
 
 
-                            </div>
+                                        <Member data={person} />
 
-                        )
-                    }
 
+
+                                        : null
+
+                                )
+                            }
+
+                        </ul>
+                        <a className="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                        <a className="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                    </div>
+                    <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+                </div>
+
+
+
+                <div className="uk-container uk-container-medium  ">
+
+
+
+                    <div className="uk-slider-container-offset uk-padding uk-background-muted" uk-slider="finite: true">
+                        <h1>Meet Our Club</h1>
+
+                        <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1">
+                            <ul className="uk-slider-items uk-child-width-1-3@s uk-grid">
+                                {
+                                    team && team.map((person) =>
+
+                                        person.attributes.category === 'Club' ?
+
+
+
+
+                                            <Member data={person} />
+
+
+
+                                            : null
+
+                                    )
+                                }
+
+                            </ul>
+                            <a className="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                            <a className="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                        </div>
+                        <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+                    </div>
 
 
                 </div>
             </div>
 
-        </>
+
+        </div>
     )
 }
 
