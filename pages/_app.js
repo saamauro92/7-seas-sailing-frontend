@@ -20,6 +20,12 @@ MyApp.getInitialProps = async (ctx) => {
 
   const contactRes = await fetchAPI("/contact", { populate: "*" });
   const coursesRes = await fetchAPI("/courses", { populate: "*" });
+  const homepageRes = await fetchAPI("/homepage", {
+    populate: {
+      hero: "*",
+      seo: { populate: "*" },
+    },
+  })
 
 
   // Pass the data to our page via props
@@ -28,6 +34,7 @@ MyApp.getInitialProps = async (ctx) => {
     pageProps: {
       contactDetails: contactRes.data,
       courses: coursesRes.data,
+      homepage: homepageRes.data,
     },
   }
 }

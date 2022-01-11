@@ -24,23 +24,3 @@ const ActivitiesAndServices = ({ homepage }) => {
 export default ActivitiesAndServices
 
 
-export async function getStaticProps() {
-
-
-
-    const homepageRes = await fetchAPI("/homepage", {
-        populate: {
-            hero: "*",
-            seo: { populate: "*" },
-        },
-    })
-
-    return {
-        props: {
-
-
-            homepage: homepageRes.data,
-        },
-        revalidate: 1,
-    }
-}

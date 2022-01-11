@@ -6,7 +6,7 @@ import SEO from '../components/Seo/Seo'
 import ReactMarkdown from "react-markdown"
 
 
-const courses = ({ team, homepage, about }) => {
+const courses = ({ team, about, homepage }) => {
 
 
     return (
@@ -62,19 +62,13 @@ export async function getStaticProps() {
 
     const aboutRes = await fetchAPI("/about-section", { populate: "*" });
 
-    const homepageRes = await fetchAPI("/homepage", {
-        populate: {
-            hero: "*",
-            seo: { populate: "*" },
-        },
-    })
 
     return {
         props: {
 
             team: teamRes.data,
             about: aboutRes.data,
-            homepage: homepageRes.data,
+
         },
         revalidate: 1,
     }

@@ -1,17 +1,40 @@
+/* eslint-disable react/no-children-prop */
 import React from 'react'
 import { fetchAPI } from '../lib/api'
 import SEO from '../components/Seo/Seo'
+import Link from 'next/link'
 
+const News = ({ homepage, news }) => {
 
-const News = ({ homepage }) => {
 
     return (
+        <>
+            <div className="uk-container uk-container-large uk-height-large">
+                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
+                <h2>News  </h2>
+
+                {news && news.length > 0 && news.map((item, index) =>
+
+                    <div key={index}>
 
 
-        <>          <div className="uk-container uk-container-large ">
-            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
-            <h2>News  </h2>
-        </div>
+                        <Link href={`/news/${item.attributes.slug}`}>
+                            <a href="">
+
+                                {item.attributes.title}
+                            </a>
+
+
+                        </Link>
+
+                    </div>
+
+                )}
+
+
+            </div>
+
+
 
 
         </>
@@ -25,17 +48,14 @@ export async function getStaticProps() {
 
 
 
-    const homepageRes = await fetchAPI("/homepage", {
-        populate: {
-            hero: "*",
-            seo: { populate: "*" },
-        },
+    const newsData = await fetchAPI("/news", {
+        populate: "*",
     })
 
     return {
         props: {
 
-            homepage: homepageRes.data,
+            news: newsData.data,
         },
         revalidate: 1,
     }

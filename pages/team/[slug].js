@@ -93,17 +93,9 @@ export async function getStaticProps({ params }) {
     })
 
 
-    const homepageRes = await fetchAPI("/homepage", {
-        populate: {
-            hero: "*",
-            seo: { populate: "*" },
-        },
-    })
-
     return {
         props: {
             member: teamsRes.data[0],
-            homepage: homepageRes.data,
         },
         revalidate: 1,
     }

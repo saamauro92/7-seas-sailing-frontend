@@ -92,18 +92,10 @@ export async function getStaticProps({ params }) {
         populate: "*",
     })
 
-
-    const homepageRes = await fetchAPI("/homepage", {
-        populate: {
-            hero: "*",
-            seo: { populate: "*" },
-        },
-    })
-
     return {
         props: {
             course: coursesRes.data[0],
-            homepage: homepageRes.data,
+
         },
         revalidate: 1,
     }
