@@ -8,7 +8,7 @@ const courses = ({ courses, homepage }) => {
     const imgBanner = homepage.attributes.hero.background.data.attributes.url;
     return (
 
-        <>
+        <div className='uk-background-muted'>
             <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                 data-src={imgBanner}
                 data-srcset={imgBanner}
@@ -29,24 +29,98 @@ const courses = ({ courses, homepage }) => {
 
 
             </div>
-            <div className='uk-container uk-container-large uk-padding'>
+            <div className='uk-container uk-container-large uk-padding '>
+
+                <h2 className='uk-background-primary uk-padding'>RYA SAIL COURSES</h2>
+                <div className="uk-flex uk-flex-around uk-flex-wrap">
 
 
-                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
+                    {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
 
 
-                {courses && courses.length > 1 && courses.map((course, index) =>
+                    {courses && courses.length > 1 && courses.map((course) =>
 
-                    <div key={index}>
-
-                        <Card data={course} />
-                    </div>
-
-                )}
+                        course.attributes.courseCategory === 'Sail' ?
 
 
+                            < Card data={course} />
+
+
+                            : null
+
+
+                    )}
+                </div>
+
+                <h2 className='uk-background-primary uk-padding'>RYA MOTOR COURSES</h2>
+                <div className="uk-flex uk-flex-around uk-flex-wrap">
+                    {courses && courses.length > 1 && courses.map((course) =>
+
+                        course.attributes.courseCategory === 'Motor' ?
+
+
+
+                            < Card data={course} />
+
+                            : null
+
+
+                    )}
+                </div>
+
+                <h2 className='uk-background-primary uk-padding'>RYA POWER COURSES</h2>
+                <div className="uk-flex uk-flex-around uk-flex-wrap">
+
+                    {courses && courses.length > 1 && courses.map((course) =>
+
+                        course.attributes.courseCategory === 'Power' ?
+
+
+
+                            < Card data={course} />
+
+                            : null
+
+
+                    )}
+
+                </div>
+
+                <h2 className='uk-background-primary uk-padding'>RYA MILE BUILDING COURSES</h2>
+                <div className="uk-flex uk-flex-around uk-flex-wrap">
+
+                    {courses && courses.length > 1 && courses.map((course) =>
+
+                        course.attributes.courseCategory === 'Mile_Building' ?
+
+
+
+                            < Card data={course} />
+
+                            : null
+
+
+                    )}
+                </div>
+
+                <h2 className='uk-background-primary uk-padding'>RYA JET SKI COURSES</h2>
+                <div className="uk-flex uk-flex-around uk-flex-wrap">
+
+                    {courses && courses.length > 1 && courses.map((course) =>
+
+                        course.attributes.courseCategory === 'Jet_Ski' ?
+
+
+
+                            < Card data={course} />
+
+                            : null
+
+
+                    )}
+                </div>
             </div>
-        </>
+        </div>
     )
 }
 

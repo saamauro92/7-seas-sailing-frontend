@@ -94,7 +94,8 @@ const Hero = ({ courses, images }) => {
 
                 <div className=" uk-container uk-container-xsmall uk-flex uk-flex-column uk-flex-middle  ">
                     <h2 className="uk-text-bolder action-text uk-text-center ">
-                        YOUR WAY AT SEA STARTS HERE!
+
+                        Your way at sea starts here!
                     </h2>
 
                     <button className="uk-button action-button uk-text-bolder uk-button-large uk-width-small uk-margin-bottom">JOIN US</button>

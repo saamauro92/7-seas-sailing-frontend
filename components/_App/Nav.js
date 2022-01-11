@@ -62,7 +62,7 @@ function Nav({ courses }) {
 
 
                             <Link href="/courses" activeClassName="active">
-                                <a className="nav-link uk-dark ">Courses</a>
+                                <a className="nav-link uk-dark  ">Courses</a>
 
                             </Link>
                             <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2 " style={{ "left": "0px", "top": "80px" }}>
@@ -240,7 +240,7 @@ function Nav({ courses }) {
                         <li>
                             <Link href="/activities-and-services" activeClassName="active">
 
-                                <a className="nav-link"> Activities {"&"} Services</a>
+                                <a className="nav-link "> Activities {"&"} Services</a>
                             </Link>
                             <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left" style={{ "left": "0px", "top": "80px" }}>
                                 <ul className="uk-nav uk-navbar-dropdown-nav">

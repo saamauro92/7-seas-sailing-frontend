@@ -7,30 +7,29 @@ const Card = ({ data }) => {
 
 
     return (
-        <Link href={`/courses/${data.attributes.slug}`}>
-            <a className="uk-link-reset">
-                <div className="uk-card uk-card-muted">
-                    <div className="uk-card-media-top">
-                        {/*    <NextImage image={data.attributes.image.data.attributes.url} /> */}
-                        {data.attributes.image.data.attributes.url &&
+        <div className="uk-card ">
+            <div className="uk-card-media-top">
+                {data.attributes.image.data.attributes.url &&
 
-                            <Image src={data.attributes.image.data.attributes.url} width={580} height={380} alt="course-picture" layout="intrinsic" />
-                        }
+                    <Image src={data.attributes.image.data.attributes.url} width={280} height={180} alt="course-picture" layout="intrinsic" />
+                }
 
-                        {/*    <Image src={`${data.attributes.image.data.attributes.url}`} alt="img" width={500} height={500} /> */}
+            </div>
 
-                    </div>
-                    <div className="uk-card-body">
-                        <p id="category" className="uk-text-uppercase">
-                            {/*            {data.attributes.category.name} */}
-                        </p>
-                        <p id="title" className="uk-text-large">
-                            {data.attributes.title}
-                        </p>
-                    </div>
-                </div>
-            </a>
-        </Link>
+            <div className="uk-card-header ">
+                <p className=" uk-text-center"> {data.attributes.title} </p>
+            </div>
+            <div className="uk-card-fotter uk-text-center">
+                <Link href={`/courses/${data.attributes.slug}`} passHref>
+                    <button className="uk-button uk-button-danger ">SEE MORE</button>
+                </Link>
+
+            </div>
+
+
+            <hr />
+
+        </div>
     )
 }
 
