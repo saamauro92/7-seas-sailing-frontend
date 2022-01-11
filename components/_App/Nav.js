@@ -315,7 +315,7 @@ function Nav({ courses }) {
     ) : (
 
 
-        <nav className="uk-navbar-container uk-margin uk-navbar uk-margin-remove uk-navbar-transparent" uk-navbar="">
+        <nav className="uk-navbar-container uk-margin uk-navbar uk-margin-remove uk-navbar-transparent uk-padding-small" uk-navbar="">
             <div className="uk-navbar-left">
 
 
@@ -349,7 +349,7 @@ function Nav({ courses }) {
                         </li>
 
 
-                        <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+                        <div id="offcanvas-nav-primary " uk-offcanvas="overlay: true">
 
                             <div className="uk-offcanvas-bar ">
                                 <button className="uk-offcanvas-close uk-close-large uk-icon uk-close" type="button" uk-close="">
