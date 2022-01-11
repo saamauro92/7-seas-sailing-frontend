@@ -16,7 +16,7 @@ const FooterStyleThree = (data) => {
             <div className="uk-container uk-container-large uk-padding-large ">
 
 
-                <div className="uk-child-width-1-4@s uk-grid-small uk-flex  uk-flex-wrap uk-text-center " uk-grid>
+                <div className="uk-child-width-1-4@s uk-grid-small uk-flex  uk-flex-wrap uk-text-center " >
 
                     <div className="uk-card uk-card-small ">
 
@@ -53,7 +53,7 @@ const FooterStyleThree = (data) => {
                 </div>
                 <hr />
 
-                <div className="uk-child-width-1-4@s uk-grid-small uk-flex  uk-flex-wrap u" uk-grid>
+                <div className="uk-child-width-1-4@s uk-grid-small uk-flex  uk-flex-wrap u" >
 
                     <div className="uk-card uk-card-secondary uk-card-small ">
 
