@@ -94,7 +94,7 @@ const Hero = ({ courses, images }) => {
 
 
 
-            <div className=" uk-container uk-container-xsmall uk-flex uk-flex-column uk-flex-middle   ">
+            <div className=" uk-container uk-container-xsmall uk-flex uk-flex-column uk-flex-middle  uk-position-relative ">
                 <h2 className="uk-text-bolder action-text uk-text-center ">
                     YOUR WAY AT SEA STARTS HERE!
                 </h2>
