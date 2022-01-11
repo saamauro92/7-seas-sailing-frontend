@@ -37,7 +37,7 @@ const Hero = ({ courses, images }) => {
                                     course.attributes.courseCategory === 'Sail' &&
 
                                     <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
-                                        <li>
+                                        <li className="uk-margin">
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
                                     </Link>
@@ -59,7 +59,7 @@ const Hero = ({ courses, images }) => {
                                     course.attributes.courseCategory === 'Motor' &&
 
                                     <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
-                                        <li>
+                                        <li className="uk-margin">
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
                                     </Link>
@@ -80,7 +80,7 @@ const Hero = ({ courses, images }) => {
                                     course.attributes.courseCategory === 'Power' &&
 
                                     <Link href={`/courses/${course.attributes.slug}`} key={i} passHref >
-                                        <li>
+                                        <li className="uk-margin">
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
                                     </Link>
@@ -117,7 +117,7 @@ const Hero = ({ courses, images }) => {
                                     course.attributes.courseCategory === 'Mile_Building' &&
 
                                     <Link href={`/courses/${course.attributes.slug}`} passHref key={i} >
-                                        <li>
+                                        <li className="uk-margin">
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
                                     </Link>
@@ -140,7 +140,7 @@ const Hero = ({ courses, images }) => {
                                     course.attributes.courseCategory === 'Jet_Ski' &&
 
                                     <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
-                                        <li>
+                                        <li className="uk-margin">
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
                                     </Link>
