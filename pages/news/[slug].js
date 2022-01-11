@@ -21,34 +21,41 @@ const newsSection = ({ item, homepage }) => {
     return (
         <>
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={item.attributes.title} />}
-            <div className="uk-container uk-container-large ">
-
-                <div className="uk-container uk-container-large ">
-
-
-                    <ul className="uk-breadcrumb">
-                        <li>
-                            <Link href={"/news"}>
-                                <a href="">News</a>
-                            </Link>
-                        </li>
-                        <li><a href="">{item.attributes.title}</a></li>
-
-                    </ul>
-                </div>
-
-            </div>
 
             <div
                 id="banner"
-                className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
+                className=" uk-background-cover uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                 data-src={imageUrl}
                 data-srcset={imageUrl}
                 data-uk-img
             >
-                <h2> {item.attributes.title}</h2>
+
+
+                <p className="banner-titles uk-heading-medium uk-text-bolder uk-text-center "> {item.attributes.title} </p>
+
+                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder">
+                    <li>
+                        <Link href={"/"}>
+                            <a href="">Home</a>
+                        </Link>
+                    </li>
+                    <li >
+
+
+                        <Link href={"/news"}>
+                            <a href="">News</a>
+                        </Link>
+                    </li>
+                    <li>
+                        <span>{item.attributes.title}</span></li>
+
+
+                </ul>
+
+
+
             </div>
-            <div className="uk-container uk-container-large ">
+            <div className="uk-container uk-container-large uk-padding">
                 <div className="uk-section">
 
 

@@ -82,3 +82,22 @@ a {
 .action-text {
   color: #002a74;
 }
+
+/* BANNER */
+.banner-titles {
+  color: #f2f2f2;
+}
+
+.uk-breadcrumb > :last-child > a:not([href]),
+.uk-breadcrumb > :last-child > span,
+.uk-breadcrumb > * > * {
+  color: #f2f2f2;
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.uk-breadcrumb > :nth-child(n + 2):not(.uk-first-column)::before {
+  color: #f2f2f2;
+  font-weight: 300;
+  font-size: 24px;
+}

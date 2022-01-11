@@ -22,7 +22,7 @@ MyApp.getInitialProps = async (ctx) => {
   const coursesRes = await fetchAPI("/courses", { populate: "*" });
   const homepageRes = await fetchAPI("/homepage", {
     populate: {
-      hero: "*",
+      hero: { populate: "*" },
       seo: { populate: "*" },
     },
   })

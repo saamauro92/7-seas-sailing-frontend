@@ -20,50 +20,51 @@ const MemberProfile = ({ member, homepage }) => {
     return (
         <>
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={member.attributes.title} />}
-            <div className="uk-container uk-container-large ">
-
-
-                <ul className="uk-breadcrumb">
-                    <li>
-                        <Link href={"/aboutus"}>
-                            <a href="">About us</a>
-                        </Link>
-                    </li>
-                    <li><a href="">{member.attributes.title}- {member.attributes.name}</a></li>
-
-                </ul>
-            </div>
-
 
 
             <div
                 id="banner"
-                className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
+                className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                 data-src={imageUrl}
                 data-srcset={imageUrl}
                 data-uk-img
             >
-                <h1>{member.attributes.name}</h1>
+
+
+                <p className="banner-titles uk-heading-medium uk-text-bolder uk-text-center "> {member.attributes.name} </p>
+
+                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder">
+                    <li>
+                        <Link href={"/"}>
+                            <a href="">Home</a>
+                        </Link>
+                    </li>
+                    <li >
+
+
+                        <Link href={"/aboutus"}>
+                            <a href=""> About</a>
+                        </Link>
+                    </li>
+                    <li>
+                        <span>{member.attributes.name}</span></li>
+
+
+                </ul>
+
+
+
             </div>
-            <div className="uk-container uk-container-large ">
+
+            <div className="uk-container uk-container-large  uk-padding">
                 <div className="uk-section">
 
-                    {/*                  <ReactMarkdown
-                        source={member.attributes.content}
-                        escapeHtml={false}
-                    /> */}
+
                     <h2> {member.attributes.title}</h2>
                     <p>  {member.attributes.description} </p>
 
                     <hr className="uk-divider-small" />
-                    <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
-                        <div className="uk-width-expand">
-                            <p className="uk-text-meta uk-margin-remove-top">
 
-                            </p>
-                        </div>
-
-                    </div>
                 </div>
             </div>
         </>
