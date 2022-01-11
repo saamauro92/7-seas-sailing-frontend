@@ -50,12 +50,7 @@ const newsSection = ({ item, homepage }) => {
             </div>
             <div className="uk-container uk-container-large ">
                 <div className="uk-section">
-                    <div className="uk-width-expand">
-                        <p className="uk-text-meta ">
-                            Posted {" "}
-                            <Moment format="DD/MM/YYYY">{item.attributes.date}</Moment>
-                        </p>
-                    </div>
+
 
                     <p className='uk-text-bolder'>
                         <ReactMarkdown
