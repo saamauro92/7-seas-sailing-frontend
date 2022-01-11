@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 import Link from 'next/link'
 import SEO from '../../components/Seo/Seo'
 import ReactMarkdown from "react-markdown"
