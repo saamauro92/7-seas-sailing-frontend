@@ -39,7 +39,6 @@ export default function Home({ courses, homepage }) {
 
   return (
 
-
     <main>
 
       <div className="test-height uk-cover-container uk-light">
@@ -50,19 +49,7 @@ export default function Home({ courses, homepage }) {
 
 
         <Hero courses={courses} images={homepage.attributes.hero} />
-
-
-
       </div>
-
-
-
-
-
-
-
-
-
 
 
 

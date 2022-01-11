@@ -16,7 +16,7 @@ const ActivitiesAndServices = ({ homepage }) => {
             >
                 <p className="banner-titles uk-heading-medium uk-text-bolder uk-text-center ">Activities {"&"} Services </p>
 
-                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder">
+                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder uk-text-center">
                     <li >
 
                         <Link href={"/"}>

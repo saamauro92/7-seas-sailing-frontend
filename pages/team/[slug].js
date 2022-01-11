@@ -19,7 +19,7 @@ const MemberProfile = ({ member, homepage }) => {
 
     return (
         <>
-            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={member.attributes.title} />}
+            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={member.attributes.name} />}
 
 
             <div
@@ -31,9 +31,9 @@ const MemberProfile = ({ member, homepage }) => {
             >
 
 
-                <p className="banner-titles uk-heading-medium uk-text-bolder uk-text-center "> {member.attributes.name} </p>
+                <p className="banner-titles uk-heading-medium uk-text-bolder uk-text-center  "> {member.attributes.name} </p>
 
-                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder">
+                <ul className="uk-breadcrumb banner-titles uk-heading-medium uk-text-bolder uk-text-center  ">
                     <li>
                         <Link href={"/"}>
                             <a href="">Home</a>
