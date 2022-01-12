@@ -19,11 +19,11 @@ const Hero = ({ courses, images }) => {
                 data-uk-img
             >
 
-                <div className="uk-container uk-container-large  uk-flex uk-flex-wrap uk-flex-around uk-margin  " uk-scrollspy="cls: uk-animation-fade; target: .hero-cards; delay: 400; repeat: true">
+                <div className="uk-container uk-container-large  uk-flex uk-flex-wrap uk-flex-around uk-margin  " >
 
 
 
-                    <div className="uk-inline-clip hero-cards uk-margin " >
+                    <div className="uk-inline-clip hero-cards uk-margin  uk-animation-slide-bottom" >
                         <Image src={images.sail.data.attributes.url} width={400} height={250} alt='' />
 
                         <div className="uk-position-bottom uk-overlay uk-overlay-primary  " uk-toggle="target: .sail-toggle; mode: hover">
@@ -46,7 +46,7 @@ const Hero = ({ courses, images }) => {
 
                         </div>
                     </div>
-                    <div className="uk-inline-clip hero-cards uk-margin ">
+                    <div className="uk-inline-clip hero-cards uk-margin  uk-animation-slide-bottom">
                         <Image src={images.motor.data.attributes.url} width={400} height={250} alt='' />
 
                         <div className="uk-position-bottom uk-overlay uk-overlay-primary " uk-toggle="target: .motor-toggle; mode: hover" >
@@ -67,7 +67,7 @@ const Hero = ({ courses, images }) => {
                             </ul>
                         </div>
                     </div>
-                    <div className="uk-inline-clip hero-cards uk-margin">
+                    <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom">
                         <Image src={images.power.data.attributes.url} width={400} height={250} alt='' />
 
                         <div className="uk-position-bottom uk-overlay uk-overlay-primary  " uk-toggle="target: .power-toggle; mode: hover" >
@@ -103,9 +103,9 @@ const Hero = ({ courses, images }) => {
 
 
 
-                <div className="uk-container uk-container-large  uk-flex uk-flex-wrap uk-flex-around " uk-scrollspy="cls: uk-animation-fade; target: .hero-cards; delay: 400; repeat: true">
+                <div className="uk-container uk-container-large  uk-flex uk-flex-wrap uk-flex-around  " >
 
-                    <div className="uk-inline-clip hero-cards uk-margin">
+                    <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom">
                         <Image src={images.mile_building.data.attributes.url} width={400} height={250} alt='' />
 
                         <div className="uk-position-bottom uk-overlay uk-overlay-primary  " uk-toggle="target: .mile-toggle; mode: hover"  >
@@ -128,7 +128,7 @@ const Hero = ({ courses, images }) => {
                     </div>
 
 
-                    <div className="uk-inline-clip hero-cards uk-margin">
+                    <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom">
                         <Image src={images.jet_ski.data.attributes.url} width={400} height={250} alt='' />
 
                         <div className="uk-position-bottom uk-overlay uk-overlay-primary  " uk-toggle="target: .jet-toggle; mode: hover" >

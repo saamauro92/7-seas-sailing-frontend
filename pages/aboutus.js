@@ -13,7 +13,7 @@ const courses = ({ team, about, homepage }) => {
 
     return (
 
-        <div className='uk-background-muted'>
+        <div className='uk-background-muted '>
             <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                 data-src={imgBanner}
                 data-srcset={imgBanner}
@@ -34,7 +34,7 @@ const courses = ({ team, about, homepage }) => {
 
 
             </div>
-            <div className="uk-container uk-container-large uk-padding  ">
+            <div className="uk-container uk-container-large uk-padding uk-animation-slide-bottom ">
 
 
                 {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
@@ -60,8 +60,8 @@ const courses = ({ team, about, homepage }) => {
 
 
 
-                <div className="uk-container uk-container-large uk-flex uk-flex-center ">
-                    <div className="uk-container uk-container-small uk-slider-container-offset  uk-background-muted" uk-slider="finite: true" uk-slideshow>
+                <div className="uk-container uk-container-large uk-flex uk-flex-center uk-padding-large">
+                    <div className="uk-container uk-container-small uk-slider-container-offset  uk-background-muted" uk-slider="finite: true" uk-slideshow uk-scrollspy="cls: uk-animation-slide-right; repeat: false">
                         <h1>Meet Our Team</h1>
 
                         <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1">
@@ -94,10 +94,10 @@ const courses = ({ team, about, homepage }) => {
 
 
 
-                    <div className="uk-container uk-container-small uk-slider-container-offset uk-padding uk-background-muted" uk-slider="finite: true" uk-slideshow>
+                    <div className="uk-container uk-container-small uk-slider-container-offset uk-padding uk-background-muted " uk-slider="finite: true" uk-slideshow uk-scrollspy="cls: uk-animation-slide-left; repeat: false">
                         <h1>Meet Our Club</h1>
 
-                        <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1">
+                        <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" >
                             <ul className="uk-slider-items uk-child-width-1-3@s uk-grid">
                                 {
                                     team && team.map((person) =>

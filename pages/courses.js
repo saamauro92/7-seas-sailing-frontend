@@ -29,7 +29,7 @@ const courses = ({ courses, homepage }) => {
 
 
             </div>
-            <div className='uk-container uk-container-large uk-padding '>
+            <div className='uk-container uk-container-large uk-padding uk-animation-slide-bottom'>
 
                 <h2 className='uk-background-primary uk-padding'>RYA SAIL COURSES</h2>
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
