@@ -54,17 +54,17 @@ const courses = ({ team, about, homepage }) => {
 
             </div>
 
-            <div className="uk-container uk-container-medium  uk-flex  uk-flex-wrap uk-padding-remove">
+            <div className="uk-container uk-container-large  ">
 
 
                 <h1>Meet Our Team</h1>
 
 
 
-                <div className="uk-slider-container-offset uk-padding uk-background-muted" uk-slider="finite: true">
+                <div className="uk-slider-container-offset  uk-background-muted" uk-slider="finite: true" uk-slideshow>
 
                     <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1">
-                        <ul className="uk-slider-items uk-child-width-1-4@s uk-grid">
+                        <ul className="uk-slider-items uk-child-width-1-3@s uk-grid">
                             {
                                 team && team.map((person) =>
 
@@ -89,11 +89,11 @@ const courses = ({ team, about, homepage }) => {
 
 
 
-                <div className="uk-container uk-container-medium  ">
+                <div className="uk-container uk-container-large  ">
 
 
 
-                    <div className="uk-slider-container-offset uk-padding uk-background-muted" uk-slider="finite: true">
+                    <div className="uk-slider-container-offset uk-padding uk-background-muted" uk-slider="finite: true" uk-slideshow>
                         <h1>Meet Our Club</h1>
 
                         <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1">
@@ -118,6 +118,8 @@ const courses = ({ team, about, homepage }) => {
                             </ul>
                             <a className="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                             <a className="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+
                         </div>
                         <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
                     </div>

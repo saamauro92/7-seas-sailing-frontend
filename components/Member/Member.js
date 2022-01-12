@@ -16,7 +16,15 @@ const Member = ({ data }) => {
 
                         <Link href={`/team/${data.attributes.slug}`} passHref>
 
-                            <Image src={data.attributes.image.data.attributes.url} width={340} height={280} alt="profile-picture" layout="intrinsic" />
+
+                            <div className=" uk-background-cover  uk-background-center-center uk-height-medium  "
+                                data-src={data.attributes.image.data.attributes.url}
+                                data-srcset={data.attributes.image.data.attributes.url}
+                                data-uk-img
+                            >
+                            </div>
+
+
 
                         </Link>
                     </div>
