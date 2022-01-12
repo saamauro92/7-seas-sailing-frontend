@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const News = ({ homepage, news }) => {
 
-    const imgBanner = homepage.attributes.hero.background.data.attributes.url;
+    const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
     return (
         <>
             <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"

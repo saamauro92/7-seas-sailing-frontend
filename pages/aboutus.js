@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 
 const courses = ({ team, about, homepage }) => {
-    const imgBanner = homepage.attributes.hero.background.data.attributes.url;
+    const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
 
 
     return (

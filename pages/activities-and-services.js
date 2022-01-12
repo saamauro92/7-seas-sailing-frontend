@@ -4,7 +4,7 @@ import SEO from '../components/Seo/Seo'
 import Link from 'next/link';
 
 const ActivitiesAndServices = ({ homepage }) => {
-    const imgBanner = homepage.attributes.hero.background.data.attributes.url;
+    const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
     return (
 
 
