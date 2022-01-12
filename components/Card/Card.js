@@ -11,7 +11,8 @@ const Card = ({ data }) => {
             <div className="uk-card-media-top">
                 {data.attributes.image.data.attributes.url &&
 
-                    <Image src={data.attributes.image.data.attributes.url} width={280} height={180} alt="course-picture" layout="intrinsic" />
+                    /*             <Image src={data.attributes.image.data.attributes.url} width={280} height={180} alt="course-picture" layout="intrinsic" /> */
+                    <img src={data.attributes.image.data.attributes.url} width="300" height="250" alt="course_card" uk-img />
                 }
 
             </div>
