@@ -30,7 +30,7 @@ const MemberProfile = ({ member, homepage }) => {
                 data-srcset={imageUrl}
                 data-uk-img
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
-                uk-parallax="bgy: -200"
+                uk-parallax="bgy: -100"
             >
 
 

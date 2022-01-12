@@ -19,7 +19,7 @@ const courses = ({ team, about, homepage }) => {
                 data-srcset={imgBanner}
                 data-uk-img
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
-                uk-parallax="bgy: -200"
+                uk-parallax="bgy: -100"
             >
                 <h2 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove" uk-toggle="cls: uk-heading-small;  mode: media; media: @s" > About us   </h2>
 

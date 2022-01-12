@@ -28,7 +28,7 @@ const newsSection = ({ item, homepage }) => {
                 data-src={imageUrl}
                 data-srcset={imageUrl}
                 data-uk-img
-                uk-parallax="bgy: -200"
+                uk-parallax="bgy: -100"
             >
 
 
