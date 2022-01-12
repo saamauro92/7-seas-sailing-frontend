@@ -32,9 +32,9 @@ const MemberProfile = ({ member, homepage }) => {
             >
 
 
-                <p className="banner-titles uk-heading-medium uk-text-bolder uk-text-center  "> {member.attributes.name} </p>
 
-                <ul className="uk-breadcrumb banner-titles uk-heading-medium uk-text-bolder uk-text-center  ">
+                <h2 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove" uk-toggle="cls: uk-heading-small;  mode: media; media: @s">  {member.attributes.name}   </h2>
+                <ul className="uk-breadcrumb banner-titles uk-heading-medium uk-text-bolder uk-text-center  uk-margin-remove uk-padding-small">
                     <li>
                         <Link href={"/"}>
                             <a href="">Home</a>

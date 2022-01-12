@@ -15,12 +15,11 @@ const courses = ({ courses, homepage }) => {
                 data-uk-img
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
             >
-                <h3
-                    className="banner-titles  uk-text-bolder  "
-                    uk-toggle="cls: uk-heading-small;  mode: media; media: @s"
-                >Our Courses</h3>
 
-                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder">
+
+                <h3 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove " uk-toggle="cls: uk-heading-small;  mode: media; media: @s"  >Our Courses</h3>
+
+                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
                     <li >
 
                         <Link href={"/"}>

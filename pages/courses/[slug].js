@@ -25,9 +25,13 @@ const Article = ({ course, homepage }) => {
             >
 
 
-                <p className="banner-titles uk-heading-medium uk-text-bolder uk-text-center "> {course.attributes.title} </p>
 
-                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder">
+                <h2
+                    className="banner-titles  uk-text-bolder  uk-margin-remove uk-padding-remove "
+                    uk-toggle="cls: uk-heading-small;  mode: media; media: @s"
+                >  {course.attributes.title}   </h2>
+
+                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder  uk-margin-remove uk-padding-small">
                     <li>
                         <Link href={"/"}>
                             <a href="">Home</a>
