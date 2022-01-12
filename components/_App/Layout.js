@@ -3,7 +3,7 @@ import Head from "next/head"
 import GoTop from './GoTop';
 import FooterStyleThree from './Footer';
 import Nav from './Nav';
-/* import Preloader from './Preloader' */
+
 
 const Layout = ({ children, data, courses }) => {
 

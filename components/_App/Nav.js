@@ -48,8 +48,12 @@ function Nav({ courses }) {
                         </a>
                     </Link>
                     <div className="uk-visible@s">
+                        <Link href="/rya">
+                            <a href="">
 
-                        <Image src={rya} alt="logo" height={94} width={117} />
+                                <Image src={rya} alt="logo" height={94} width={117} />
+                            </a>
+                        </Link>
                     </div>
 
 
@@ -567,10 +571,13 @@ function Nav({ courses }) {
                                         </Link>
 
                                     </div>
-
                                     <div className="uk-card menu-logo-container">
+                                        <Link href="/rya">
 
-                                        <li> <Image src={rya} alt="logo" height={94} width={117} /></li>
+                                            <li>
+                                                <Image src={rya} alt="logo" height={94} width={117} />
+                                            </li>
+                                        </Link>
                                     </div>
 
 
@@ -593,10 +600,10 @@ function Nav({ courses }) {
 
                     </div>
 
-                </ul>
+                </ul >
 
 
-            </div>
+            </div >
 
         </nav >
     )

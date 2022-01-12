@@ -1,4 +1,4 @@
-/* import ReactMarkdown from "react-markdown" */
+
 import Link from 'next/link'
 import SEO from '../../components/Seo/Seo'
 
@@ -6,18 +6,10 @@ import {
     fetchAPI,
 } from "../../lib/api"
 
-/* import Seo from "../../components/seo" */
-import { getStrapiMedia } from "../../lib/media"
 
 const Article = ({ course, homepage }) => {
     const imageUrl = course.attributes.image.data.attributes.url
 
-    const seo = {
-        metaTitle: course.attributes.title,
-        metaDescription: course.attributes.description,
-        shareImage: course.attributes.image,
-        article: true,
-    }
 
     return (
         <>
