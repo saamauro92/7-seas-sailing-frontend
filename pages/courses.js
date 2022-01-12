@@ -31,7 +31,7 @@ const courses = ({ courses, homepage }) => {
             </div>
             <div className='uk-container uk-container-large uk-padding uk-animation-slide-bottom'>
 
-                <h2 className='uk-background-primary uk-padding'>RYA SAIL COURSES</h2>
+                <h2 className='uk-background-primary  uk-padding'>RYA Sailing Courses</h2>
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
 
 
@@ -52,7 +52,7 @@ const courses = ({ courses, homepage }) => {
                     )}
                 </div>
 
-                <h2 className='uk-background-primary uk-padding'>RYA MOTOR COURSES</h2>
+                <h2 className='uk-background-primary uk-padding'>RYA Motor Cruising Courses</h2>
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
                     {courses && courses.length > 1 && courses.map((course) =>
 
@@ -86,7 +86,7 @@ const courses = ({ courses, homepage }) => {
 
                 </div>
 
-                <h2 className='uk-background-primary uk-padding'>RYA MILE BUILDING COURSES</h2>
+                <h2 className='uk-background-primary uk-padding'>RYA Mile builduing courses</h2>
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
 
                     {courses && courses.length > 1 && courses.map((course) =>
@@ -103,7 +103,7 @@ const courses = ({ courses, homepage }) => {
                     )}
                 </div>
 
-                <h2 className='uk-background-primary uk-padding'>RYA JET SKI COURSES</h2>
+                <h2 className='uk-background-primary uk-padding'>RYA Jet Ski Courses</h2>
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
 
                     {courses && courses.length > 1 && courses.map((course) =>

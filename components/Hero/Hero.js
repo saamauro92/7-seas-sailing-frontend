@@ -26,17 +26,17 @@ const Hero = ({ courses, images }) => {
                     <div className="uk-inline-clip hero-cards uk-margin  uk-animation-slide-bottom" >
                         <Image src={images.sail.data.attributes.url} width={400} height={250} alt='' />
 
-                        <div className="uk-position-bottom uk-overlay uk-overlay-primary  " uk-toggle="target: .sail-toggle; mode: hover">
+                        <div className="uk-position-bottom uk-overlay uk-overlay-primary uk-visible-toggle " tabIndex="-1">
 
                             <h2 >RYA Sail</h2>
 
-                            <ul className="sail-toggle" hidden>
+                            <ul className="uk-hidden-hover">
 
                                 {courses.map((course, i) =>
                                     course.attributes.courseCategory === 'Sail' &&
 
                                     <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
-                                        <li className="uk-margin-small">
+                                        <li>
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
                                     </Link>
@@ -49,16 +49,16 @@ const Hero = ({ courses, images }) => {
                     <div className="uk-inline-clip hero-cards uk-margin  uk-animation-slide-bottom">
                         <Image src={images.motor.data.attributes.url} width={400} height={250} alt='' />
 
-                        <div className="uk-position-bottom uk-overlay uk-overlay-primary " uk-toggle="target: .motor-toggle; mode: hover" >
+                        <div className="uk-position-bottom uk-overlay uk-overlay-primary uk-visible-toggle " tabIndex="-1"  >
                             <h2 >RYA Motor</h2>
 
-                            <ul className="motor-toggle" hidden >
+                            <ul className="uk-hidden-hover" >
 
                                 {courses.map((course, i) =>
                                     course.attributes.courseCategory === 'Motor' &&
 
                                     <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
-                                        <li className="uk-margin-small">
+                                        <li >
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
                                     </Link>
@@ -70,16 +70,16 @@ const Hero = ({ courses, images }) => {
                     <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom">
                         <Image src={images.power.data.attributes.url} width={400} height={250} alt='' />
 
-                        <div className="uk-position-bottom uk-overlay uk-overlay-primary  " uk-toggle="target: .power-toggle; mode: hover" >
+                        <div className="uk-position-bottom uk-overlay uk-overlay-primary uk-visible-toggle  " tabIndex="-1" >
                             <h2 >RYA Power</h2>
 
-                            <ul className="power-toggle" hidden >
+                            <ul className="uk-hidden-hover" >
 
                                 {courses.map((course, i) =>
                                     course.attributes.courseCategory === 'Power' &&
 
                                     <Link href={`/courses/${course.attributes.slug}`} key={i} passHref >
-                                        <li className="uk-margin-small">
+                                        <li >
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
                                     </Link>
@@ -108,16 +108,16 @@ const Hero = ({ courses, images }) => {
                     <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom">
                         <Image src={images.mile_building.data.attributes.url} width={400} height={250} alt='' />
 
-                        <div className="uk-position-bottom uk-overlay uk-overlay-primary  " uk-toggle="target: .mile-toggle; mode: hover"  >
+                        <div className="uk-position-bottom uk-overlay uk-overlay-primary uk-visible-toggle " tabIndex="-1">
                             <h2 >RYA Mile Building</h2>
 
-                            <ul className="mile-toggle" hidden >
+                            <ul className="uk-hidden-hover" >
 
                                 {courses.map((course, i) =>
                                     course.attributes.courseCategory === 'Mile_Building' &&
 
                                     <Link href={`/courses/${course.attributes.slug}`} passHref key={i} >
-                                        <li className="uk-margin-small">
+                                        <li >
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
                                     </Link>
@@ -131,16 +131,16 @@ const Hero = ({ courses, images }) => {
                     <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom">
                         <Image src={images.jet_ski.data.attributes.url} width={400} height={250} alt='' />
 
-                        <div className="uk-position-bottom uk-overlay uk-overlay-primary  " uk-toggle="target: .jet-toggle; mode: hover" >
+                        <div className="uk-position-bottom uk-overlay uk-overlay-primary uk-visible-toggle  " tabIndex="-1" >
                             <h2>RYA Jet Ski</h2>
 
-                            <ul className="jet-toggle" hidden >
+                            <ul className="uk-hidden-hover"  >
 
                                 {courses.map((course, i) =>
                                     course.attributes.courseCategory === 'Jet_Ski' &&
 
                                     <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
-                                        <li className="uk-margin-small">
+                                        <li>
                                             <a href="">   {course.attributes.title}</a>
                                         </li>
                                     </Link>
