@@ -14,12 +14,16 @@ const courses = ({ team, about, homepage }) => {
     return (
 
         <div className='uk-background-muted '>
-            <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
+            <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                 data-src={imgBanner}
                 data-srcset={imgBanner}
                 data-uk-img
+                uk-toggle="cls: uk-height-medium; mode: media; media: @l"
             >
-                <p className="banner-titles uk-heading-medium uk-text-bolder uk-text-center "> About us </p>
+                <h3
+                    className="banner-titles  uk-text-bolder  "
+                    uk-toggle="cls: uk-heading-small;  mode: media; media: @s"
+                > About us   </h3>
 
                 <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder">
                     <li >
