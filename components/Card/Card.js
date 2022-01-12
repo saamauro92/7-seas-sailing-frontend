@@ -7,7 +7,7 @@ const Card = ({ data }) => {
 
 
     return (
-        <div className="uk-card ">
+        <div className="uk-card " >
             <div className="uk-card-media-top">
                 {data.attributes.image.data.attributes.url &&
 

@@ -8,12 +8,13 @@ const courses = ({ courses, homepage }) => {
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
     return (
 
-        <div className='uk-background-muted'>
+        <div className='uk-background-muted' >
             <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small  uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                 data-src={imgBanner}
                 data-srcset={imgBanner}
                 data-uk-img
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
+                uk-parallax="bgy: -200"
             >
 
 
@@ -34,7 +35,7 @@ const courses = ({ courses, homepage }) => {
             </div>
             <div className='uk-container uk-container-large uk-padding uk-animation-slide-bottom'>
 
-                <h4 className='uk-background-primary  uk-padding'>RYA Sailing Courses</h4>
+                <h4 className='uk-background-primary  uk-padding' >RYA Sailing Courses</h4>
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
 
 

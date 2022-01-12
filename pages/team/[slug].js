@@ -30,6 +30,7 @@ const MemberProfile = ({ member, homepage }) => {
                 data-srcset={imageUrl}
                 data-uk-img
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
+                uk-parallax="bgy: -200"
             >
 
 
@@ -58,7 +59,7 @@ const MemberProfile = ({ member, homepage }) => {
 
             </div>
 
-            <div className="uk-container uk-container-small  uk-padding">
+            <div className="uk-container uk-container-small  uk-padding uk-padding uk-animation-slide-bottom">
 
 
 

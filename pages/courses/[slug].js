@@ -23,6 +23,7 @@ const Article = ({ course, homepage }) => {
                 data-srcset={imageUrl}
                 data-uk-img
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
+                uk-parallax="bgy: -200"
             >
 
 
@@ -52,7 +53,7 @@ const Article = ({ course, homepage }) => {
                 </ul>
             </div>
 
-            <div className="uk-section uk-background-muted uk-flex  " >
+            <div className="uk-section uk-background-muted uk-flex uk-padding uk-animation-slide-bottom " >
 
                 <div className="uk-container uk-container-xsmall  ">
                     <div > {course.attributes.description}</div>
