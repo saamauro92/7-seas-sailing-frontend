@@ -10,11 +10,11 @@ const Member = ({ data }) => {
         <>
 
 
-            <li>
-                <div className="uk-card uk-card-default">
-                    <div className="uk-card-media-top">
+            <li className="member-card">
+                <Link href={`/team/${data.attributes.slug}`} passHref>
+                    <div className="uk-card uk-card-default ">
+                        <div className="uk-card-media-top">
 
-                        <Link href={`/team/${data.attributes.slug}`} passHref>
 
 
                             <div className=" uk-background-cover  uk-background-center-center uk-height-medium  "
@@ -26,18 +26,14 @@ const Member = ({ data }) => {
 
 
 
-                        </Link>
+                        </div>
+                        <div className="uk-card-body">
+                            <h3 className="uk-card-title"> {data.attributes.name}</h3>
+                            <p>{data.attributes.title}</p>
+
+                        </div>
                     </div>
-                    <div className="uk-card-body">
-                        <h3 className="uk-card-title"> {data.attributes.name}</h3>
-                        <p>{data.attributes.title}</p>
-                        <button className="uk-button action-button uk-light">
-                            <Link href={`/team/${data.attributes.slug}`} passHref>
-                                See More
-                            </Link>
-                        </button>
-                    </div>
-                </div>
+                </Link>
             </li>
 
         </>

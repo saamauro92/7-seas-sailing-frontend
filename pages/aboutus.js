@@ -54,46 +54,47 @@ const courses = ({ team, about, homepage }) => {
 
             </div>
 
-            <div className="uk-container uk-container-large  ">
-
-
-                <h1>Meet Our Team</h1>
+            <div className="uk-container uk-container-large   ">
 
 
 
-                <div className="uk-slider-container-offset  uk-background-muted" uk-slider="finite: true" uk-slideshow>
-
-                    <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1">
-                        <ul className="uk-slider-items uk-child-width-1-3@s uk-grid">
-                            {
-                                team && team.map((person) =>
-
-                                    person.attributes.category === 'Team' ?
 
 
-                                        <Member data={person} />
+                <div className="uk-container uk-container-large uk-flex uk-flex-center ">
+                    <div className="uk-container uk-container-small uk-slider-container-offset  uk-background-muted" uk-slider="finite: true" uk-slideshow>
+                        <h1>Meet Our Team</h1>
+
+                        <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1">
+                            <ul className="uk-slider-items uk-child-width-1-3@s uk-grid">
+                                {
+                                    team && team.map((person) =>
+
+                                        person.attributes.category === 'Team' ?
+
+
+                                            <Member data={person} />
 
 
 
-                                        : null
+                                            : null
 
-                                )
-                            }
+                                    )
+                                }
 
-                        </ul>
-                        <a className="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                        <a className="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                            </ul>
+                            <a className="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                            <a className="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                        </div>
+                        <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
                     </div>
-                    <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
                 </div>
 
-
-
-                <div className="uk-container uk-container-large  ">
+                <div className="uk-container uk-container-large uk-flex uk-flex-center ">
 
 
 
-                    <div className="uk-slider-container-offset uk-padding uk-background-muted" uk-slider="finite: true" uk-slideshow>
+                    <div className="uk-container uk-container-small uk-slider-container-offset uk-padding uk-background-muted" uk-slider="finite: true" uk-slideshow>
                         <h1>Meet Our Club</h1>
 
                         <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1">
