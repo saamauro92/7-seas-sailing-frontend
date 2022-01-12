@@ -7,28 +7,29 @@ const Rya = ({ homepage }) => {
 
     return (
         <>
-            <div className='uk-background-muted'>
-                <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
-                    data-src={imgBanner}
-                    data-srcset={imgBanner}
-                    data-uk-img
-                >
-                    <p className="banner-titles uk-heading-medium uk-text-bolder ">About the RYA </p>
 
-                    <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder">
-                        <li >
+            <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small  uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
+                data-src={imgBanner}
+                data-srcset={imgBanner}
+                data-uk-img
+                uk-toggle="cls: uk-height-medium; mode: media; media: @l"
+            >
 
-                            <Link href={"/"}>
-                                <a href=""> Home</a>
-                            </Link>
-                        </li>
-                        <li > <span > About the RYA</span></li>
+                <h3 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove " uk-toggle="cls: uk-heading-small;  mode: media; media: @s"  > About the RYA</h3>
+                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder uk-text-center uk-margin-remove uk-padding-small">
+                    <li >
 
-                    </ul>
+                        <Link href={"/"}>
+                            <a href=""> Home</a>
+                        </Link>
+                    </li>
+                    <li > <span > About the RYA</span></li>
+
+                </ul>
 
 
-                </div>
             </div>
+
 
         </>
 

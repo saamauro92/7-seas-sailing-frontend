@@ -1,6 +1,7 @@
 /* import ReactMarkdown from "react-markdown" */
 import Link from 'next/link'
 import SEO from '../../components/Seo/Seo'
+import Image from 'next/image'
 
 import {
     fetchAPI,
@@ -57,14 +58,23 @@ const MemberProfile = ({ member, homepage }) => {
 
             </div>
 
-            <div className="uk-container uk-container-large  uk-padding">
-                <div className="uk-section">
+            <div className="uk-container uk-container-small  uk-padding">
 
+
+
+                <div className="uk-section">
 
                     <h2> {member.attributes.title}</h2>
                     <p>  {member.attributes.description} </p>
+                    <div
+                        className=" uk-background-contain uk-height-large "
+                        data-src={imageUrl}
+                        data-srcset={imageUrl}
+                        data-uk-img
+                        uk-toggle="cls: uk-height-medium; mode: media; media: @l"
+                    > </div>
 
-                    <hr className="uk-divider-small" />
+                    <hr />
 
                 </div>
             </div>
