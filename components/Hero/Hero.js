@@ -37,7 +37,7 @@ const Hero = ({ courses, images }) => {
                         ></div>
  */}
 
-                        <img src={images.sail.data.attributes.url} width="450" height="250" alt="hero_card_sail" uk-img uk-parallax="y: 200; easing: 0.5" />
+                        <img src={images.sail.data.attributes.url} width="450" height="250" alt="hero_card_sail" uk-img uk-parallax="y: 200; easing: 0.2" />
 
                         <div className="uk-position-bottom uk-overlay uk-overlay-primary uk-visible-toggle " tabIndex="-1">
 
@@ -61,7 +61,7 @@ const Hero = ({ courses, images }) => {
                     </div>
                     <div className="uk-inline-clip hero-cards uk-margin  uk-animation-slide-bottom">
                         {/*             <Image src={images.motor.data.attributes.url} width={400} height={250} alt='' /> */}
-                        <img src={images.motor.data.attributes.url} width="450" height="250" alt="hero_card_motor" uk-img uk-parallax="y: 200; easing: 0.5" />
+                        <img src={images.motor.data.attributes.url} width="450" height="250" alt="hero_card_motor" uk-img uk-parallax="y: 200; easing: 0.2" />
 
                         <div className="uk-position-bottom uk-overlay uk-overlay-primary uk-visible-toggle " tabIndex="-1"  >
                             <h2 >RYA Motor</h2>
@@ -83,7 +83,7 @@ const Hero = ({ courses, images }) => {
                     </div>
                     <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom">
                         {/*        <Image src={images.power.data.attributes.url} width={400} height={250} alt='' /> */}
-                        <img src={images.power.data.attributes.url} width="450" height="250" alt="hero_card_power" uk-img uk-parallax="y: 200; easing: 0.5" />
+                        <img src={images.power.data.attributes.url} width="450" height="250" alt="hero_card_power" uk-img uk-parallax="y: 200; easing: 0.2" />
 
                         <div className="uk-position-bottom uk-overlay uk-overlay-primary uk-visible-toggle  " tabIndex="-1" >
                             <h2 >RYA Power</h2>
@@ -122,12 +122,12 @@ const Hero = ({ courses, images }) => {
 
                     <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom">
                         {/*           <Image src={images.mile_building.data.attributes.url} width={400} height={250} alt='' /> */}
-                        <img src={images.mile_building.data.attributes.url} width="450" height="250" alt="hero_card_mile" uk-img uk-parallax="y: 200; easing: 0.5" />
+                        <img src={images.mile_building.data.attributes.url} width="450" height="250" alt="hero_card_mile" uk-img uk-parallax="y: 200; easing: 0.2" />
 
                         <div className="uk-position-bottom uk-overlay uk-overlay-primary uk-visible-toggle " tabIndex="-1">
                             <h2 >RYA Mile Building</h2>
 
-                            <ul className="uk-hidden-hover" uk-parallax="y: 200; easing: 0.5" >
+                            <ul className="uk-hidden-hover" uk-parallax="y: 200; easing: 0.2" >
 
                                 {courses.map((course, i) =>
                                     course.attributes.courseCategory === 'Mile_Building' &&
@@ -146,11 +146,11 @@ const Hero = ({ courses, images }) => {
 
                     <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom" >
                         {/*            <Image src={images.jet_ski.data.attributes.url} width={400} height={250} alt='' /> */}
-                        <img src={images.jet_ski.data.attributes.url} width="450" height="250" alt="hero_card_jet" uk-parallax="y: 200; easing: 0.5" />
+                        <img src={images.jet_ski.data.attributes.url} width="450" height="250" alt="hero_card_jet" uk-parallax="y: 200; easing: 0.2" />
                         <div className="uk-position-bottom uk-overlay uk-overlay-primary uk-visible-toggle  " tabIndex="-1" >
                             <h2>RYA Jet Ski</h2>
 
-                            <ul className="uk-hidden-hover" uk-parallax="y: 200; easing: 0.5"  >
+                            <ul className="uk-hidden-hover" uk-parallax="y: 200; easing: 0.2"  >
 
                                 {courses.map((course, i) =>
                                     course.attributes.courseCategory === 'Jet_Ski' &&
