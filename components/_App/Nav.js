@@ -575,7 +575,10 @@ function Nav({ courses }) {
                                         <Link href="/rya">
 
                                             <li>
-                                                <Image src={rya} alt="logo" height={94} width={117} />
+                                                <a uk-toggle="target: #offcanvas-nav-primary">
+
+                                                    <Image src={rya} alt="logo" height={94} width={117} />
+                                                </a>
                                             </li>
                                         </Link>
                                     </div>
