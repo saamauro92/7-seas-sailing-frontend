@@ -66,7 +66,7 @@ const courses = ({ team, about, homepage }) => {
 
                 <div className="uk-container uk-container-large uk-flex uk-flex-center uk-padding-large">
                     <div className="uk-container uk-container-small uk-slider-container-offset  uk-background-muted" uk-slider="finite: true" uk-slideshow uk-scrollspy="cls: uk-animation-slide-right; repeat: false">
-                        <h1>Meet Our Team</h1>
+                        <h1 className='uk-text-center'>Meet Our Team</h1>
 
                         <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1">
                             <ul className="uk-slider-items uk-child-width-1-3@s uk-grid">
@@ -99,7 +99,7 @@ const courses = ({ team, about, homepage }) => {
 
 
                     <div className="uk-container uk-container-small uk-slider-container-offset uk-padding uk-background-muted " uk-slider="finite: true" uk-slideshow uk-scrollspy="cls: uk-animation-slide-left; repeat: false">
-                        <h1>Meet Our Club</h1>
+                        <h1 className='uk-text-center'>Meet Our Club</h1>
 
                         <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" >
                             <ul className="uk-slider-items uk-child-width-1-3@s uk-grid">
