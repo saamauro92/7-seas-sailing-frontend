@@ -1,10 +1,11 @@
 
 import Link from 'next/link'
 import SEO from '../../components/Seo/Seo'
-
+import ReactMarkdown from "react-markdown"
 import {
     fetchAPI,
 } from "../../lib/api"
+import React from 'react'
 
 
 const Article = ({ course, homepage }) => {
@@ -49,33 +50,81 @@ const Article = ({ course, homepage }) => {
                     <li > <span > {course.attributes.title}  </span></li>
 
                 </ul>
-
-
-
             </div>
-            <div className="uk-container uk-container-lage ">
+
+            <div className="uk-section uk-background-muted uk-flex  " >
+
+                <div className="uk-container uk-container-xsmall  ">
+                    <div > {course.attributes.description}</div>
 
 
-
-
-                <div className="uk-section">
-                    <div className="uk-container uk-container-small">
-                        {/*                  <ReactMarkdown
-                        source={article.attributes.content}
-                        escapeHtml={false}
-                    /> */}
-
-                        <hr className="uk-divider-small" />
-                        <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
-                            <div className="uk-width-expand">
-                                <p className="uk-text-meta uk-margin-remove-top">
-
-                                </p>
-                            </div>
-                        </div>
+                    <div className="uk-container uk-container-xsmall  uk-padding ">
+                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>  For whom is that course?</h4>
+                        <div > {course.attributes.forWho}</div>
                     </div>
+
+
+
+                    <div className="uk-container uk-container-xsmall  uk-padding ">
+                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>  Theory Background</h4>
+                        <div > {course.attributes.background}</div>
+                    </div>
+
+                    <div className="uk-container uk-container-xsmall  uk-padding ">
+                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>  Practical Experience</h4>
+                        <div > {course.attributes.experience}</div>
+                    </div>
+
+
+                    <div className="uk-container uk-container-xsmall  uk-padding ">
+                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>   Minimum Age</h4>
+                        <div > {course.attributes.age}</div>
+                    </div>
+
+
+
+
                 </div>
-            </div>
+
+                <div className="uk-container">
+
+                    <div className="uk-container uk-container-xsmall  uk-padding ">
+                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>  Course Content</h4>
+                        <div >
+
+                            <ReactMarkdown children={course.attributes.content}
+
+                            />
+
+                        </div>
+
+                    </div>
+                    <div className="uk-container uk-container-xsmall  uk-padding ">
+                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>  Duration</h4>
+                        <div > {course.attributes.duration}</div>
+                    </div>
+
+                    <div className="uk-container uk-container-xsmall  uk-padding ">
+                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>  Examination</h4>
+                        <div > {course.attributes.examination}</div>
+                    </div>
+                    <div className="uk-container uk-container-xsmall  uk-padding ">
+                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>  Certificate</h4>
+                        <div > {course.attributes.certificate}</div>
+                    </div>
+                    <div className="uk-container uk-container-xsmall  uk-padding ">
+                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>  Ability after the course</h4>
+                        <div > {course.attributes.abilityAfter}</div>
+                    </div>
+
+                </div>
+
+            </div >
+
+
+
+
+
         </>
     )
 }

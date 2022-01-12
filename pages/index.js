@@ -36,13 +36,11 @@ export async function getStaticProps() {
 export default function Home({ courses, homepage }) {
 
 
-
   return (
 
     <main>
 
       <div className="test-height uk-cover-container uk-light">
-
 
         {homepage && homepage.attributes.seo && <SEO data={homepage.attributes.seo} />}
 
