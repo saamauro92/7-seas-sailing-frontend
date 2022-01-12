@@ -1,7 +1,7 @@
 
 import Link from 'next/link'
 import SEO from '../../components/Seo/Seo'
-import ReactMarkdown from "react-markdown"
+
 import {
     fetchAPI,
 } from "../../lib/api"
@@ -91,10 +91,7 @@ const Article = ({ course, homepage }) => {
                     <div className="uk-container uk-container-xsmall  uk-padding ">
                         <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>  Course Content</h4>
                         <div >
-
-                            <ReactMarkdown children={course.attributes.content}
-
-                            />
+                            {course.attributes.content}
 
                         </div>
 
