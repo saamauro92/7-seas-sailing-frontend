@@ -34,7 +34,7 @@ const courses = ({ courses, homepage }) => {
             </div>
             <div className='uk-container uk-container-large uk-padding uk-animation-slide-bottom'>
 
-                <h2 className='uk-background-primary  uk-padding'>RYA Sailing Courses</h2>
+                <h4 className='uk-background-primary  uk-padding'>RYA Sailing Courses</h4>
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
 
 
@@ -55,7 +55,7 @@ const courses = ({ courses, homepage }) => {
                     )}
                 </div>
 
-                <h2 className='uk-background-primary uk-padding'>RYA Motor Cruising Courses</h2>
+                <h4 className='uk-background-primary uk-padding'>RYA Motor Cruising Courses</h4>
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
                     {courses && courses.length > 1 && courses.map((course) =>
 
@@ -71,7 +71,7 @@ const courses = ({ courses, homepage }) => {
                     )}
                 </div>
 
-                <h2 className='uk-background-primary uk-padding'>RYA POWER COURSES</h2>
+                <h4 className='uk-background-primary uk-padding'>RYA POWER COURSES</h4>
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
 
                     {courses && courses.length > 1 && courses.map((course) =>
@@ -89,7 +89,7 @@ const courses = ({ courses, homepage }) => {
 
                 </div>
 
-                <h2 className='uk-background-primary uk-padding'>RYA Mile builduing courses</h2>
+                <h4 className='uk-background-primary uk-padding'>RYA Mile builduing courses</h4>
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
 
                     {courses && courses.length > 1 && courses.map((course) =>
@@ -106,7 +106,7 @@ const courses = ({ courses, homepage }) => {
                     )}
                 </div>
 
-                <h2 className='uk-background-primary uk-padding'>RYA Jet Ski Courses</h2>
+                <h4 className='uk-background-primary uk-padding'>RYA Jet Ski Courses</h4>
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
 
                     {courses && courses.length > 1 && courses.map((course) =>
