@@ -53,9 +53,9 @@ const Article = ({ course, homepage }) => {
                 </ul>
             </div>
 
-            <div className="uk-section uk-background-muted uk-flex uk-padding uk-animation-slide-bottom " >
+            <div className="uk-section uk-background-muted uk-flex uk-padding uk-animation-slide-bottom uk-flex-wrap " >
 
-                <div className="uk-container uk-container-xsmall  ">
+                <div className="uk-container uk-container-xsmall   ">
                     <div > {course.attributes.description}</div>
 
 
