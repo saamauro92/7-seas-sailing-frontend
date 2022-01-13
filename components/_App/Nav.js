@@ -274,30 +274,13 @@ function Nav({ courses }) {
                                 <a className="nav-link">
                                     About Us</a>
                             </Link>
-                            <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left" style={{ "left": "0px", "top": "80px" }}>
+                            {/*                             <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left" style={{ "left": "0px", "top": "80px" }}>
                                 <ul className="uk-nav uk-navbar-dropdown-nav">
 
-                                    <Link href="/courses/coastal-skipper">
-                                        <li className="uk-parent">
-                                            <a className="nav-link">
-                                                Coastal Skipper</a>
 
-
-                                        </li>
-                                    </Link>
-                                    <li className="uk-parent">
-                                        <a className="nav-link">
-                                            Parent</a>
-
-                                    </li>
-                                    <li className="uk-parent">
-                                        <a className="nav-link">
-                                            Parent</a>
-
-                                    </li>
 
                                 </ul>
-                            </div>
+                            </div> */}
                         </li>
                         <li>
                             <Link href="/news" activeClassName="active" >
@@ -544,7 +527,7 @@ function Nav({ courses }) {
 
                                         <a href="" ></a>
                                         <ul className="uk-nav-sub   " hidden="" >
-                                            <li className="uk-flex uk-flex-start  "><a uk-toggle="target: #offcanvas-nav-primary">Coastal Skipper </a></li>
+                                            <li className="uk-flex uk-flex-start  "><a uk-toggle="target: #offcanvas-nav-primary"> Sub item to add   </a></li>
                                             <li className="uk-flex uk-flex-start"><a uk-toggle="target: #offcanvas-nav-primary">Sub item</a></li>
                                             <li className="uk-flex uk-flex-start"><a uk-toggle="target: #offcanvas-nav-primary">Sub item</a></li>
 
