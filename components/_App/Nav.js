@@ -338,7 +338,7 @@ function Nav({ courses }) {
 
                         <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
 
-                            <div className="uk-offcanvas-bar ">
+                            <div className="uk-offcanvas-bar offcanvas-nav">
                                 <button className="uk-offcanvas-close uk-close-large uk-icon uk-close" type="button" uk-close="">
                                     <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 

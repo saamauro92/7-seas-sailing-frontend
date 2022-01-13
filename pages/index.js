@@ -3,14 +3,15 @@ import Image from 'next/image'
 import { fetchAPI } from '../lib/api'
 import SEO from '../components/Seo/Seo'
 import Hero from '../components/Hero/Hero'
+import NewsSidebar from '../components/NewsSidebar/NewsSidebar'
 
 
 
 
 export async function getStaticProps() {
 
-  // Run API calls in parallel
-  const [coursesRes, homepageRes] = await Promise.all([
+
+  const [coursesRes, homepageRes, latestNews] = await Promise.all([
     fetchAPI("/courses", { populate: "*" }),
     fetchAPI("/homepage", {
       populate: {
@@ -18,12 +19,14 @@ export async function getStaticProps() {
         seo: { populate: "*" },
       },
     }),
+    fetchAPI("/news", { populate: "*" }),
   ])
 
   return {
     props: {
       courses: coursesRes?.data,
       homepage: homepageRes?.data,
+      latestNews: latestNews?.data,
     },
     revalidate: 1,
   }
@@ -33,7 +36,7 @@ export async function getStaticProps() {
 
 
 
-export default function Home({ courses, homepage }) {
+export default function Home({ courses, homepage, latestNews }) {
 
 
   return (
@@ -47,6 +50,8 @@ export default function Home({ courses, homepage }) {
 
 
         <Hero courses={courses} images={homepage.attributes.hero} />
+
+        <NewsSidebar latestNews={latestNews} />
       </div>
 
 
