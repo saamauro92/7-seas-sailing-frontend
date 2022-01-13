@@ -566,7 +566,7 @@ function Nav({ courses, activities }) {
                                                     null :
                                                     < li className={i === 0 ? "uk-flex uk-flex-start " : "uk-flex uk-flex-start "} key={i} >
                                                         <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
-                                                            <a className="nav-link responsive-link-font ">  {activitie.attributes.title} </a>
+                                                            <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">  {activitie.attributes.title} </a>
                                                         </Link></li>
 
 
