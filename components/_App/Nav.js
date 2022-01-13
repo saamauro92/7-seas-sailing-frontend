@@ -258,7 +258,7 @@ function Nav({ courses, activities }) {
 
                                                     null :
                                                     < li className={i === 0 ? "uk-flex uk-flex-start" : "uk-flex uk-flex-start uk-nav-divider"} key={i} >
-                                                        <Link href={`/activities/${activitie.attributes.slug}`} >
+                                                        <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
                                                             <a className="nav-link responsive-link-font ">  {activitie.attributes.title} </a>
                                                         </Link></li>
 
@@ -278,7 +278,7 @@ function Nav({ courses, activities }) {
 
 
                                                             < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >
-                                                                <Link href={`/activities/${activitie.attributes.slug}`} >
+                                                                <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
                                                                     <a  >  {activitie.attributes.title} </a>
                                                                 </Link></li>
 

@@ -3,7 +3,7 @@ import React from "react"
 import Link from "next/link"
 import Image from 'next/image'
 
-const Card = ({ data }) => {
+const Card = ({ data, slug }) => {
 
 
     return (
@@ -21,7 +21,7 @@ const Card = ({ data }) => {
                 <p className=" uk-text-center"> {data.attributes.title} </p>
             </div>
             <div className="uk-card-fotter uk-text-center">
-                <Link href={`/courses/${data.attributes.slug}`} passHref>
+                <Link href={`/${slug}/${data.attributes.slug}`} passHref>
                     <button className="uk-button uk-button-danger ">SEE MORE</button>
                 </Link>
 

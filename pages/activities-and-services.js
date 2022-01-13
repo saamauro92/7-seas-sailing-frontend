@@ -2,8 +2,8 @@ import React from 'react'
 import { fetchAPI } from '../lib/api'
 import SEO from '../components/Seo/Seo'
 import Link from 'next/link';
-
-const ActivitiesAndServices = ({ homepage }) => {
+import Card from '../components/Card/Card'
+const ActivitiesAndServices = ({ homepage, activities }) => {
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
     return (
 
@@ -44,6 +44,56 @@ const ActivitiesAndServices = ({ homepage }) => {
 
             </div>
 
+
+            <div className='uk-container uk-container-large uk-padding uk-animation-slide-bottom'>
+
+
+                <div className="uk-flex uk-flex-around uk-flex-wrap">
+
+
+                    {activities && activities.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
+
+
+                    {activities && activities.length > 1 && activities.map((activitie) =>
+
+                        activitie.attributes.category === "Mile_Building" ? null :
+
+                            <>
+                                <Card data={activitie} slug="activities-and-services" />
+
+
+
+                            </>
+
+
+                    )}
+                </div>
+                <h4 className='uk-background-primary  uk-padding' >Mile Building</h4>
+                <div className="uk-flex uk-flex-around uk-flex-wrap">
+
+
+                    {activities && activities.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
+
+
+                    {activities && activities.length > 1 && activities.map((activitie) =>
+
+                        activitie.attributes.category === "Mile_Building" ?
+
+                            <>
+                                <Card data={activitie} slug="activities-and-services" />
+
+
+
+                            </>
+                            : null
+
+
+                    )}
+                </div>
+
+
+
+            </div>
 
 
 

@@ -47,7 +47,7 @@ const courses = ({ courses, homepage }) => {
                         course.attributes.courseCategory === 'Sail' ?
 
 
-                            < Card data={course} />
+                            < Card data={course} slug="courses" />
 
 
                             : null
@@ -64,7 +64,7 @@ const courses = ({ courses, homepage }) => {
 
 
 
-                            < Card data={course} />
+                            < Card data={course} slug="courses" />
 
                             : null
 
@@ -81,7 +81,7 @@ const courses = ({ courses, homepage }) => {
 
 
 
-                            < Card data={course} />
+                            < Card data={course} slug="courses" />
 
                             : null
 
@@ -99,7 +99,7 @@ const courses = ({ courses, homepage }) => {
 
 
 
-                            < Card data={course} />
+                            < Card data={course} slug="courses" />
 
                             : null
 
@@ -116,7 +116,7 @@ const courses = ({ courses, homepage }) => {
 
 
 
-                            < Card data={course} />
+                            < Card data={course} slug="courses" />
 
                             : null
 
