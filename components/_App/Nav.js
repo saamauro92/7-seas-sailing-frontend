@@ -390,7 +390,7 @@ function Nav({ courses, activities }) {
                                         </div>
 
                                         <a href="" ></a>
-                                        <ul className="uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-nav-parent-icon  " hidden="" uk-nav="multiple: true">
+                                        <ul className="uk-nav-sub uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-nav-parent-icon  " hidden="" uk-nav="multiple: true">
 
 
                                             <li className="uk-parent  ">
@@ -558,11 +558,48 @@ function Nav({ courses, activities }) {
                                         </div>
 
                                         <a href="" ></a>
-                                        <ul className="uk-nav-sub   " hidden="" >
-                                            <li className="uk-flex uk-flex-start  "><a uk-toggle="target: #offcanvas-nav-primary"> Sub item to add   </a></li>
-                                            <li className="uk-flex uk-flex-start"><a uk-toggle="target: #offcanvas-nav-primary">Sub item</a></li>
-                                            <li className="uk-flex uk-flex-start"><a uk-toggle="target: #offcanvas-nav-primary">Sub item</a></li>
+                                        <ul className="uk-nav-sub uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-nav-parent-icon  " hidden="" uk-nav="multiple: true">
 
+                                            {activities.map((activitie, i) =>
+                                                activitie.attributes.category === "Mile_Building" ?
+
+                                                    null :
+                                                    < li className={i === 0 ? "uk-flex uk-flex-start " : "uk-flex uk-flex-start "} key={i} >
+                                                        <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
+                                                            <a className="nav-link responsive-link-font ">  {activitie.attributes.title} </a>
+                                                        </Link></li>
+
+
+
+
+
+                                            )}
+                                            <li className="uk-parent " >
+                                                <div className="uk-position-absolute">
+
+                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">  Mile Building </a>
+
+                                                </div>
+                                                <a href=""></a>
+
+                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+
+                                                    {activities.map((activitie, i) =>
+                                                        activitie.attributes.category === "Mile_Building" ?
+
+
+                                                            < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >
+                                                                <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
+                                                                    <a uk-toggle="target: #offcanvas-nav-primary">  {activitie.attributes.title} </a>
+                                                                </Link></li>
+
+                                                            : null
+
+
+
+                                                    )}
+                                                </ul>
+                                            </li>
 
                                         </ul>
                                     </li>
