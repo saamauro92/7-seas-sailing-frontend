@@ -3,7 +3,6 @@ import Link from "next/link"
 
 
 const NewsSidebar = ({ latestNews }) => {
-    console.log("latestNews", latestNews)
 
     return (
         <>

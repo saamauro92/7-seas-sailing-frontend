@@ -5,7 +5,7 @@ import rya from '../../assets/rya.png'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
-function Nav({ courses }) {
+function Nav({ courses, activities }) {
 
 
     const router = useRouter()
@@ -246,22 +246,54 @@ function Nav({ courses }) {
 
                                 <a className="nav-link "> Activities {"&"} Services</a>
                             </Link>
-                            <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left" style={{ "left": "0px", "top": "80px" }}>
-                                <ul className="uk-nav uk-navbar-dropdown-nav">
+                            <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2 " style={{ "left": "0px", "top": "80px" }}>
 
-                                    <li className="uk-parent uk-margin">
-                                        <a className="nav-link">
-                                            Parent</a>
 
-                                    </li>
-                                    <li className="uk-parent uk-margin">
-                                        <a className="nav-link">
-                                            Parent</a>
+                                <ul className="uk-nav uk-navbar-dropdown-nav   ">
+                                    <li>
+                                        <ul className="uk-nav-start  uk-nav-parent-icon " hidden="" uk-nav="multiple: true">
 
-                                    </li>
-                                    <li className="uk-parent uk-margin">
-                                        <a className="nav-link">
-                                            Parent</a>
+                                            {activities.map((activitie, i) =>
+                                                activitie.attributes.category === "Mile_Building" ?
+
+                                                    null :
+                                                    < li className={i === 0 ? "uk-flex uk-flex-start" : "uk-flex uk-flex-start uk-nav-divider"} key={i} >
+                                                        <Link href={`/activities/${activitie.attributes.slug}`} >
+                                                            <a className="nav-link responsive-link-font ">  {activitie.attributes.title} </a>
+                                                        </Link></li>
+
+
+
+
+
+                                            )}
+                                            < li className="uk-parent uk-nav-divider ">
+
+
+                                                <a href=" " className="nav-link responsive-link-font ">Mile Building</a>
+                                                <ul className="uk-nav-sub  uk-nav-start  uk-nav-parent-icon   " hidden="">
+
+                                                    {activities.map((activitie, i) =>
+                                                        activitie.attributes.category === "Mile_Building" ?
+
+
+                                                            < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >
+                                                                <Link href={`/activities/${activitie.attributes.slug}`} >
+                                                                    <a  >  {activitie.attributes.title} </a>
+                                                                </Link></li>
+
+                                                            : null
+
+
+
+                                                    )}
+                                                </ul>
+
+
+                                            </li>
+
+
+                                        </ul>
 
                                     </li>
 
@@ -297,7 +329,7 @@ function Nav({ courses }) {
 
 
             </nav >
-        </div>
+        </div >
 
     ) : (
 

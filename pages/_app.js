@@ -6,9 +6,9 @@ import { fetchAPI } from '../lib/api';
 
 export default function MyApp({ Component, pageProps }) {
 
-  const { courses } = pageProps;
+  const { courses, activities } = pageProps;
   return (
-    <Layout data={pageProps.contactDetails} courses={courses}>
+    <Layout data={pageProps.contactDetails} courses={courses} activities={activities}>
       <Component {...pageProps} />
     </Layout>
   )
@@ -26,7 +26,7 @@ MyApp.getInitialProps = async (ctx) => {
       seo: { populate: "*" },
     },
   })
-
+  const activitiesRes = await fetchAPI("/activities", { populate: "*" });
 
   // Pass the data to our page via props
   return {
@@ -35,6 +35,7 @@ MyApp.getInitialProps = async (ctx) => {
       contactDetails: contactRes.data,
       courses: coursesRes.data,
       homepage: homepageRes.data,
+      activities: activitiesRes.data,
     },
   }
 }
