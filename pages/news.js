@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-children-prop */
 import React from 'react'
 import { fetchAPI } from '../lib/api'
@@ -34,28 +35,48 @@ const News = ({ homepage, news }) => {
 
 
             </div>
-            <div className="uk-container uk-container-large uk-height-large uk-padding">
+            <div className="uk-container uk-container-large uk-height-large uk-padding uk-height-large">
                 {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
-                <h2>News  </h2>
-
-                {news && news.length > 0 && news.map((item, index) =>
-
-                    <div key={index}>
 
 
-                        <Link href={`/news/${item.attributes.slug}`}>
-                            <a href="">
-
-                                {item.attributes.title}
-                            </a>
+                <div className="uk-container uk-container-large uk-padding uk-animation-slide-bottom uk-height-large">
+                    {news && news.length > 0 && news.map((item, index) =>
 
 
+
+
+                        <Link href={`/news/${item.attributes.slug}`} key={index} passHref>
+                            <div className='uk-card uk-margin-large ' >
+
+
+
+
+
+                                <div className="uk-header uk-text-bolder">
+                                    <a href="">   {item.attributes.title}  </a>
+                                </div>
+
+
+
+
+
+                                <div>
+                                    Written By: {" "}
+                                    {item.attributes.writtenBy}
+                                </div>
+
+                                <div>
+                                    {item.attributes.date}
+                                </div>
+
+                                <hr />
+                            </div>
                         </Link>
 
-                    </div>
 
-                )}
 
+                    )}
+                </div>
 
             </div>
 

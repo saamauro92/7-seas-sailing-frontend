@@ -20,7 +20,7 @@ const NewsSidebar = ({ latestNews }) => {
                 <div className="uk-offcanvas-bar offcanvas-News">
 
                     <button className="uk-offcanvas-close " type="button" uk-close>X</button>
-                    <p> News </p>
+                    <p> Latest News </p>
 
 
                     {latestNews && latestNews.length > 0 && latestNews.map((item, i) =>
