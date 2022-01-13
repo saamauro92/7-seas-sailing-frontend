@@ -26,7 +26,7 @@ const Hero = ({ courses, images }) => {
 
 
 
-                    <div className="uk-inline-clip hero-cards uk-margin  uk-animation-slide-bottom" >
+                    <div className="uk-inline-clip hero-cards uk-margin  uk-animation-slide-bottom uk-visible-toggle" tabIndex="-1">
                         {/*      <Image src={images.sail.data.attributes.url} width={400} height={250} alt='' /> */}
                         {/*                  <div
                             className=" uk-background-contain uk-height-small "
@@ -39,7 +39,7 @@ const Hero = ({ courses, images }) => {
 
                         <img src={images.sail.data.attributes.url} width="450" height="250" alt="hero_card_sail" uk-img />
 
-                        <div className="uk-position-bottom uk-overlay uk-overlay-primary uk-visible-toggle " tabIndex="-1">
+                        <div className="uk-position-bottom uk-overlay uk-overlay-primary" >
 
                             <h2 >RYA Sail</h2>
 
@@ -59,11 +59,11 @@ const Hero = ({ courses, images }) => {
 
                         </div>
                     </div>
-                    <div className="uk-inline-clip hero-cards uk-margin  uk-animation-slide-bottom">
+                    <div className="uk-inline-clip hero-cards uk-margin  uk-animation-slide-bottom uk-visible-toggle" tabIndex="-1">
                         {/*             <Image src={images.motor.data.attributes.url} width={400} height={250} alt='' /> */}
                         <img src={images.motor.data.attributes.url} width="450" height="250" alt="hero_card_motor" uk-img />
 
-                        <div className="uk-position-bottom uk-overlay uk-overlay-primary uk-visible-toggle " tabIndex="-1"  >
+                        <div className="uk-position-bottom uk-overlay uk-overlay-primary "  >
                             <h2 >RYA Motor</h2>
 
                             <ul className="uk-hidden-hover" >
@@ -81,11 +81,11 @@ const Hero = ({ courses, images }) => {
                             </ul>
                         </div>
                     </div>
-                    <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom">
+                    <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom uk-visible-toggle" tabIndex="-1">
                         {/*        <Image src={images.power.data.attributes.url} width={400} height={250} alt='' /> */}
                         <img src={images.power.data.attributes.url} width="450" height="250" alt="hero_card_power" uk-img />
 
-                        <div className="uk-position-bottom uk-overlay uk-overlay-primary uk-visible-toggle  " tabIndex="-1" >
+                        <div className="uk-position-bottom uk-overlay uk-overlay-primary u  " >
                             <h2 >RYA Power</h2>
 
                             <ul className="uk-hidden-hover" >
@@ -120,11 +120,11 @@ const Hero = ({ courses, images }) => {
 
                 <div className="uk-container uk-container-large  uk-flex uk-flex-wrap uk-flex-around  " >
 
-                    <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom">
+                    <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom uk-visible-toggle" tabIndex="-1" >
                         {/*           <Image src={images.mile_building.data.attributes.url} width={400} height={250} alt='' /> */}
                         <img src={images.mile_building.data.attributes.url} width="450" height="250" alt="hero_card_mile" uk-img />
 
-                        <div className="uk-position-bottom uk-overlay uk-overlay-primary uk-visible-toggle " tabIndex="-1">
+                        <div className="uk-position-bottom uk-overlay uk-overlay-primary" >
                             <h2 >RYA Mile Building</h2>
 
                             <ul className="uk-hidden-hover" >
@@ -144,10 +144,10 @@ const Hero = ({ courses, images }) => {
                     </div>
 
 
-                    <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom">
+                    <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom uk-visible-toggle" tabIndex="-1">
                         {/*            <Image src={images.jet_ski.data.attributes.url} width={400} height={250} alt='' /> */}
                         <img src={images.jet_ski.data.attributes.url} width="450" height="250" alt="hero_card_jet" uk-img />
-                        <div className="uk-position-bottom uk-overlay uk-overlay-primary uk-visible-toggle  " tabIndex="-1" >
+                        <div className="uk-position-bottom uk-overlay uk-overlay-primary" >
                             <h2>RYA Jet Ski</h2>
 
                             <ul className="uk-hidden-hover"  >
