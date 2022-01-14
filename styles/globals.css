@@ -28,18 +28,18 @@ a {
  background-color: #002a74; 
 } */
 .offcanvas-nav {
-  color: #f2f2f2;
-  background-color: #002a74;
+  color: #2a2a2a;
+  background-color: rgb(241, 241, 241);
 }
 
 .uk-offcanvas-bar .uk-nav-primary > li > a,
 .uk-offcanvas-bar .uk-nav-primary .uk-nav-sub a {
-  color: #f2f2f2;
+  color: #2a2a2a;
 }
 
 .uk-offcanvas-bar .uk-nav-primary .uk-nav-sub a:hover,
 .uk-offcanvas-bar .uk-nav-primary > li > a:hover {
-  color: #f2f2f2;
+  color: #2a2a2a;
   opacity: 0.7;
 }
 
@@ -55,9 +55,11 @@ a {
 
 /* off canvas responsive menu bar */
 .uk-offcanvas-bar {
-  width: 96vw;
-  top: 100px;
-  padding-top: 80px;
+  width: 100vw;
+}
+.uk-offcanvas-bar > ul > li {
+  margin-top: 60px;
+  padding: 15px 0;
 }
 
 .responsive-link-font {
@@ -69,8 +71,34 @@ a {
 }
 
 .menu-logo-container {
-  background-color: #e5e5e5;
   width: 20%;
+}
+/* font color menu responsive bar */
+.uk-offcanvas-bar a {
+  color: #002a74;
+}
+.uk-offcanvas-bar a:hover {
+  color: #9e3030;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.uk-offcanvas-bar .uk-nav-primary > li > a {
+  color: #002a74;
+
+  border-bottom: 1px solid #3a327e;
+}
+.uk-parent > a::after {
+  background-color: #002a74;
+  border-radius: 50%;
+}
+
+/* close button off canvas */
+.uk-offcanvas-bar .uk-close {
+  color: #2a2a2a;
+}
+.uk-offcanvas-bar .uk-close::selection {
+  color: #2a2a2a;
 }
 
 .uk-card {

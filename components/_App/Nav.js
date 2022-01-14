@@ -63,6 +63,20 @@ function Nav({ courses, activities }) {
 
                     <ul className="uk-navbar-nav ">
                         <li className="nav-item">
+                            <Link href="/aboutus" activeClassName="active">
+
+                                <a className="nav-link">
+                                    About Us</a>
+                            </Link>
+                            {/*                             <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left" style={{ "left": "0px", "top": "80px" }}>
+                                <ul className="uk-nav uk-navbar-dropdown-nav">
+
+
+
+                                </ul>
+                            </div> */}
+                        </li>
+                        <li className="nav-item">
 
 
                             <Link href="/courses" activeClassName="active">
@@ -300,20 +314,7 @@ function Nav({ courses, activities }) {
                                 </ul>
                             </div>
                         </li>
-                        <li className="nav-item">
-                            <Link href="/aboutus" activeClassName="active">
 
-                                <a className="nav-link">
-                                    About Us</a>
-                            </Link>
-                            {/*                             <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left" style={{ "left": "0px", "top": "80px" }}>
-                                <ul className="uk-nav uk-navbar-dropdown-nav">
-
-
-
-                                </ul>
-                            </div> */}
-                        </li>
                         <li>
                             <Link href="/news" activeClassName="active" >
 
@@ -356,6 +357,7 @@ function Nav({ courses, activities }) {
                 <ul className="uk-navbar-nav">
 
                     <div id="my-id" uk-offcanvas>
+
                         <li>
 
                             <a className="uk-navbar-toggle uk-icon uk-navbar-toggle-icon" uk-toggle="target: #offcanvas-nav-primary" >
@@ -370,17 +372,62 @@ function Nav({ courses, activities }) {
 
                         <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
 
+
                             <div className="uk-offcanvas-bar offcanvas-nav">
+                                <div className="uk-navbar-left uk-margin-large">
+
+
+
+                                    <Link href="/">
+                                        <a className="uk-navbar-item uk-logo">
+                                            <Image src={logo} alt="logo" height={64} width={217} />
+                                        </a>
+                                    </Link>
+                                    <Link href="/">
+                                        <a className="uk-navbar-item uk-logo">
+                                            <Image src={rya} alt="logo" height={84} width={117} />
+                                        </a>
+                                    </Link>
+
+                                </div>
                                 <button className="uk-offcanvas-close uk-close-large uk-icon uk-close" type="button" uk-close="">
                                     <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 
                                     </svg>
                                 </button>
 
-                                <ul className="uk-nav uk-nav-primary uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon uk-nav-divider" uk-nav="multiple: true">
+                                <ul className="uk-nav uk-nav-primary uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon uk-list-large " uk-nav="multiple: false">
+
+                                    <li className="uk-parent ">
+                                        <div className=" uk-position-absolute ">
+                                            <Link href="/aboutus">
+                                                <a className="nav-link responsive-link-font uk-margin" uk-toggle="target: #offcanvas-nav-primary">About us</a>
+                                            </Link>
+
+                                        </div>
+                                        <a href="" ></a>
 
 
-                                    <li className="uk-parent">
+                                        <ul className="uk-nav-sub uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-nav-parent-icon uk-list-large" hidden="" uk-nav="multiple: false">
+
+                                            <li className="uk-margin  ">
+                                                <div className=" uk-position-absolute ">
+
+                                                    <Link href="/aboutus">
+                                                        <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">The Team</a>
+                                                    </Link>
+
+
+                                                </div>
+                                                <a href="" ></a>
+
+
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li className="uk-parent  ">
                                         <div className=" uk-position-absolute ">
 
                                             <Link href="/courses"  >
@@ -390,10 +437,10 @@ function Nav({ courses, activities }) {
                                         </div>
 
                                         <a href="" ></a>
-                                        <ul className="uk-nav-sub uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-nav-parent-icon  " hidden="" uk-nav="multiple: true">
+                                        <ul className="uk-nav-sub uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-nav-parent-icon uk-list-large " hidden="" uk-nav="multiple: false">
 
 
-                                            <li className="uk-parent  ">
+                                            <li className="uk-parent ">
                                                 <div className=" uk-position-absolute ">
 
                                                     <Link href="/courses">
@@ -406,7 +453,7 @@ function Nav({ courses, activities }) {
 
 
 
-                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-list-large" hidden="" uk-nav="multiple: false">
 
                                                     {courses.map((course, i) =>
                                                         course.attributes.courseCategory === "Sail" ?
@@ -436,7 +483,7 @@ function Nav({ courses, activities }) {
 
 
 
-                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon uk-list-large " hidden="">
 
                                                     {courses.map((course, i) =>
                                                         course.attributes.courseCategory === "Motor" ?
@@ -466,7 +513,7 @@ function Nav({ courses, activities }) {
 
 
 
-                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-list-large" hidden="">
 
                                                     {courses.map((course, index) =>
                                                         course.attributes.courseCategory === "Power" ?
@@ -497,7 +544,7 @@ function Nav({ courses, activities }) {
 
 
 
-                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon uk-list-large " hidden="">
 
                                                     {courses.map((course, index) =>
                                                         course.attributes.courseCategory === "Mile_Building" ?
@@ -528,7 +575,7 @@ function Nav({ courses, activities }) {
 
 
 
-                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon uk-list-large " hidden="">
 
                                                     {courses.map((course, index) =>
                                                         course.attributes.courseCategory === "Jet_Ski" ?
@@ -558,7 +605,7 @@ function Nav({ courses, activities }) {
                                         </div>
 
                                         <a href="" ></a>
-                                        <ul className="uk-nav-sub uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-nav-parent-icon  " hidden="" uk-nav="multiple: true">
+                                        <ul className="uk-nav-sub uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-nav-parent-icon  uk-list-large" hidden="" uk-nav="multiple: true">
 
                                             {activities.map((activitie, i) =>
                                                 activitie.attributes.category === "Mile_Building" ?
@@ -582,7 +629,7 @@ function Nav({ courses, activities }) {
                                                 </div>
                                                 <a href=""></a>
 
-                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-list-large" hidden="">
 
                                                     {activities.map((activitie, i) =>
                                                         activitie.attributes.category === "Mile_Building" ?
@@ -603,37 +650,21 @@ function Nav({ courses, activities }) {
 
                                         </ul>
                                     </li>
-                                    <li className="uk-parent">
-                                        <div className=" uk-position-abslute  uk-margin">
 
-                                            <Link href="/aboutus">
-                                                <a className="nav-link responsive-link-font uk-margin" uk-toggle="target: #offcanvas-nav-primary">About us</a>
-                                            </Link>
 
-                                        </div>
+
+
+
+                                    <li className="">
+
+                                        <Link href="/news">
+                                            <a className="nav-link responsive-link-font uk-margin" uk-toggle="target: #offcanvas-nav-primary">News </a>
+                                        </Link>
 
 
                                     </li>
 
 
-                                    <div className=" uk-position-abslute  uk-margin">
-
-                                        <Link href="/news">
-                                            <a className="nav-link responsive-link-font uk-margin" uk-toggle="target: #offcanvas-nav-primary">News</a>
-                                        </Link>
-
-                                    </div>
-                                    <div className="uk-card menu-logo-container">
-                                        <Link href="/rya">
-
-                                            <li>
-                                                <a uk-toggle="target: #offcanvas-nav-primary">
-
-                                                    <Image src={rya} alt="logo" height={94} width={117} />
-                                                </a>
-                                            </li>
-                                        </Link>
-                                    </div>
 
 
 
