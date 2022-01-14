@@ -107,7 +107,7 @@ function Nav({ courses, activities }) {
 
                                                             <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
-                                                                    <a >  {course.attributes.title} </a>
+                                                                    <a href="">  {course.attributes.title} </a>
                                                                 </Link></li>
 
                                                             : null
@@ -136,7 +136,7 @@ function Nav({ courses, activities }) {
 
                                                             <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
-                                                                    <a >  {course.attributes.title} </a>
+                                                                    <a href=" ">  {course.attributes.title} </a>
                                                                 </Link></li>
 
                                                             : null
@@ -167,7 +167,7 @@ function Nav({ courses, activities }) {
 
                                                             <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
-                                                                    <a >  {course.attributes.title} </a>
+                                                                    <a href="" >  {course.attributes.title} </a>
                                                                 </Link></li>
 
                                                             : null
@@ -199,7 +199,7 @@ function Nav({ courses, activities }) {
 
                                                             <li className="uk-flex uk-flex-start uk-nav-divider" key={i}>
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
-                                                                    <a >  {course.attributes.title} </a>
+                                                                    <a href="">  {course.attributes.title} </a>
                                                                 </Link></li>
 
                                                             : null
@@ -230,7 +230,7 @@ function Nav({ courses, activities }) {
 
                                                             <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
-                                                                    <a >  {course.attributes.title} </a>
+                                                                    <a href=" ">  {course.attributes.title} </a>
                                                                 </Link></li>
 
                                                             : null
