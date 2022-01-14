@@ -49,7 +49,7 @@ export default function Home({ courses, homepage, latestNews }) {
 
         <Hero courses={courses} images={homepage.attributes.hero} />
 
-        <NewsSidebar latestNews={latestNews} />
+        {/*         <NewsSidebar latestNews={latestNews} /> */}
       </div>
 
 

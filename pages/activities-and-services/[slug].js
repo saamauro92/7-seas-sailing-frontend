@@ -40,6 +40,13 @@ const activitieSection = ({ activitie, homepage }) => {
                             <a href="">Activities {"&"} Services</a>
                         </Link>
                     </li>
+                    {activitie.attributes.category === "Mile_Building" ?
+                        <li>
+                            <span>Mile Building</span>
+                        </li>
+                        : null
+
+                    }
                     <li>
                         <span>{activitie.attributes.title}</span></li>
 
@@ -49,32 +56,39 @@ const activitieSection = ({ activitie, homepage }) => {
 
 
             </div>
-            <div className="uk-container uk-container-expand uk-padding ">
-                <div className="uk-section">
+            <div className="uk-container uk-container-large uk-padding-small ">
 
+                <p className='uk-text-bolder'>
+                    {activitie.attributes.title}
 
-                    <p className='uk-text-bolder'>
-                        {activitie.attributes.title}
+                </p>
+                <div className="uk-section uk-flex uk-flex-between uk-flex-wrap  " >
 
-                    </p>
+                    <div className="uk-width-1-1 uk-width-1-2@m  uk-padding-small uk-padding-remove-vertical " >
+                        <ReactMarkdown
+                            children={activitie.attributes.content} />
 
+                    </div>
 
-                    <ReactMarkdown
-                        children={activitie.attributes.content}
-                    />
-
-
-                    <div
-                        id="banner"
-                        className=" uk-background-contain uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
-                        data-src={imageUrl}
-                        data-srcset={imageUrl}
-                        data-uk-img
-                        uk-parallax="bgy: -100"
-                    ></div>
-                    <hr className="uk-divider-small" />
+                    <div className="uk-width-1-1 uk-width-1-2@m  uk-padding-small ">
+                        <ReactMarkdown
+                            children={activitie.attributes.more_content} />
+                        <div
+                            id="banner"
+                            className=" uk-background-contain uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
+                            data-src={imageUrl}
+                            data-srcset={imageUrl}
+                            data-uk-img
+                            uk-parallax="bgy: -100"
+                        ></div>
+                    </div>
 
                 </div>
+
+
+                <hr />
+
+
             </div>
         </>
     )
