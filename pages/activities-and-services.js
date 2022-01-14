@@ -1,9 +1,8 @@
 import React from 'react'
-import { fetchAPI } from '../lib/api'
 import SEO from '../components/Seo/Seo'
 import Link from 'next/link';
 import Card from '../components/Card/Card'
-const ActivitiesAndServices = ({ homepage, activities }) => {
+const ActivitiesAndServicesPage = ({ homepage, activities }) => {
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
     return (
 
@@ -16,16 +15,14 @@ const ActivitiesAndServices = ({ homepage, activities }) => {
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
                 uk-parallax="bgy: -100"
             >
+                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Activities and Services" />}
                 <h3
                     className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove  "
                     uk-toggle="cls: uk-heading-small;  mode: media; media: @s"
                 > Activities {"&"} Services   </h3>
 
-                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder uk-text-center uk-margin-remove uk-padding-small"
-
-
-                >
-                    <li  >
+                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder uk-text-center uk-margin-remove uk-padding-small">
+                    <li >
 
                         <Link href={"/"}>
                             <a href=""> Home</a>
@@ -101,6 +98,6 @@ const ActivitiesAndServices = ({ homepage, activities }) => {
     )
 }
 
-export default ActivitiesAndServices
+export default ActivitiesAndServicesPage
 
 

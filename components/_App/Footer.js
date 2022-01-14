@@ -8,7 +8,6 @@ const FooterStyleThree = (data) => {
 
     const currentYear = new Date().getFullYear();
 
-
     const contactInfo = data.data.attributes;
 
     return (
@@ -53,17 +52,8 @@ const FooterStyleThree = (data) => {
                 </div>
                 <hr />
 
-                <div className="uk-child-width-1-4@s uk-grid-small uk-flex  uk-flex-wrap u" >
+                <div className="uk-child-width-1-3@s uk-grid-small uk-flex  uk-flex-wrap u" >
 
-                    <div className="uk-card uk-card-secondary uk-card-small ">
-
-
-                        <div className="uk-card uk-card-secondary uk-card-body ">
-                            <h3 className="uk-card-title">ABOUT US </h3>
-                            <p>Whatever your interests are in the world of yachting, pleasure or commercial we are here to offer you courses from the most successful training scheme.</p>
-                        </div>
-
-                    </div>
 
                     <div className="uk-card uk-card-secondary uk-card-small ">
                         <div className="uk-card uk-card-secondary uk-card-body ">
@@ -105,24 +95,7 @@ const FooterStyleThree = (data) => {
 
 
                     </div>
-                    <div className="uk-card uk-card-secondary uk-card-small">
-                        <div className="uk-card uk-card-secondary uk-card-body ">
-                            <h3 className="uk-card-title">LATEST NEWS </h3>
-                            <ul className="uk-list  ">
-                                <li>
-                                    <Link href="/news" activeClassName="active">
-                                        <a>News</a>
-                                    </Link>
-                                </li>
 
-                                {/* ADD NEWS */}
-
-                            </ul>
-                        </div>
-
-
-
-                    </div>
                     <div className="uk-card  uk-card-small">
                         <div className="uk-card uk-card-secondary uk-card-body ">
                             <h3 className="uk-card-title">WE ARE PART OF  </h3>
@@ -172,16 +145,31 @@ const FooterStyleThree = (data) => {
 
 
                     </div>
+
+                    <div className="uk-card uk-card-secondary uk-card-small ">
+
+
+                        <form action="">
+
+                            <div className="uk-card uk-card-secondary uk-card-body uk-flex uk-flex-center uk-flex-column " uk-form-custom>
+                                <h3 className="uk-card-title">JOIN OUR NEWSLETTER </h3>
+                                <input type="text" className='uk-input uk-form-width-large' />
+                                <button className='uk-button uk-button-default uk-button-large uk-margin' type="button" tabIndex="-1">SUBSCRIBE</button>
+                            </div>
+                        </form>
+
+
+                    </div>
                 </div>
                 <div className="uk-container uk-container-expand uk-flex uk-flex-wrap uk-flex-around uk-padding uk-light  ">
 
                     <Image src={logo} alt="logo" height={64} width={217} />
                     <Image src={rya} alt="logo" height={94} width={117} />
                     <div className="uk-card">
-                        <p className='card-title'>
+                        <h3 className='card-title'>
                             Follow us
 
-                        </p>
+                        </h3>
                     </div>
 
                 </div>
@@ -189,9 +177,6 @@ const FooterStyleThree = (data) => {
                 <div className="copyright-area uk-text-center">
                     <p>Copyright &copy; {currentYear} <strong>7 Seas Sailing </strong>. All Rights Reserved.</p>
                 </div>
-
-
-
 
 
                 <CookieConsent

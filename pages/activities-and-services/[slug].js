@@ -11,13 +11,6 @@ import {
 const activitieSection = ({ activitie, homepage }) => {
     const imageUrl = activitie.attributes.image.data.attributes.url
 
-    const seo = {
-        metaTitle: activitie.attributes.title,
-        metaDescription: activitie.attributes.title,
-        shareImage: activitie.attributes.image,
-        article: true,
-    }
-
     return (
         <>
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={activitie.attributes.title} />}

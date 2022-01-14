@@ -8,7 +8,7 @@ import {
 import React from 'react'
 
 
-const Article = ({ course, homepage }) => {
+const CourseSection = ({ course, homepage }) => {
     const imageUrl = course.attributes.image.data.attributes.url
 
 
@@ -157,4 +157,4 @@ export async function getStaticProps({ params }) {
     }
 }
 
-export default Article
+export default CourseSection

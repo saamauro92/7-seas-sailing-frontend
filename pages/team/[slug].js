@@ -11,13 +11,6 @@ import {
 const MemberProfile = ({ member, homepage }) => {
     const imageUrl = member.attributes.image.data.attributes.url
 
-    const seo = {
-        metaTitle: member.attributes.title,
-        metaDescription: member.attributes.description,
-        shareImage: member.attributes.image,
-        article: true,
-    }
-
     return (
         <>
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={member.attributes.name} />}

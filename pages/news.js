@@ -5,7 +5,7 @@ import { fetchAPI } from '../lib/api'
 import SEO from '../components/Seo/Seo'
 import Link from 'next/link'
 
-const News = ({ homepage, news }) => {
+const NewsPage = ({ homepage, news }) => {
 
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
     return (
@@ -17,10 +17,12 @@ const News = ({ homepage, news }) => {
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
                 uk-parallax="bgy: -100"
             >
+                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
                 <h3
                     className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove "
-                    uk-toggle="cls: uk-heading-small;  mode: media; media: @s"
-                > News    </h3>
+                    uk-toggle="cls: uk-heading-small;  mode: media; media: @s">
+                    News
+                </h3>
 
                 <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
                     <li >
@@ -33,16 +35,13 @@ const News = ({ homepage, news }) => {
 
                 </ul>
 
-
             </div>
             <div className="uk-container uk-container-large uk-height-large uk-padding uk-height-large">
-                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
+
 
 
                 <div className="uk-container uk-container-large uk-padding uk-animation-slide-bottom uk-height-large">
                     {news && news.length > 0 && news.map((item, index) =>
-
-
 
 
                         <Link href={`/news/${item.attributes.slug}`} key={index} passHref>
@@ -50,14 +49,9 @@ const News = ({ homepage, news }) => {
 
 
 
-
-
                                 <div className="uk-header uk-text-bolder">
                                     <a href="">   {item.attributes.title}  </a>
                                 </div>
-
-
-
 
 
                                 <div>
@@ -81,13 +75,11 @@ const News = ({ homepage, news }) => {
             </div>
 
 
-
-
         </>
     )
 }
 
-export default News;
+export default NewsPage;
 
 
 export async function getStaticProps() {

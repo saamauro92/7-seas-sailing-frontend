@@ -7,9 +7,8 @@ import ReactMarkdown from "react-markdown"
 import Link from 'next/link'
 
 
-const courses = ({ team, about, homepage }) => {
+const AboutUsPage = ({ team, about, homepage }) => {
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
-
 
     return (
 
@@ -21,6 +20,7 @@ const courses = ({ team, about, homepage }) => {
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
                 uk-parallax="bgy: -100"
             >
+                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
                 <h2 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove" uk-toggle="cls: uk-heading-small;  mode: media; media: @s" > About us   </h2>
 
                 <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
@@ -38,17 +38,10 @@ const courses = ({ team, about, homepage }) => {
             </div>
             <div className="uk-container uk-container-large uk-padding uk-animation-slide-bottom ">
 
-
-                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
-
-
-
-
                 {about &&
 
                     <ReactMarkdown children={about.attributes.whatWeDo} />
                 }
-
 
                 {about && <h2>{about.attributes.rya.title}</h2>}
 
@@ -57,8 +50,6 @@ const courses = ({ team, about, homepage }) => {
             </div>
 
             <div className="uk-container uk-container-large   ">
-
-
 
 
 
@@ -75,7 +66,6 @@ const courses = ({ team, about, homepage }) => {
 
 
                                             <Member data={person} />
-
 
 
                                             : null
@@ -136,7 +126,7 @@ const courses = ({ team, about, homepage }) => {
     )
 }
 
-export default courses
+export default AboutUsPage
 
 
 export async function getStaticProps() {

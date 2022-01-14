@@ -1,7 +1,8 @@
 import Link from "next/link";
+import SEO from "../components/Seo/Seo";
 
 
-const Rya = ({ homepage }) => {
+const RyaPage = ({ homepage }) => {
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
 
 
@@ -15,6 +16,7 @@ const Rya = ({ homepage }) => {
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
                 uk-parallax="bgy: -100"
             >
+                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="About RYA" />}
 
                 <h3 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove " uk-toggle="cls: uk-heading-small;  mode: media; media: @s"  > About the RYA</h3>
                 <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder uk-text-center uk-margin-remove uk-padding-small">
@@ -39,4 +41,4 @@ const Rya = ({ homepage }) => {
 }
 
 
-export default Rya;
+export default RyaPage;

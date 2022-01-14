@@ -11,13 +11,6 @@ import {
 const newsSection = ({ item, homepage }) => {
     const imageUrl = item.attributes.image.data.attributes.url
 
-    const seo = {
-        metaTitle: item.attributes.title,
-        metaDescription: item.attributes.title,
-        shareImage: item.attributes.image,
-        article: true,
-    }
-
     return (
         <>
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={item.attributes.title} />}

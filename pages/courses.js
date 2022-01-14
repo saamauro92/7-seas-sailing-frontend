@@ -1,5 +1,4 @@
 import React from 'react'
-import { fetchAPI } from '../lib/api'
 import Card from '../components/Card/Card'
 import SEO from '../components/Seo/Seo'
 import Link from 'next/link'
@@ -16,6 +15,7 @@ const courses = ({ courses, homepage }) => {
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
                 uk-parallax="bgy: -100"
             >
+                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Courses" />}
 
 
                 <h3 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove " uk-toggle="cls: uk-heading-small;  mode: media; media: @s"  >Our Courses</h3>
@@ -38,15 +38,8 @@ const courses = ({ courses, homepage }) => {
                 <h4 className='uk-background-primary  uk-padding' >RYA Sailing Courses</h4>
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
 
-
-                    {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
-
-
                     {courses && courses.length > 1 && courses.map((course) =>
-
                         course.attributes.courseCategory === 'Sail' ?
-
-
                             < Card data={course} slug="courses" />
 
 
@@ -59,10 +52,7 @@ const courses = ({ courses, homepage }) => {
                 <h4 className='uk-background-primary uk-padding'>RYA Motor Cruising Courses</h4>
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
                     {courses && courses.length > 1 && courses.map((course) =>
-
                         course.attributes.courseCategory === 'Motor' ?
-
-
 
                             < Card data={course} slug="courses" />
 
@@ -76,10 +66,7 @@ const courses = ({ courses, homepage }) => {
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
 
                     {courses && courses.length > 1 && courses.map((course) =>
-
                         course.attributes.courseCategory === 'Power' ?
-
-
 
                             < Card data={course} slug="courses" />
 
@@ -94,10 +81,7 @@ const courses = ({ courses, homepage }) => {
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
 
                     {courses && courses.length > 1 && courses.map((course) =>
-
                         course.attributes.courseCategory === 'Mile_Building' ?
-
-
 
                             < Card data={course} slug="courses" />
 
@@ -113,8 +97,6 @@ const courses = ({ courses, homepage }) => {
                     {courses && courses.length > 1 && courses.map((course) =>
 
                         course.attributes.courseCategory === 'Jet_Ski' ?
-
-
 
                             < Card data={course} slug="courses" />
 
