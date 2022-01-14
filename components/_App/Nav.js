@@ -61,7 +61,7 @@ function Nav({ courses, activities }) {
 
                 <div className="uk-navbar-center">
 
-                    <ul className="uk-navbar-nav ">
+                    <ul className="uk-navbar-nav " uk-nav="multiple: false">
                         <li className="nav-item">
                             <Link href="/aboutus" activeClassName="active">
 
@@ -86,10 +86,11 @@ function Nav({ courses, activities }) {
                             <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2 " style={{ "left": "0px", "top": "80px" }}>
                                 <ul className="uk-nav uk-navbar-dropdown-nav  uk-nav-divider ">
                                     <li>
-                                        <ul className="uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon uk-padding-small" hidden="" uk-nav="multiple: true">
+                                        <ul className="uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon uk-padding-small" hidden="" uk-nav="multiple: false">
 
 
                                             <li className="uk-parent ">
+
                                                 <div className=" uk-position-absolute  ">
 
                                                     <Link href="/courses">
@@ -178,37 +179,7 @@ function Nav({ courses, activities }) {
 
                                             </li>
 
-                                            <li className="uk-parent  uk-nav-divider">
-                                                <div className=" uk-position-absolute ">
 
-                                                    <Link href="/courses"  >
-                                                        <a className="nav-link responsive-link-font ">Mile Building</a>
-
-                                                    </Link>
-
-
-                                                </div>
-                                                <a href="" ></a>
-
-
-
-                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
-
-                                                    {courses.map((course, i) =>
-                                                        course.attributes.courseCategory === "Mile_Building" ?
-
-                                                            <li className="uk-flex uk-flex-start uk-nav-divider" key={i}>
-                                                                <Link href={`/courses/${course.attributes.slug}`} >
-                                                                    <a href="">  {course.attributes.title} </a>
-                                                                </Link></li>
-
-                                                            : null
-
-
-                                                    )}
-                                                </ul>
-
-                                            </li>
                                             <li className="uk-parent  uk-nav-divider">
                                                 <div className=" uk-position-absolute ">
 
@@ -238,6 +209,31 @@ function Nav({ courses, activities }) {
 
                                                     )}
                                                 </ul>
+
+                                            </li>
+                                            <li className=" ">
+
+                                                <div className="uk-nav-divider  ">
+
+                                                    {courses.map((course, i) =>
+                                                        course.attributes.courseCategory === "YM_exam" ?
+
+
+                                                            <Link href={`/courses/${course.attributes.slug}`} >
+                                                                <a href="" className="nav-link responsive-link-font ">  {course.attributes.title} </a>
+                                                            </Link>
+
+                                                            : null
+
+
+                                                    )}
+
+                                                    <Link href="/courses">
+                                                        <a className="nav-link responsive-link-font " >{ }</a>
+                                                    </Link>
+
+
+                                                </div>
 
                                             </li>
 

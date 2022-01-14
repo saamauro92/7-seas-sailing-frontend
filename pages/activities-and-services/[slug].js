@@ -50,18 +50,24 @@ const activitieSection = ({ activitie, homepage }) => {
                     <li>
                         <span>{activitie.attributes.title}</span></li>
 
-
                 </ul>
 
 
-
             </div>
-            <div className="uk-container uk-container-large uk-padding-small uk-animation-slide-bottom">
+            <div className="uk-container uk-container-medium uk-padding-small uk-animation-slide-bottom uk-background-muted">
 
                 <p className='uk-text-bolder'>
                     {activitie.attributes.title}
 
                 </p>
+                <div
+                    id="banner"
+                    className=" uk-background-contain uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
+                    data-src={imageUrl}
+                    data-srcset={imageUrl}
+                    data-uk-img
+                    uk-parallax="bgy: -100"
+                ></div>
                 <div className="uk-section uk-flex uk-flex-between uk-flex-wrap  " >
 
                     <div className="uk-width-1-1 uk-width-1-2@m  uk-padding-small uk-padding-remove-vertical " >
@@ -73,14 +79,7 @@ const activitieSection = ({ activitie, homepage }) => {
                     <div className="uk-width-1-1 uk-width-1-2@m  uk-padding-small ">
                         <ReactMarkdown
                             children={activitie.attributes.more_content} />
-                        <div
-                            id="banner"
-                            className=" uk-background-contain uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
-                            data-src={imageUrl}
-                            data-srcset={imageUrl}
-                            data-uk-img
-                            uk-parallax="bgy: -100"
-                        ></div>
+
                     </div>
 
                 </div>
