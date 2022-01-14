@@ -56,7 +56,7 @@ const activitieSection = ({ activitie, homepage }) => {
 
 
             </div>
-            <div className="uk-container uk-container-large uk-padding-small ">
+            <div className="uk-container uk-container-large uk-padding-small uk-animation-slide-bottom">
 
                 <p className='uk-text-bolder'>
                     {activitie.attributes.title}
