@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 
 import Link from 'next/link'
 import SEO from '../../components/Seo/Seo'
@@ -6,7 +7,8 @@ import {
     fetchAPI,
 } from "../../lib/api"
 import React from 'react'
-
+import ReactMarkdown from "react-markdown"
+import remarkGfm from 'remark-gfm'
 
 const CourseSection = ({ course, homepage }) => {
     const imageUrl = course.attributes.image.data.attributes.url
@@ -53,72 +55,44 @@ const CourseSection = ({ course, homepage }) => {
                 </ul>
             </div>
 
-            <div className="uk-section uk-background-muted uk-flex uk-padding uk-animation-slide-bottom uk-flex-wrap " >
+            <div className="uk-container uk-container-large uk-padding-small uk-animation-slide-bottom">
 
-                <div className="uk-container uk-container-xsmall   ">
-                    <div > {course.attributes.description}</div>
+                <p className='uk-text-bolder'>
+                    {course.attributes.title}
+
+                </p>
+                <div className="uk-section uk-flex uk-flex-between uk-flex-wrap  " >
+
+                    <div className="uk-width-1-1 uk-width-1-2@m  uk-padding-small uk-padding-remove-vertical " >
+
+                        <ReactMarkdown linkTarget="_blank" remarkPlugins={[remarkGfm]}
+                            children={course.attributes.content} />
 
 
-                    <div className="uk-container uk-container-xsmall  uk-padding ">
-                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>  For whom is that course?</h4>
-                        <div > {course.attributes.forWho}</div>
                     </div>
 
+                    <div className="uk-width-1-1 uk-width-1-2@m  uk-padding-small ">
 
+                        <ReactMarkdown linkTarget="_blank" remarkPlugins={[remarkGfm]}
+                            children={course.attributes.more_content} />
 
-                    <div className="uk-container uk-container-xsmall  uk-padding ">
-                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>  Theory Background</h4>
-                        <div > {course.attributes.background}</div>
-                    </div>
-
-                    <div className="uk-container uk-container-xsmall  uk-padding ">
-                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>  Practical Experience</h4>
-                        <div > {course.attributes.experience}</div>
-                    </div>
-
-
-                    <div className="uk-container uk-container-xsmall  uk-padding ">
-                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>   Minimum Age</h4>
-                        <div > {course.attributes.age}</div>
-                    </div>
-
-
-
-
-                </div>
-
-                <div className="uk-container">
-
-                    <div className="uk-container uk-container-xsmall  uk-padding ">
-                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>  Course Content</h4>
-                        <div >
-                            {course.attributes.content}
-
-                        </div>
-
-                    </div>
-                    <div className="uk-container uk-container-xsmall  uk-padding ">
-                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>  Duration</h4>
-                        <div > {course.attributes.duration}</div>
-                    </div>
-
-                    <div className="uk-container uk-container-xsmall  uk-padding ">
-                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>  Examination</h4>
-                        <div > {course.attributes.examination}</div>
-                    </div>
-                    <div className="uk-container uk-container-xsmall  uk-padding ">
-                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>  Certificate</h4>
-                        <div > {course.attributes.certificate}</div>
-                    </div>
-                    <div className="uk-container uk-container-xsmall  uk-padding ">
-                        <h4 className='uk-text-lead  uk-text-bold uk-text-uppercase'>  Ability after the course</h4>
-                        <div > {course.attributes.abilityAfter}</div>
+                        <div
+                            id="banner"
+                            className=" uk-background-contain uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
+                            data-src={imageUrl}
+                            data-srcset={imageUrl}
+                            data-uk-img
+                            uk-parallax="bgy: -100"
+                        ></div>
                     </div>
 
                 </div>
 
-            </div >
 
+                <hr />
+
+
+            </div>
 
 
 
