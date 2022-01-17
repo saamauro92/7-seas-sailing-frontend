@@ -155,8 +155,22 @@ a {
   cursor: pointer;
 }
 
+/* switcher border (yachtmaster section */
+.uk-tab-left > * > a {
+  border-right: 4px solid transparent;
+}
+
 @media only screen and (max-width: 600px) {
   .offcanvas-News {
     width: 100vw;
   }
+}
+
+h2,
+h3 {
+  color: #002a74;
+}
+
+p > strong {
+  color: #002a74;
 }

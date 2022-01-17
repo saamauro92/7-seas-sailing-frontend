@@ -57,25 +57,60 @@ const Yachtmaster = ({ homepage, data }) => {
                 </ul>
             </div>
 
-
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle='Yachtmaster preparation' />}
+            <div className="uk-container uk-container-medium  uk-animation-slide-bottom  uk-background-muted" uk-toggle="cls: uk-padding-small; mode: media; media: @m">
+                <h2 >
 
-            <div className="uk-container uk-container-mediumW uk-padding-small uk-animation-slide-bottom uk-background-muted">
+                    THE PINAPPLE OF YACHTING!
+
+
+                </h2>
+                {/* description section */}
+                <div className="uk-section  ">
+                    <ReactMarkdown children={data.attributes.description} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+
+
+                </div>
 
 
 
-                <div className="uk-child-width-auto uk-padding uk-margin " uk-grid>
+                <div className="uk-section uk-width-1-1 uk-flex uk-padding-remove-vertical uk-margin" >
+                    <div className=" fade-effect uk-width-1-2 uk-padding-small uk-padding-remove-horizontal " uk-scrollspy="cls: uk-animation-fade; delay:200; repeat: false">
+
+                        <ReactMarkdown children={data.attributes.theory} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+
+                    </div>
+
+
+                    <div className="fade-effect  uk-width-1-2 uk-padding-small " uk-scrollspy="cls: uk-animation-fade; delay:400; repeat: false">
+
+                        <ReactMarkdown children={data.attributes.practical} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+            <div className="uk-container uk-container-medium uk-padding-remove uk-margin " uk-toggle="cls: uk-padding-small; mode: media; media: @m">
+
+                <h2 className='uk-padding'> <strong> Requisites and exam format for each level of Yachtmaster qualification:</strong> </h2>
+
+
+                <div className="uk-child-width-expand uk-background-muted uk-margin-large-bottom uk-padding-small  " uk-grid>
                     <div>
-
                         <h2>   RYA Yachtmaster Coastal Exam</h2>
 
-                        <div uk-grid className='uk-flex'>
+
+                        <div uk-grid className='uk-flex '
+                            uk-toggle="cls: uk-flex; mode: media; media: @l" >
 
 
 
                             {yachtmasterCoastalPath.map((item, i) =>
                                 <>
-                                    <div className="uk-width-1-3 uk-padding-small">
+                                    <div className="uk-width-1-4 ">
 
                                         <ul className="uk-tab-left" uk-tab="connect: #component-nav-coastal; animation: uk-animation-fade">
                                             <li><a href="#">{item.Minimum_seatime}</a></li>
@@ -86,23 +121,34 @@ const Yachtmaster = ({ homepage, data }) => {
                                         </ul>
                                     </div>
 
-                                    <div className="uk-width-1-1">
-                                        <ul id="component-nav-coastal" className="uk-switcher">
-                                            <li>
-                                                <ReactMarkdown children={item.contentItemOne} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
-                                            </li>
-                                            <li>
-                                                <ReactMarkdown children={item.contentItemTwo} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
-                                            </li>
-                                            <li>
-                                                <ReactMarkdown children={item.contentItemThree} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
-                                            </li>
-                                            <li>
-                                                <ReactMarkdown children={item.contentItemFour} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
-                                            </li>
-                                            <li>
-                                                <ReactMarkdown children={item.contentItemFive} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
-                                            </li>
+                                    <div className="uk-width-1-1 ">
+                                        <ul id="component-nav-coastal" className="uk-switcher uk-padding-small uk-padding-remove-vertical uk-margin" >
+                                            <div className="uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+
+                                                <li>
+                                                    <ReactMarkdown children={item.contentItemOne} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                                                </li>
+                                            </div>
+                                            <div className=" uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+                                                <li>
+                                                    <ReactMarkdown children={item.contentItemTwo} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                                                </li>
+                                            </div>
+                                            <div className="uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+                                                <li>
+                                                    <ReactMarkdown children={item.contentItemThree} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                                                </li>
+                                            </div>
+                                            <div className="uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+                                                <li>
+                                                    <ReactMarkdown children={item.contentItemFour} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                                                </li>
+                                            </div>
+                                            <div className="uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+                                                <li>
+                                                    <ReactMarkdown children={item.contentItemFive} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                                                </li>
+                                            </div>
                                         </ul>
                                     </div>
                                 </>
@@ -111,20 +157,22 @@ const Yachtmaster = ({ homepage, data }) => {
                             )}
 
 
-                        </div>
-                    </div>
-                </div >
 
-                <div className="uk-child-width-auto uk-padding uk-margin " uk-grid>
+                        </div>
+                    </div >
+                </div>
+
+                <div className="uk-child-width-expand uk-background-muted uk-margin uk-padding-small uk-margin-large-bottom" uk-grid>
                     <div>
                         <h2>RYA Yachtmaster Offshore Exam</h2>
 
-                        <div uk-grid className='uk-flex'>
+                        <div uk-grid className='uk-flex '
+                            uk-toggle="cls: uk-flex; mode: media; media: @l" >
 
 
                             {yachtmasterOffshorePath.map((item, i) =>
                                 <>
-                                    <div className="uk-width-1-3 uk-padding-small">
+                                    <div className="uk-width-1-4 ">
 
                                         <ul className="uk-tab-left" uk-tab="connect: #component-nav-offshore; animation: uk-animation-fade">
                                             <li><a href="#">{item.Minimum_seatime}</a></li>
@@ -135,23 +183,34 @@ const Yachtmaster = ({ homepage, data }) => {
                                         </ul>
                                     </div>
 
-                                    <div className="uk-width-1-1">
-                                        <ul id="component-nav-offshore" className="uk-switcher">
-                                            <li>
-                                                <ReactMarkdown children={item.contentItemOne} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
-                                            </li>
-                                            <li>
-                                                <ReactMarkdown children={item.contentItemTwo} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
-                                            </li>
-                                            <li>
-                                                <ReactMarkdown children={item.contentItemThree} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
-                                            </li>
-                                            <li>
-                                                <ReactMarkdown children={item.contentItemFour} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
-                                            </li>
-                                            <li>
-                                                <ReactMarkdown children={item.contentItemFive} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
-                                            </li>
+                                    <div className="uk-width-1-1 ">
+                                        <ul id="component-nav-offshore" className="uk-switcher uk-padding-small uk-padding-remove-vertical uk-margin" >
+                                            <div className="uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+
+                                                <li>
+                                                    <ReactMarkdown children={item.contentItemOne} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                                                </li>
+                                            </div>
+                                            <div className=" uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+                                                <li>
+                                                    <ReactMarkdown children={item.contentItemTwo} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                                                </li>
+                                            </div>
+                                            <div className="uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+                                                <li>
+                                                    <ReactMarkdown children={item.contentItemThree} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                                                </li>
+                                            </div>
+                                            <div className="uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+                                                <li>
+                                                    <ReactMarkdown children={item.contentItemFour} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                                                </li>
+                                            </div>
+                                            <div className="uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+                                                <li>
+                                                    <ReactMarkdown children={item.contentItemFive} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                                                </li>
+                                            </div>
                                         </ul>
                                     </div>
                                 </>
@@ -164,15 +223,16 @@ const Yachtmaster = ({ homepage, data }) => {
                     </div>
                 </div >
 
-                <div className="uk-child-width-auto uk-padding uk-margin " uk-grid>
+                <div className="uk-child-width-expand uk-background-muted uk-margin uk-padding-small uk-margin-large-bottom" uk-grid>
                     <div>
                         <h2> RYA Yachtmaster Ocean Exam</h2>
-                        <div uk-grid className='uk-flex'>
+                        <div uk-grid className='uk-flex '
+                            uk-toggle="cls: uk-flex; mode: media; media: @l" >
 
 
                             {yachtmasterOceanPath.map((item, i) =>
                                 <>
-                                    <div className="uk-width-1-3 uk-padding-small">
+                                    <div className="uk-width-1-4 ">
 
                                         <ul className="uk-tab-left" uk-tab="connect: #component-nav-ocean; animation: uk-animation-fade">
                                             <li><a href="#">{item.Minimum_seatime}</a></li>
@@ -183,23 +243,34 @@ const Yachtmaster = ({ homepage, data }) => {
                                         </ul>
                                     </div>
 
-                                    <div className="uk-width-1-1">
-                                        <ul id="component-nav-ocean" className="uk-switcher">
-                                            <li>
-                                                <ReactMarkdown children={item.contentItemOne} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
-                                            </li>
-                                            <li>
-                                                <ReactMarkdown children={item.contentItemTwo} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
-                                            </li>
-                                            <li>
-                                                <ReactMarkdown children={item.contentItemThree} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
-                                            </li>
-                                            <li>
-                                                <ReactMarkdown children={item.contentItemFour} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
-                                            </li>
-                                            <li>
-                                                <ReactMarkdown children={item.contentItemFive} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
-                                            </li>
+                                    <div className="uk-width-1-1 ">
+                                        <ul id="component-nav-ocean" className="uk-switcher uk-padding-small uk-padding-remove-vertical uk-margin" >
+                                            <div className="uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+
+                                                <li>
+                                                    <ReactMarkdown children={item.contentItemOne} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                                                </li>
+                                            </div>
+                                            <div className=" uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+                                                <li>
+                                                    <ReactMarkdown children={item.contentItemTwo} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                                                </li>
+                                            </div>
+                                            <div className="uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+                                                <li>
+                                                    <ReactMarkdown children={item.contentItemThree} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                                                </li>
+                                            </div>
+                                            <div className="uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+                                                <li>
+                                                    <ReactMarkdown children={item.contentItemFour} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                                                </li>
+                                            </div>
+                                            <div className="uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+                                                <li>
+                                                    <ReactMarkdown children={item.contentItemFive} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                                                </li>
+                                            </div>
                                         </ul>
                                     </div>
                                 </>

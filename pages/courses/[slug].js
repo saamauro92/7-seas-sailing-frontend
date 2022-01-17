@@ -55,7 +55,7 @@ const CourseSection = ({ course, homepage }) => {
 
 
 
-            <div className="uk-container uk-container-mediumW uk-padding-small uk-animation-slide-bottom uk-background-muted">
+            <div className="uk-container uk-container-medium uk-padding-small uk-animation-slide-bottom uk-background-muted">
 
 
 
