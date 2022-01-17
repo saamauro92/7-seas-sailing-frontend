@@ -74,15 +74,15 @@ const Yachtmaster = ({ homepage, data }) => {
 
 
 
-                <div className="uk-section uk-width-1-1 uk-flex uk-padding-remove-vertical uk-margin" >
-                    <div className=" fade-effect uk-width-1-2 uk-padding-small uk-padding-remove-horizontal " uk-scrollspy="cls: uk-animation-fade; delay:200; repeat: false">
+                <div className="uk-section uk-width-expand  uk-padding-remove-vertical uk-margin  " uk-toggle="cls: uk-flex; mode: media; media: @m ">
+                    <div className=" fade-effect uk-width-1-1  uk-padding-small uk-padding-remove-horizontal" uk-scrollspy="cls: uk-animation-fade; delay:200; repeat: false">
 
                         <ReactMarkdown children={data.attributes.theory} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
 
                     </div>
 
 
-                    <div className="fade-effect  uk-width-1-2 uk-padding-small " uk-scrollspy="cls: uk-animation-fade; delay:400; repeat: false">
+                    <div className="fade-effect      uk-padding-small " uk-scrollspy="cls: uk-animation-fade; delay:400; repeat: false">
 
                         <ReactMarkdown children={data.attributes.practical} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
                     </div>
