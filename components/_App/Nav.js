@@ -86,7 +86,7 @@ function Nav({ courses, activities }) {
                             <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2 " style={{ "left": "0px", "top": "80px" }}>
                                 <ul className="uk-nav uk-navbar-dropdown-nav  uk-nav-divider ">
                                     <li>
-                                        <ul className="uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon uk-padding-small" hidden="" uk-nav="multiple: false">
+                                        <ul className="uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon uk-padding-small" hidden="" uk-nav="multiple:    ">
 
 
                                             <li className="uk-parent ">
@@ -215,18 +215,9 @@ function Nav({ courses, activities }) {
 
                                                 <div className="uk-nav-divider  ">
 
-                                                    {courses.map((course, i) =>
-                                                        course.attributes.courseCategory === "YM_exam" ?
-
-
-                                                            <Link href={`/courses/${course.attributes.slug}`} >
-                                                                <a href="" className="nav-link responsive-link-font ">  {course.attributes.title} </a>
-                                                            </Link>
-
-                                                            : null
-
-
-                                                    )}
+                                                    <Link href={`/courses/yachtmaster`} >
+                                                        <a href="" className="nav-link responsive-link-font ">  Yachtmaster Preparation </a>
+                                                    </Link>
 
                                                     <Link href="/courses">
                                                         <a className="nav-link responsive-link-font " >{ }</a>
