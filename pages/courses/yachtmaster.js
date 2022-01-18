@@ -98,7 +98,7 @@ const Yachtmaster = ({ homepage, data }) => {
             </div>
 
 
-            <div className="uk-container uk-container-medium uk-padding-remove uk-margin " uk-toggle="cls: uk-padding-small; mode: media; media: @m">
+            <div className="uk-container  uk-container-medium  uk-padding-remove uk-margin " uk-toggle="cls: uk-padding-small; mode: media; media: @m">
 
                 <h2 className='uk-padding'> <strong> Requisites and exam format for each level of Yachtmaster qualification:</strong> </h2>
 
@@ -128,7 +128,7 @@ const Yachtmaster = ({ homepage, data }) => {
 
                                     <div className="uk-width-1-1 ">
                                         <ul id="component-nav-coastal" className="uk-switcher uk-padding-small uk-padding-remove-vertical uk-margin" >
-                                            <div className="uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+                                            <div className="uk-height-1-1 uk-height-match" >
 
                                                 <li>
                                                     <ReactMarkdown children={item.contentItemOne} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
@@ -190,13 +190,13 @@ const Yachtmaster = ({ homepage, data }) => {
 
                                     <div className="uk-width-1-1 ">
                                         <ul id="component-nav-offshore" className="uk-switcher uk-padding-small uk-padding-remove-vertical uk-margin" >
-                                            <div className="uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+                                            <div className="uk-height1-1 uk-height-match">
 
                                                 <li>
                                                     <ReactMarkdown children={item.contentItemOne} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
                                                 </li>
                                             </div>
-                                            <div className=" uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+                                            <div className=" uk-height-1-1 " uk-toggle="cls: uk-height-large ; mode: media; media: @m">
                                                 <li>
                                                     <ReactMarkdown children={item.contentItemTwo} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
                                                 </li>
@@ -250,7 +250,7 @@ const Yachtmaster = ({ homepage, data }) => {
 
                                     <div className="uk-width-1-1 ">
                                         <ul id="component-nav-ocean" className="uk-switcher uk-padding-small uk-padding-remove-vertical uk-margin" >
-                                            <div className="uk-height-1-1" uk-toggle="cls: uk-height-large ; mode: media; media: @m">
+                                            <div className="uk-height-1-1 uk-height-match">
 
                                                 <li>
                                                     <ReactMarkdown children={item.contentItemOne} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
