@@ -20,7 +20,10 @@ const courses = ({ courses, homepage }) => {
 
                 <h3 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove " uk-toggle="cls: uk-heading-small;  mode: media; media: @s"  >Our Courses</h3>
 
-                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
+
+            </div>
+            <div className='uk-container uk-container-large uk-padding uk-animation-slide-bottom'>
+                <ul className="uk-breadcrumb  uk-width-1-4@m uk-width-1-4@l banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
                     <li >
 
                         <Link href={"/"}>
@@ -30,11 +33,6 @@ const courses = ({ courses, homepage }) => {
                     <li > <span > Courses</span></li>
 
                 </ul>
-
-
-            </div>
-            <div className='uk-container uk-container-large uk-padding uk-animation-slide-bottom'>
-
                 <h4 className='uk-background-primary  uk-padding' >RYA Sailing Courses</h4>
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
 

@@ -34,7 +34,12 @@ const CourseSection = ({ course, homepage }) => {
                     uk-toggle="cls: uk-heading-small;  mode: media; media: @s"
                 >  {course.attributes.title}   </h2>
 
-                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder  uk-margin-remove uk-padding-small">
+
+            </div>
+
+
+            <div className="uk-container uk-container-medium uk-padding-medium uk-animation-slide-bottom uk-background-muted" >
+                <ul className="uk-breadcrumb uk-width-1-2@m uk-width-1-2@l banner-titles uk-heading-medium  uk-text-bolder  uk-margin-remove uk-padding-small">
                     <li>
                         <Link href={"/"}>
                             <a href="">Home</a>
@@ -52,18 +57,6 @@ const CourseSection = ({ course, homepage }) => {
                     <li > <span > {course.attributes.title}  </span></li>
 
                 </ul>
-            </div>
-
-
-            <div className="uk-container uk-container-medium uk-padding-medium uk-animation-slide-bottom uk-background-muted" >
-
-
-                {/*               <p className='uk-text-bolder'>
-                    {course.attributes.title}
-
-                </p>
- */}
-
 
                 <div className="uk-section uk-flex uk-flex-wrap  uk-margin " >
 

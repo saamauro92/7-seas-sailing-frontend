@@ -34,9 +34,25 @@ const Yachtmaster = ({ homepage, data }) => {
                 <h2
                     className="banner-titles  uk-text-bolder  uk-margin-remove uk-padding-remove "
                     uk-toggle="cls: uk-heading-small;  mode: media; media: @s"
-                >  Yachtmaster   </h2>
+                >  Yachtmaster Exam Prep   </h2>
+                <h2
+                    className="banner-titles  uk-text-bolder  uk-margin-remove uk-padding-remove "
+                    uk-toggle="cls: uk-heading-small;  mode: media; media: @s"
 
-                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder  uk-margin-remove uk-padding-small">
+                >
+                    The Pinapple of Yachting!
+
+
+                </h2>
+
+
+            </div>
+
+
+            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle='Yachtmaster preparation' />}
+            <div className="uk-container uk-container-medium  uk-animation-slide-bottom  uk-background-muted" uk-toggle="cls: uk-padding-small; mode: media; media: @m">
+
+                <ul className="uk-breadcrumb uk-width-1-3@m uk-heading-medium  uk-text-bolder  uk-margin-remove uk-padding-small">
                     <li>
                         <Link href={"/"}>
                             <a href="">Home</a>
@@ -55,17 +71,6 @@ const Yachtmaster = ({ homepage, data }) => {
 
 
                 </ul>
-            </div>
-
-            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle='Yachtmaster preparation' />}
-            <div className="uk-container uk-container-medium  uk-animation-slide-bottom  uk-background-muted" uk-toggle="cls: uk-padding-small; mode: media; media: @m">
-                <h2 >
-
-                    THE PINAPPLE OF YACHTING!
-
-
-                </h2>
-                {/* description section */}
                 <div className="uk-section  ">
                     <ReactMarkdown children={data.attributes.description} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
 

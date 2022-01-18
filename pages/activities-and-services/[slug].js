@@ -28,7 +28,12 @@ const activitieSection = ({ activitie, homepage }) => {
 
                 <h2 className="banner-titles uk-heading-medium uk-text-bolder uk-text-center  uk-margin-remove uk-padding-remove"> {activitie.attributes.title} </h2>
 
-                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
+
+
+
+            </div>
+            <div className="uk-container uk-container-medium uk-padding-small uk-animation-slide-bottom uk-background-muted">
+                <ul className="uk-breadcrumb uk-width-1-2@m uk-width-1-2@l banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
                     <li>
                         <Link href={"/"}>
                             <a href="">Home</a>
@@ -52,11 +57,6 @@ const activitieSection = ({ activitie, homepage }) => {
                         <span>{activitie.attributes.title}</span></li>
 
                 </ul>
-
-
-            </div>
-            <div className="uk-container uk-container-medium uk-padding-small uk-animation-slide-bottom uk-background-muted">
-
 
 
 

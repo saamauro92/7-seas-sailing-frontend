@@ -120,16 +120,24 @@ a {
 .banner-titles {
   color: #f2f2f2;
 }
-
+/*  BREADCUMB */
 .uk-breadcrumb > :last-child > a:not([href]),
 .uk-breadcrumb > :last-child > span,
 .uk-breadcrumb > * > * {
-  color: #f2f2f2;
+  color: #2a2a2a;
   font-weight: 500;
 }
 
+.uk-breadcrumb * {
+  justify-content: center;
+}
+.uk-heading-medium {
+  justify-content: space-around;
+  line-height: 1.8;
+}
+
 .uk-breadcrumb > :nth-child(n + 2):not(.uk-first-column)::before {
-  color: #f2f2f2;
+  color: #2a2a2a;
   font-weight: 300;
 }
 
@@ -172,5 +180,5 @@ h3 {
 }
 
 p > strong {
-  color: #2e4e85;
+  color: #465e88;
 }

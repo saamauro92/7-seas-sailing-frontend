@@ -23,7 +23,10 @@ const AboutUsPage = ({ team, about, homepage }) => {
                 {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
                 <h2 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove" uk-toggle="cls: uk-heading-small;  mode: media; media: @s" > About us   </h2>
 
-                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
+
+            </div>
+            <div className="uk-container uk-container-large uk-padding uk-animation-slide-bottom ">
+                <ul className="uk-breadcrumb  uk-width-1-4@m uk-width-1-4@l banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
                     <li >
 
                         <Link href={"/"}>
@@ -33,11 +36,6 @@ const AboutUsPage = ({ team, about, homepage }) => {
                     <li > <span > About </span></li>
 
                 </ul>
-
-
-            </div>
-            <div className="uk-container uk-container-large uk-padding uk-animation-slide-bottom ">
-
                 {about &&
 
                     <ReactMarkdown children={about.attributes.whatWeDo} />

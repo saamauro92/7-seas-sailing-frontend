@@ -24,7 +24,10 @@ const NewsPage = ({ homepage, news }) => {
                     News
                 </h3>
 
-                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
+            </div>
+            <div className="uk-container uk-container-large uk-height-large uk-padding uk-height-large">
+
+                <ul className="uk-breadcrumb uk-width-1-4@m uk-width-1-4@l banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
                     <li >
 
                         <Link href={"/"}>
@@ -34,11 +37,6 @@ const NewsPage = ({ homepage, news }) => {
                     <li > <span > News </span></li>
 
                 </ul>
-
-            </div>
-            <div className="uk-container uk-container-large uk-height-large uk-padding uk-height-large">
-
-
 
                 <div className="uk-container uk-container-large uk-padding uk-animation-slide-bottom uk-height-large">
                     {news && news.length > 0 && news.map((item, index) =>

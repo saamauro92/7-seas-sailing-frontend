@@ -21,7 +21,18 @@ const ActivitiesAndServicesPage = ({ homepage, activities }) => {
                     uk-toggle="cls: uk-heading-small;  mode: media; media: @s"
                 > Activities {"&"} Services   </h3>
 
-                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder uk-text-center uk-margin-remove uk-padding-small">
+
+            </div>
+
+
+            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Activities and Services" />}
+
+
+
+
+
+            <div className='uk-container uk-container-large uk-padding uk-animation-slide-bottom'>
+                <ul className="uk-breadcrumb  uk-width-1-4@m uk-width-1-4@l banner-titles uk-heading-medium  uk-text-bolder uk-text-center uk-margin-remove uk-padding-small">
                     <li >
 
                         <Link href={"/"}>
@@ -32,20 +43,7 @@ const ActivitiesAndServicesPage = ({ homepage, activities }) => {
 
                 </ul>
 
-
-            </div>
-
-            <div className="uk-container uk-container-large uk-padding ">
-                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Activities and Services" />}
-
-
-            </div>
-
-
-            <div className='uk-container uk-container-large uk-padding uk-animation-slide-bottom'>
-
-
-                <div className="uk-flex uk-flex-around uk-flex-wrap">
+                <div className="uk-flex uk-flex-around uk-flex-wrap uk-margin-large">
 
 
                     {activities && activities.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
