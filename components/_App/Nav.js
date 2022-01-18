@@ -44,14 +44,15 @@ function Nav({ courses, activities }) {
 
                     <Link href="/">
                         <a className="uk-navbar-item uk-logo" >
+
                             <Image src={logo} alt="logo" height={64} width={217} />
                         </a>
                     </Link>
                     <div className="uk-visible@s">
                         <Link href="/rya">
                             <a href="">
-
                                 <Image src={rya} alt="logo" height={94} width={117} />
+
                             </a>
                         </Link>
                     </div>
@@ -86,7 +87,7 @@ function Nav({ courses, activities }) {
                             <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2 " style={{ "left": "0px", "top": "80px" }}>
                                 <ul className="uk-nav uk-navbar-dropdown-nav  uk-nav-divider ">
                                     <li>
-                                        <ul className="uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon uk-padding-small" hidden="" uk-nav="multiple:    ">
+                                        <ul className="uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon uk-padding-small" hidden="" uk-nav="multiple: false   ">
 
 
                                             <li className="uk-parent ">
@@ -333,7 +334,7 @@ function Nav({ courses, activities }) {
                     </a>
                 </Link>
                 <div className="uk-visible@s">
-                    <Image src={rya} alt="logo" height={94} width={117} />
+                    <Image src={rya} alt="logo" height={84} width={117} />
                 </div>
             </div>
 
@@ -577,6 +578,22 @@ function Nav({ courses, activities }) {
 
                                                     )}
                                                 </ul>
+
+                                            </li>
+                                            <li className=" uk-parent">
+
+                                                <div className="uk-position-absolute  ">
+
+                                                    <Link href={`/courses/yachtmaster`} >
+                                                        <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">  Yachtmaster Preparation </a>
+                                                    </Link>
+
+                                                    <Link href="/courses">
+                                                        <a className="nav-link responsive-link-font " >{ }</a>
+                                                    </Link>
+
+
+                                                </div>
 
                                             </li>
 

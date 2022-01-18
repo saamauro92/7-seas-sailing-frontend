@@ -1,7 +1,7 @@
 /* import ReactMarkdown from "react-markdown" */
 import Link from 'next/link'
 import SEO from '../../components/Seo/Seo'
-import Image from 'next/image'
+
 
 import {
     fetchAPI,

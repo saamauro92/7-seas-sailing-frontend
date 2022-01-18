@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react"
 import Link from "next/link"
-import Image from 'next/image'
+
 
 const Card = ({ data, slug }) => {
 
@@ -11,7 +11,6 @@ const Card = ({ data, slug }) => {
             <div className="uk-card-media-top">
                 {data.attributes.image.data.attributes.url &&
 
-                    /*             <Image src={data.attributes.image.data.attributes.url} width={280} height={180} alt="course-picture" layout="intrinsic" /> */
                     <img src={data.attributes.image.data.attributes.url} width="300" height="250" alt="course_card" uk-img />
                 }
 

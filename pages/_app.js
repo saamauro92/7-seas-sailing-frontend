@@ -6,9 +6,10 @@ import { fetchAPI } from '../lib/api';
 
 export default function MyApp({ Component, pageProps }) {
 
-  const { courses, activities } = pageProps;
+  const { courses, activities, homepage } = pageProps;
+  console.log(homepage, 'homepage')
   return (
-    <Layout data={pageProps.contactDetails} courses={courses} activities={activities}>
+    <Layout data={pageProps.contactDetails} courses={courses} activities={activities} homepage={homepage}>
       <Component {...pageProps} />
     </Layout>
   )
@@ -22,8 +23,9 @@ MyApp.getInitialProps = async (ctx) => {
   const coursesRes = await fetchAPI("/courses", { populate: "*" });
   const homepageRes = await fetchAPI("/homepage", {
     populate: {
-      hero: { populate: "*" },
       seo: { populate: "*" },
+      hero: { populate: "*" },
+      logos: { populate: "*" }
     },
   })
   const activitiesRes = await fetchAPI("/activities", { populate: "*" });

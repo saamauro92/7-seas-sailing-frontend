@@ -89,7 +89,7 @@ a {
   border-bottom: 1px solid #3a327e;
 }
 .uk-parent > a::after {
-  background-color: #002a74;
+  background-color: #39f;
   border-radius: 50%;
 }
 

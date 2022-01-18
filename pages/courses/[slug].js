@@ -9,6 +9,7 @@ import {
 import React from 'react'
 import ReactMarkdown from "react-markdown"
 import remarkGfm from 'remark-gfm'
+import ActionSection from '../../components/actionSection/ActionSection'
 
 const CourseSection = ({ course, homepage }) => {
     const imageUrl = course.attributes.image.data.attributes.url
@@ -55,48 +56,60 @@ const CourseSection = ({ course, homepage }) => {
 
 
 
-            <div className="uk-container uk-container-medium uk-padding-small uk-animation-slide-bottom uk-background-muted">
+            <div className="uk-container uk-container-medium uk-padding-small uk-animation-slide-bottom uk-background-muted" >
 
 
-
-                <p className='uk-text-bolder'>
+                {/*               <p className='uk-text-bolder'>
                     {course.attributes.title}
 
                 </p>
+ */}
 
-                <div
-                    id="banner"
-                    className=" uk-width-1-2 uk-background-contain uk-height-large  "
-                    data-src={imageUrl}
-                    data-srcset={imageUrl}
-                    data-uk-img
-                    uk-parallax="bgy: -100"
-                ></div>
-                <div className="uk-section uk-flex uk-flex-between uk-flex-wrap  " >
 
-                    <div className="uk-width-1-1 uk-width-1-2@m  uk-padding-small uk-padding-remove-vertical " >
+                <div className="uk-section uk-flex uk-flex-wrap  uk-margin " >
+
+
+                    <div className="uk-width-2-4 uk-width-1-2@m  uk-padding-small uk-padding-remove-vertical " >
 
                         <ReactMarkdown linkTarget="_blank" remarkPlugins={[remarkGfm]}
                             children={course.attributes.content} />
 
 
                     </div>
+                    <div className="uk-card uk-width-2-4  uk-width-1-2@m uk-height-large ">
+                        <div
+                            className="  uk-background-cover uk-height-large  "
+                            data-src={imageUrl}
+                            data-srcset={imageUrl}
+                            data-uk-img
+                            uk-parallax="bgy: -100"
+                        ></div>
 
-                    <div className="uk-width-1-1 uk-width-1-2@m  uk-padding-small ">
+
 
                         <ReactMarkdown linkTarget="_blank" remarkPlugins={[remarkGfm]}
                             children={course.attributes.more_content} />
 
 
+
+
+
+
                     </div>
+                    <ActionSection>Contact us</ActionSection>
+
+
+
 
                 </div>
 
 
-                <hr />
+
+
 
 
             </div>
+
 
 
 

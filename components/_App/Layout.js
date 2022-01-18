@@ -5,7 +5,7 @@ import FooterStyleThree from './Footer';
 import Nav from './Nav';
 
 
-const Layout = ({ children, data, courses, activities }) => {
+const Layout = ({ children, data, courses, activities, homepage, }) => {
 
     // Preloader
     /*     const [loader, setLoader] = React.useState(true);
@@ -25,7 +25,7 @@ const Layout = ({ children, data, courses, activities }) => {
 
 
             {/*         {loader ? <h5> LOADING...</h5> : null} */}
-            <Nav courses={courses} activities={activities} />
+            <Nav courses={courses} activities={activities} homepage={homepage} />
 
             {children}
 
