@@ -55,8 +55,7 @@ const CourseSection = ({ course, homepage }) => {
             </div>
 
 
-
-            <div className="uk-container uk-container-medium uk-padding-small uk-animation-slide-bottom uk-background-muted" >
+            <div className="uk-container uk-container-medium uk-padding-medium uk-animation-slide-bottom uk-background-muted" >
 
 
                 {/*               <p className='uk-text-bolder'>
@@ -76,7 +75,7 @@ const CourseSection = ({ course, homepage }) => {
 
 
                     </div>
-                    <div className="uk-card uk-width-2-4  uk-width-1-2@m uk-height-large ">
+                    <div className="uk-card uk-width-2-4  uk-width-1-2@m  uk-padding-small ">
                         <div
                             className="  uk-background-cover uk-height-large  "
                             data-src={imageUrl}
@@ -91,12 +90,10 @@ const CourseSection = ({ course, homepage }) => {
                             children={course.attributes.more_content} />
 
 
-
-
-
+                        <ActionSection>Contact us</ActionSection>
 
                     </div>
-                    <ActionSection>Contact us</ActionSection>
+
 
 
 

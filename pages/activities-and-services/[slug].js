@@ -68,7 +68,7 @@ const activitieSection = ({ activitie, homepage }) => {
 
                     </div>
 
-                    <div className="uk-card uk-width-2-4  uk-width-1-2@m uk-height-large ">
+                    <div className="uk-card uk-width-2-4  uk-width-1-2@m  ">
                         <div
                             className=" uk-background-cover uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                             data-src={imageUrl}
@@ -79,8 +79,8 @@ const activitieSection = ({ activitie, homepage }) => {
                         <ReactMarkdown
                             children={activitie.attributes.more_content} />
 
+                        <ActionSection>Contact us</ActionSection>
                     </div>
-                    <ActionSection>Contact us</ActionSection>
 
                 </div>
 
