@@ -7,13 +7,15 @@ const courses = ({ courses, homepage }) => {
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
     return (
 
-        <div className='uk-background-muted' >
+        <div className='' >
+
             <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small  uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                 data-src={imgBanner}
                 data-srcset={imgBanner}
                 data-uk-img
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
                 uk-parallax="bgy: -100"
+                style={{ "zIndex": "9" }}
             >
                 {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Courses" />}
 
@@ -22,7 +24,13 @@ const courses = ({ courses, homepage }) => {
 
 
             </div>
-            <div className='uk-container uk-container-large uk-padding uk-animation-slide-bottom'>
+
+
+
+
+            <div className='uk-container uk-container-medium  uk-padding uk-animation-slide-bottom uk-background-muted  '>
+
+
                 <ul className="uk-breadcrumb  uk-width-1-4@m uk-width-1-4@l banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
                     <li >
 
@@ -33,76 +41,105 @@ const courses = ({ courses, homepage }) => {
                     <li > <span > Courses</span></li>
 
                 </ul>
-                <h4 className='uk-background-primary  uk-padding' >RYA Sailing Courses</h4>
-                <div className="uk-flex uk-flex-around uk-flex-wrap">
-
-                    {courses && courses.length > 1 && courses.map((course) =>
-                        course.attributes.courseCategory === 'Sail' ?
-                            < Card data={course} slug="courses" />
 
 
-                            : null
-
-
-                    )}
+                <div uk-switcher="animation: uk-animation-fade; toggle: > *" className='uk-text-center uk-margin '>
+                    <button className="uk-button uk-button-primary" type="button">RYA Sailing</button>
+                    <button className="uk-button uk-button-primary" type="button">RYA Motor Cruising</button>
+                    <button className="uk-button uk-button-primary" type="button"> RYA Power</button>
+                    <button className="uk-button uk-button-primary" type="button"> RYA Jet Ski</button>
                 </div>
 
-                <h4 className='uk-background-primary uk-padding'>RYA Motor Cruising Courses</h4>
-                <div className="uk-flex uk-flex-around uk-flex-wrap">
-                    {courses && courses.length > 1 && courses.map((course) =>
-                        course.attributes.courseCategory === 'Motor' ?
+                <ul className="uk-switcher uk-margin">
+                    <li>
 
-                            < Card data={course} slug="courses" />
+                        <div className=" uk-padding-small ">
 
-                            : null
+                            <h4 className='  uk-padding' id="sailing">RYA Sailing Courses</h4>
 
+                            <div uk-toggle="cls: uk-flex; mode: media; media: @m ">
 
-                    )}
-                </div>
-
-                <h4 className='uk-background-primary uk-padding'>RYA POWER COURSES</h4>
-                <div className="uk-flex uk-flex-around uk-flex-wrap">
-
-                    {courses && courses.length > 1 && courses.map((course) =>
-                        course.attributes.courseCategory === 'Power' ?
-
-                            < Card data={course} slug="courses" />
-
-                            : null
+                                {courses && courses.length > 1 && courses.map((course) =>
+                                    course.attributes.courseCategory === 'Sail' ?
+                                        < Card data={course} slug="courses" />
 
 
-                    )}
-
-                </div>
-
-                <h4 className='uk-background-primary uk-padding'>RYA Mile builduing courses</h4>
-                <div className="uk-flex uk-flex-around uk-flex-wrap">
-
-                    {courses && courses.length > 1 && courses.map((course) =>
-                        course.attributes.courseCategory === 'Mile_Building' ?
-
-                            < Card data={course} slug="courses" />
-
-                            : null
+                                        : null
 
 
-                    )}
-                </div>
+                                )}
+                            </div>
+                        </div>
 
-                <h4 className='uk-background-primary uk-padding'>RYA Jet Ski Courses</h4>
-                <div className="uk-flex uk-flex-around uk-flex-wrap">
+                    </li>
+                    <li>
+                        <div className=" uk-padding-small ">
+                            <h4 className=' uk-padding' id="motor_courses">RYA Motor Cruising Courses</h4>
 
-                    {courses && courses.length > 1 && courses.map((course) =>
+                            <div uk-toggle="cls: uk-flex; mode: media; media: @m ">
 
-                        course.attributes.courseCategory === 'Jet_Ski' ?
+                                {courses && courses.length > 1 && courses.map((course) =>
+                                    course.attributes.courseCategory === 'Motor' ?
 
-                            < Card data={course} slug="courses" />
+                                        < Card data={course} slug="courses" />
 
-                            : null
+                                        : null
 
 
-                    )}
-                </div>
+                                )}
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div className=" uk-padding-small ">
+                            <h4 className=' uk-padding' id="power_courses">RYA POWER COURSES</h4>
+                            <div uk-toggle="cls: uk-flex; mode: media; media: @m ">
+
+                                {courses && courses.length > 1 && courses.map((course) =>
+                                    course.attributes.courseCategory === 'Power' ?
+
+                                        < Card data={course} slug="courses" />
+
+                                        : null
+
+
+                                )}
+                            </div>
+
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <div className=" uk-padding-small ">
+                            <h4 className='uk-padding' id="jet_ski">RYA Jet Ski Courses</h4>
+
+                            <div className="uk-flex uk-flex-center">
+                                {courses && courses.length > 1 && courses.map((course) =>
+
+                                    course.attributes.courseCategory === 'Jet_Ski' ?
+
+                                        < Card data={course} slug="courses" />
+
+                                        : null
+
+
+                                )}
+                            </div>
+                        </div>
+
+                    </li>
+
+
+                </ul>
+
+
+
+
+
+
+
             </div>
         </div>
     )

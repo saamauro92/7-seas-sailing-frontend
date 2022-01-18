@@ -12,7 +12,7 @@ const FooterStyleThree = (data) => {
 
     return (
         <>
-            <div className="uk-container uk-container-large uk-padding-large ">
+            <div className="uk-container uk-container-large uk-padding-large " style={{ "zIndex": "9" }}>
 
 
                 <div className="uk-child-width-1-4@s uk-grid-small uk-flex  uk-flex-wrap uk-text-center " >

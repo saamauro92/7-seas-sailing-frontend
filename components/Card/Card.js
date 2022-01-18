@@ -8,10 +8,10 @@ const Card = ({ data, slug }) => {
 
     return (
         <div className="uk-card " >
-            <div className="uk-card-media-top">
+            <div className="uk-card-media-top uk-padding">
                 {data.attributes.image.data.attributes.url &&
 
-                    <img src={data.attributes.image.data.attributes.url} width="300" height="250" alt="course_card" uk-img />
+                    <img src={data.attributes.image.data.attributes.url} width="250" height="250" alt="course_card" uk-img />
                 }
 
             </div>

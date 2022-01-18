@@ -30,7 +30,7 @@ const Layout = ({ children, data, courses, activities, homepage, }) => {
             {children}
 
             <GoTop scrollStepInPx="100" delayInMs="10.50" />
-            <div className=' uk-background-secondary'>
+            <div className=' uk-background-secondary' >
                 <FooterStyleThree data={data} />
             </div>
         </>
