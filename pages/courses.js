@@ -19,17 +19,11 @@ const courses = ({ courses, homepage }) => {
             >
                 {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Courses" />}
 
-
                 <h3 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove " uk-toggle="cls: uk-heading-small;  mode: media; media: @s"  >Our Courses</h3>
-
 
             </div>
 
-
-
-
             <div className='uk-container uk-container-medium  uk-padding uk-animation-slide-bottom uk-background-muted  '>
-
 
                 <ul className="uk-breadcrumb  uk-width-1-4@m uk-width-1-4@l banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
                     <li >
@@ -115,7 +109,7 @@ const courses = ({ courses, homepage }) => {
                         <div className=" uk-padding-small ">
                             <h4 className='uk-padding' id="jet_ski">RYA Jet Ski Courses</h4>
 
-                            <div className="uk-flex uk-flex-center">
+                            <div uk-toggle="cls: uk-flex; mode: media; media: @m ">
                                 {courses && courses.length > 1 && courses.map((course) =>
 
                                     course.attributes.courseCategory === 'Jet_Ski' ?
