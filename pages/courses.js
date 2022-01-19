@@ -43,7 +43,7 @@ const courses = ({ courses, homepage }) => {
                     <button className="uk-button uk-button-primary" type="button">RYA Motor Cruising</button>
                     <button className="uk-button uk-button-primary" type="button"> RYA Power</button>
                     <button className="uk-button uk-button-primary" type="button"> RYA Jet Ski</button>
-                    <button className="uk-button uk-button-primary" type="button"> Yachtmaster Preparation</button>
+                    <button className="uk-button uk-button-primary" type="button"> Yachtmaster Exam Preparation</button>
                 </div>
 
                 <ul className="uk-switcher uk-margin">
@@ -130,7 +130,7 @@ const courses = ({ courses, homepage }) => {
                         <div className="uk-padding-small">
 
 
-                            <h4 className='uk-padding' id="jet_ski">Yachtmaster Preparation</h4>
+                            <h4 className='uk-padding' id="jet_ski">Yachtmaster Exam Preparation</h4>
                             <div uk-toggle="cls: uk-flex; mode: media; media: @m ">
                                 <div className="uk-card " >
                                     <div className="uk-card-media-top uk-padding">
@@ -141,7 +141,7 @@ const courses = ({ courses, homepage }) => {
                                     </div>
 
                                     <div className="uk-card-header ">
-                                        <p className=" uk-text-center"> Yachstmater Preparation </p>
+                                        <p className=" uk-text-center"> Yachtmaster Exam Preparation </p>
                                     </div>
                                     <div className="uk-card-fotter uk-text-center">
                                         <Link href="/courses/yachtmaster" passHref>

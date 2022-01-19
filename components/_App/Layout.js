@@ -3,6 +3,7 @@ import Head from "next/head"
 import GoTop from './GoTop';
 import FooterStyleThree from './Footer';
 import Nav from './Nav';
+import NewsSidebar from '../NewsSidebar/NewsSidebar';
 
 
 const Layout = ({ children, data, courses, activities, homepage, }) => {
@@ -26,6 +27,8 @@ const Layout = ({ children, data, courses, activities, homepage, }) => {
 
             {/*         {loader ? <h5> LOADING...</h5> : null} */}
             <Nav courses={courses} activities={activities} homepage={homepage} />
+
+
 
             {children}
 

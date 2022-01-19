@@ -40,9 +40,10 @@ export default function Home({ courses, homepage, latestNews }) {
   return (
 
     <main>
-
       <div className="test-height uk-cover-container uk-light">
 
+
+        <NewsSidebar latestNews={latestNews} />
         {homepage && homepage.attributes.seo && <SEO data={homepage.attributes.seo} />}
 
 

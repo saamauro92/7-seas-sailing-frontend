@@ -220,7 +220,7 @@ function Nav({ courses, activities }) {
                                                 <div className="uk-nav-divider  ">
 
                                                     <Link href={`/courses/yachtmaster`} >
-                                                        <a href="" className="nav-link responsive-link-font ">  Yachtmaster Preparation </a>
+                                                        <a href="" className="nav-link responsive-link-font ">  Yachtmaster Exam Preparation </a>
                                                     </Link>
 
                                                     <Link href="/courses">
@@ -612,7 +612,7 @@ function Nav({ courses, activities }) {
                                                 <div className="uk-position-absolute  ">
 
                                                     <Link href={`/courses/yachtmaster`} >
-                                                        <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">  Yachtmaster Preparation </a>
+                                                        <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">  Yachtmaster Exam Preparation </a>
                                                     </Link>
 
                                                     <Link href="/courses">
