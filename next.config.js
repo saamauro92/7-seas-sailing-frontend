@@ -19,7 +19,7 @@ module.exports = nextConfig; */
 const withPlugins = require('next-compose-plugins');
 const optimizedImages = require('next-optimized-images');
 
-const getLocalPackages = require('./scripts/getLocalPackages');
+
 
 
 const nextConfig = {
