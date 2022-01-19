@@ -1,8 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import { React, useState, useEffect } from "react";
 import Link from "../../utils/ActiveLink";
 import logo from '../../assets/seven-seas-logo.png'
 import rya from '../../assets/rya.png'
-import Image from 'next/image'
+
 import { useRouter } from 'next/router'
 
 function Nav({ courses, activities }) {
@@ -45,13 +46,15 @@ function Nav({ courses, activities }) {
                     <Link href="/">
                         <a className="uk-navbar-item uk-logo" >
 
-                            <Image src={logo} alt="logo" height={64} width={217} />
+
+                            <img src={logo} width="217" height="64" alt="logo" uk-img />
+
                         </a>
                     </Link>
                     <div className="uk-visible@s">
                         <Link href="/rya">
                             <a href="">
-                                <Image src={rya} alt="logo" height={94} width={117} />
+                                <img src={rya} alt="logo" height={94} width={117} uk-img />
 
                             </a>
                         </Link>
@@ -329,13 +332,19 @@ function Nav({ courses, activities }) {
 
 
                 <Link href="/">
-                    <a className="uk-navbar-item uk-logo">
-                        <Image src={logo} alt="logo" height={64} width={217} />
+                    <a className="uk-navbar-item uk-logo ">
+
+                        <img src={logo} alt="logo" width={217} height={64} uk-img className="uk-visible@s" />{/* big */}
+
+                        <img src={logo} alt="rya-logo" width={117} height={64} uk-img className="uk-hidden@s" />
                     </a>
                 </Link>
-                <div className="uk-visible@s">
-                    <Image src={rya} alt="logo" height={84} width={117} />
-                </div>
+
+
+                <img src={rya} alt="logo" width={117} height={64} uk-img className="uk-visible@s" />{/* big */}
+
+                <img src={rya} alt="rya-logo" width={67} height={64} uk-img className="uk-hidden@s" />
+
             </div>
 
 
@@ -368,12 +377,15 @@ function Nav({ courses, activities }) {
 
                                     <Link href="/">
                                         <a className="uk-navbar-item uk-logo">
-                                            <Image src={logo} alt="logo" height={64} width={217} />
+
+                                            <img src={logo} alt="logo" height={64} width={117} uk-img />
                                         </a>
                                     </Link>
                                     <Link href="/">
                                         <a className="uk-navbar-item uk-logo">
-                                            <Image src={rya} alt="logo" height={84} width={117} />
+
+
+                                            <img src={rya} alt="rya-logo" height={64} width={67} uk-img />
                                         </a>
                                     </Link>
 

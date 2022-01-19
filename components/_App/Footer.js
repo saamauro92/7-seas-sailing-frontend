@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import Link from 'next/link';
 import CookieConsent from "react-cookie-consent";
 import logo from '../../assets/seven-seas-logo.png'
 import rya from '../../assets/rya.png'
-import Image from 'next/image'
+
 const FooterStyleThree = (data) => {
 
     const currentYear = new Date().getFullYear();
@@ -163,8 +164,8 @@ const FooterStyleThree = (data) => {
                 </div>
                 <div className="uk-container uk-container-expand uk-flex uk-flex-wrap uk-flex-around uk-padding uk-light  ">
 
-                    <Image src={logo} alt="logo" height={64} width={217} />
-                    <Image src={rya} alt="logo" height={94} width={117} />
+                    <img src={logo} alt="logo" height={64} width={217} />
+                    <img src={rya} alt="logo" height={94} width={117} />
 
                     <div className="uk-card">
                         <h3 className='card-title'>
