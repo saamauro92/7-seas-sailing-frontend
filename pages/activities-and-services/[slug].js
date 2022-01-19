@@ -34,7 +34,7 @@ const activitieSection = ({ activitie, homepage }) => {
 
 
             </div>
-            <div className="uk-container uk-container-medium uk-padding-small uk-animation-slide-bottom uk-background-muted">
+            <div className="uk-container uk-container-medium uk-padding-medium uk-animation-slide-bottom uk-background-muted">
                 <ul className="uk-breadcrumb uk-width-1-2@m uk-width-1-2@l banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
                     <li>
                         <Link href={"/"}>

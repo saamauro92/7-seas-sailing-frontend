@@ -29,7 +29,14 @@ const MemberProfile = ({ member, homepage }) => {
 
 
                 <h2 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove" uk-toggle="cls: uk-heading-small;  mode: media; media: @s">  {member.attributes.name}   </h2>
-                <ul className="uk-breadcrumb banner-titles uk-heading-medium uk-text-bolder uk-text-center  uk-margin-remove uk-padding-small">
+
+
+
+
+            </div>
+
+            <div className="uk-container uk-container-small  uk-padding-medium uk-animation-slide-bottom">
+                <ul className="uk-breadcrumb uk-width-1-2@m uk-width-1-2@l banner-titles uk-heading-medium uk-text-bolder uk-text-center  uk-margin-remove uk-padding-small">
                     <li>
                         <Link href={"/"}>
                             <a href="">Home</a>
@@ -47,13 +54,6 @@ const MemberProfile = ({ member, homepage }) => {
 
 
                 </ul>
-
-
-
-            </div>
-
-            <div className="uk-container uk-container-small  uk-padding uk-padding uk-animation-slide-bottom">
-
 
 
                 <div className="uk-section">

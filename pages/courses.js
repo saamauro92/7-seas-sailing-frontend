@@ -24,7 +24,7 @@ const courses = ({ courses, homepage }) => {
 
             </div>
 
-            <div className='uk-container uk-container-medium  uk-padding uk-animation-slide-bottom uk-background-muted  '>
+            <div className='uk-container uk-container-medium  uk-padding-medium uk-animation-slide-bottom uk-background-muted  '>
 
                 <ul className="uk-breadcrumb  uk-width-1-4@m uk-width-1-4@l banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
                     <li >

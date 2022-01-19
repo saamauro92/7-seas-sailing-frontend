@@ -19,7 +19,12 @@ const RyaPage = ({ homepage }) => {
                 {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="About RYA" />}
 
                 <h3 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove " uk-toggle="cls: uk-heading-small;  mode: media; media: @s"  > About the RYA</h3>
-                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder uk-text-center uk-margin-remove uk-padding-small">
+
+
+
+            </div>
+            <div className="uk-container uk-container-medium uk-background-muted">
+                <ul className="uk-breadcrumb uk-width-1-4@m uk-width-1-4@l banner-titles uk-heading-medium  uk-text-bolder uk-text-center uk-margin-remove uk-padding-small">
                     <li >
 
                         <Link href={"/"}>
@@ -29,10 +34,7 @@ const RyaPage = ({ homepage }) => {
                     <li > <span > About the RYA</span></li>
 
                 </ul>
-
-
             </div>
-
 
         </>
 

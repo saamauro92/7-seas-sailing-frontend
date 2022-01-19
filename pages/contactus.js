@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from 'next/link';
 import React from 'react'
 import SEO from '../components/Seo/Seo'
 
@@ -23,9 +24,18 @@ const contact = ({ homepage }) => {
 
             </div>
 
-            <div className='uk-container uk-container-medium  uk-padding uk-animation-slide-bottom uk-background-muted  '>
+            <div className='uk-container uk-container-medium  uk-padding-medium uk-animation-slide-bottom uk-background-muted  '>
 
+                <ul className="uk-breadcrumb uk-width-1-4@m uk-width-1-4@l banner-titles uk-heading-medium  uk-text-bolder uk-text-center uk-margin-remove uk-padding-small">
+                    <li >
 
+                        <Link href={"/"}>
+                            <a href=""> Home</a>
+                        </Link>
+                    </li>
+                    <li > <span > Gallery  </span></li>
+
+                </ul>
 
 
 

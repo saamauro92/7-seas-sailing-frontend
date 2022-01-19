@@ -25,7 +25,7 @@ const NewsPage = ({ homepage, news }) => {
                 </h3>
 
             </div>
-            <div className="uk-container uk-container-large uk-height-large uk-padding uk-height-large">
+            <div className="uk-container uk-container-medium uk-height-large uk-padding-medium uk-height-large">
 
                 <ul className="uk-breadcrumb uk-width-1-4@m uk-width-1-4@l banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
                     <li >
