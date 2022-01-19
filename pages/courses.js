@@ -46,7 +46,7 @@ const courses = ({ courses, homepage }) => {
                     <button className="uk-button uk-button-primary" type="button"> Yachtmaster Exam Preparation</button>
                 </div>
 
-                <ul className="uk-switcher uk-margin">
+                <ul className="uk-switcher uk-margin ">
                     <li>
 
                         <div className=" uk-padding-small ">
@@ -130,30 +130,37 @@ const courses = ({ courses, homepage }) => {
                         <div className="uk-padding-small">
 
 
-                            <h4 className='uk-padding' id="jet_ski">Yachtmaster Exam Preparation</h4>
-                            <div uk-toggle="cls: uk-flex; mode: media; media: @m ">
-                                <div className="uk-card " >
-                                    <div className="uk-card-media-top uk-padding">
+                            <div className="uk-flex uk-flex-column uk-padding">
+
+                                <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom uk-visible-toggle" tabIndex="-1">
 
 
-                                        <img src={imgBanner} width="250" height="250" alt="course_card" uk-img />
-                                        {/* CHANGE IMAGE  */}
-                                    </div>
+                                    {imgBanner &&
+                                        <div
+                                            data-src={imgBanner}
+                                            data-srcset={imgBanner}
+                                            data-uk-img
 
-                                    <div className="uk-card-header ">
-                                        <p className=" uk-text-center"> Yachtmaster Exam Preparation </p>
-                                    </div>
-                                    <div className="uk-card-fotter uk-text-center">
-                                        <Link href="/courses/yachtmaster" passHref>
-                                            <button className="uk-button uk-button-danger ">SEE MORE</button>
+                                            className="uk-background-image uk-background-cover  uk-height-medium uk-width-auto uk-flex uk-flex-center uk-flex-middle uk"
+                                        >
+                                        </div>
+
+                                    }
+
+                                    <div className="uk-position-cover uk-overlay uk-overlay-primary uk-hidden-hover cursor-pointer uk-flex uk-flex-center uk-flex-middle" >
+
+                                        <Link href='/courses/yachtmaster' passHref>
+                                            <a uk-icon="icon: more; ratio: 2;"  ></a>
                                         </Link>
 
+
                                     </div>
 
-
-                                    <hr />
-
                                 </div>
+                                <p className="uk-text-start">
+
+                                    <strong>Yachtmaster Exam Preparation </strong>
+                                </p>
                             </div>
                         </div>
 

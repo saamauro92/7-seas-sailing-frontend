@@ -26,15 +26,7 @@ const Hero = ({ courses, images }) => {
 
 
                     <div className="uk-inline-clip hero-cards uk-margin  uk-animation-slide-bottom uk-visible-toggle" tabIndex="-1">
-                        {/*      <Image src={images.sail.data.attributes.url} width={400} height={250} alt='' /> */}
-                        {/*                  <div
-                            className=" uk-background-contain uk-height-small "
-                            data-src={images.sail.data.attributes.url}
-                            data-srcset={images.sail.data.attributes.url}
-                            data-uk-img
-                            uk-toggle="cls: uk-height-medium; mode: media; media: @l"
-                        ></div>
- */}
+
 
                         <img src={images.sail.data.attributes.url} width="450" height="250" alt="hero_card_sail" uk-img />
 
@@ -59,7 +51,7 @@ const Hero = ({ courses, images }) => {
                         </div>
                     </div>
                     <div className="uk-inline-clip hero-cards uk-margin  uk-animation-slide-bottom uk-visible-toggle" tabIndex="-1">
-                        {/*             <Image src={images.motor.data.attributes.url} width={400} height={250} alt='' /> */}
+
                         <img src={images.motor.data.attributes.url} width="450" height="250" alt="hero_card_motor" uk-img />
 
                         <div className="uk-position-bottom uk-overlay uk-overlay-primary "  >
@@ -84,7 +76,7 @@ const Hero = ({ courses, images }) => {
                         {/*        <Image src={images.power.data.attributes.url} width={400} height={250} alt='' /> */}
                         <img src={images.power.data.attributes.url} width="450" height="250" alt="hero_card_power" uk-img />
 
-                        <div className="uk-position-bottom uk-overlay uk-overlay-primary u  " >
+                        <div className="uk-position-bottom uk-overlay uk-overlay-primary   " >
                             <h2 >RYA Power</h2>
 
                             <ul className="uk-hidden-hover" >

@@ -7,35 +7,42 @@ const Card = ({ data, slug }) => {
 
 
     return (
-        <div className="uk-card " >
 
-            {data.attributes.new_course && data.attributes.new_course === true ? <h4 className=" uk-position-top-center uk-text-success"> New! </h4> : null}
-            <div className="uk-card-media-top uk-padding">
+        <div className="uk-flex uk-flex-column uk-padding">
+
+            <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom uk-visible-toggle" tabIndex="-1">
 
                 {data.attributes.image.data.attributes.url &&
 
-                    <img src={data.attributes.image.data.attributes.url} width="250" height="250" alt="course_card" uk-img />
+                    <div
+                        data-src={data.attributes.image.data.attributes.url}
+                        data-srcset={data.attributes.image.data.attributes.url}
+                        data-uk-img
+
+                        className="uk-background-image uk-background-cover  uk-height-medium uk-width-medium uk-flex uk-flex-center uk-flex-middle"
+
+                    >
+
+                    </div>
+
+
                 }
 
-            </div>
+                <div className="uk-position-cover uk-overlay uk-overlay-primary uk-hidden-hover cursor-pointer uk-flex uk-flex-center uk-flex-middle" >
 
-            <div className="uk-card-header ">
 
-                <p className=" uk-text-center">
+                    <Link href={`/${slug}/${data.attributes.slug}`} passHref>
+                        <a uk-icon="icon: more; ratio: 2;"  ></a>
+                    </Link>
 
-                    {data.attributes.title}
-                </p>
-            </div>
-            <div className="uk-card-fotter uk-text-center">
-                <Link href={`/${slug}/${data.attributes.slug}`} passHref>
-                    <button className="uk-button uk-button-danger ">SEE MORE</button>
-                </Link>
+
+                </div>
 
             </div>
+            <p className=" uk-text-start">
 
-
-            <hr />
-
+                <strong>{data.attributes.title} </strong>
+            </p>
         </div>
     )
 }
