@@ -8,10 +8,13 @@ const NewsSidebar = ({ latestNews }) => {
         <>
 
 
-            <div className="uk-card uk-card-secondary uk-card-body  uk-position-top uk-padding-rmove uk-box-shadow-medium  uk-animation-fade news_sidebar">
+            <div className="uk-card uk-card-secondary uk-card-body  uk-position-top uk-padding-rmove uk-box-shadow-medium  news_sidebar">
 
 
                 {latestNews && latestNews.length > 0 &&
+
+
+
 
                     <Link href={`/news/${latestNews[0].attributes.slug}`} passHref>
 
