@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-children-prop */
 import Link from 'next/link';
 import React from 'react'
@@ -15,7 +16,6 @@ const Yachtmaster = ({ homepage, data }) => {
     const yachtmasterCoastalPath = data.attributes.Yachtmaster_Coastal_Exam_Requisites;
     const yachtmasterOffshorePath = data.attributes.Yachtmaster_Offshore_Exam_prerequisites;
     const yachtmasterOceanPath = data.attributes.Yachtmaster_Ocean_Exam_prerequisites;
-
 
     return (
 
@@ -72,6 +72,7 @@ const Yachtmaster = ({ homepage, data }) => {
 
                 </ul>
                 <div className="uk-section  ">
+                    <img src={data.attributes.image.data.attributes.formats.medium.url} className='uk-align-center uk-height-large uk-padding-small uk-align-right@m uk-margin-remove-adjacent' alt="" uk-image />
                     <ReactMarkdown children={data.attributes.description} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
 
 
@@ -90,25 +91,13 @@ const Yachtmaster = ({ homepage, data }) => {
                     <div className="fade-effect      uk-padding-small " uk-scrollspy="cls: uk-animation-fade; delay:400; repeat: false">
 
                         <ReactMarkdown children={data.attributes.practical} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                        <img src={data.attributes.image_three.data.attributes.formats.medium.url} className='uk-align-center uk-height-large uk-padding-small uk-align-left@m uk-margin-remove-adjacent' alt="" uk-image />
                     </div>
 
 
 
                 </div>
             </div>
-            <div className="uk-container uk-container-medium">
-
-                <div
-
-                    className="uk-background-cover uk-background-center-center  uk-height-large uk-panel "
-                    data-src={imageUrl}
-                    data-srcset={imageUrl}
-                    data-uk-img
-                    uk-toggle="cls: uk-height-medium; mode: media; media: @l"
-                    uk-parallax="bgy: -100"
-                ></div>
-            </div>
-
 
 
             <div className="uk-container  uk-container-medium  uk-padding-remove uk-margin " uk-toggle="cls: uk-padding-small; mode: media; media: @m">
@@ -116,7 +105,7 @@ const Yachtmaster = ({ homepage, data }) => {
                 <h2 className='uk-padding'> <strong> Requisites and exam format for each level of Yachtmaster qualification:</strong> </h2>
 
 
-                <div className="uk-child-width-expand uk-background-muted uk-margin-large-bottom uk-padding-small  " uk-grid>
+                <div className="uk-child-width-expand uk-background-muted uk-margin-large-bottom uk-padding-small  " uk-grid uk-scrollspy="cls: uk-animation-fade;  delay: 300; repeat: false">
                     <div>
                         <h2>   RYA Yachtmaster Coastal Exam</h2>
 
@@ -128,7 +117,7 @@ const Yachtmaster = ({ homepage, data }) => {
 
                             {yachtmasterCoastalPath.map((item, i) =>
                                 <>
-                                    <div className="uk-width-1-4 ">
+                                    <div className="uk-width-1-4 " >
 
                                         <ul className="uk-tab-left" uk-tab="connect: #component-nav-coastal; animation: uk-animation-fade">
                                             <li><a href="#">{item.Minimum_seatime}</a></li>
@@ -139,7 +128,7 @@ const Yachtmaster = ({ homepage, data }) => {
                                         </ul>
                                     </div>
 
-                                    <div className="uk-width-1-1 ">
+                                    <div className="uk-width-1-1 " >
                                         <ul id="component-nav-coastal" className="uk-switcher uk-padding-small uk-padding-remove-vertical uk-margin" >
                                             <div className="uk-height-1-1 uk-height-match" >
 
@@ -180,7 +169,7 @@ const Yachtmaster = ({ homepage, data }) => {
                     </div >
                 </div>
 
-                <div className="uk-child-width-expand uk-background-muted uk-margin uk-padding-small uk-margin-large-bottom" uk-grid>
+                <div className="uk-child-width-expand uk-background-muted uk-margin uk-padding-small uk-margin-large-bottom" uk-grid uk-scrollspy="cls: uk-animation-fade;  delay: 300; repeat: false">
                     <div>
                         <h2>RYA Yachtmaster Offshore Exam</h2>
 
@@ -241,7 +230,7 @@ const Yachtmaster = ({ homepage, data }) => {
                     </div>
                 </div >
 
-                <div className="uk-child-width-expand uk-background-muted uk-margin uk-padding-small uk-margin-large-bottom" uk-grid>
+                <div className="uk-child-width-expand uk-background-muted uk-margin uk-padding-small uk-margin-large-bottom" uk-grid uk-scrollspy="cls: uk-animation-fade;  delay: 300; repeat: false">
                     <div>
                         <h2> RYA Yachtmaster Ocean Exam</h2>
                         <div uk-grid className='uk-flex '
@@ -301,6 +290,7 @@ const Yachtmaster = ({ homepage, data }) => {
                     </div>
                 </div >
 
+                <img src={data.attributes.image_two.data.attributes.url} className='uk-align-center uk-height-small uk-padding-small uk-align-center@m uk-margin-remove-adjacent' alt="" uk-image />
 
 
 
