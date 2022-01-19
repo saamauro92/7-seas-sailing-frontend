@@ -193,6 +193,7 @@ p > strong {
   animation-fill-mode: forwards;
   visibility: hidden;
   gap: 35px;
+  z-index: 99;
 }
 
 .news_sidebar > span {
@@ -201,15 +202,16 @@ p > strong {
 .news_sidebar > li {
   cursor: pointer;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 960px) {
   .news_sidebar {
     flex-direction: column;
     transition: 1s smooth;
+    overflow: hidden;
   }
 
   .news_sidebar:hover,
   .news_sidebar:active {
-    z-index: 1;
+    z-index: 999;
     height: auto;
     padding-bottom: 10px;
   }
