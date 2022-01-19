@@ -61,12 +61,13 @@ const MemberProfile = ({ member, homepage }) => {
                     <h2> {member.attributes.title}</h2>
                     <p>  {member.attributes.description} </p>
                     <div
-                        className=" uk-background-contain uk-height-large "
+                        className=" uk-background-contain uk-height-large uk-margin-large"
                         data-src={imageUrl}
                         data-srcset={imageUrl}
                         data-uk-img
                         uk-toggle="cls: uk-height-medium; mode: media; media: @l"
                     > </div>
+
 
                     <hr />
 
