@@ -63,7 +63,7 @@ const CourseSection = ({ course, homepage }) => {
 
                     <div className="uk-width-2-4 uk-width-1-2@m  uk-padding-small uk-padding-remove-vertical " >
                         {/*  PROGRESSION TIMELINES FOR EACH CATEGORY */}
-                        <h3>RYA Courses Progression </h3>
+                        <h3 className='uk-padding uk-padding-remove-horizontal'> <strong>RYA Courses Progression</strong> </h3>
                         {course.attributes.courseCategory === 'Sail' ? <div className="progresion_wrapper uk-flex uk-flex-baseline uk-flex-center">
 
                             <p className={course.attributes.title === 'RYA Competent Crew' ? 'progression_button progression_button_active' : 'progression_button'}> CC</p>
@@ -111,14 +111,16 @@ const CourseSection = ({ course, homepage }) => {
 
 
 
+                        <div className="uk-margin-large-top">
 
+                            <ReactMarkdown linkTarget="_blank" remarkPlugins={[remarkGfm]}
+                                children={course.attributes.content} />
+                        </div>
 
-                        <ReactMarkdown linkTarget="_blank" remarkPlugins={[remarkGfm]}
-                            children={course.attributes.content} />
 
 
                     </div>
-                    <div className="uk-card uk-width-2-4  uk-width-1-2@m  uk-padding-small ">
+                    <div className="uk-card uk-width-2-4  uk-width-1-2@m  uk-padding-medium ">
                         <div
                             className="  uk-background-cover uk-height-large  "
                             data-src={imageUrl}
