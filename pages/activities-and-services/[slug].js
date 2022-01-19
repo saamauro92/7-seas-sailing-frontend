@@ -18,11 +18,13 @@ const activitieSection = ({ activitie, homepage }) => {
 
             <div
                 id="banner"
-                className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
+                className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                 data-src={imageUrl}
                 data-srcset={imageUrl}
                 data-uk-img
+                uk-toggle="cls: uk-height-medium; mode: media; media: @l"
                 uk-parallax="bgy: -100"
+
             >
 
 
