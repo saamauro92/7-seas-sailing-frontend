@@ -27,7 +27,13 @@ const newsSection = ({ item, homepage }) => {
 
                 <h2 className="banner-titles uk-heading-medium uk-text-bolder uk-text-center  uk-margin-remove uk-padding-remove"> {item.attributes.title} </h2>
 
-                <ul className="uk-breadcrumb banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
+
+
+
+
+            </div>
+            <div className="uk-container uk-container-large uk-padding">
+                <ul className="uk-breadcrumb uk-width-1-2@m uk-width-1-2@l banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
                     <li>
                         <Link href={"/"}>
                             <a href="">Home</a>
@@ -37,7 +43,7 @@ const newsSection = ({ item, homepage }) => {
 
 
                         <Link href={"/news"}>
-                            <a href="">News</a>
+                            <a href="">Blog</a>
                         </Link>
                     </li>
                     <li>
@@ -45,11 +51,6 @@ const newsSection = ({ item, homepage }) => {
 
 
                 </ul>
-
-
-
-            </div>
-            <div className="uk-container uk-container-large uk-padding">
                 <div className="uk-section">
 
 

@@ -63,7 +63,7 @@ function Nav({ courses, activities }) {
 
                 </div>
 
-                <div className="uk-navbar-center">
+                <div className="uk-navbar-right">
 
                     <ul className="uk-navbar-nav " uk-nav="multiple: false">
                         <li className="nav-item">
@@ -309,10 +309,25 @@ function Nav({ courses, activities }) {
                         <li>
                             <Link href="/news" activeClassName="active" >
 
-                                <a className={currentRoute === "/news" ? 'active' : ''}>  News</a>
+                                <a className={currentRoute === "/news" ? 'active' : ''}>  Blog</a>
                             </Link>
 
                         </li>
+                        <li>
+                            <Link href="/gallery" activeClassName="active" >
+
+                                <a className={currentRoute === "/gallery" ? 'active' : ''}>  Gallery</a>
+                            </Link>
+
+                        </li>
+                        <li>
+                            <Link href="/gallery" activeClassName="active" >
+
+                                <a className={currentRoute === "/gallery" ? 'active' : ''}>  Contact us</a>
+                            </Link>
+
+                        </li>
+
 
 
                     </ul >
@@ -674,13 +689,29 @@ function Nav({ courses, activities }) {
                                     <li className="">
 
                                         <Link href="/news">
-                                            <a className="nav-link responsive-link-font uk-margin" uk-toggle="target: #offcanvas-nav-primary">News </a>
+                                            <a className="nav-link responsive-link-font uk-margin" uk-toggle="target: #offcanvas-nav-primary">Blog </a>
                                         </Link>
 
 
                                     </li>
 
+                                    <li className="">
 
+                                        <Link href="/gallery">
+                                            <a className="nav-link responsive-link-font uk-margin" uk-toggle="target: #offcanvas-nav-primary">Gallery </a>
+                                        </Link>
+
+
+                                    </li>
+
+                                    <li className="">
+
+                                        <Link href="/contact">
+                                            <a className="nav-link responsive-link-font uk-margin" uk-toggle="target: #offcanvas-nav-primary">Contact us </a>
+                                        </Link>
+
+
+                                    </li>
 
 
 

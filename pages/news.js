@@ -21,7 +21,7 @@ const NewsPage = ({ homepage, news }) => {
                 <h3
                     className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove "
                     uk-toggle="cls: uk-heading-small;  mode: media; media: @s">
-                    News
+                    Blog
                 </h3>
 
             </div>
@@ -34,7 +34,7 @@ const NewsPage = ({ homepage, news }) => {
                             <a href=""> Home</a>
                         </Link>
                     </li>
-                    <li > <span > News </span></li>
+                    <li > <span > Blog </span></li>
 
                 </ul>
 
