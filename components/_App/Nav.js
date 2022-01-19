@@ -321,7 +321,7 @@ function Nav({ courses, activities }) {
 
                         </li>
                         <li>
-                            <Link href="/gallery" activeClassName="active" >
+                            <Link href="/contactus" activeClassName="active" >
 
                                 <a className={currentRoute === "/gallery" ? 'active' : ''}>  Contact us</a>
                             </Link>
@@ -706,7 +706,7 @@ function Nav({ courses, activities }) {
 
                                     <li className="">
 
-                                        <Link href="/contact">
+                                        <Link href="/contactus">
                                             <a className="nav-link responsive-link-font uk-margin" uk-toggle="target: #offcanvas-nav-primary">Contact us </a>
                                         </Link>
 
