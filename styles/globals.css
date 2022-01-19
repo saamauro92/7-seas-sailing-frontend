@@ -201,6 +201,19 @@ p > strong {
 .news_sidebar > li {
   cursor: pointer;
 }
+@media only screen and (max-width: 600px) {
+  .news_sidebar {
+    flex-direction: column;
+    transition: 1s smooth;
+  }
+
+  .news_sidebar:hover,
+  .news_sidebar:active {
+    z-index: 1;
+    height: auto;
+    padding-bottom: 10px;
+  }
+}
 
 @keyframes fadeIn {
   99% {
