@@ -8,6 +8,7 @@ import {
 } from "../../lib/api"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from 'remark-gfm'
+import ActionSection from '../../components/actionSection/ActionSection';
 
 
 const Yachtmaster = ({ homepage, data }) => {
@@ -289,12 +290,17 @@ const Yachtmaster = ({ homepage, data }) => {
                         </div>
                     </div>
                 </div >
+                <div className="uk-section">
+
+                    <ReactMarkdown children={data.attributes.price} />
+                </div>
+
+                <ActionSection > Contact us </ActionSection>
+
+
+
 
                 <img src={data.attributes.image_two.data.attributes.url} className='uk-align-center uk-height-small uk-padding-small uk-align-center@m uk-margin-remove-adjacent' alt="" uk-image />
-
-
-
-
             </div >
 
 
