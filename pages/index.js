@@ -43,7 +43,7 @@ export default function Home({ courses, homepage, latestNews }) {
       <div className="test-height uk-cover-container uk-light">
 
 
-        <NewsSidebar latestNews={latestNews} />
+        <NewsSidebar latestNews={latestNews} courses={courses} />
         {homepage && homepage.attributes.seo && <SEO data={homepage.attributes.seo} />}
 
 

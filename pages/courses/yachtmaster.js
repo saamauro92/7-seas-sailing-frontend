@@ -96,6 +96,19 @@ const Yachtmaster = ({ homepage, data }) => {
 
                 </div>
             </div>
+            <div className="uk-container uk-container-medium">
+
+                <div
+
+                    className="uk-background-cover uk-background-center-center  uk-height-large uk-panel "
+                    data-src={imageUrl}
+                    data-srcset={imageUrl}
+                    data-uk-img
+                    uk-toggle="cls: uk-height-medium; mode: media; media: @l"
+                    uk-parallax="bgy: -100"
+                ></div>
+            </div>
+
 
 
             <div className="uk-container  uk-container-medium  uk-padding-remove uk-margin " uk-toggle="cls: uk-padding-small; mode: media; media: @m">

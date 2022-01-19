@@ -192,9 +192,13 @@ p > strong {
   animation: 1.5s fadeIn;
   animation-fill-mode: forwards;
   visibility: hidden;
+  gap: 35px;
 }
 
-.news_sidebar > p {
+.news_sidebar > span {
+  cursor: pointer;
+}
+.news_sidebar > li {
   cursor: pointer;
 }
 
