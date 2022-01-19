@@ -223,3 +223,55 @@ p > strong {
     visibility: visible;
   }
 }
+
+/* RYA PROGRESSION BUTTON */
+
+.progresion_wrapper {
+  gap: 30px;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .progresion_wrapper {
+    gap: 3px;
+  }
+}
+.progression_button {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  background: #ccc;
+}
+.progression_button > p {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+.progression_button_active {
+  background: #002a74;
+}
+
+.arrow-right:after {
+  content: "";
+  display: inline-block !important;
+  width: 0;
+  height: 0;
+  border-left: 4px solid #002a74;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  vertical-align: middle;
+}
+
+.arrow-right:before {
+  width: 10px;
+  height: 2px;
+  background: #002a74;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+}
