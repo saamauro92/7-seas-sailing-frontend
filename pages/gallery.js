@@ -41,7 +41,13 @@ const gallery = ({ homepage }) => {
 
 
 
+
+
+
+
             </div>
+
+
         </div>
     )
 }
