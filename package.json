@@ -16,6 +16,8 @@
     "extracted-loader": "^1.0.7",
     "file-loader": "^6.2.0",
     "ignore-loader": "^0.1.2",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-optipng": "^8.0.0",
     "img-loader": "^4.0.0",
     "moment": "^2.29.1",
     "next": "12.0.7",
@@ -29,8 +31,10 @@
     "react-moment": "^1.1.1",
     "remark": "^14.0.2",
     "remark-gfm": "^3.0.1",
+    "responsive-loader": "^2.3.0",
     "uikit": "^3.9.4",
-    "url-loader": "^4.1.1"
+    "url-loader": "^4.1.1",
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
     "eslint": "8.5.0",
