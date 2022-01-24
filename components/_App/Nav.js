@@ -323,7 +323,7 @@ function Nav({ courses, activities }) {
                         <li>
                             <Link href="/contactus" activeClassName="active" >
 
-                                <a className={currentRoute === "/gallery" ? 'active' : ''}>  Contact us</a>
+                                <a className={currentRoute === "/contactus" ? 'active' : ''}>  Contact us</a>
                             </Link>
 
                         </li>
