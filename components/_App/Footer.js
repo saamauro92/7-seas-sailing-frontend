@@ -64,6 +64,12 @@ const FooterStyleThree = (data) => {
                             <h3 className="uk-card-title">QUICK LINKS</h3>
                             <ul className="uk-list  ">
                                 <li>
+                                    <Link href="/aboutus" activeClassName="active">
+
+                                        <a>About us</a>
+                                    </Link>
+                                </li>
+                                <li>
 
                                     <Link href="/courses" activeClassName="active">
                                         <a>Courses</a>
@@ -74,21 +80,24 @@ const FooterStyleThree = (data) => {
                                         <a>Activities {"&"} Services</a>
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link href="/aboutus" activeClassName="active">
 
-                                        <a>About us</a>
-                                    </Link>
-                                </li>
 
                                 <li>
                                     <Link href="/news" activeClassName="active" >
 
-                                        <a>News</a>
+                                        <a>Blog</a>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/news" activeClassName="active" >
+                                    <Link href="/gallery" activeClassName="active" >
+
+                                        <a>Gallery</a>
+                                    </Link>
+                                </li>
+
+                                <li>
+
+                                    <Link href="/contactus" activeClassName="active" >
 
                                         <a >Contact us</a>
                                     </Link>
@@ -106,40 +115,40 @@ const FooterStyleThree = (data) => {
                             <ul className="uk-list  ">
                                 <li>
 
-                                    <Link href="https://www.rya.org.uk/" activeClassName="active">
 
-                                        <a href="" target='_blank'> RYA Training Centre</a>
-                                    </Link>
+
+                                    <a href="https://www.rya.org.uk/" target='_blank' rel="noreferrer"> RYA Training Centre</a>
+
                                 </li>
                                 <li>
-                                    <Link href="www.exadasyachts.com" activeClassName="active">
 
-                                        <a href=" " target='_blank'>Exadas Yachts</a>
 
-                                    </Link>
+                                    <a href="https://www.exadasyachts.com" target='_blank' rel="noreferrer">Exadas Yachts</a>
+
+
                                 </li>
                                 <li>
-                                    <Link href="http://athenian-yachts.gr/en/" activeClassName="active">
 
 
-                                        <a href=" " target='_blank'>Athenian Yachts</a>
 
-                                    </Link>
+                                    <a href="https://athenian-yachts.gr/en/" target='_blank' rel="noreferrer">Athenian Yachts</a>
+
+
                                 </li>
                                 <li>
-                                    <Link href="https://technohull.com/" activeClassName="active">
 
-                                        <a href="" target='_blank'>Technohull</a>
 
-                                    </Link>
+                                    <a href="https://technohull.com/" target='_blank' rel="noreferrer">Technohull</a>
+
+
                                 </li>
                                 <li>
-                                    <Link href="http://www.cosmostraining.gr/" activeClassName="active" >
 
 
-                                        <a href=" " target='_blank'> Cosmos Training</a>
 
-                                    </Link>
+                                    <a href="https://www.cosmostraining.gr/" target='_blank' rel="noreferrer"> Cosmos Training</a>
+
+
                                 </li>
 
 
