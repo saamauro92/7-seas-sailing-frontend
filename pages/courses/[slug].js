@@ -29,10 +29,8 @@ const CourseSection = ({ course, homepage }) => {
                 uk-parallax="bgy: -100"
             >
 
-                <h2
-                    className="banner-titles  uk-text-bolder  uk-margin-remove uk-padding-remove "
-                    uk-toggle="cls: uk-heading-small;  mode: media; media: @s"
-                >  {course.attributes.title}   </h2>
+
+                <h2 className="banner-titles uk-text-bolder uk-text-center  uk-margin-remove uk-padding-remove"> {course.attributes.title} </h2>
 
 
             </div>
