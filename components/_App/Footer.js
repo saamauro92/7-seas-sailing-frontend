@@ -153,8 +153,9 @@ const FooterStyleThree = (data) => {
                         <form action="">
 
                             <div className="uk-card uk-card-secondary uk-card-body uk-flex uk-flex-center uk-flex-column " uk-form-custom>
-                                <h3 className="uk-card-title">JOIN OUR NEWSLETTER </h3>
-                                <input type="text" className='uk-input uk-form-width-large' />
+                                <label  > <h3 className="uk-card-title">  JOIN OUR NEWSLETTER  </h3>
+                                    <input type="text" className='uk-input uk-form-width-large' />
+                                </label>
                                 <button className='uk-button uk-button-default uk-button-large uk-margin' type="button" tabIndex="-1">SUBSCRIBE</button>
                             </div>
                         </form>
