@@ -54,7 +54,6 @@ const gallery = ({ homepage, data }) => {
 
                             <div key={i}>
                                 <a className="uk-inline" href={item.attributes.formats.medium.url} data-caption={`Caption ${i}`}>
-                                    {/*                   <img src={item.attributes.formats.small.url} alt="" /> */}
 
 
                                     <div
