@@ -281,3 +281,24 @@ p {
 .cursor-pointer {
   cursor: pointer;
 }
+
+/*  ABOUT PAGE */
+.about-banner-two {
+  height: 60vh;
+}
+
+.rya-letter {
+  color: #cb0447;
+}
+
+.about-team-image {
+  height: 800px;
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+
+.about-club-image {
+  height: 800px;
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
