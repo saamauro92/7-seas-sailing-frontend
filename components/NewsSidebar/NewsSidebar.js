@@ -16,10 +16,11 @@ const NewsSidebar = ({ latestNews, courses }) => {
 
                         < >
                             <span className="uk-text-success">News! </span>
+                            <span className=""> Blog:  </span>
                             <Link href={`/news/${latestNews[0].attributes.slug}`} passHref>
 
 
-                                <span> blog:  {" "}{latestNews[0].attributes.title}</span >
+                                <a href="">   {" "}{latestNews[0].attributes.title}</a >
                             </Link>
                         </>
 
@@ -28,14 +29,16 @@ const NewsSidebar = ({ latestNews, courses }) => {
                     <span className="">Latest courses:  </span>
                     {courses && courses.length > 0 && courses.map((course, i) =>
                         course.attributes.new_course &&
-                        <>
 
-                            <Link href={`/courses/${course.attributes.slug}`} passHref>
 
-                                <li> {course.attributes.title}</li>
 
-                            </Link>
-                        </>
+                        <Link href={`/courses/${course.attributes.slug}`} passHref>
+
+                            <a href=" "> - {course.attributes.title}</a>
+
+                        </Link>
+
+
 
                     )
 
