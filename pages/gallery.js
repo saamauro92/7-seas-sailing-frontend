@@ -2,10 +2,16 @@
 import Link from 'next/link';
 import React from 'react'
 import SEO from '../components/Seo/Seo'
+import { fetchAPI } from '../lib/api';
 
 
-const gallery = ({ homepage }) => {
+const gallery = ({ homepage, data }) => {
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
+
+    const album = data.attributes.album.data;
+
+    console.log("gallery", album)
+
     return (
 
         <div className='' >
@@ -37,16 +43,40 @@ const gallery = ({ homepage }) => {
                     <li > <span > Gallery  </span></li>
 
                 </ul>
-
-
-
-
-
-
-
-
             </div>
 
+            <div className="uk-container uk-container-medium uk-background-muted uk-padding">
+
+                <div className="uk-flex uk-flex-wrap uk-flex-center uk-margin-remove uk-padding-remove" uk-grid uk-lightbox="animation: slide">
+
+                    {
+                        album.map((item, i) =>
+
+                            <div key={i}>
+                                <a className="uk-inline" href={item.attributes.formats.medium.url} data-caption={`Caption ${i}`}>
+                                    {/*                   <img src={item.attributes.formats.small.url} alt="" /> */}
+
+
+                                    <div
+                                        data-src={item.attributes.formats.small.url}
+                                        data-srcset={item.attributes.formats.small.url}
+                                        data-uk-img
+
+                                        className="uk-background-image uk-background-cover  uk-height-medium uk-width-medium uk-flex uk-flex-center uk-flex-middle uk-margin-remove uk-padding-remove"
+
+                                    >
+                                    </div>
+
+                                </a>
+                            </div>
+
+
+                        )
+                    }
+
+
+                </div>
+            </div>
 
         </div>
     )
@@ -55,3 +85,21 @@ const gallery = ({ homepage }) => {
 export default gallery
 
 
+
+
+export async function getStaticProps() {
+
+
+    const galleryData = await fetchAPI("/gallery", {
+        populate: "*",
+    })
+
+
+    return {
+        props: {
+
+            data: galleryData.data,
+        },
+        revalidate: 1,
+    }
+}

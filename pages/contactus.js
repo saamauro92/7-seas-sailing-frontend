@@ -106,7 +106,7 @@ export default contact
 export async function getStaticProps() {
 
 
-    const contacDetails = await fetchAPI("/contact", {
+    const galleryData = await fetchAPI("/gallery", {
         populate: "*",
     })
 
@@ -114,9 +114,8 @@ export async function getStaticProps() {
     return {
         props: {
 
-            data: contacDetails.data,
+            data: galleryData.data,
         },
         revalidate: 1,
     }
 }
-
