@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { React, useState, useEffect } from "react";
 import Link from "../../utils/ActiveLink";
-import logo from '../../assets/seven-seas-logo.png'
-import rya from '../../assets/rya.png'
+import logo from '../../assets/seven-seas-logo.webp'
+import rya from '../../assets/rya.webp'
 
 import { useRouter } from 'next/router'
 
