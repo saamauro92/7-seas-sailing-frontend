@@ -12,7 +12,7 @@ const Card = ({ data, slug }) => {
 
             <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom uk-visible-toggle" tabIndex="-1">
 
-                {data.attributes.image.data.attributes.url &&
+                {data.attributes.image.data.attributes.url ?
 
                     <div
                         data-src={data.attributes.image.data.attributes.url}
@@ -26,13 +26,16 @@ const Card = ({ data, slug }) => {
                     </div>
 
 
-                }
+                    : null}
 
                 <div className="uk-position-cover uk-overlay uk-overlay-primary uk-hidden-hover cursor-pointer uk-flex uk-flex-center uk-flex-middle" >
 
 
                     <Link href={`/${slug}/${data.attributes.slug}`} passHref>
-                        <a uk-icon="icon: more; ratio: 2;"  ></a>
+                        <a href="" className="uk-icon" >
+                            <svg width="40" height="40" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="10" r="2"></circle><circle cx="10" cy="10" r="2"></circle><circle cx="17" cy="10" r="2"></circle></svg>
+
+                        </a>
                     </Link>
 
 
@@ -40,8 +43,10 @@ const Card = ({ data, slug }) => {
 
             </div>
             <p className=" uk-text-start">
-
-                <strong>{data.attributes.title} </strong>
+                <strong>   <Link href={`/${slug}/${data.attributes.slug}`} passHref>
+                    <a href=""> {data.attributes.title} </a>
+                </Link>
+                </strong>
             </p>
         </div>
     )

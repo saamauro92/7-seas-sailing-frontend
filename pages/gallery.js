@@ -5,12 +5,10 @@ import SEO from '../components/Seo/Seo'
 import { fetchAPI } from '../lib/api';
 
 
-const gallery = ({ homepage, data }) => {
+const gallery = ({ homepage, gallery }) => {
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
 
-    const album = data.attributes.album.data;
-
-    console.log("gallery", album)
+    const album = gallery.attributes.album.data;
 
     return (
 
@@ -45,11 +43,11 @@ const gallery = ({ homepage, data }) => {
                 </ul>
             </div>
 
-            <div className="uk-container uk-container-medium uk-background-muted uk-padding">
+            <div className="uk-container uk-container-medium uk-background-muted uk-padding uk-animation-slide-bottom">
 
                 <div className="uk-flex uk-flex-wrap uk-flex-center uk-margin-remove uk-padding-remove" uk-grid uk-lightbox="animation: slide">
 
-                    {
+                    {album.length > 0 && album &&
                         album.map((item, i) =>
 
                             <div key={i}>
@@ -97,7 +95,7 @@ export async function getStaticProps() {
     return {
         props: {
 
-            data: galleryData.data,
+            gallery: galleryData.data,
         },
         revalidate: 1,
     }
