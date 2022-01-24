@@ -28,7 +28,7 @@ const activitieSection = ({ activitie, homepage }) => {
             >
 
 
-                <h2 className="banner-titles uk-heading-medium uk-text-bolder uk-text-center  uk-margin-remove uk-padding-remove"> {activitie.attributes.title} </h2>
+                <h2 className="banner-titles uk-text-bolder uk-text-center  uk-margin-remove uk-padding-remove"> {activitie.attributes.title} </h2>
 
 
 
