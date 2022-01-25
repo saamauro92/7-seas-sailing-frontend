@@ -72,13 +72,51 @@ function Nav({ courses, activities }) {
                                 <a className="nav-link">
                                     About Us</a>
                             </Link>
-                            {/*                             <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left" style={{ "left": "0px", "top": "80px" }}>
-                                <ul className="uk-nav uk-navbar-dropdown-nav">
+                            <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2" style={{ "left": "0px", "top": "80px" }}>
+                                <ul className="uk-nav uk-navbar-dropdown-nav uk-nav-divider">
+                                    <Link href="/aboutus/#team" activeClassName="active">
+                                        <li className="uk-parent">
+                                            <a href="#team " className="nav-link responsive-link-font " uk-scroll>
+                                                Our team
+                                            </a>
 
+                                        </li>
+                                    </Link>
+                                    <Link href="/aboutus/#club" activeClassName="active">
+                                        <li className="uk-parent">
+                                            <a href="#club " className="nav-link responsive-link-font " uk-scroll>
+                                                The Seven Seas Club
+                                            </a>
 
+                                        </li>
+                                    </Link>
+                                    <Link href="/aboutus/#sailing_area" activeClassName="active">
+                                        <li className="uk-parent">
+                                            <a href="#sailing_area" className="nav-link responsive-link-font " uk-scroll>
+                                                Sailing Area
+                                            </a>
+
+                                        </li>
+                                    </Link>
+                                    <Link href="/aboutus/#rya_section" activeClassName="active">
+                                        <li className="uk-parent">
+                                            <a href="#rya_section " className="nav-link responsive-link-font " uk-scroll>
+                                                About the RYA
+                                            </a>
+
+                                        </li>
+                                    </Link>
+                                    <Link href="/aboutus/#testimonials" activeClassName="active">
+                                        <li className="uk-parent">
+                                            <a href="#testimonials " className="nav-link responsive-link-font " uk-scroll>
+                                                Testimonials
+                                            </a>
+
+                                        </li>
+                                    </Link>
 
                                 </ul>
-                            </div> */}
+                            </div>
                         </li>
                         <li className="nav-item">
 
@@ -434,18 +472,52 @@ function Nav({ courses, activities }) {
                                         <a href="" ></a>
 
 
-                                        <ul className="uk-nav-sub uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-nav-parent-icon uk-list-large" hidden="" uk-nav="multiple: false">
+                                        <ul className="uk-nav-sub uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-nav-parent-icon " hidden="" uk-nav="multiple: false">
 
                                             <li className="uk-margin  ">
-                                                <div className=" uk-position-absolute ">
 
-                                                    <Link href="/aboutus">
-                                                        <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">The Team</a>
-                                                    </Link>
+                                                <Link href="/aboutus#team">
+                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">The Team</a>
+                                                </Link>
 
 
-                                                </div>
-                                                <a href="" ></a>
+                                            </li>
+                                            <li className="uk-margin  ">
+
+
+
+                                                <Link href="/aboutus#club">
+                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">The Seven Seas Club</a>
+                                                </Link>
+
+
+                                            </li>
+                                            <li className="uk-margin  ">
+
+
+
+                                                <Link href="/aboutus#sailing_area">
+                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Sailing Area   </a>
+                                                </Link>
+
+
+                                            </li>
+                                            <li className="uk-margin  ">
+
+
+                                                <Link href="/aboutus#rya_section">
+                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary"> About The RYA   </a>
+                                                </Link>
+
+
+                                            </li>
+                                            <li className="uk-margin  ">
+
+
+
+                                                <Link href="/aboutus#testimonials">
+                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Testimonials    </a>
+                                                </Link>
 
 
                                             </li>

@@ -74,7 +74,7 @@ const AboutUsPage = ({ team, about, homepage }) => {
 
             <div className="uk-container uk-container-medium  uk-animation-slide-bottom  uk-background-muted ">
 
-                <div className="uk-section uk-flex uk-flex-wrap">
+                <div className="uk-section uk-flex uk-flex-wrap" id="rya_section">
                     <div className="uk-width-1-2@m uk-flex uk-flex-middle uk-flex-center " uk-scrollspy="cls: uk-animation-slide-left; repeat: false">
                         <h2> <strong>WE ARE RECOGNIZED </strong> </h2>
                     </div>
@@ -89,7 +89,7 @@ const AboutUsPage = ({ team, about, homepage }) => {
 
 
 
-                <div className="uk-section uk-flex uk-flex-wrap ">
+                <div className="uk-section uk-flex uk-flex-wrap " >
                     <div className="uk-width-1-2@m uk-flex uk-flex-middle uk-flex-center  " >
 
                         <h2 uk-scrollspy="cls: uk-animation-slide-left; repeat: false"> <strong>ABOUT THE R<span className='rya-letter'>Y</span>A</strong> </h2>
@@ -118,7 +118,7 @@ const AboutUsPage = ({ team, about, homepage }) => {
             </div>
 
 
-            <div className="uk-container uk-container-expand uk-padding-remove uk-animation-slide-bottom uk-background-muted  ">
+            <div className="uk-container uk-container-expand uk-padding-remove uk-animation-slide-bottom uk-background-muted  " id="sailing_area" >
 
 
                 <div className=" uk-background-cover  uk-width-1-1@m"
@@ -132,7 +132,7 @@ const AboutUsPage = ({ team, about, homepage }) => {
 
                         </div>
 
-                        <div className="uk-width-1-4@m  uk-padding-small ">
+                        <div className="uk-width-1-4@m  uk-padding-small " >
                             <h2>Sailing Area </h2>
                             {about && <ReactMarkdown  >
 
@@ -169,7 +169,7 @@ const AboutUsPage = ({ team, about, homepage }) => {
                 </div>
 
                 <div className="uk-padding-large uk-margin-large">
-                    <h1 className='uk-text-left'>Meet Our Team</h1>
+                    <h1 className='uk-text-left' id="team">Meet Our Team</h1>
 
 
 
@@ -227,7 +227,7 @@ const AboutUsPage = ({ team, about, homepage }) => {
 
 
                     <div className="uk-container uk-container-large uk-slider-container-offset uk-padding  " uk-slider="finite: true" uk-slideshow uk-scrollspy="cls: uk-animation-slide-left; repeat: false" >
-                        <h1 className='uk-text-center'>The 7 Seas Club</h1>
+                        <h1 className='uk-text-center' id="club">The 7 Seas Club</h1>
 
                         <ReactMarkdown className=' uk-padding-large'>
 
