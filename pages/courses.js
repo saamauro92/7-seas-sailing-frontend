@@ -150,8 +150,12 @@ const courses = ({ courses, homepage }) => {
                                     <div className="uk-position-cover uk-overlay uk-overlay-primary uk-hidden-hover cursor-pointer uk-flex uk-flex-center uk-flex-middle" >
 
                                         <Link href='/courses/yachtmaster' passHref>
-                                            <a uk-icon="icon: more; ratio: 2;"  ></a>
+                                            <a href="" className="uk-icon" >
+                                                <svg width="40" height="40" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="10" r="2"></circle><circle cx="10" cy="10" r="2"></circle><circle cx="17" cy="10" r="2"></circle></svg>
+
+                                            </a>
                                         </Link>
+
 
 
                                     </div>
