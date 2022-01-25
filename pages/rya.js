@@ -39,7 +39,7 @@ const RyaPage = ({ homepage, data }) => {
             </div>
 
 
-            <div className="uk-container uk-container-medium uk-background-muted  uk-padding-medium">
+            <div className="uk-container uk-container-medium uk-background-muted  uk-padding-medium uk-animation-slide-bottom">
 
                 <ReactMarkdown className="uk-padding-large">
 
