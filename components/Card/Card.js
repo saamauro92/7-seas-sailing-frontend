@@ -13,7 +13,6 @@ const Card = ({ data, slug }) => {
 
                 <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom uk-visible-toggle" tabIndex="-1">
 
-
                     {data.attributes.image.data.attributes.url ?
 
                         <div
@@ -26,6 +25,7 @@ const Card = ({ data, slug }) => {
                         >
                             {data.attributes.new_course === true ? <span className="uk-label uk-label-success uk-position-top-right">New</span> : null}
                         </div>
+
 
                         : null}
 
