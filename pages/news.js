@@ -53,7 +53,7 @@ const NewsPage = ({ homepage, news }) => {
                                         </div>
                                         <div >
 
-                                            <img src={item.attributes.image.data.attributes.formats.small.url} alt="blog_img" className='uk-height-medium' />
+                                            <img src={item.attributes.image.data.attributes.formats.small.url} alt="blog_img" className='uk-height-medium' uk-img />
 
                                         </div>
                                     </div>
