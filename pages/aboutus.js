@@ -157,28 +157,28 @@ const AboutUsPage = ({ team, about, homepage }) => {
 
 
 
-            <div className="uk-container uk-container-expand  uk-margin-large  uk-background-muted uk-padding-remove">
+
+            <div className="uk-container uk-container-medium  uk-background-muted uk-padding-large   ">
+
                 <div
-                    data-src={about.attributes.team_image.data.attributes.formats.medium.url}
-                    data-srcset={about.attributes.team_image.data.attributes.formats.medium.url}
+                    data-src={about.attributes.club_image.data.attributes.formats.medium.url}
+                    data-srcset={about.attributes.club_image.data.attributes.formats.medium.url}
                     data-uk-img
                     style={{ zIndex: '0' }}
-                    className="uk-background-imagen uk-background-cover uk-width-1-3@m  uk-align-right@m about-team-image uk-visible@s"
+                    className="uk-background-imagen uk-background-cover uk-width-1-4@m  uk-align-right@m about-team-image uk-visible@s"
 
                 >
                 </div>
-
-                <div className="uk-padding-large uk-margin-large">
-                    <h1 className='uk-text-left' id="team">Meet Our Team</h1>
+                <div className="uk-container uk-container-medium uk-flex uk-flex-center ">
 
 
 
-                    <div className="uk-container uk-container-large uk-slider-container-offset  uk-background-muted uk-padding-large " uk-slider="finite: true" uk-slideshow uk-scrollspy="cls: uk-animation-slide-right; repeat: false">
+                    <div className="uk-container uk-container-large uk-slider-container-offset uk-padding  " uk-slider="finite: true" uk-slideshow uk-scrollspy="cls: uk-animation-slide-left; repeat: false" >
+                        <h1 className='uk-text-center' id="team">Meet our Team</h1>
 
 
 
-
-                        <div className="uk-position-relative uk-visible-toggle uk-light " tabIndex="-1" style={{ zIndex: '2' }}>
+                        <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" style={{ zIndex: '2' }}>
                             <ul className="uk-slider-items uk-child-width-1-3@s uk-grid">
                                 {
                                     team && team.map((person) =>
@@ -186,7 +186,10 @@ const AboutUsPage = ({ team, about, homepage }) => {
                                         person.attributes.category === 'Team' ?
 
 
+
+
                                             <Member data={person} />
+
 
 
                                             : null
@@ -195,38 +198,37 @@ const AboutUsPage = ({ team, about, homepage }) => {
                                 }
 
                             </ul>
-                            <a className="uk-position-center-left uk-position-small uk-hidden-hover uk-light" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                            <a className="uk-position-center-right uk-position-small uk-hidden-hover uk-dark" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                            <a className="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                            <a className="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+
                         </div>
                         <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-
-
                     </div>
 
+
                 </div>
-
-
             </div>
 
 
+            {/*  */}
+
+            <div className="uk-container uk-container-medium  uk-background-muted uk-padding-large   ">
+
+                <div
+                    data-src={about.attributes.club_image.data.attributes.formats.medium.url}
+                    data-srcset={about.attributes.club_image.data.attributes.formats.medium.url}
+                    data-uk-img
+                    style={{ zIndex: '0' }}
+                    className="uk-background-imagen uk-background-cover uk-width-1-4@m  uk-align-left@m about-club-image uk-visible@s"
+
+                >
+                </div>
+                <div className="uk-container uk-container-medium uk-flex uk-flex-center ">
 
 
-            <div className="uk-container uk-container-expand  uk-background-muted uk-padding-large   ">
 
-                <div className="uk-container uk-container-expand uk-flex uk-flex-center ">
-
-                    <div
-                        data-src={about.attributes.club_image.data.attributes.formats.medium.url}
-                        data-srcset={about.attributes.club_image.data.attributes.formats.medium.url}
-                        data-uk-img
-                        style={{ zIndex: '0' }}
-                        className="uk-background-imgen uk-background-cover uk-width-1-3@m  uk-align-left@m about-club-image uk-visible@s"
-
-                    >
-                    </div>
-
-
-                    <div className="uk-container uk-container-large uk-slider-container-offset uk-padding  " uk-slider="finite: true" uk-slideshow uk-scrollspy="cls: uk-animation-slide-left; repeat: false" >
+                    <div className="uk-container uk-container-large uk-slider-container-offset uk-padding  " uk-slider="finite: true" uk-slideshow uk-scrollspy="cls: uk-animation-slide-right; repeat: false" >
                         <h1 className='uk-text-center' id="club">The 7 Seas Club</h1>
 
                         <ReactMarkdown className=' uk-padding-large'>
