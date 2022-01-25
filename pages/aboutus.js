@@ -11,8 +11,6 @@ import Link from 'next/link'
 const AboutUsPage = ({ team, about, homepage }) => {
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
 
-    console.log(about, 'about');
-
 
     return (
 

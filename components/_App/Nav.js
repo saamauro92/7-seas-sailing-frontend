@@ -346,20 +346,30 @@ function Nav({ courses, activities }) {
 
 
 
-                <Link href="/">
-                    <a className="uk-navbar-item uk-logo ">
 
+                <a className="uk-navbar-item uk-logo  " href="">
+                    <Link href="/">
                         <img src={logo} alt="logo" width={217} height={64} uk-img className="uk-visible@s" />{/* big */}
 
+
+                    </Link>
+                </a>
+                <a className="uk-navbar-item uk-logo  " href="" >
+                    <Link href="/rya">
                         <img src={logo} alt="rya-logo" width={117} height={64} uk-img className="uk-hidden@s" />
-                    </a>
-                </Link>
+                    </Link>
 
-
-                <img src={rya} alt="logo" width={117} height={64} uk-img className="uk-visible@s" />{/* big */}
-
-                <img src={rya} alt="rya-logo" width={67} height={64} uk-img className="uk-hidden@s" />
-
+                </a>
+                <a className="uk-navbar-item uk-logo  " href="">
+                    <Link href="/">
+                        <img src={rya} alt="logo" width={117} height={64} uk-img className="uk-visible@s" />
+                    </Link>
+                </a>
+                <a className="uk-navbar-item uk-logo  " href="">
+                    <Link href="/rya">
+                        <img src={rya} alt="rya-logo" width={67} height={64} uk-img className="uk-hidden@s" />
+                    </Link>
+                </a>
             </div>
 
 
@@ -391,13 +401,14 @@ function Nav({ courses, activities }) {
 
 
                                     <Link href="/">
-                                        <a className="uk-navbar-item uk-logo">
+                                        <a className="uk-navbar-item uk-logo" uk-toggle="target: #offcanvas-nav-primary" href="">
 
                                             <img src={logo} alt="logo" height={64} width={117} uk-img />
                                         </a>
                                     </Link>
-                                    <Link href="/">
-                                        <a className="uk-navbar-item uk-logo">
+
+                                    <Link href="/rya">
+                                        <a className="uk-navbar-item uk-logo" uk-toggle="target: #offcanvas-nav-primary" href="">
 
 
                                             <img src={rya} alt="rya-logo" height={64} width={67} uk-img />

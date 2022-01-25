@@ -1,15 +1,16 @@
 import Link from "next/link";
 import SEO from "../components/Seo/Seo";
+import ReactMarkdown from "react-markdown"
+import { fetchAPI } from "../lib/api";
 
-
-const RyaPage = ({ homepage }) => {
+const RyaPage = ({ homepage, data }) => {
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
 
 
     return (
         <>
 
-            <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small  uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
+            <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small  uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle uk-padding-large"
                 data-src={imgBanner}
                 data-srcset={imgBanner}
                 data-uk-img
@@ -23,7 +24,7 @@ const RyaPage = ({ homepage }) => {
 
 
             </div>
-            <div className="uk-container uk-container-medium uk-background-muted">
+            <div className="uk-container uk-container-medium uk-background-muted uk-padding-medium ">
                 <ul className="uk-breadcrumb uk-width-1-4@m uk-width-1-4@l banner-titles uk-heading-medium  uk-text-bolder uk-text-center uk-margin-remove uk-padding-small">
                     <li >
 
@@ -34,8 +35,18 @@ const RyaPage = ({ homepage }) => {
                     <li > <span > About the RYA</span></li>
 
                 </ul>
+
             </div>
 
+
+            <div className="uk-container uk-container-medium uk-background-muted  uk-padding-medium">
+
+                <ReactMarkdown className="uk-padding-large">
+
+                    {data.attributes.content}
+                </ReactMarkdown>
+
+            </div>
         </>
 
     )
@@ -44,3 +55,22 @@ const RyaPage = ({ homepage }) => {
 
 
 export default RyaPage;
+
+
+export async function getStaticProps() {
+
+    const ryaData = await fetchAPI("/rya", { populate: "*" });
+
+
+
+
+    return {
+        props: {
+
+            data: ryaData.data,
+
+
+        },
+        revalidate: 1,
+    }
+}
