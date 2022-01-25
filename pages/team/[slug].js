@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 /* import ReactMarkdown from "react-markdown" */
 import Link from 'next/link'
 import SEO from '../../components/Seo/Seo'
-
+import ReactMarkdown from "react-markdown"
 
 import {
     fetchAPI,
@@ -58,20 +59,29 @@ const MemberProfile = ({ member, homepage }) => {
 
                 <div className="uk-section">
 
+
                     <h2> {member.attributes.title}</h2>
-                    <p>  {member.attributes.description} </p>
-                    <div
-                        className=" uk-background-contain uk-height-large uk-margin-large"
+                    <img src={imageUrl} alt="profile_pic" className='uk-align-left@m uk-margin-remove-adjacent uk-height-large ' uk-img />
+                    {/*                     <div
+                        className=" uk-background-contain uk-height-large uk-margin-large uk-align-center uk-align-right@m uk-margin-remove-adjacent"
                         data-src={imageUrl}
                         data-srcset={imageUrl}
                         data-uk-img
-                        uk-toggle="cls: uk-height-medium; mode: media; media: @l"
+                              uk-toggle="cls: uk-height-medium; mode: media; media: @l"
                     > </div>
+ */}
 
 
-                    <hr />
+                    <ReactMarkdown>
+
+                        {member.attributes.description}
+
+                    </ReactMarkdown>
+
+
 
                 </div>
+                <hr />
             </div>
         </>
     )

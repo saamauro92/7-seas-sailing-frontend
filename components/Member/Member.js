@@ -16,7 +16,7 @@ const Member = ({ data }) => {
 
 
 
-                            <div className=" uk-background-cover  uk-background-center-center uk-height-medium  "
+                            <div className="uk-width-large uk-background-cover  uk-background-center-center uk-height-medium  "
                                 data-src={data.attributes.image.data.attributes.url}
                                 data-srcset={data.attributes.image.data.attributes.url}
                                 data-uk-img
@@ -28,7 +28,11 @@ const Member = ({ data }) => {
                         </div>
                         <div className="uk-card-body">
                             <h3 className="uk-card-title"> {data.attributes.name}</h3>
-                            <p>{data.attributes.title}</p>
+                            <p className="uk-text-success">{data.attributes.title}</p>
+
+
+                            <p>{data.attributes.short}</p>
+
 
                         </div>
                     </div>

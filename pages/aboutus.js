@@ -16,7 +16,7 @@ const AboutUsPage = ({ team, about, homepage }) => {
 
     return (
 
-        <div className=''>
+        <>
             <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                 data-src={imgBanner}
                 data-srcset={imgBanner}
@@ -108,7 +108,7 @@ const AboutUsPage = ({ team, about, homepage }) => {
 
                         }
                         <Link href={"/rya"} passHref>
-                            <button className='uk-button uk-margin-large'> READ MORE</button>
+                            <button className='uk-button uk-button-default uk-margin-large'> READ MORE</button>
                         </Link>
                     </div>
 
@@ -127,8 +127,6 @@ const AboutUsPage = ({ team, about, homepage }) => {
                     data-src={about.attributes.sailing_image.data.attributes.url}
                     data-srcset={about.attributes.sailing_image.data.attributes.url}
                     data-uk-img
-                /*       uk-toggle="cls: uk-height-medium; mode: media; media: @l" */
-
                 >
 
                     <div className="uk-section uk-flex uk-light uk-flex-wrap">
@@ -161,13 +159,13 @@ const AboutUsPage = ({ team, about, homepage }) => {
 
 
 
-            <div className="uk-container uk-container-large  uk-margin-large  uk-background-muted uk-padding-large">
+            <div className="uk-container uk-container-expand  uk-margin-large  uk-background-muted uk-padding-remove">
                 <div
                     data-src={about.attributes.team_image.data.attributes.formats.medium.url}
                     data-srcset={about.attributes.team_image.data.attributes.formats.medium.url}
                     data-uk-img
                     style={{ zIndex: '0' }}
-                    className="uk-background-imgen uk-background-cover uk-width-1-3@m  uk-align-right@m about-team-image uk-visible@s"
+                    className="uk-background-imagen uk-background-cover uk-width-1-3@m  uk-align-right@m about-team-image uk-visible@s"
 
                 >
                 </div>
@@ -176,7 +174,8 @@ const AboutUsPage = ({ team, about, homepage }) => {
                     <h1 className='uk-text-left'>Meet Our Team</h1>
 
 
-                    <div className="uk-container uk-container-small uk-slider-container-offset  uk-background-muted uk-padding-large" uk-slider="finite: true" uk-slideshow uk-scrollspy="cls: uk-animation-slide-right; repeat: false">
+
+                    <div className="uk-container uk-container-large uk-slider-container-offset  uk-background-muted uk-padding-large " uk-slider="finite: true" uk-slideshow uk-scrollspy="cls: uk-animation-slide-right; repeat: false">
 
 
 
@@ -198,8 +197,8 @@ const AboutUsPage = ({ team, about, homepage }) => {
                                 }
 
                             </ul>
-                            <a className="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                            <a className="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                            <a className="uk-position-center-left uk-position-small uk-hidden-hover uk-light" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                            <a className="uk-position-center-right uk-position-small uk-hidden-hover uk-dark" href="#" uk-slidenav-next uk-slider-item="next"></a>
                         </div>
                         <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
 
@@ -214,9 +213,9 @@ const AboutUsPage = ({ team, about, homepage }) => {
 
 
 
-            <div className="uk-container uk-container-large  uk-background-muted uk-padding-large   ">
+            <div className="uk-container uk-container-expand  uk-background-muted uk-padding-large   ">
 
-                <div className="uk-container uk-container-large uk-flex uk-flex-center ">
+                <div className="uk-container uk-container-expand uk-flex uk-flex-center ">
 
                     <div
                         data-src={about.attributes.club_image.data.attributes.formats.medium.url}
@@ -229,10 +228,10 @@ const AboutUsPage = ({ team, about, homepage }) => {
                     </div>
 
 
-                    <div className="uk-container uk-container-small uk-slider-container-offset uk-padding  " uk-slider="finite: true" uk-slideshow uk-scrollspy="cls: uk-animation-slide-left; repeat: false" >
+                    <div className="uk-container uk-container-large uk-slider-container-offset uk-padding  " uk-slider="finite: true" uk-slideshow uk-scrollspy="cls: uk-animation-slide-left; repeat: false" >
                         <h1 className='uk-text-center'>The 7 Seas Club</h1>
 
-                        <ReactMarkdown className='uk-padding-large'>
+                        <ReactMarkdown className=' uk-padding-large'>
 
                             {about.attributes.club.description}
                         </ReactMarkdown>
@@ -270,7 +269,7 @@ const AboutUsPage = ({ team, about, homepage }) => {
             </div>
 
 
-        </div >
+        </ >
     )
 }
 
