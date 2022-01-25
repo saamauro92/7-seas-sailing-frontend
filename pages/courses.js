@@ -40,7 +40,7 @@ const courses = ({ courses, homepage }) => {
 
                 <div uk-switcher="animation: uk-animation-fade; toggle: > *" className='uk-text-center uk-margin '>
                     <button className="uk-button uk-button-primary" type="button">RYA Sailing</button>
-                    <button className="uk-button uk-button-primary" type="button">RYA Motor Cruising</button>
+                    <button className="uk-button uk-button-primary " type="button" id='motor_'>RYA Motor Cruising</button>
                     <button className="uk-button uk-button-primary" type="button"> RYA Power</button>
                     <button className="uk-button uk-button-primary" type="button"> RYA Jet Ski</button>
                     <button className="uk-button uk-button-primary" type="button"> Yachtmaster Exam Preparation</button>
@@ -68,7 +68,7 @@ const courses = ({ courses, homepage }) => {
                         </div>
 
                     </li>
-                    <li>
+                    <li >
                         <div className=" uk-padding-small ">
                             <h4 className=' uk-padding' id="motor_courses">RYA Motor Cruising Courses</h4>
 

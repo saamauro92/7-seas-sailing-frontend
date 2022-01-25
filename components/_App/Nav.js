@@ -380,7 +380,7 @@ function Nav({ courses, activities }) {
 
 
         <nav className="uk-navbar-container uk-margin uk-navbar uk-margin-remove uk-navbar-transparent uk-padding-small" uk-navbar="">
-            <div className="uk-navbar-left">
+            <div className="uk-navbar-left ">
 
 
                 <a className="uk-navbar-item uk-logo  " href="">
@@ -391,21 +391,21 @@ function Nav({ courses, activities }) {
                     </Link>
                 </a>
                 <a href="" >
-                    <Link href="/rya">
-                        <img src={logo} alt="logo" width={147} height={64} uk-img className="uk-hidden@s " />{/* small ss logo */}
+                    <Link href="/" >
+                        <img src={logo} alt="logo" width={140} height={68} uk-img className="uk-hidden@s  " />{/* small ss logo */}
                     </Link>
 
                 </a>
 
 
-                <Link href="/">
+                <Link href="/rya">
                     <a href="">
                         <img src={rya} alt="rya-logo" width={97} height={64} uk-img className="uk-visible@s" />
                     </a>
                 </Link>
-                <a href="" className="uk-padding-small uk-padding-remove-vertical">
+                <a href="" className="uk-margin-left  ">
                     <Link href="/rya">
-                        <img src={rya} alt="rya-logo" width={74} height={64} uk-img className="uk-hidden@s" />
+                        <img src={rya} alt="rya-logo" width={74} height={60} uk-img className="uk-hidden@s " />
                     </Link>
                 </a>
             </div>
