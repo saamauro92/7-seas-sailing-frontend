@@ -383,29 +383,29 @@ function Nav({ courses, activities }) {
             <div className="uk-navbar-left">
 
 
-
-
                 <a className="uk-navbar-item uk-logo  " href="">
                     <Link href="/">
-                        <img src={logo} alt="logo" width={217} height={64} uk-img className="uk-visible@s" />{/* big */}
+                        <img src={logo} alt="logo" width={217} height={64} uk-img className="uk-visible@s" />{/* big ss logo */}
 
 
                     </Link>
                 </a>
-                <a className="uk-navbar-item uk-logo  " href="" >
+                <a href="" >
                     <Link href="/rya">
-                        <img src={logo} alt="rya-logo" width={117} height={64} uk-img className="uk-hidden@s" />
+                        <img src={logo} alt="logo" width={147} height={64} uk-img className="uk-hidden@s " />{/* small ss logo */}
                     </Link>
 
                 </a>
-                <a className="uk-navbar-item uk-logo  " href="">
-                    <Link href="/">
-                        <img src={rya} alt="logo" width={117} height={64} uk-img className="uk-visible@s" />
-                    </Link>
-                </a>
-                <a className="uk-navbar-item uk-logo  " href="">
+
+
+                <Link href="/">
+                    <a href="">
+                        <img src={rya} alt="rya-logo" width={97} height={64} uk-img className="uk-visible@s" />
+                    </a>
+                </Link>
+                <a href="" className="uk-padding-small uk-padding-remove-vertical">
                     <Link href="/rya">
-                        <img src={rya} alt="rya-logo" width={67} height={64} uk-img className="uk-hidden@s" />
+                        <img src={rya} alt="rya-logo" width={74} height={64} uk-img className="uk-hidden@s" />
                     </Link>
                 </a>
             </div>
