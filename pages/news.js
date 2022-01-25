@@ -25,7 +25,7 @@ const NewsPage = ({ homepage, news }) => {
                 </h3>
 
             </div>
-            <div className="uk-container uk-container-medium uk-height-large uk-padding-medium uk-height-large">
+            <div className="uk-container uk-container-medium uk-padding-medium ">
 
                 <ul className="uk-breadcrumb uk-width-1-4@m uk-width-1-4@l banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
                     <li >
@@ -38,36 +38,51 @@ const NewsPage = ({ homepage, news }) => {
 
                 </ul>
 
-                <div className="uk-container uk-container-large uk-padding uk-animation-slide-bottom uk-height-large">
+                <div className="uk-container uk-container-large uk-padding uk-animation-slide-bottom ">
                     {news && news.length > 0 && news.map((item, index) =>
 
 
                         <Link href={`/news/${item.attributes.slug}`} key={index} passHref>
-                            <div className='uk-card uk-margin-large ' >
+                            <a href="">
+                                <div className='uk-card uk-margin-large uk-padding-small ' uk-grid >
+
+
+                                    <div className="uk-width-1-4@m">
+                                        <div className="uk-header uk-text-bolder uk-padding-small uk-padding-remove-horizontal">
+                                            <a href="">   {item.attributes.title}  </a>
+                                        </div>
+                                        <div >
+
+                                            <img src={item.attributes.image.data.attributes.formats.small.url} alt="blog_img" className='uk-height-medium' />
+
+                                        </div>
+                                    </div>
+                                    <div className="uk-width-1-2@m uk-padding-small uk-padding-remove-horizontal">
 
 
 
-                                <div className="uk-header uk-text-bolder">
-                                    <a href="">   {item.attributes.title}  </a>
+
+                                        <div >
+                                            Written By: {" "}
+                                            {item.attributes.writtenBy}
+                                        </div>
+
+                                        <div>
+                                            Posted:  {item.attributes.date}
+                                        </div>
+                                    </div>
+
+
+                                    <hr />
+
                                 </div>
-
-
-                                <div>
-                                    Written By: {" "}
-                                    {item.attributes.writtenBy}
-                                </div>
-
-                                <div>
-                                    {item.attributes.date}
-                                </div>
-
-                                <hr />
-                            </div>
+                            </a>
                         </Link>
 
 
 
                     )}
+
                 </div>
 
             </div>
