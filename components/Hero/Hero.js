@@ -6,7 +6,7 @@ import Link from "next/link"
 
 const Hero = ({ courses, images }) => {
 
-    console.log(images)
+
     return (
         <>
             {/* 
@@ -24,6 +24,7 @@ const Hero = ({ courses, images }) => {
                     <li>
                         <div className="uk-transform-cente uk-animation-kenburns uk-animation-reverse  hero-wrapper " >
                             <img src={images.background.data.attributes.url} alt="" className="uk-cover" />
+
                         </div>
                         <div className="uk-container uk-container-large uk-margin-top uk-padding-large uk-padding-horizontal-remove">
 
@@ -35,22 +36,22 @@ const Hero = ({ courses, images }) => {
                                     <button className="uk-margin-top uk-button-large uk-animation-scale-up uk-button uk-button-danger uk-text-bold ">See more</button>
                                 </Link>
 
+
                             </div>
 
                         </div>
 
 
-
                         {/*  */}
-                        <div className=" uk-position-bottom-right  uk-text-center uk-widht-medium uk-visible@m" tabIndex="-1" uk-slider="sets: true" style={{ width: "1000px" }}>
+                        <div className=" uk-position-bottom-right  uk-text-center uk-widht-medium " tabIndex="-1" uk-slider="sets: true" style={{ width: "1000px" }}>
 
-                            <ul className="uk-slider-items uk-child-width-1-3@m uk-child-width-1-2@m">
+                            <ul className="uk-slider-items uk-child-width-1-3@m uk-child-width-1-2@m uk-visible@m">
 
                                 <li>
 
 
 
-                                    <div className="uk-inline-clip hero-cards  uk-animation-slide-bottom uk-visible-toggle" tabIndex="-1" >
+                                    <div className="uk-inline-clip hero-cards  uk-animation-slide-bottom uk-visible-toggle uk-visible@m" tabIndex="-1" >
 
 
                                         <img src={images.sail.data.attributes.url} width="250" height="200" alt="hero_card_sail" uk-img />
@@ -202,12 +203,12 @@ const Hero = ({ courses, images }) => {
                                 </li>
 
                             </ul>
-                            <a className="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous">
+                            <a className="uk-position-center-left uk-position-small uk-hidden-hover uk-visible@m" href="#" uk-slidenav-previous uk-slider-item="previous">
 
                                 <svg width="40" height="40" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#fff" strokeWidth="1.33" points="13 16 7 10 13 4"></polyline></svg>
 
                             </a>
-                            <a className="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next">
+                            <a className="uk-position-center-right uk-position-small uk-hidden-hover uk-visible@m" href="#" uk-slidenav-next uk-slider-item="next">
                                 <svg width="40" height="40" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#fff" strokeWidth="1.33" points="7 4 13 10 7 16"></polyline></svg>
 
 
@@ -216,6 +217,7 @@ const Hero = ({ courses, images }) => {
 
                         </div>
 
+
                         {/*  */}
 
                     </li>
@@ -223,6 +225,7 @@ const Hero = ({ courses, images }) => {
                     <li>
                         <div className="uk-transform-cente uk-animation-kenburns uk-animation-reverse  hero-wrapper " >
                             <img src={images.power.data.attributes.url} alt="" className="uk-cover" />
+
                         </div>
                         <div className="uk-container uk-container-large uk-margin-top uk-padding-large uk-padding-horizontal-remove">
 
@@ -234,6 +237,7 @@ const Hero = ({ courses, images }) => {
 
                             </div>
 
+
                         </div>
 
 
@@ -243,17 +247,20 @@ const Hero = ({ courses, images }) => {
                 </ul>
 
                 <div className="uk-light">
-                    <a className="uk-position-center-left uk-position-small uk-hidden-hover  " href="#" uk-slidenav-previous uk-slideshow-item="previous"><span >
+                    <a className="uk-position-center-left uk-position-small uk-hidden-hover uk-visible@m " href="#" uk-slidenav-previous uk-slideshow-item="previous"><span >
                         <svg width="60" height="80" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#fff" strokeWidth="1.33" points="13 16 7 10 13 4"></polyline></svg>
                     </span>
 
                     </a>
-                    <a className="uk-position-center-right uk-position-small uk-hidden-hover  " href="#" uk-slidenav-next uk-slideshow-item="next"><span >
+                    <a className="uk-position-center-right uk-position-small uk-hidden-hover  uk-visible@m" href="#" uk-slidenav-next uk-slideshow-item="next"><span >
                         <svg width="60" height="80" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#fff" strokeWidth="1.33" points="7 4 13 10 7 16"></polyline></svg>
                     </span>
 
                     </a>
+
+
                 </div>
+                <ul className="uk-position-bottom uk-slideshow-nav uk-dotnav uk-flex-center uk-margin uk-hidden@m"></ul>
 
             </div>
 
