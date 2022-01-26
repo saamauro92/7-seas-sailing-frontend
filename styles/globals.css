@@ -15,6 +15,32 @@ a {
   box-sizing: border-box;
 }
 
+/* HERO */
+
+.hero-wrapper {
+}
+
+.hero_1 {
+}
+
+.hero_subtitle {
+  font-size: 34px;
+}
+/*  overrading uk kenburns effect */
+
+.uk-animation-kenburns {
+  animation-duration: 15s infinite;
+}
+
+@keyframes uk-kenburns {
+  0% {
+    transform: scale(1.7);
+  }
+  100% {
+    transform: scale(1.6);
+  }
+}
+
 /* navbar */
 
 .uk-navbar-item,
@@ -204,7 +230,7 @@ p > strong {
   box-shadow: 10px 5px 5px #2a2a2a;
   height: 40px;
   padding: 5px 0 0 15%;
-  animation: 1.5s fadeIn;
+  animation: 2s fadeIn;
   animation-fill-mode: forwards;
   visibility: hidden;
   gap: 35px;

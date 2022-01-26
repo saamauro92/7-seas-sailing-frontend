@@ -9,7 +9,7 @@ const NewsSidebar = ({ latestNews, courses }) => {
 
             {
 
-                <div className="uk-card uk-card-secondary uk-card-body uk-position-top news_sidebar uk-flex uk-flex-baseline "  >
+                <div className="uk-card uk-card-secondary uk-card-body uk-position-top news_sidebar uk-flex uk-flex-baseline uk-flex-center"  >
 
 
                     {latestNews && latestNews.length > 0 &&
