@@ -38,6 +38,8 @@ function Nav({ courses, activities }) {
     return showBar ? (
 
         <div className="uk-container uk-container-large uk-background-default ">
+
+
             <nav className="uk-navbar-container  uk-navbar uk-margin-remove uk-navbar-transparent " uk-navbar="">
 
                 <div className="uk-navbar-left nav-logos ">
@@ -74,15 +76,15 @@ function Nav({ courses, activities }) {
                             </Link>
                             <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2" style={{ "left": "0px", "top": "80px" }}>
                                 <ul className="uk-nav uk-navbar-dropdown-nav uk-nav-divider">
-                                    <Link href="/aboutus/#team" activeClassName="active">
+                                    <Link href="/aboutus/#team" >
                                         <li className="uk-parent">
-                                            <a href="#team " className="nav-link responsive-link-font " uk-scroll>
+                                            <a className="responsive-link-font nav-link" href="#team " uk-scroll>
                                                 Our team
                                             </a>
 
                                         </li>
                                     </Link>
-                                    <Link href="/aboutus/#club" activeClassName="active">
+                                    <Link href="/aboutus/#club" >
                                         <li className="uk-parent">
                                             <a href="#club " className="nav-link responsive-link-font " uk-scroll>
                                                 The Seven Seas Club
@@ -122,7 +124,7 @@ function Nav({ courses, activities }) {
 
 
                             <Link href="/courses" activeClassName="active">
-                                <a className="nav-link uk-dark  ">Courses</a>
+                                <a className="nav-link  ">Courses</a>
 
                             </Link>
                             <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2 " style={{ "left": "0px", "top": "80px" }}>
@@ -136,7 +138,7 @@ function Nav({ courses, activities }) {
                                                 <div className=" uk-position-absolute  ">
 
                                                     <Link href="/courses">
-                                                        <a className="nav-link responsive-link-font " >Sail</a>
+                                                        <a className="nav-link responsive-link-font " href="">Sail</a>
                                                     </Link>
 
 
