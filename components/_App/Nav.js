@@ -441,7 +441,7 @@ function Nav({ courses, activities }) {
                                     <Link href="/">
                                         <a className="uk-navbar-item uk-logo" uk-toggle="target: #offcanvas-nav-primary" href="">
 
-                                            <img src={logo} alt="logo" height={64} width={117} uk-img />
+                                            <img src={logo} alt="logo" width={140} height={68} uk-img />
                                         </a>
                                     </Link>
 
@@ -449,7 +449,7 @@ function Nav({ courses, activities }) {
                                         <a className="uk-navbar-item uk-logo" uk-toggle="target: #offcanvas-nav-primary" href="">
 
 
-                                            <img src={rya} alt="rya-logo" height={64} width={67} uk-img />
+                                            <img src={rya} alt="rya-logo" width={74} height={60} uk-img />
                                         </a>
                                     </Link>
 
