@@ -613,37 +613,7 @@ function Nav({ courses, activities }) {
                                                 </ul>
 
                                             </li>
-                                            <li className="uk-parent  ">
-                                                <div className=" uk-position-absolute ">
 
-                                                    <Link href="/courses"  >
-                                                        <a className="responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Mile Building</a>
-
-                                                    </Link>
-
-
-                                                </div>
-                                                <a href="" ></a>
-
-
-
-                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon uk-list-large " hidden="">
-
-                                                    {courses.map((course, index) =>
-                                                        course.attributes.courseCategory === "Mile_Building" ?
-
-                                                            <li className="uk-flex uk-flex-start uk-nav-divider" >
-                                                                <Link href={`/courses/${course.attributes.slug}`} >
-                                                                    <a uk-toggle="target: #offcanvas-nav-primary">  {course.attributes.title} </a>
-                                                                </Link></li>
-
-                                                            : null
-
-
-                                                    )}
-                                                </ul>
-
-                                            </li>
                                             <li className="uk-parent  ">
                                                 <div className=" uk-position-absolute ">
 
