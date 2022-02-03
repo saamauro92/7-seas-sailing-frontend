@@ -161,7 +161,7 @@ const CourseSection = ({ course, homepage }) => {
 
 
                     <h2 className='uk-text-center uk-text-italic  uk-text-bold'>HAPPY CLIENTS ABOUT US</h2>
-                    <div className="uk-position-relative uk-visible-toggle uk-dark" tabIndex="-1" uk-slider="sets: true">
+                    <div className="uk-position-relative uk-visible-toggle uk-dark" tabIndex="-1" uk-slider="sets: true; autoplay:true;autoplay-interval: 4000; ">
 
                         <ul className="uk-slider-items uk-child-width-1-1 uk-child-width-1-1@m">
 
