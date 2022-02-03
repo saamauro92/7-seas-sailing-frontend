@@ -63,7 +63,7 @@ const ActivitiesAndServicesPage = ({ homepage, activities }) => {
 
                     )}
                 </div>
-                <h4 className='uk-background-primary  uk-padding' >Mile Building</h4>
+                <h4 className=' uk-padding  t uk-text-bold uk-heading-line ' ><span>Mile Building</span>  </h4>
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
 
 
