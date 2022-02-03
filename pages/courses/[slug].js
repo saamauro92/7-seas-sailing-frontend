@@ -64,11 +64,11 @@ const CourseSection = ({ course, homepage }) => {
                         <h3 className='uk-padding uk-padding-remove-horizontal'> <strong>RYA Courses Progression</strong> </h3>
                         {course.attributes.courseCategory === 'Sail' ? <div className="progresion_wrapper uk-flex uk-flex-baseline uk-flex-center">
 
-                            <p className={course.attributes.title === 'RYA Competent Crew' ? 'progression_button progression_button_active' : 'progression_button'}> CC</p>
+                            <p className={course.attributes.title === 'Competent Crew' ? 'progression_button progression_button_active' : 'progression_button'}> CC</p>
                             <span className="arrow-right"></span>
-                            <p className={course.attributes.title === 'RYA Day Skipper' ? 'progression_button progression_button_active' : 'progression_button'}> DS</p>
+                            <p className={course.attributes.title === 'Day Skipper' ? 'progression_button progression_button_active' : 'progression_button'}> DS</p>
                             <span className="arrow-right"></span>
-                            <p className={course.attributes.title === 'RYA Coastal Skipper' ? 'progression_button progression_button_active' : 'progression_button'}> CS</p>
+                            <p className={course.attributes.title === 'Coastal Skipper' ? 'progression_button progression_button_active' : 'progression_button'}> CS</p>
                             <span className="arrow-right"></span>
                             <p className={course.attributes.title === 'Yachtmaster' ? 'progression_button progression_button_active' : 'progression_button'}> YM</p>
 
@@ -78,9 +78,9 @@ const CourseSection = ({ course, homepage }) => {
                         }
                         {course.attributes.courseCategory === 'Motor' ? <div className="progresion_wrapper uk-flex uk-flex-baseline uk-flex-center">
 
-                            <p className={course.attributes.title === 'RYA Day Skipper Practical Motorcruising ' ? 'progression_button progression_button_active' : 'progression_button'}> DS</p>
+                            <p className={course.attributes.title === 'Day Skipper Practical Motorcruising ' ? 'progression_button progression_button_active' : 'progression_button'}> DS</p>
                             <span className="arrow-right"></span>
-                            <p className={course.attributes.title === 'RYA Coastal Skipper Practical Motorcruising' ? 'progression_button progression_button_active' : 'progression_button'}> CS</p>
+                            <p className={course.attributes.title === 'Coastal Skipper Practical Motorcruising' ? 'progression_button progression_button_active' : 'progression_button'}> CS</p>
                             <span className="arrow-right"></span>
                             <p className={course.attributes.title === 'Yachtmaster' ? 'progression_button progression_button_active' : 'progression_button'}> YM</p>
 
@@ -91,11 +91,11 @@ const CourseSection = ({ course, homepage }) => {
                         }
                         {course.attributes.courseCategory === 'Power' ? <div className="progresion_wrapper uk-flex uk-flex-baseline uk-flex-center">
 
-                            <p className={course.attributes.title === 'RYA PB Lvl. 2 Handling' ? 'progression_button progression_button_active' : 'progression_button'}> LVL2</p>
+                            <p className={course.attributes.title === 'PB Lvl. 2 Handling' ? 'progression_button progression_button_active' : 'progression_button'}> LVL2</p>
                             <span className="arrow-right"></span>
-                            <p className={course.attributes.title === 'RYA Tender Operator' ? 'progression_button progression_button_active' : 'progression_button'}> TO</p>
+                            <p className={course.attributes.title === 'Tender Operator' ? 'progression_button progression_button_active' : 'progression_button'}> TO</p>
                             <span className="arrow-right"></span>
-                            <p className={course.attributes.title === 'RYA Advanced Powerboat (CoC)' ? 'progression_button progression_button_active' : 'progression_button'}> ADV</p>
+                            <p className={course.attributes.title === 'Advanced Powerboat (CoC)' ? 'progression_button progression_button_active' : 'progression_button'}> ADV</p>
                             <span className="arrow-right"></span>
                             <p className={course.attributes.title === 'Yachtmaster' ? 'progression_button progression_button_active' : 'progression_button'}> YMM</p>
 

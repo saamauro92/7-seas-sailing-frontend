@@ -16,7 +16,7 @@ const NewsSidebar = ({ latestNews, courses }) => {
                         {latestNews && latestNews.length > 0 &&
 
                             < >
-                                <span className="uk-text-success">News! </span>
+                                <span className="uk-text-success">News <span className="uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polygon points="8 5 13 10 8 15"></polygon></svg></span> </span>
                                 <span className=""> Blog:  </span>
                                 <Link href={`/news/${latestNews[0].attributes.slug}`} passHref>
 
