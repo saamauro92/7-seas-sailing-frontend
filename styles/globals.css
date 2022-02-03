@@ -373,3 +373,8 @@ p {
   -ms-transform: rotate(5deg);
   transform: rotate(5deg);
 }
+
+/* testimonials section */
+.testimonials_section {
+  height: 80vh;
+}
