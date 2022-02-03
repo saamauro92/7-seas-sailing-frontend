@@ -11,7 +11,7 @@ const Card = ({ data, slug }) => {
             <div className="uk-flex uk-flex-column uk-padding">
 
 
-                <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom uk-visible-toggle" tabIndex="-1">
+                <div className="uk-inline-clip uk-margin uk-animation-slide-bottom uk-visible-toggle" tabIndex="-1">
 
                     {data.attributes.image.data.attributes.url ?
 

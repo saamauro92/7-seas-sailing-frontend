@@ -23,18 +23,26 @@ a {
 .hero_1 {
 }
 
+.hero-cards {
+  max-height: 220px;
+  overflow: hidden;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  position: relative;
+}
+
 .hero_subtitle {
   font-size: 28px;
 }
 /*  overrading uk kenburns effect */
 
 .uk-animation-kenburns {
-  animation-duration: 15s infinite;
+  animation-duration: 10s;
 }
 
 @keyframes uk-kenburns {
   0% {
-    transform: scale(1.7);
+    transform: scale(2.1);
   }
   100% {
     transform: scale(1.6);
@@ -234,9 +242,9 @@ p > strong {
   position: relative;
   background-color: #002a74;
   height: 40px;
-  animation: 2s fadeIn;
+  /*   animation: 2s fadeIn;
   animation-fill-mode: forwards;
-  visibility: hidden;
+  visibility: hidden; */
   gap: 20px;
   z-index: 99;
 }

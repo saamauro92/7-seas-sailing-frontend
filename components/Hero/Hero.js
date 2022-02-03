@@ -3,6 +3,7 @@
 
 import React from "react"
 import Link from "next/link"
+import Image from "next/image"
 
 const Hero = ({ courses, images }) => {
 
@@ -15,15 +16,18 @@ const Hero = ({ courses, images }) => {
         
         */}
 
-            <div className="uk-position-relative uk-visible-toggle " tabIndex="-1" uk-slideshow="animation: push">
+            <div className="uk-position-relative uk-visible-toggle " tabIndex="-1" uk-slideshow="autoplay: false; autoplay-interval: 8000; pause-on-hover: true; animation: push" >
 
 
-                <ul className="uk-slideshow-items" uk-height-viewport="offset-top: true; offset-bottom:5">
+                <ul className="uk-slideshow-items" uk-height-viewport="offset-top: true; offset-bottom:15">
 
 
                     <li>
-                        <div className="uk-transform-cente uk-animation-kenburns uk-animation-reverse  hero-wrapper " >
-                            <img src={images.background.data.attributes.url} alt="" className="uk-cover" />
+                        <div className="uk-position-cover hero-wrapper uk-animation-kenburns uk-transform-origin-bottom-center uk-animation-reverse hero-wrapper" > {/* uk-transform-cente uk-animation-kenburns  uk-animation-reverse   */}
+
+                            <img src={images.background.data.attributes.url} alt="" className="uk-cover hero_1" />
+
+
 
                         </div>
                         <div className="uk-container uk-container-large uk-margin-top uk-padding-large uk-padding-horizontal-remove">
@@ -43,7 +47,7 @@ const Hero = ({ courses, images }) => {
 
 
                         {/*  */}
-                        <div className=" uk-position-bottom-right  uk-text-center uk-widht-medium " tabIndex="-1" uk-slider="sets: true" style={{ width: "1000px" }}>
+                        {/*  <div className=" uk-position-bottom-center  uk-text-center uk-widht-medium " tabIndex="-1" uk-slider="sets: true" style={{ width: "1000px" }}>
 
                             <ul className="uk-slider-items uk-child-width-1-3@m uk-child-width-1-2@m uk-visible@m">
 
@@ -215,7 +219,7 @@ const Hero = ({ courses, images }) => {
 
                             </a>
 
-                        </div>
+                        </div> */}
 
 
                         {/*  */}
