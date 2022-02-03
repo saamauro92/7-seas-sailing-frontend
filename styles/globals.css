@@ -1,3 +1,4 @@
+@import url("http://fonts.cdnfonts.com/css/futura-md-bt");
 html,
 body {
   padding: 0;
@@ -53,8 +54,10 @@ a {
 
 .uk-navbar-item,
 .uk-navbar-nav > li > a {
-  font-weight: 700;
   color: #002a74;
+  font-family: "Futura Md BT", sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 200;
 }
 
 .nav-link {
@@ -78,6 +81,11 @@ a {
 .offcanvas-nav {
   color: #2a2a2a;
   background-color: rgb(241, 241, 241);
+}
+.uk-position-absolute > .nav-link {
+  font-family: "Futura Md BT", sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .uk-offcanvas-bar .uk-nav-primary > li > a,
@@ -111,7 +119,6 @@ a {
 }
 
 .responsive-link-font {
-  font-size: 22px;
   padding: 20px 20px 20px 0;
 }
 .responsive-link-font:hover {
@@ -136,10 +143,13 @@ a {
 
   border-bottom: 1px solid #3a327e;
 }
-.uk-parent > a::after {
-  background-color: #39f;
-  border-radius: 50%;
-  font-size: 14px;
+
+@media only screen and (max-width: 600px) {
+  .uk-parent > a::after {
+    background-color: #39f;
+    border-radius: 50%;
+    font-size: 14px;
+  }
 }
 
 /* close button off canvas */
