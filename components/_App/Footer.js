@@ -201,7 +201,7 @@ const FooterStyleThree = (data) => {
                 </div>
 
                 <div className="copyright-area uk-text-center">
-                    <p>Copyright &copy; {currentYear} <strong className='uk-light'>7 Seas Sailing </strong>. All Rights Reserved.</p>
+                    <p>Copyright &copy; {currentYear} <strong className='uk-light'>- Seven Seas School of Yachting </strong>. All Rights Reserved.</p>
                 </div>
 
 
