@@ -38,7 +38,7 @@ export async function getStaticProps() {
 
 export default function Home({ courses, homepage, latestNews, activities, testimonials }) {
 
-  console.log(testimonials, 'tets')
+
   const images = homepage.attributes.hero;
 
   return (

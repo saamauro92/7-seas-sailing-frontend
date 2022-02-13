@@ -41,7 +41,7 @@ function Nav({ courses, activities }) {
         <div uk-sticky="animation: uk-animation-fade ; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky   ; cls-inactive: uk-navbar-default  ; top: 5">
 
 
-            <nav className="uk-navbar-container   uk-navbar  uk-margin-remove uk-navbar-default " uk-navbar="">
+            <nav className="uk-navbar-container   uk-navbar  uk-margin-remove uk-navbar-default" uk-navbar="">
 
                 <div className="main_navbar uk-flex ">
 
