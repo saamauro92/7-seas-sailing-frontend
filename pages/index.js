@@ -307,9 +307,9 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
       </div>
 
-      <div className="uk-dark uk-background-cover uk-background-muted  testimonials_section uk-padding-large uk-padding-remove-horizontal" >
+      <div className="uk-dark uk-background-cover uk-background-muted  testimonials_section uk-padding-large uk-padding-remove-horizontal uk-margin" >
 
-        <div className="uk-container">
+        <div className="uk-container uk-margin ">
 
 
           <h2 className='uk-text-center uk-text-muted  uk-text-bold'>What People Say About Us</h2>
@@ -321,7 +321,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
                 item.attributes.image.data &&
                 <li key={i}>
-                  <div className="uk-section uk-text-center" >
+                  <div className="uk-section uk-text-center uk-margin" >
                     <div className="uk-width-expand uk-flex uk-flex-around uk-flex-middle uk-flex-column">
                       {item.attributes.image.data &&
 
@@ -343,10 +343,10 @@ export default function Home({ courses, homepage, latestNews, activities, testim
                       <div className=" uk-margin-remove"><a className="uk-link-reset" href="#"> From {item.attributes.country}</a></div>
 
                     </div>
-                    <article className="uk-comment">
+                    <article className="uk-comment   uk-margin-bottom">
                       <header className="uk-comment-header">
                         <div className="uk-grid-medium uk-flex-middle " uk-grid>
-                          <div className="uk-comment-body uk-padding-large ">
+                          <div className="uk-comment-body uk-padding-large   uk-margin-bottom">
 
                             {item.attributes.description}
                           </div>
@@ -366,9 +366,9 @@ export default function Home({ courses, homepage, latestNews, activities, testim
         </div>
       </div>
 
-      <div className="uk-dark uk-background-cover  testimonials_section uk-padding-large uk-padding-remove-horizontal" >
+      <div className="uk-dark uk-background-cover  testimonials_section uk-padding-large uk-padding-remove-horizontal uk-margin-top" >
 
-        <div className="uk-container">
+        <div className="uk-container uk-margin-top">
 
 
           <h2 className='uk-text-center uk-text-bold'>Featured Courses</h2>
