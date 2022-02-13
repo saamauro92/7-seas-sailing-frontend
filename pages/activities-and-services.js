@@ -25,7 +25,7 @@ const ActivitiesAndServicesPage = ({ homepage, activities }) => {
             </div>
 
 
-            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Activities and Services" />}
+            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Activities and Services -" />}
 
 
 
@@ -67,7 +67,7 @@ const ActivitiesAndServicesPage = ({ homepage, activities }) => {
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
 
 
-                    {activities && activities.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
+
 
 
                     {activities && activities.length > 1 && activities.map((activitie) =>

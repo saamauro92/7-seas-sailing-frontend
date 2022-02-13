@@ -21,7 +21,7 @@ const courses = ({ courses, homepage }) => {
                     uk-parallax="bgy: -100"
                     style={{ "zIndex": "9" }}
                 >
-                    {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Courses" />}
+                    {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Courses -" />}
 
                     <h3 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove " uk-toggle="cls: uk-heading-small;  mode: media; media: @s"  >Our Courses</h3>
 

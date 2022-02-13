@@ -17,7 +17,7 @@ const NewsPage = ({ homepage, news }) => {
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
                 uk-parallax="bgy: -100"
             >
-                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
+                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Blog - " />}
                 <h3
                     className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove "
                     uk-toggle="cls: uk-heading-small;  mode: media; media: @s">

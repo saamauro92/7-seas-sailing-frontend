@@ -22,7 +22,7 @@ const AboutUsPage = ({ team, about, homepage }) => {
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
                 uk-parallax="bgy: -100"
             >
-                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="About us" />}
+                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="About us - " />}
                 <h2 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove" uk-toggle="cls: uk-heading-small;  mode: media; media: @s" > About us   </h2>
 
 

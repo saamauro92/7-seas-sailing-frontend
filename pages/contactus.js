@@ -19,7 +19,7 @@ const contact = ({ data, homepage }) => {
                 uk-parallax="bgy: -100"
                 style={{ "zIndex": "9" }}
             >
-                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Contact Us" />}
+                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Contact Us -" />}
 
                 <h3 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove " uk-toggle="cls: uk-heading-small;  mode: media; media: @s"  >Contact us </h3>
 
