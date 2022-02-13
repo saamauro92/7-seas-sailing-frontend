@@ -374,9 +374,23 @@ p > strong {
   align-items: center;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-pointer:hover {
+  opacity: 0.7;
+}
+
 @media only screen and (max-width: 600px) {
   .progresion_wrapper {
     gap: 3px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .arrow-right {
+    transform: rotate(90deg);
+    margin-right: 30px;
   }
 }
 .progression_button {
