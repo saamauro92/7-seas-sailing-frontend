@@ -51,7 +51,7 @@ const ActivitiesAndServicesPage = ({ homepage, activities }) => {
 
                     {activities && activities.length > 1 && activities.map((activitie) =>
 
-                        activitie.attributes.category === "Mile_Building" ? null :
+                        activitie.attributes.category === "Mile_Building" || activitie.attributes.category === "jetski" ? null :
 
                             <>
                                 <Card data={activitie} slug="activities-and-services" />
@@ -73,6 +73,27 @@ const ActivitiesAndServicesPage = ({ homepage, activities }) => {
                     {activities && activities.length > 1 && activities.map((activitie) =>
 
                         activitie.attributes.category === "Mile_Building" ?
+
+                            <>
+                                <Card data={activitie} slug="activities-and-services" size={"uk-width-1-3"} />
+
+
+                            </>
+                            : null
+
+
+                    )}
+                </div>
+                <h4 className=' uk-padding   uk-text-bold uk-heading-line ' ><span>Jet Ski </span>  </h4>
+                <div className="uk-flex uk-flex-around uk-flex-wrap">
+
+
+                    {activities && activities.attributes && <SEO data={homepage.attributes.seo} metaTitle="courses" />}
+
+
+                    {activities && activities.length > 1 && activities.map((activitie) =>
+
+                        activitie.attributes.category === "jetski" ?
 
                             <>
                                 <Card data={activitie} slug="activities-and-services" />

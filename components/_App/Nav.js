@@ -221,33 +221,7 @@ function Nav({ courses, activities }) {
                                                 </li>
 
 
-                                                <li className="uk-parent  uk-nav-divider">
 
-
-                                                    <Link href="/courses"  >
-                                                        <a className="nav-link responsive-link-font ">Jet Ski </a>
-
-                                                    </Link>
-
-
-
-                                                    <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
-
-                                                        {courses.map((course, i) =>
-                                                            course.attributes.courseCategory === "Jet_Ski" ?
-
-                                                                <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
-                                                                    <Link href={`/courses/${course.attributes.slug}`} >
-                                                                        <a href=" ">  {course.attributes.title} </a>
-                                                                    </Link></li>
-
-                                                                : null
-
-
-                                                        )}
-                                                    </ul>
-
-                                                </li>
                                                 <li className=" ">
 
                                                     <div className="uk-nav-divider  ">
@@ -292,7 +266,7 @@ function Nav({ courses, activities }) {
                                             <ul className="uk-nav-start  uk-nav-parent-icon " hidden="" uk-nav="multiple: true">
 
                                                 {activities.map((activitie, i) =>
-                                                    activitie.attributes.category === "Mile_Building" ?
+                                                    activitie.attributes.category === "jetski" || activitie.attributes.category === "Mile_Building" ?
 
                                                         null :
                                                         < li className={i === 0 ? "uk-flex uk-flex-start" : "uk-flex uk-flex-start uk-nav-divider"} key={i} >
@@ -336,7 +310,7 @@ function Nav({ courses, activities }) {
                                                     <ul className="uk-nav-sub  uk-nav-start  uk-nav-parent-icon   " hidden="">
 
                                                         {activities.map((activitie, i) =>
-                                                            activitie.attributes.category === "Jet_ski" ?
+                                                            activitie.attributes.category === "jetski" ?
 
 
                                                                 < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >
@@ -644,37 +618,7 @@ function Nav({ courses, activities }) {
 
                                             </li>
 
-                                            <li className="uk-parent  ">
-                                                <div className=" uk-position-absolute ">
 
-                                                    <Link href="/courses"  >
-                                                        <a className=" responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Jet Ski </a>
-
-                                                    </Link>
-
-
-                                                </div>
-                                                <a href="" ></a>
-
-
-
-                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon uk-list-large " hidden="">
-
-                                                    {courses.map((course, index) =>
-                                                        course.attributes.courseCategory === "Jet_Ski" ?
-
-                                                            <li className="uk-flex uk-flex-start uk-nav-divider" >
-                                                                <Link href={`/courses/${course.attributes.slug}`} >
-                                                                    <a uk-toggle="target: #offcanvas-nav-primary">  {course.attributes.title} </a>
-                                                                </Link></li>
-
-                                                            : null
-
-
-                                                    )}
-                                                </ul>
-
-                                            </li>
                                             <li className=" uk-parent">
 
                                                 <div className="uk-position-absolute  ">
@@ -707,7 +651,7 @@ function Nav({ courses, activities }) {
                                         <ul className="uk-nav-sub uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-nav-parent-icon  uk-list-large" hidden="" uk-nav="multiple: true">
 
                                             {activities.map((activitie, i) =>
-                                                activitie.attributes.category === "Mile_Building" ?
+                                                activitie.attributes.category === "jetski" || activitie.attributes.category === "Mile_Building" ?
 
                                                     null :
                                                     < li className={i === 0 ? "uk-flex uk-flex-start " : "uk-flex uk-flex-start "} key={i} >
@@ -757,7 +701,7 @@ function Nav({ courses, activities }) {
                                                 <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-list-large" hidden="">
 
                                                     {activities.map((activitie, i) =>
-                                                        activitie.attributes.category === "Jet_ski" ?
+                                                        activitie.attributes.category === "jetski" ?
 
 
                                                             < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >

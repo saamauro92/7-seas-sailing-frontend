@@ -4,6 +4,7 @@ import SEO from '../components/Seo/Seo'
 import Hero from '../components/Hero/Hero'
 import NewsSidebar from '../components/NewsSidebar/NewsSidebar'
 import Link from 'next/link'
+import Card from '../components/Card/Card'
 
 
 
@@ -35,9 +36,9 @@ export async function getStaticProps() {
 
 
 
-export default function Home({ courses, homepage, latestNews }) {
+export default function Home({ courses, homepage, latestNews, activities, testimonials }) {
 
-
+  console.log(testimonials, 'tets')
   const images = homepage.attributes.hero;
 
   return (
@@ -198,15 +199,17 @@ export default function Home({ courses, homepage, latestNews }) {
 
                 <div className="uk-card-body uk-padding-remove-horizontal  ">
 
-                  {courses.map((course, i) =>
-                    course.attributes.courseCategory === 'Mile_Building' &&
 
-                    <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
+
+                  {activities.map((activitie, i) =>
+                    activitie.attributes.category === 'Mile_Building' &&
+
+                    <Link href={`/activities-and-services/${activitie.attributes.slug}`} passHref key={i}>
                       <ul>
                         <li>
 
                           <p className='text-secondary-white' >
-                            {course.attributes.title}
+                            {activitie.attributes.title}
                           </p>
                         </li>
 
@@ -217,6 +220,7 @@ export default function Home({ courses, homepage, latestNews }) {
                 </div>
 
               </div>
+
             </div>
 
 
@@ -269,15 +273,15 @@ export default function Home({ courses, homepage, latestNews }) {
 
                 <div className="uk-card-body uk-padding-remove-horizontal ">
 
-                  {courses.map((course, i) =>
-                    course.attributes.courseCategory === 'Jet_Ski' &&
+                  {activities.map((activitie, i) =>
+                    activitie.attributes.category === 'jetski' &&
 
-                    <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
+                    <Link href={`/activities-and-services/${activitie.attributes.slug}`} passHref key={i}>
                       <ul>
                         <li>
 
                           <p className='text-secondary-white' >
-                            {course.attributes.title}
+                            {activitie.attributes.title}
                           </p>
                         </li>
 
@@ -303,9 +307,99 @@ export default function Home({ courses, homepage, latestNews }) {
 
       </div>
 
+      <div className="uk-dark uk-background-cover uk-background-muted  testimonials_section uk-padding-large uk-padding-remove-horizontal" >
+
+        <div className="uk-container">
+
+
+          <h2 className='uk-text-center uk-text-muted  uk-text-bold'>What People Say About Us</h2>
+          <div className="uk-position-relative uk-visible-toggle uk-dark" tabIndex="-1" uk-slider="sets: true; autoplay:true;autoplay-interval: 5000; ">
+
+            <ul className="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m">
+
+              {testimonials.length > 0 && testimonials.map((item, i) =>
+
+                item.attributes.image.data &&
+                <li key={i}>
+                  <div className="uk-section uk-text-center" >
+                    <div className="uk-width-expand uk-flex uk-flex-around uk-flex-middle uk-flex-column">
+                      {item.attributes.image.data &&
+
+                        <div
+                          data-src={item.attributes.image.data.attributes.formats.small.url}
+                          data-srcset={item.attributes.image.data.attributes.formats.small.url}
+                          data-uk-img
+                          className=" uk-background-cover  comment_pic"
+                        >
+
+                        </div>
+
+                      }
 
 
 
+
+                      <h4 className="uk-comment-title uk-margin-remove "><a className="uk-link-reset" href="#"> {item.attributes.name}</a></h4>
+                      <div className=" uk-margin-remove"><a className="uk-link-reset" href="#"> From {item.attributes.country}</a></div>
+
+                    </div>
+                    <article className="uk-comment">
+                      <header className="uk-comment-header">
+                        <div className="uk-grid-medium uk-flex-middle " uk-grid>
+                          <div className="uk-comment-body uk-padding-large ">
+
+                            {item.attributes.description}
+                          </div>
+                        </div>
+                      </header>
+
+                    </article>
+
+                  </div>
+                </li>
+              )
+              }
+            </ul>
+            <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div className="uk-dark uk-background-cover  testimonials_section uk-padding-large uk-padding-remove-horizontal" >
+
+        <div className="uk-container">
+
+
+          <h2 className='uk-text-center uk-text-bold'>Featured Courses</h2>
+          <div className="uk-position-relative uk-visible-toggle uk-dark" tabIndex="-1" uk-slider="sets: true; autoplay:true;autoplay-interval: 5000; ">
+
+            <ul className="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m">
+
+              {courses.map((course, i) =>
+                course.attributes.new_course === true &&
+
+                <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
+
+                  <li>
+
+                    <Card data={course} slug="courses" size={"uk-width-1-1"} />
+
+
+
+                  </li>
+
+
+                </Link>
+
+              )}
+
+            </ul>
+            <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+          </div>
+        </div>
+      </div>
 
     </main >
 

@@ -45,7 +45,6 @@ const courses = ({ courses, homepage }) => {
                         <button className="uk-button uk-button-primary" type="button"> Sailing</button>
                         <button className="uk-button uk-button-primary " type="button" id='motor_'> Motor Cruising</button>
                         <button className="uk-button uk-button-primary" type="button">  Power</button>
-                        <button className="uk-button uk-button-primary" type="button">  Jet Ski</button>
                         <button className="uk-button uk-button-primary" type="button"> Yachtmaster Exam Preparation</button>
                     </div>
 
@@ -111,26 +110,7 @@ const courses = ({ courses, homepage }) => {
 
                         </li>
 
-                        <li>
-                            <div className=" uk-padding-small ">
 
-                                <h4 className=' uk-padding   uk-text-bold uk-heading-line ' id="jet_ski"><span> Jet Ski Courses </span>  </h4>
-
-                                <div uk-toggle="cls: uk-flex; mode: media; media: @m ">
-                                    {courses && courses.length > 1 && courses.map((course) =>
-
-                                        course.attributes.courseCategory === 'Jet_Ski' ?
-
-                                            < Card data={course} slug="courses" />
-
-                                            : null
-
-
-                                    )}
-                                </div>
-                            </div>
-
-                        </li>
                         <li>
                             <div className="uk-padding-small">
 

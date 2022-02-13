@@ -288,23 +288,6 @@ a {
   cursor: pointer;
 }
 
-/* NEWS SIDEBAR COMPONENT */
-
-.offcanvas-News {
-  background-color: #354c71;
-  color: #354c71;
-  width: 26vw;
-  top: 100px;
-  padding-top: 80px;
-}
-
-.offcanvas-News > button {
-  background-color: transparent;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-}
-
 /* switcher border (yachtmaster section */
 .uk-tab-left > * > a {
   border-right: 4px solid transparent;
@@ -336,11 +319,7 @@ p > strong {
   position: relative;
   background-color: rgba(53, 76, 113, 1);
   height: 80px;
-  /*   animation: 2s fadeIn;
-  animation-fill-mode: forwards;
-  visibility: hidden; */
   gap: 20px;
-  z-index: 99;
 }
 .news-banner-title {
   background-color: #fff;
@@ -470,4 +449,17 @@ p {
 /* testimonials section */
 .testimonials_section {
   height: 80vh;
+}
+
+/* foote r*/
+
+.footer_bg {
+  background-color: #3b5075;
+}
+/* comments */
+
+.comment_pic {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
 }
