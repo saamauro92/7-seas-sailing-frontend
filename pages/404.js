@@ -6,18 +6,17 @@ export default function Custom404({ homepage }) {
 
   return <>
 
-
     <div className="uk-container uk-container-medium  uk-padding">
 
       <div className="uk-width-1-1 uk-flex uk-flex-column uk-flex-around uk-padding uk-text-center">
 
-        <h2 className="uk-heading-medium uk-text-primary "> Oops! something{"'"}s gone wrong!</h2>
+        <h2 className="uk-heading-medium uk-text-primary error_text "> Oops! something{"'"}s gone wrong!</h2>
         <div className="uk-card">
 
           <img src={homepage.attributes.hero.sail.data.attributes.url} alt="404_pic" width={100} className="" />
         </div>
         <div className="uk-card uk-margin-top uk-padding-small">
-          <h3>Not to worry, why don{"'"}t you try one of these helpful links:</h3>
+          <h3 className="error_text">Not to worry, why don{"'"}t you try one of these helpful links:</h3>
           <Link href={'/'} passHref>
 
             <button className="uk-button uk-button-primary">
@@ -43,7 +42,6 @@ export default function Custom404({ homepage }) {
         </p>
       </div>
     </div>
-
 
 
 
