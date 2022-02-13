@@ -4,10 +4,11 @@ import GoTop from './GoTop';
 import FooterStyleThree from './Footer';
 import Nav from './Nav';
 import NewsSidebar from '../NewsSidebar/NewsSidebar';
+import { useRouter } from 'next/router';
 
 
 const Layout = ({ children, data, courses, activities, homepage, }) => {
-
+    const router = useRouter();
     // Preloader
     /*     const [loader, setLoader] = React.useState(true);
         React.useEffect(() => {
@@ -26,9 +27,8 @@ const Layout = ({ children, data, courses, activities, homepage, }) => {
 
 
             {/*         {loader ? <h5> LOADING...</h5> : null} */}
+
             <Nav courses={courses} activities={activities} homepage={homepage} />
-
-
 
             {children}
 

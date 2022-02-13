@@ -82,12 +82,7 @@ const FooterStyleThree = (data) => {
                                         <a>Blog</a>
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link href="/gallery" activeClassName="active" >
 
-                                        <a>Gallery</a>
-                                    </Link>
-                                </li>
 
                                 <li>
 
@@ -156,15 +151,20 @@ const FooterStyleThree = (data) => {
                     <div className="uk-card uk-card-secondary uk-card-small ">
 
 
-                        <form action="">
 
-                            <div className="uk-card uk-card-secondary uk-card-body uk-flex uk-flex-center uk-flex-column " uk-form-custom>
-                                <label  > <h3 className="uk-card-title">  JOIN OUR NEWSLETTER  </h3>
-                                    <input type="text" className='uk-input uk-form-width-large' />
-                                </label>
-                                <button className='uk-button uk-button-default uk-button-large uk-margin' type="button" tabIndex="-1">SUBSCRIBE</button>
-                            </div>
-                        </form>
+
+                        <div className="uk-card uk-card-secondary uk-card-body uk-flex uk-flex-center uk-flex-column " uk-form-custom>
+                            <label  > <h3 className="uk-card-title uk-text-center">  JOIN OUR NEWSLETTER  </h3>
+
+                            </label>
+                            <a href="https://7seassailing.us5.list-manage.com/subscribe?u=9eb7f6b85d6d3ab5bf703f1a9&id=85d8a5aae0" target='_blank' rel="noreferrer" className='uk-text-center'>
+                                <button className='uk-button uk-button-default uk-button-large  uk-margin' type="button" tabIndex="-1">
+                                    Subscribe
+
+                                </button>
+                            </a>
+                        </div>
+
 
 
                     </div>

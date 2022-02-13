@@ -3,13 +3,13 @@ import { React, useState, useEffect } from "react";
 import Link from "../../utils/ActiveLink";
 import logo from '../../assets/seven-seas-logo.webp'
 import rya from '../../assets/rya.webp'
+import { useRouter } from 'next/router';
 
-import { useRouter } from 'next/router'
 
 function Nav({ courses, activities }) {
+    const router = useRouter();
 
 
-    const router = useRouter()
     const currentRoute = router.pathname
 
 
@@ -37,334 +37,340 @@ function Nav({ courses, activities }) {
 
     return showBar ? (
 
-        <div className="uk-container uk-container-large uk-background-default ">
+
+        <div uk-sticky="animation: uk-animation-fade ; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky   ; cls-inactive: uk-navbar-default  ; top: 5">
 
 
-            <nav className="uk-navbar-container  uk-navbar uk-margin-remove uk-navbar-transparent " uk-navbar="">
+            <nav className="uk-navbar-container   uk-navbar  uk-margin-remove uk-navbar-default " uk-navbar="">
 
-                <div className="uk-navbar-left nav-logos ">
-
-
-                    <Link href="/">
-                        <a className="uk-navbar-item uk-logo" >
+                <div className="main_navbar uk-flex ">
 
 
-                            <img src={logo} width="217" height="64" alt="logo" uk-img />
+                    <div className=" uk-navbar-left nav-logos ">
 
-                        </a>
-                    </Link>
-                    <div className="uk-visible@s">
-                        <Link href="/rya">
-                            <a href="">
-                                <img src={rya} alt="logo" height={94} width={117} uk-img />
+
+                        <Link href="/">
+                            <a className="uk-navbar-item uk-logo" >
+
+
+                                <img src={logo} width="217" height="64" alt="logo" uk-img />
 
                             </a>
                         </Link>
+                        <div className="uk-visible@s">
+                            <Link href="/rya">
+                                <a href="">
+                                    <img src={rya} alt="logo" height={94} width={117} uk-img />
+
+                                </a>
+                            </Link>
+                        </div>
+
+
                     </div>
 
+                    <div className="uk-navbar-right">
 
-                </div>
+                        <ul className="uk-navbar-nav  " uk-nav="multiple: false">
+                            <li className="nav-item">
+                                <Link href="/aboutus" activeClassName="active">
 
-                <div className="uk-navbar-right">
-
-                    <ul className="uk-navbar-nav " uk-nav="multiple: false">
-                        <li className="nav-item">
-                            <Link href="/aboutus" activeClassName="active">
-
-                                <a className="nav-link">
-                                    About Us</a>
-                            </Link>
-                            <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2" style={{ "left": "0px", "top": "80px" }}>
-                                <ul className="uk-nav uk-navbar-dropdown-nav uk-nav-divider">
-                                    <Link href="/aboutus/#team" >
-                                        <li className="uk-parent">
-                                            <a className="responsive-link-font nav-link" href="#team " uk-scroll>
-                                                Our team
-                                            </a>
-
-                                        </li>
-                                    </Link>
-                                    <Link href="/aboutus/#club" >
-                                        <li className="uk-parent">
-                                            <a href="#club " className="nav-link responsive-link-font " uk-scroll>
-                                                The Seven Seas Club
-                                            </a>
-
-                                        </li>
-                                    </Link>
-                                    <Link href="/aboutus/#sailing_area" activeClassName="active">
-                                        <li className="uk-parent">
-                                            <a href="#sailing_area" className="nav-link responsive-link-font " uk-scroll>
-                                                Sailing Area
-                                            </a>
-
-                                        </li>
-                                    </Link>
-                                    <Link href="/aboutus/#rya_section" activeClassName="active">
-                                        <li className="uk-parent">
-                                            <a href="#rya_section " className="nav-link responsive-link-font " uk-scroll>
-                                                About the RYA
-                                            </a>
-
-                                        </li>
-                                    </Link>
-                                    <Link href="/aboutus/#testimonials" activeClassName="active">
-                                        <li className="uk-parent">
-                                            <a href="#testimonials " className="nav-link responsive-link-font " uk-scroll>
-                                                Testimonials
-                                            </a>
-
-                                        </li>
-                                    </Link>
-
-                                </ul>
-                            </div>
-                        </li>
-                        <li className="nav-item">
-
-
-                            <Link href="/courses" activeClassName="active">
-                                <a className="nav-link  ">Courses</a>
-
-                            </Link>
-                            <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2 " style={{ "left": "0px", "top": "80px" }}>
-                                <ul className="uk-nav uk-navbar-dropdown-nav  uk-nav-divider ">
-                                    <li>
-                                        <ul className="uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon uk-padding-small" hidden="" uk-nav="multiple: false   ">
-
-
-                                            <li className="uk-parent ">
-
-
-                                                <Link href="/courses">
-                                                    <a className="nav-link responsive-link-font " href="">Sail</a>
-                                                </Link>
-
-
-
-
-                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon   " hidden="">
-
-                                                    {courses.map((course, i) =>
-                                                        course.attributes.courseCategory === "Sail" ?
-
-                                                            <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
-                                                                <Link href={`/courses/${course.attributes.slug}`} >
-                                                                    <a href="">  {course.attributes.title} </a>
-                                                                </Link></li>
-
-                                                            : null
-
-
-                                                    )}
-                                                </ul>
-                                            </li>
-                                            <li className="uk-parent uk-nav-divider ">
-
-
-                                                <Link href="/courses" >
-                                                    <a className="nav-link responsive-link-font " >Motor</a>
-                                                </Link>
-
-
-
-                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
-
-                                                    {courses.map((course, i) =>
-                                                        course.attributes.courseCategory === "Motor" ?
-
-                                                            <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
-                                                                <Link href={`/courses/${course.attributes.slug}`} >
-                                                                    <a href=" ">  {course.attributes.title} </a>
-                                                                </Link></li>
-
-                                                            : null
-
-
-                                                    )}
-                                                </ul>
+                                    <a className="nav-link">
+                                        About Us</a>
+                                </Link>
+                                <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2" style={{ "left": "0px", "top": "80px" }}>
+                                    <ul className="uk-nav uk-navbar-dropdown-nav uk-nav-divider ">
+                                        <Link href="/aboutus/#team" >
+                                            <li className="uk-parent">
+                                                <a className="responsive-link-font nav-link" href="#team " uk-scroll>
+                                                    Our team
+                                                </a>
 
                                             </li>
-
-                                            <li className="uk-parent uk-nav-divider ">
-
-
-                                                <Link href="/courses"  >
-                                                    <a className="nav-link responsive-link-font " >Power</a>
-                                                </Link>
-
-
-
-
-
-
-                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
-
-                                                    {courses.map((course, i) =>
-                                                        course.attributes.courseCategory === "Power" ?
-
-                                                            <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
-                                                                <Link href={`/courses/${course.attributes.slug}`} >
-                                                                    <a href="" >  {course.attributes.title} </a>
-                                                                </Link></li>
-
-                                                            : null
-
-
-                                                    )}
-                                                </ul>
+                                        </Link>
+                                        <Link href="/aboutus/#club" >
+                                            <li className="uk-parent">
+                                                <a href="#club " className="nav-link responsive-link-font " uk-scroll>
+                                                    The Seven Seas Club
+                                                </a>
 
                                             </li>
-
-
-                                            <li className="uk-parent  uk-nav-divider">
-
-
-                                                <Link href="/courses"  >
-                                                    <a className="nav-link responsive-link-font ">Jet Ski </a>
-
-                                                </Link>
-
-
-
-                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
-
-                                                    {courses.map((course, i) =>
-                                                        course.attributes.courseCategory === "Jet_Ski" ?
-
-                                                            <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
-                                                                <Link href={`/courses/${course.attributes.slug}`} >
-                                                                    <a href=" ">  {course.attributes.title} </a>
-                                                                </Link></li>
-
-                                                            : null
-
-
-                                                    )}
-                                                </ul>
+                                        </Link>
+                                        <Link href="/aboutus/#sailing_area" activeClassName="active">
+                                            <li className="uk-parent">
+                                                <a href="#sailing_area" className="nav-link responsive-link-font " uk-scroll>
+                                                    Sailing Area
+                                                </a>
 
                                             </li>
-                                            <li className=" ">
+                                        </Link>
+                                        <Link href="/aboutus/#rya_section" activeClassName="active">
+                                            <li className="uk-parent">
+                                                <a href="#rya_section " className="nav-link responsive-link-font " uk-scroll>
+                                                    About the RYA
+                                                </a>
 
-                                                <div className="uk-nav-divider  ">
+                                            </li>
+                                        </Link>
+                                        <Link href="/aboutus/#testimonials" activeClassName="active">
+                                            <li className="uk-parent">
+                                                <a href="#testimonials " className="nav-link responsive-link-font " uk-scroll>
+                                                    Testimonials
+                                                </a>
 
-                                                    <Link href={`/courses/yachtmaster`} >
-                                                        <a href="" className="nav-link responsive-link-font ">  Yachtmaster Exam Preparation </a>
-                                                    </Link>
+                                            </li>
+                                        </Link>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li className="nav-item">
+
+
+                                <Link href="/courses" activeClassName="active">
+                                    <a className="nav-link  ">Courses</a>
+
+                                </Link>
+                                <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2 " style={{ "left": "0px", "top": "80px" }}>
+                                    <ul className="uk-nav uk-navbar-dropdown-nav  uk-nav-divider ">
+                                        <li>
+                                            <ul className="uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon uk-padding-small" hidden="" uk-nav="multiple: false   ">
+
+
+                                                <li className="uk-parent ">
+
 
                                                     <Link href="/courses">
-                                                        <a className="nav-link responsive-link-font " >{ }</a>
+                                                        <a className="nav-link responsive-link-font " href="" >Sail</a>
                                                     </Link>
 
 
-                                                </div>
-
-                                            </li>
 
 
-                                        </ul>
+                                                    <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon   " hidden="">
+
+                                                        {courses.map((course, i) =>
+                                                            course.attributes.courseCategory === "Sail" ?
+
+                                                                <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
+                                                                    <Link href={`/courses/${course.attributes.slug}`} >
+                                                                        <a href="">  {course.attributes.title} </a>
+                                                                    </Link></li>
+
+                                                                : null
 
 
+                                                        )}
+                                                    </ul>
+                                                </li>
+                                                <li className="uk-parent uk-nav-divider ">
 
 
-
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </li>
-
-
-                        <li>
-                            <Link href="/activities-and-services" activeClassName="active">
-
-                                <a className="nav-link "> Activities {"&"} Services</a>
-                            </Link>
-                            <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2 " style={{ "left": "0px", "top": "80px" }}>
-
-
-                                <ul className="uk-nav uk-navbar-dropdown-nav   ">
-                                    <li>
-                                        <ul className="uk-nav-start  uk-nav-parent-icon " hidden="" uk-nav="multiple: true">
-
-                                            {activities.map((activitie, i) =>
-                                                activitie.attributes.category === "Mile_Building" ?
-
-                                                    null :
-                                                    < li className={i === 0 ? "uk-flex uk-flex-start" : "uk-flex uk-flex-start uk-nav-divider"} key={i} >
-                                                        <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
-                                                            <a className="nav-link responsive-link-font ">  {activitie.attributes.title} </a>
-                                                        </Link></li>
+                                                    <Link href="/courses" >
+                                                        <a className="nav-link responsive-link-font " >Motor</a>
+                                                    </Link>
 
 
 
+                                                    <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+
+                                                        {courses.map((course, i) =>
+                                                            course.attributes.courseCategory === "Motor" ?
+
+                                                                <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
+                                                                    <Link href={`/courses/${course.attributes.slug}`} >
+                                                                        <a href=" ">  {course.attributes.title} </a>
+                                                                    </Link></li>
+
+                                                                : null
 
 
-                                            )}
-                                            < li className="uk-parent uk-nav-divider ">
+                                                        )}
+                                                    </ul>
+
+                                                </li>
+
+                                                <li className="uk-parent uk-nav-divider ">
 
 
-                                                <a href=" " className="nav-link responsive-link-font ">Mile Building</a>
-                                                <ul className="uk-nav-sub  uk-nav-start  uk-nav-parent-icon   " hidden="">
-
-                                                    {activities.map((activitie, i) =>
-                                                        activitie.attributes.category === "Mile_Building" ?
-
-
-                                                            < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >
-                                                                <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
-                                                                    <a  >  {activitie.attributes.title} </a>
-                                                                </Link></li>
-
-                                                            : null
-
-
-
-                                                    )}
-                                                </ul>
-
-
-                                            </li>
-
-
-                                        </ul>
-
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li>
-                            <Link href="/news" activeClassName="active" >
-
-                                <a className={currentRoute === "/news" ? 'active' : ''}>  Blog</a>
-                            </Link>
-
-                        </li>
-
-                        <li>
-                            <Link href="/contactus" activeClassName="active" >
-
-                                <a className={currentRoute === "/contactus" ? 'active' : ''}>  Contact us</a>
-                            </Link>
-
-                        </li>
+                                                    <Link href="/courses"  >
+                                                        <a className="nav-link responsive-link-font " >Power</a>
+                                                    </Link>
 
 
 
-                    </ul >
+
+
+
+                                                    <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+
+                                                        {courses.map((course, i) =>
+                                                            course.attributes.courseCategory === "Power" ?
+
+                                                                <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
+                                                                    <Link href={`/courses/${course.attributes.slug}`} >
+                                                                        <a href="" >  {course.attributes.title} </a>
+                                                                    </Link></li>
+
+                                                                : null
+
+
+                                                        )}
+                                                    </ul>
+
+                                                </li>
+
+
+                                                <li className="uk-parent  uk-nav-divider">
+
+
+                                                    <Link href="/courses"  >
+                                                        <a className="nav-link responsive-link-font ">Jet Ski </a>
+
+                                                    </Link>
+
+
+
+                                                    <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+
+                                                        {courses.map((course, i) =>
+                                                            course.attributes.courseCategory === "Jet_Ski" ?
+
+                                                                <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
+                                                                    <Link href={`/courses/${course.attributes.slug}`} >
+                                                                        <a href=" ">  {course.attributes.title} </a>
+                                                                    </Link></li>
+
+                                                                : null
+
+
+                                                        )}
+                                                    </ul>
+
+                                                </li>
+                                                <li className=" ">
+
+                                                    <div className="uk-nav-divider  ">
+
+                                                        <Link href={`/courses/yachtmaster`} >
+                                                            <a href="" className="nav-link responsive-link-font ">  Yachtmaster Exam Preparation </a>
+                                                        </Link>
+
+                                                        <Link href="/courses">
+                                                            <a className="nav-link responsive-link-font " >{ }</a>
+                                                        </Link>
+
+
+                                                    </div>
+
+                                                </li>
+
+
+                                            </ul >
+
+
+
+
+
+                                        </li >
+                                    </ul >
+
+                                </div >
+                            </li >
+
+
+                            <li>
+                                <Link href="/activities-and-services" activeClassName="active">
+
+                                    <a className="nav-link "> Activities {"&"} Services</a>
+                                </Link>
+                                <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2 " style={{ "left": "0px", "top": "80px" }}>
+
+
+                                    <ul className="uk-nav uk-navbar-dropdown-nav   ">
+                                        <li>
+                                            <ul className="uk-nav-start  uk-nav-parent-icon " hidden="" uk-nav="multiple: true">
+
+                                                {activities.map((activitie, i) =>
+                                                    activitie.attributes.category === "Mile_Building" ?
+
+                                                        null :
+                                                        < li className={i === 0 ? "uk-flex uk-flex-start" : "uk-flex uk-flex-start uk-nav-divider"} key={i} >
+                                                            <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
+                                                                <a className="nav-link responsive-link-font ">  {activitie.attributes.title} </a>
+                                                            </Link></li>
+
+
+
+
+
+                                                )}
+                                                < li className="uk-parent uk-nav-divider ">
+
+
+                                                    <a href=" " className="nav-link responsive-link-font ">Mile Building</a>
+                                                    <ul className="uk-nav-sub  uk-nav-start  uk-nav-parent-icon   " hidden="">
+
+                                                        {activities.map((activitie, i) =>
+                                                            activitie.attributes.category === "Mile_Building" ?
+
+
+                                                                < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >
+                                                                    <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
+                                                                        <a  >  {activitie.attributes.title} </a>
+                                                                    </Link></li>
+
+                                                                : null
+
+
+
+                                                        )}
+                                                    </ul>
+
+
+                                                </li>
+
+
+                                            </ul>
+
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <Link href="/news" activeClassName="active" >
+
+                                    <a className={currentRoute === "/news" ? 'active' : ''}>  Blog</a>
+                                </Link>
+
+                            </li>
+
+                            <li>
+                                <Link href="/contactus" activeClassName="active" >
+
+                                    <a className={currentRoute === "/contactus" ? 'active' : ''}>  Contact us</a>
+                                </Link>
+
+                            </li>
+
+
+
+                        </ul >
+
+                    </div >
 
                 </div >
-
 
             </nav >
         </div >
 
+
     ) : (
 
 
-        <nav className="uk-navbar-container uk-margin uk-navbar uk-margin-remove uk-navbar-transparent uk-padding-small" uk-navbar="">
+        <nav className="uk-navbar-container uk-margin uk-navbar uk-margin-remove uk-navbar-default uk-padding-small" uk-navbar="">
             <div className="uk-navbar-left ">
 
 

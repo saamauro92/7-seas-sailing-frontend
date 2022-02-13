@@ -7,7 +7,6 @@ import Link from 'next/link'
 
 
 
-
 export async function getStaticProps() {
 
 
@@ -45,9 +44,10 @@ export default function Home({ courses, homepage, latestNews }) {
 
     <main>
 
-      <div className="uk-cover-container uk-light">
 
-        <NewsSidebar latestNews={latestNews} courses={courses} />
+      <div className="uk-cover-containe uk-light">
+
+
 
 
         {homepage && homepage.attributes.seo && <SEO data={homepage.attributes.seo} />}
@@ -55,184 +55,255 @@ export default function Home({ courses, homepage, latestNews }) {
 
         <Hero courses={courses} images={homepage.attributes.hero} />
 
+        <NewsSidebar latestNews={latestNews} courses={courses} />
+        <div className="uk-section " id="courses_section_banner">
+          <div className="uk-container uk-container-large uk-flex uk-flex-around uk-flex-wrap  " uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: false">
 
 
-        <h2 className='uk-header-medium'> Our courses</h2>
-        <div className=" uk-padding uk-flex uk-flex-center uk-text-center  " tabIndex="-1" uk-slider="sets: true; autoplay:false;" >
+
+            <div className="uk-card uk-card-default uk-flex uk-flex-start uk-flex-column">  {/* uk-width-medium  */}
+
+              <div className="uk-flex uk-flex-column  uk-flex-start ">
 
 
-          {/*             <ul className="uk-slider-items uk-child-width-1-3@m uk-child-width-1-2@m "> */}
-          <ul className="uk-slider-items  uk-child-width-1-3@m ">
+                <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
 
+                  <h3 className="uk-card-title  text-primary-blue"> Sailing Courses </h3>
+                  <div className="uk-card-header uk-height-small uk-margin">
 
-            <li>
-              <div>
-                <div className="uk-card uk-card-default uk-width-medium">
-                  <div className="uk-card-media-top">
-                    <img src={images.sail.data.attributes.url} alt="hero_card_sail" width={300} height={300} uk-img />
-                  </div>
-                  <div className="uk-card-body">
-                    <h3 className="uk-card-title">RYA Sail </h3>
-                    {courses.map((course, i) =>
-                      course.attributes.courseCategory === 'Sail' &&
-
-                      <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
-                        <p >
-
-                          {course.attributes.title}
-                        </p>
-
-                      </Link>
-
-                    )}
+                    <img src={images.sail.data.attributes.url} alt="hero_card_sail" width={150} height={250} uk-img />
                   </div>
                 </div>
+
               </div>
 
-            </li>
-            <li>
-              <div>
-                <div className="uk-card uk-card-default uk-width-medium">
-                  <div className="uk-card-media-top">
-                    <img src={images.motor.data.attributes.url} alt="hero_card_sail" width={300} height={300} uk-img />
-                  </div>
-                  <div className="uk-card-body">
-                    <h3 className="uk-card-title">RYA Motor </h3>
-                    {courses.map((course, i) =>
-                      course.attributes.courseCategory === 'Motor' &&
 
-                      <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
-                        <p >
+              <div className="uk-card-body uk-padding-remove-horizontal  ">
+                {courses.map((course, i) =>
+                  course.attributes.courseCategory === 'Sail' &&
 
+                  <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
+                    <ul>
+                      <li>
+
+                        <p className='text-secondary-blue-light' >
                           {course.attributes.title}
                         </p>
-
-                      </Link>
-
-                    )}
-                  </div>
-                </div>
-              </div>
-
-            </li>
-            <li>
-              <div>
-                <div className="uk-card uk-card-default uk-width-medium">
-                  <div className="uk-card-media-top">
-                    <img src={images.power.data.attributes.url} alt="hero_card_sail" width={300} height={300} uk-img />
-                  </div>
-                  <div className="uk-card-body">
-                    <h3 className="uk-card-title">RYA Power </h3>
-                    {courses.map((course, i) =>
-                      course.attributes.courseCategory === 'Power' &&
-
-                      <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
-                        <p >
-
-                          {course.attributes.title}
-                        </p>
-
-                      </Link>
-
-                    )}
-                  </div>
-                </div>
-              </div>
-
-            </li>
-            <li>
-              <div>
-                <div className="uk-card uk-card-default uk-width-medium">
-                  <div className="uk-card-media-top">
-                    <img src={images.mile_building.data.attributes.url} alt="hero_card_sail" width={300} height={300} uk-img />
-                  </div>
-                  <div className="uk-card-body">
-                    <h3 className="uk-card-title">RYA Mile Building </h3>
-                    {courses.map((course, i) =>
-                      course.attributes.courseCategory === 'Mile_Building' &&
-
-                      <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
-                        <p >
-
-                          {course.attributes.title}
-                        </p>
-
-                      </Link>
-
-                    )}
-                  </div>
-                </div>
-              </div>
-
-            </li>
-            <li>
-              <div>
-                <div className="uk-card uk-card-default uk-width-medium">
-                  <div className="uk-card-media-top">
-                    <img src={images.jet_ski.data.attributes.url} alt="hero_card_sail" uk-img className='uk-width-medium' />
-                  </div>
-                  <div className="uk-card-body">
-                    <h3 className="uk-card-title">RYA Jet Ski </h3>
-                    {courses.map((course, i) =>
-                      course.attributes.courseCategory === 'Jet_Ski' &&
-
-                      <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
-                        <p >
-
-                          {course.attributes.title}
-                        </p>
-
-                      </Link>
-
-                    )}
-                  </div>
-                </div>
-              </div>
-
-            </li>
-
-
-
-            {/*               <li>
-
-                <div className="uk-inline-clip hero-cards uk-margin uk-animation-slide-bottom uk-visible-toggle" tabIndex="-1">
-
-                  <img src={images.mile_building.data.attributes.url} width="250" height="250" alt="hero_card_jet" uk-img />
-                  <div className="uk-position-bottom uk-overlay uk-overlay-primary" >
-                    <p>RYA Yachtmaster</p>
-
-                    <ul className="uk-hidden-hover uk-overlay uk-overlay-primary">
-
-
-                      <Link href={`/courses/yachtmaster`} passHref>
-                        <li>
-                          <a href="">   Yachtmaster Prep Exam</a>
-                        </li>
-                      </Link>
+                      </li>
 
                     </ul>
+
+                  </Link>
+
+                )}
+              </div>
+
+            </div>
+
+
+
+            <div className="uk-card uk-card-default uk-flex uk-flex-start uk-flex-column">
+              <div className="uk-flex uk-flex-column  uk-flex-start ">
+
+                <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
+
+                  <h3 className="uk-card-title text-primary-blue"> Motor Courses </h3>
+                  <div className="uk-card-header uk-height-small uk-margin">
+
+                    <img src={images.motor.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />
                   </div>
                 </div>
-              </li> */}
-
-          </ul>
-          <a className="uk-position-center-left hero-cards   uk-position-small uk-hidden-hover uk-visible@m" href="#" uk-slidenav-previous uk-slider-item="previous">
-
-            <svg width="40" height="40" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#fff" strokeWidth="1.33" points="13 16 7 10 13 4"></polyline></svg>
-
-          </a>
-          <a className="uk-position-center-right uk-position-small uk-hidden-hover uk-visible@m" href="#" uk-slidenav-next uk-slider-item="next">
-            <svg width="40" height="40" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#fff" strokeWidth="1.33" points="7 4 13 10 7 16"></polyline></svg>
 
 
 
+              </div>
+              <div className="uk-card-body ">
 
-          </a>
+                {courses.map((course, i) =>
+                  course.attributes.courseCategory === 'Motor' &&
+
+                  <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
+                    <ul >
+                      <li>
+
+                        <p className='text-secondary-blue-light' >
+                          {course.attributes.title}
+                        </p>
+                      </li>
+
+                    </ul>
+
+                  </Link>
+
+                )}
+              </div>
+            </div>
+
+            <div className="uk-card uk-card-default uk-width-medium">
+
+
+
+              <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
+                <h3 className="uk-card-title text-primary-blue"> Power Courses </h3>
+                <div className="uk-card-header uk-height-small uk-margin">
+
+
+                  <img src={images.power.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />
+                </div>
+              </div>
+
+              <div className="uk-card-body uk-padding-remove-horizontal  ">
+
+                {courses.map((course, i) =>
+                  course.attributes.courseCategory === 'Power' &&
+
+                  <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
+                    <ul>
+                      <li>
+
+                        <p className='text-secondary-blue-light' >
+                          {course.attributes.title}
+                        </p>
+                      </li>
+
+                    </ul>
+                  </Link>
+
+                )}
+              </div>
+            </div>
+
+
+          </div>
+
 
 
         </div>
-        <ul className="uk-s lider-nav uk-dotnav uk-flex-center uk-margin uk-flex uk-flex-center"></ul>
+        <div className="uk-section  section_banner " uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 400; repeat: false">
+
+          <div className="uk-container uk-container-large uk-flex uk-flex-around uk-flex-start uk-flex-wrap">
+
+
+
+            <div className="uk-card  uk-width-medium uk-flex uk-flex-start uk-flex-column">
+
+              <div className="uk-flex uk-flex-column  uk-flex-start ">
+                <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
+
+                  <h3 className="uk-card-title text-primary-white"> Mile Building </h3>
+                  <div className="uk-card-header uk-height-small uk-margin">
+                    <img src={images.mile_building.data.attributes.url} alt="hero_card_sail" width={150} height={300} uk-img />
+                  </div>
+                </div>
+
+                <div className="uk-card-body uk-padding-remove-horizontal  ">
+
+                  {courses.map((course, i) =>
+                    course.attributes.courseCategory === 'Mile_Building' &&
+
+                    <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
+                      <ul>
+                        <li>
+
+                          <p className='text-secondary-white' >
+                            {course.attributes.title}
+                          </p>
+                        </li>
+
+                      </ul>
+                    </Link>
+
+                  )}
+                </div>
+
+              </div>
+            </div>
+
+
+
+
+
+            <div className="uk-card uk-width-medium yachtmaster_card_landing">
+
+              <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
+
+
+                <h3 className="uk-card-title text-primary-white"> Yachtmaster  </h3>
+                <div className="uk-card-header uk-height-small uk-margin">
+                  <img src={images.yachtmaster.data.attributes.url} width={150} height={250} alt="hero_card_jet" uk-img />
+                </div>
+              </div>
+
+
+              <div className="uk-card-body uk-padding-remove-horizontal ">
+
+                <Link href={`/courses/yachtmaster`} passHref>
+                  <ul>
+                    <li>
+
+                      <p className='text-secondary-white '>
+                        Yachtmaster Prep Exam
+                      </p>
+                    </li>
+                  </ul>
+                </Link>
+              </div>
+
+
+
+
+            </div>
+
+
+
+            <div className="uk-card uk-flex uk-flex-start uk-flex-column">
+              <div className="uk-flex uk-flex-column  uk-flex-start ">
+
+                <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
+                  <h3 className="uk-card-title text-primary-white"> Jet Ski </h3>
+                  <div className="uk-card-header uk-height-small uk-margin">
+                    <img src={images.jet_ski.data.attributes.url} alt="hero_card_sail" width={150} height={250} uk-img />
+                  </div>
+                </div>
+
+
+                <div className="uk-card-body uk-padding-remove-horizontal ">
+
+                  {courses.map((course, i) =>
+                    course.attributes.courseCategory === 'Jet_Ski' &&
+
+                    <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
+                      <ul>
+                        <li>
+
+                          <p className='text-secondary-white' >
+                            {course.attributes.title}
+                          </p>
+                        </li>
+
+                      </ul>
+                    </Link>
+
+                  )}
+                </div>
+
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+
+
+
+
+
+
       </div>
+
+
 
 
 

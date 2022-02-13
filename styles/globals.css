@@ -18,39 +18,122 @@ a {
 
 /* HERO */
 
-.hero-wrapper {
+.hero-title {
+  font-family: "Futura Md BT", sans-serif;
+  font-weight: 200;
+}
+.hero-action {
+  background-color: #072251;
+  border-radius: 15px;
+  -webkit-box-shadow: 1px 7px 18px -5px rgba(255, 255, 255, 0.72);
+  box-shadow: 1px 7px 18px -5px rgba(255, 255, 255, 0.72);
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  transition: 0.3s;
 }
 
-.hero_1 {
+.hero-action:hover {
+  background-color: #fff;
+  color: #072251;
+  border: 2px solid #072251;
+}
+.hero_image_wrapper .uk-cover {
+  transform: translate(-50%, -35%);
 }
 
-.hero-cards {
-  max-height: 220px;
-  overflow: hidden;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  position: relative;
+@media only screen and (max-width: 900px) {
+  .hero_image_wrapper .uk-cover {
+    transform: translate(-25%, -33%);
+  }
 }
 
-.hero_subtitle {
-  font-size: 28px;
-}
 /*  overrading uk kenburns effect */
 
 .uk-animation-kenburns {
-  animation-duration: 10s;
+  animation-duration: 10s infinite;
 }
 
 @keyframes uk-kenburns {
   0% {
-    transform: scale(2.1);
+    transform: scale(1.1);
   }
   100% {
-    transform: scale(1.6);
+    transform: scale(1.3);
   }
 }
 
+/* section courses banner front */
+
+.uk-card .text-primary-blue {
+  color: #012f87;
+  font-family: "Futura Md BT", sans-serif;
+  font-weight: 200;
+}
+
+.uk-card .text-primary-white {
+  color: #f5f5f5;
+  font-family: "Futura Md BT", sans-serif;
+  font-weight: 200;
+}
+
+.uk-card .text-secondary-blue-light {
+  color: #1975cd;
+  cursor: pointer;
+}
+.uk-card .text-secondary-blue-light:hover {
+  opacity: 0.7;
+}
+.uk-card .text-secondary-white {
+  color: #f5f5f5;
+  cursor: pointer;
+}
+.uk-card .text-secondary-white:hover {
+  opacity: 0.7;
+}
+
+.section_banner {
+  background-color: #3b5075;
+}
+.uk-card-default .uk-card-header {
+  border-bottom: none;
+}
+
+.uk-card ul li {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.uk-card ul {
+  list-style: none;
+}
+
+.uk-card ul li:before {
+  content: "";
+  position: absolute;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  width: 10px;
+  height: 10px;
+  top: calc(50% - 4px);
+  left: -20px;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
 /* navbar */
+
+.uk-navbar-container {
+  z-index: 99;
+}
+
+.main_navbar {
+  max-width: 1400px;
+  z-index: 99;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  transition: 2s;
+}
 
 .uk-navbar-item,
 .uk-navbar-nav > li > a {
@@ -208,8 +291,8 @@ a {
 /* NEWS SIDEBAR COMPONENT */
 
 .offcanvas-News {
-  background-color: #f2f2f2;
-  color: #002a74;
+  background-color: #354c71;
+  color: #354c71;
   width: 26vw;
   top: 100px;
   padding-top: 80px;
@@ -242,21 +325,29 @@ p > strong {
   color: #465e88;
 }
 
-/* news Sidebar */
+/* news Sidebar/ banner */
 .news_sidebar_wrapper {
-  background-color: #002a74;
+  background-color: rgba(53, 76, 113, 1);
 }
+
 .news_sidebar {
   display: flex;
   align-items: center;
   position: relative;
-  background-color: #002a74;
-  height: 40px;
+  background-color: rgba(53, 76, 113, 1);
+  height: 80px;
   /*   animation: 2s fadeIn;
   animation-fill-mode: forwards;
   visibility: hidden; */
   gap: 20px;
   z-index: 99;
+}
+.news-banner-title {
+  background-color: #fff;
+  border-radius: 4px;
+  font-weight: 700;
+  padding: 3px 10px;
+  color: #133f8b;
 }
 
 .news_sidebar > span {
