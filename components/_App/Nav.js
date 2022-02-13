@@ -329,6 +329,30 @@ function Nav({ courses, activities }) {
 
 
                                                 </li>
+                                                < li className="uk-parent uk-nav-divider ">
+
+
+                                                    <a href=" " className="nav-link responsive-link-font ">Jet Ski </a>
+                                                    <ul className="uk-nav-sub  uk-nav-start  uk-nav-parent-icon   " hidden="">
+
+                                                        {activities.map((activitie, i) =>
+                                                            activitie.attributes.category === "Jet_ski" ?
+
+
+                                                                < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >
+                                                                    <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
+                                                                        <a  >  {activitie.attributes.title} </a>
+                                                                    </Link></li>
+
+                                                                : null
+
+
+
+                                                        )}
+                                                    </ul>
+
+
+                                                </li>
 
 
                                             </ul>
@@ -708,6 +732,32 @@ function Nav({ courses, activities }) {
 
                                                     {activities.map((activitie, i) =>
                                                         activitie.attributes.category === "Mile_Building" ?
+
+
+                                                            < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >
+                                                                <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
+                                                                    <a uk-toggle="target: #offcanvas-nav-primary">  {activitie.attributes.title} </a>
+                                                                </Link></li>
+
+                                                            : null
+
+
+
+                                                    )}
+                                                </ul>
+                                            </li>
+                                            <li className="uk-parent " >
+                                                <div className="uk-position-absolute">
+
+                                                    <a className=" responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">  Jet Ski  </a>
+
+                                                </div>
+                                                <a href=""></a>
+
+                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-list-large" hidden="">
+
+                                                    {activities.map((activitie, i) =>
+                                                        activitie.attributes.category === "Jet_ski" ?
 
 
                                                             < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >

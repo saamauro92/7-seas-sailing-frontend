@@ -61,7 +61,7 @@ export default function Home({ courses, homepage, latestNews }) {
 
 
 
-            <div className="uk-card uk-card-default uk-flex uk-flex-start uk-flex-column">  {/* uk-width-medium  */}
+            <div className="uk-card  uk-flex uk-flex-start uk-flex-column">  {/* uk-width-medium  */}
 
               <div className="uk-flex uk-flex-column  uk-flex-start ">
 
@@ -102,7 +102,7 @@ export default function Home({ courses, homepage, latestNews }) {
 
 
 
-            <div className="uk-card uk-card-default uk-flex uk-flex-start uk-flex-column">
+            <div className="uk-card  uk-flex uk-flex-start uk-flex-column">
               <div className="uk-flex uk-flex-column  uk-flex-start ">
 
                 <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
@@ -139,7 +139,7 @@ export default function Home({ courses, homepage, latestNews }) {
               </div>
             </div>
 
-            <div className="uk-card uk-card-default uk-width-medium">
+            <div className="uk-card  uk-width-medium">
 
 
 

@@ -11,7 +11,8 @@ import {
 import React from 'react'
 import ReactMarkdown from "react-markdown"
 import remarkGfm from 'remark-gfm'
-import ActionSection from '../../components/actionSection/ActionSection'
+import ActionSection from '../../components/actionSection/ActionSection';
+
 
 const CourseSection = ({ course, homepage }) => {
     const imageUrl = course.attributes.image.data.attributes.url
@@ -61,54 +62,96 @@ const CourseSection = ({ course, homepage }) => {
 
                 </ul>
 
+                {/*  PROGRESSION TIMELINES FOR EACH CATEGORY */}
+                <h3 className='uk-padding uk-padding-remove-horizontal uk-text-center'> <strong> Courses Progression</strong> </h3>
+                {course.attributes.courseCategory === 'Sail' ? <div className="progresion_wrapper uk-flex uk-flex-baseline uk-flex-center">
+
+                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle'>
+
+                        <p className={course.attributes.title === 'Competent Crew' ? 'progression_button progression_button_active' : 'progression_button'}> CC</p>
+                        <p className='uk-margin-top '> Competent Crew</p>
+                    </div>
+
+                    <p className="arrow-right"></p>
+                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle'>
+
+                        <p className={course.attributes.title === 'Day Skipper' ? 'progression_button progression_button_active' : 'progression_button'}> DS</p>
+                        <p className='uk-margin-top' > Day Skipper</p>
+                    </div>
+                    <span className="arrow-right"></span>
+                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle'>
+
+                        <p className={course.attributes.title === 'Coastal Skipper' ? 'progression_button progression_button_active' : 'progression_button'}> CS</p>
+                        <p className='uk-margin-top'> Coastal Skipper</p>
+                    </div>
+                    <span className="arrow-right"></span>
+                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle'>
+
+                        <p className={course.attributes.title === 'Yachtmaster' ? 'progression_button progression_button_active' : 'progression_button'}> YM</p>
+                        <p className='uk-margin-top'> Yachtmaster </p>
+                    </div>
+
+                </div>
+
+                    : null
+                }
+                {course.attributes.courseCategory === 'Motor' ? <div className="progresion_wrapper uk-flex uk-flex-baseline uk-flex-center">
+                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle'>
+                        <p className={course.attributes.title === 'Day Skipper Practical Motorcruising ' ? 'progression_button progression_button_active' : 'progression_button'}> DS</p>
+                        <p className='uk-margin-top'> Day Skipper   </p>
+                    </div>
+                    <span className="arrow-right"></span>
+                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle'>
+                        <p className={course.attributes.title === 'Coastal Skipper Practical Motorcruising' ? 'progression_button progression_button_active' : 'progression_button'}> CS</p>
+                        <p className='uk-margin-top'> Coastal Skipper  </p>
+                    </div>
+
+                    <span className="arrow-right"></span>
+                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle'>
+
+
+                        <p className={course.attributes.title === 'Yachtmaster' ? 'progression_button progression_button_active' : 'progression_button'}> YM</p>
+                        <p className='uk-margin-top'> Yachtmaster </p>
+                    </div>
+
+                </div>
+
+                    : null
+                }
+                {course.attributes.courseCategory === 'Power' ? <div className="progresion_wrapper uk-flex uk-flex-baseline uk-flex-center">
+                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle'>
+                        <p className={course.attributes.title === 'PB Lvl. 2 Handling' ? 'progression_button progression_button_active' : 'progression_button'}> LVL2</p>
+                        <p className='uk-margin-top'> PB Lvl. 2 Handling </p>
+                    </div>
+
+                    <span className="arrow-right"></span>
+                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle'>
+                        <p className={course.attributes.title === 'Tender Operator' ? 'progression_button progression_button_active' : 'progression_button'}> TO</p>
+                        <p className='uk-margin-top'> Tender Operator </p>
+                    </div>
+                    <span className="arrow-right"></span>
+                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle'>
+                        <p className={course.attributes.title === 'Advanced Powerboat (CoC)' ? 'progression_button progression_button_active' : 'progression_button'}> ADV</p>
+                        <p className='uk-margin-top'> Advanced Powerboat (CoC) </p>
+                    </div>
+
+                    <span className="arrow-right"></span>
+                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle'>
+                        <p className={course.attributes.title === 'Yachtmaster' ? 'progression_button progression_button_active' : 'progression_button'}> YMM</p>
+                        <p className='uk-margin-top'> Yachtmaster </p>
+                    </div>
+
+                </div>
+
+                    : null
+                }
+
+
                 <div className="uk-section uk-flex uk-flex-wrap  uk-margin " >
 
 
                     <div className="uk-width-2-4 uk-width-1-2@m  uk-padding-small uk-padding-remove-vertical " >
-                        {/*  PROGRESSION TIMELINES FOR EACH CATEGORY */}
-                        <h3 className='uk-padding uk-padding-remove-horizontal'> <strong>RYA Courses Progression</strong> </h3>
-                        {course.attributes.courseCategory === 'Sail' ? <div className="progresion_wrapper uk-flex uk-flex-baseline uk-flex-center">
 
-                            <p className={course.attributes.title === 'Competent Crew' ? 'progression_button progression_button_active' : 'progression_button'}> CC</p>
-                            <span className="arrow-right"></span>
-                            <p className={course.attributes.title === 'Day Skipper' ? 'progression_button progression_button_active' : 'progression_button'}> DS</p>
-                            <span className="arrow-right"></span>
-                            <p className={course.attributes.title === 'Coastal Skipper' ? 'progression_button progression_button_active' : 'progression_button'}> CS</p>
-                            <span className="arrow-right"></span>
-                            <p className={course.attributes.title === 'Yachtmaster' ? 'progression_button progression_button_active' : 'progression_button'}> YM</p>
-
-                        </div>
-
-                            : null
-                        }
-                        {course.attributes.courseCategory === 'Motor' ? <div className="progresion_wrapper uk-flex uk-flex-baseline uk-flex-center">
-
-                            <p className={course.attributes.title === 'Day Skipper Practical Motorcruising ' ? 'progression_button progression_button_active' : 'progression_button'}> DS</p>
-                            <span className="arrow-right"></span>
-                            <p className={course.attributes.title === 'Coastal Skipper Practical Motorcruising' ? 'progression_button progression_button_active' : 'progression_button'}> CS</p>
-                            <span className="arrow-right"></span>
-                            <p className={course.attributes.title === 'Yachtmaster' ? 'progression_button progression_button_active' : 'progression_button'}> YM</p>
-
-
-                        </div>
-
-                            : null
-                        }
-                        {course.attributes.courseCategory === 'Power' ? <div className="progresion_wrapper uk-flex uk-flex-baseline uk-flex-center">
-
-                            <p className={course.attributes.title === 'PB Lvl. 2 Handling' ? 'progression_button progression_button_active' : 'progression_button'}> LVL2</p>
-                            <span className="arrow-right"></span>
-                            <p className={course.attributes.title === 'Tender Operator' ? 'progression_button progression_button_active' : 'progression_button'}> TO</p>
-                            <span className="arrow-right"></span>
-                            <p className={course.attributes.title === 'Advanced Powerboat (CoC)' ? 'progression_button progression_button_active' : 'progression_button'}> ADV</p>
-                            <span className="arrow-right"></span>
-                            <p className={course.attributes.title === 'Yachtmaster' ? 'progression_button progression_button_active' : 'progression_button'}> YMM</p>
-
-
-                        </div>
-
-                            : null
-                        }
 
 
 
