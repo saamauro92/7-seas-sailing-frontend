@@ -70,10 +70,10 @@ export default function Home({ courses, homepage, latestNews, activities, testim
                 <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
 
                   <h3 className="uk-card-title  text-primary-blue"> Sailing Courses </h3>
-                  <div className="uk-card-header uk-height-small uk-margin">
 
-                    <img src={images.sail.data.attributes.url} alt="hero_card_sail" width={150} height={250} uk-img />
-                  </div>
+
+                  <img src={images.sail.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />
+
                 </div>
 
               </div>
@@ -109,10 +109,10 @@ export default function Home({ courses, homepage, latestNews, activities, testim
                 <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
 
                   <h3 className="uk-card-title text-primary-blue"> Motor Courses </h3>
-                  <div className="uk-card-header uk-height-small uk-margin">
 
-                    <img src={images.motor.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />
-                  </div>
+
+                  <img src={images.motor.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />
+
                 </div>
 
 
@@ -146,11 +146,11 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
               <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
                 <h3 className="uk-card-title text-primary-blue"> Power Courses </h3>
-                <div className="uk-card-header uk-height-small uk-margin">
 
 
-                  <img src={images.power.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />
-                </div>
+
+                <img src={images.power.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />
+
               </div>
 
               <div className="uk-card-body uk-padding-remove-horizontal  ">
@@ -192,9 +192,9 @@ export default function Home({ courses, homepage, latestNews, activities, testim
                 <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
 
                   <h3 className="uk-card-title text-primary-white"> Mile Building </h3>
-                  <div className="uk-card-header uk-height-small uk-margin">
-                    <img src={images.mile_building.data.attributes.url} alt="hero_card_sail" width={150} height={300} uk-img />
-                  </div>
+
+                  <img src={images.mile_building.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />
+
                 </div>
 
                 <div className="uk-card-body uk-padding-remove-horizontal  ">
@@ -233,9 +233,9 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
 
                 <h3 className="uk-card-title text-primary-white"> Yachtmaster  </h3>
-                <div className="uk-card-header uk-height-small uk-margin">
-                  <img src={images.yachtmaster.data.attributes.url} width={150} height={250} alt="hero_card_jet" uk-img />
-                </div>
+
+                <img src={images.yachtmaster.data.attributes.url} width={200} height={250} alt="hero_card_jet" uk-img />
+
               </div>
 
 
@@ -265,9 +265,9 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
                 <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
                   <h3 className="uk-card-title text-primary-white"> Jet Ski </h3>
-                  <div className="uk-card-header uk-height-small uk-margin">
-                    <img src={images.jet_ski.data.attributes.url} alt="hero_card_sail" width={150} height={250} uk-img />
-                  </div>
+
+                  <img src={images.jet_ski.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />
+
                 </div>
 
 
@@ -307,7 +307,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
       </div>
 
-      <div className="uk-dark uk-background-cover uk-background-muted  testimonials_section uk-padding-large uk-padding-remove-horizontal uk-margin" >
+      <div className="uk-dark uk-background-cover testimonials_section uk-padding-large uk-padding-remove-horizontal " >
 
         <div className="uk-container uk-margin ">
 
@@ -360,13 +360,13 @@ export default function Home({ courses, homepage, latestNews, activities, testim
               )
               }
             </ul>
-            <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin "></ul>
 
           </div>
         </div>
       </div>
 
-      <div className="uk-dark uk-background-cover  testimonials_section uk-padding-large uk-padding-remove-horizontal uk-margin-top" >
+      <div className="uk-dark uk-background-cover uk-background-muted testimonials_section uk-padding-large uk-padding-remove-horizontal " >
 
         <div className="uk-container uk-margin-top">
 
