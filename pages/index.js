@@ -307,9 +307,9 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
       </div>
 
-      <div className="uk-dark uk-background-cover testimonials_section uk-padding-large uk-padding-remove-horizontal " >
+      <div className="uk-dark uk-background-cover testimonials_section uk-padding-large uk-padding-remove-horizontal uk-margin  " >
 
-        <div className="uk-container uk-margin ">
+        <div className="uk-container ">
 
 
           <h2 className='uk-text-center uk-text-muted  uk-text-bold'>What People Say About Us</h2>
@@ -360,13 +360,13 @@ export default function Home({ courses, homepage, latestNews, activities, testim
               )
               }
             </ul>
-            <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin "></ul>
+            <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin-bottom  uk-background-default"></ul>
 
           </div>
         </div>
       </div>
 
-      <div className="uk-dark uk-background-cover uk-background-muted testimonials_section uk-padding-large uk-padding-remove-horizontal " >
+      <div className="uk-dark uk-background-cover uk-background-muted testimonials_section uk-padding-large uk-padding-remove-horizontal  uk-margin-top" >
 
         <div className="uk-container uk-margin-top">
 
