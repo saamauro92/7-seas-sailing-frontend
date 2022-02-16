@@ -39,7 +39,7 @@ const NewsPage = ({ homepage, news }) => {
                 </ul>
 
                 <div className="uk-container uk-container-large uk-padding uk-animation-slide-bottom ">
-                    {news && news.length > 0 && news.reverse().map((item, index) =>
+                    {news && news.length > 0 && news.slice(0).reverse().map((item, index) =>
 
 
                         <Link href={`/news/${item.attributes.slug}`} key={index} passHref>
