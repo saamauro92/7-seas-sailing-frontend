@@ -39,7 +39,7 @@ const NewsPage = ({ homepage, news }) => {
                 </ul>
 
                 <div className="uk-container uk-container-large uk-padding uk-animation-slide-bottom ">
-                    {news && news.length > 0 && news.map((item, index) =>
+                    {news && news.length > 0 && news.reverse().map((item, index) =>
 
 
                         <Link href={`/news/${item.attributes.slug}`} key={index} passHref>
@@ -53,7 +53,9 @@ const NewsPage = ({ homepage, news }) => {
                                         </div>
                                         <div >
 
-                                            <img src={item.attributes.image.data.attributes.formats.small.url} alt="blog_img" className='uk-height-medium' uk-img />
+                                            {item.attributes.image.data.attributes.formats ? <img src={item.attributes.image.data.attributes.formats.small.url} alt="blog_img" className='uk-height-medium' uk-img /> :
+                                                <img src={item.attributes.image.data.attributes.url} alt="blog_img" className='uk-height-medium' uk-img />
+                                            }
 
                                         </div>
                                     </div>

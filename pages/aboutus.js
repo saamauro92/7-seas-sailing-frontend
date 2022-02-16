@@ -15,18 +15,19 @@ const AboutUsPage = ({ team, about, homepage }) => {
     return (
 
         <>
-            <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
+            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="About us - " />}
+            {imgBanner && <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                 data-src={imgBanner}
                 data-srcset={imgBanner}
                 data-uk-img
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
                 uk-parallax="bgy: -100"
             >
-                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="About us - " />}
+
                 <h2 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove" uk-toggle="cls: uk-heading-small;  mode: media; media: @s" > About us   </h2>
 
 
-            </div>
+            </div>}
             <div className="uk-container uk-container-medium uk-padding-medium uk-animation-slide-bottom uk-background-muted  ">
                 <ul className="uk-breadcrumb  uk-width-1-4@m uk-width-1-4@l banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
                     <li >
@@ -42,34 +43,64 @@ const AboutUsPage = ({ team, about, homepage }) => {
             </div>
 
             <div className="uk-container uk-container-medium uk-padding@m   uk-animation-slide-bottom  uk-background-muted ">
+                {about.attributes.banner_two.data.attributes.url &&
+                    about.attributes.banner_two.data.attributes.url ?
+                    <div className=" uk-background-cover uk-height-large uk-width-1-1@m about-banner-two  "
+                        data-src={about.attributes.banner_two.data.attributes.url}
+                        data-srcset={about.attributes.banner_two.data.attributes.url}
+                        data-uk-img
 
-                <div className=" uk-background-cover uk-height-large uk-width-1-1@m about-banner-two  "
-                    data-src={about.attributes.banner_two.data.attributes.url}
-                    data-srcset={about.attributes.banner_two.data.attributes.url}
-                    data-uk-img
-                /*      uk-toggle="cls: uk-height-medium; mode: media; media: @l" */
 
-                >
+                    >
 
-                    <div className="uk-section  uk-padding">
+                        <div className="uk-section  uk-padding">
 
-                        <div className="uk-container-small  uk-width-1-2@m uk-light  ">
+                            <div className="uk-container-small  uk-width-1-2@m uk-light  ">
 
-                            <ReactMarkdown children={about.attributes.whatWeDo} />
+                                <ReactMarkdown children={about.attributes.whatWeDo} />
+                            </div>
+
+
+
+
                         </div>
+
+
+
+
+
+
+
+                    </div> :
+                    <div className=" uk-background-cover uk-height-large uk-width-1-1@m about-banner-two  "
+                        data-src={about.attributes.banner_two.data.attributes.formats.medium.url}
+                        data-srcset={about.attributes.banner_two.data.attributes.formats.medium.url}
+                        data-uk-img
+
+
+                    >
+
+                        <div className="uk-section  uk-padding">
+
+                            <div className="uk-container-small  uk-width-1-2@m uk-light  ">
+
+                                <ReactMarkdown children={about.attributes.whatWeDo} />
+                            </div>
+
+
+
+
+                        </div>
+
+
+
 
 
 
 
                     </div>
 
-
-
-
-
-
-
-                </div>
+                }
             </div>
 
             <div className="uk-container uk-container-medium  uk-animation-slide-bottom  uk-background-muted ">
@@ -80,7 +111,7 @@ const AboutUsPage = ({ team, about, homepage }) => {
                     </div>
 
                     <div className="uk-width-1-2@m uk-flex uk-flex-middle uk-flex-center " uk-scrollspy="cls: uk-animation-slide-right; repeat: false">
-                        <img src={about.attributes.rya_image.data.attributes.url} alt="" width={250} />
+                        {about.attributes.rya_image.data.attributes.url && <img src={about.attributes.rya_image.data.attributes.url} alt="rya_logo" width={250} />}
                     </div>
 
                 </div>
@@ -121,36 +152,37 @@ const AboutUsPage = ({ team, about, homepage }) => {
             <div className="uk-container uk-container-expand uk-padding-remove uk-animation-slide-bottom uk-background-muted  " id="sailing_area" >
 
 
-                <div className=" uk-background-cover  uk-width-1-1@m"
-                    data-src={about.attributes.sailing_image.data.attributes.url}
-                    data-srcset={about.attributes.sailing_image.data.attributes.url}
-                    data-uk-img
-                >
+                {about.attributes.sailing_image.data.attributes.url &&
+                    <div className=" uk-background-cover  uk-width-1-1@m"
+                        data-src={about.attributes.sailing_image.data.attributes.url}
+                        data-srcset={about.attributes.sailing_image.data.attributes.url}
+                        data-uk-img
+                    >
 
-                    <div className="uk-section uk-flex uk-light uk-flex-wrap">
-                        <div className="uk-width-1-2@m uk-flex  uk-flex-middle">
+                        <div className="uk-section uk-flex uk-light uk-flex-wrap">
+                            <div className="uk-width-1-2@m uk-flex  uk-flex-middle">
+
+                            </div>
+
+                            <div className="uk-width-1-4@m  uk-padding-small " >
+                                <h2>Sailing Area </h2>
+                                {about && <ReactMarkdown  >
+
+                                    {about.attributes.sailing.description}
+                                </ReactMarkdown>
+
+
+
+                                }
+
+
+
+                            </div>
+
 
                         </div>
 
-                        <div className="uk-width-1-4@m  uk-padding-small " >
-                            <h2>Sailing Area </h2>
-                            {about && <ReactMarkdown  >
-
-                                {about.attributes.sailing.description}
-                            </ReactMarkdown>
-
-
-
-                            }
-
-
-
-                        </div>
-
-
-                    </div>
-
-                </div>
+                    </div>}
 
             </div>
 
@@ -159,23 +191,20 @@ const AboutUsPage = ({ team, about, homepage }) => {
 
 
             <div className="uk-container uk-container-medium  uk-background-muted uk-padding-large   ">
+                {about.attributes.club_image.data.attributes.formats.medium.url &&
+                    <div
+                        data-src={about.attributes.club_image.data.attributes.formats.medium.url}
+                        data-srcset={about.attributes.club_image.data.attributes.formats.medium.url}
+                        data-uk-img
+                        style={{ zIndex: '0' }}
+                        className="uk-background-imagen uk-background-cover uk-width-1-4@m  uk-align-right@m about-team-image uk-visible@s"
 
-                <div
-                    data-src={about.attributes.club_image.data.attributes.formats.medium.url}
-                    data-srcset={about.attributes.club_image.data.attributes.formats.medium.url}
-                    data-uk-img
-                    style={{ zIndex: '0' }}
-                    className="uk-background-imagen uk-background-cover uk-width-1-4@m  uk-align-right@m about-team-image uk-visible@s"
-
-                >
-                </div>
+                    >
+                    </div>}
                 <div className="uk-container uk-container-medium uk-flex uk-flex-center ">
-
-
 
                     <div className="uk-container uk-container-large uk-slider-container-offset uk-padding  " uk-slider="finite: true" uk-slideshow uk-scrollspy="cls: uk-animation-slide-left; repeat: false" >
                         <h1 className='uk-text-center' id="team">Meet our Team</h1>
-
 
 
                         <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1" style={{ zIndex: '2' }}>
@@ -185,12 +214,7 @@ const AboutUsPage = ({ team, about, homepage }) => {
 
                                         person.attributes.category === 'Team' ?
 
-
-
-
                                             <Member data={person} />
-
-
 
                                             : null
 
@@ -218,28 +242,23 @@ const AboutUsPage = ({ team, about, homepage }) => {
             </div>
 
 
-            {/*  */}
-
             <div className="uk-container uk-container-medium  uk-background-muted uk-padding-large   ">
+                {about.attributes.club_image.data.attributes.formats.medium.url &&
+                    <div
+                        data-src={about.attributes.club_image.data.attributes.formats.medium.url}
+                        data-srcset={about.attributes.club_image.data.attributes.formats.medium.url}
+                        data-uk-img
+                        style={{ zIndex: '0' }}
+                        className="uk-background-imagen uk-background-cover uk-width-1-4@m  uk-align-left@m about-club-image uk-visible@s"
 
-                <div
-                    data-src={about.attributes.club_image.data.attributes.formats.medium.url}
-                    data-srcset={about.attributes.club_image.data.attributes.formats.medium.url}
-                    data-uk-img
-                    style={{ zIndex: '0' }}
-                    className="uk-background-imagen uk-background-cover uk-width-1-4@m  uk-align-left@m about-club-image uk-visible@s"
-
-                >
-                </div>
+                    >
+                    </div>}
                 <div className="uk-container uk-container-medium uk-flex uk-flex-center ">
-
-
 
                     <div className="uk-container uk-container-large uk-slider-container-offset uk-padding  " uk-slider="finite: true" uk-slideshow uk-scrollspy="cls: uk-animation-slide-right; repeat: false" >
                         <h1 className='uk-text-center' id="club">The 7 Seas Club</h1>
 
                         <ReactMarkdown className=' uk-padding-large'>
-
                             {about.attributes.club.description}
                         </ReactMarkdown>
 
@@ -250,11 +269,7 @@ const AboutUsPage = ({ team, about, homepage }) => {
 
                                         person.attributes.category === 'Club' ?
 
-
-
-
                                             <Member data={person} />
-
 
 
                                             : null

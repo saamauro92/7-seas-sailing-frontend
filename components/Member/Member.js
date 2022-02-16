@@ -15,14 +15,23 @@ const Member = ({ data }) => {
                         <div className="uk-card-media-top">
 
 
+                            {data.attributes.image.data.attributes.url &&
 
-                            <div className="uk-width-large uk-background-cover  uk-background-center-center uk-height-medium  "
-                                data-src={data.attributes.image.data.attributes.url}
-                                data-srcset={data.attributes.image.data.attributes.url}
-                                data-uk-img
-                            >
-                            </div>
-
+                                data.attributes.image.data.attributes.url ?
+                                <div className="uk-width-large uk-background-cover  uk-background-center-center uk-height-medium  "
+                                    data-src={data.attributes.image.data.attributes.url}
+                                    data-srcset={data.attributes.image.data.attributes.url}
+                                    data-uk-img
+                                >
+                                </div>
+                                :
+                                <div className="uk-width-large uk-background-cover  uk-background-center-center uk-height-medium  "
+                                    data-src={data.attributes.image.data.attributes.formats.medium.url}
+                                    data-srcset={data.attributes.image.data.attributes.formats.medium.url}
+                                    data-uk-img
+                                >
+                                </div>
+                            }
 
 
                         </div>

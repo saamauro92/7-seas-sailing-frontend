@@ -34,8 +34,6 @@ export async function getStaticProps() {
 }
 
 
-
-
 export default function Home({ courses, homepage, latestNews, activities, testimonials }) {
 
 
@@ -45,10 +43,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
     <main>
 
-
       <div className="uk-cover-containe uk-light">
-
-
 
 
         {homepage && homepage.attributes.seo && <SEO data={homepage.attributes.seo} />}
@@ -60,9 +55,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
         <div className="uk-section " id="courses_section_banner">
           <div className="uk-container uk-container-large uk-flex uk-flex-around uk-flex-wrap  " uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: false">
 
-
-
-            <div className="uk-card  uk-flex uk-flex-start uk-flex-column">  {/* uk-width-medium  */}
+            <div className="uk-card  uk-flex uk-flex-start uk-flex-column">
 
               <div className="uk-flex uk-flex-column  uk-flex-start ">
 
@@ -72,7 +65,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
                   <h3 className="uk-card-title  text-primary-blue"> Sailing Courses </h3>
 
 
-                  <img src={images.sail.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />
+                  {images.sail.data.attributes.url && <img src={images.sail.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />}
 
                 </div>
 
@@ -111,7 +104,9 @@ export default function Home({ courses, homepage, latestNews, activities, testim
                   <h3 className="uk-card-title text-primary-blue"> Motor Courses </h3>
 
 
-                  <img src={images.motor.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />
+
+                  {images.motor.data.attributes.url && <img src={images.motor.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />}
+
 
                 </div>
 
@@ -149,7 +144,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
 
 
-                <img src={images.power.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />
+                {images.power.data.attributes.url && <img src={images.power.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />}
 
               </div>
 
@@ -193,7 +188,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
                   <h3 className="uk-card-title text-primary-white"> Mile Building </h3>
 
-                  <img src={images.mile_building.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />
+                  {images.mile_building.data.attributes.url && <img src={images.mile_building.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />}
 
                 </div>
 
@@ -234,7 +229,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
                 <h3 className="uk-card-title text-primary-white"> Yachtmaster  </h3>
 
-                <img src={images.yachtmaster.data.attributes.url} width={200} height={250} alt="hero_card_jet" uk-img />
+                {images.yachtmaster.data.attributes.url && <img src={images.yachtmaster.data.attributes.url} width={200} height={250} alt="hero_card_jet" uk-img />}
 
               </div>
 
@@ -266,7 +261,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
                 <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
                   <h3 className="uk-card-title text-primary-white"> Services For Superyachts </h3>
 
-                  <img src={images.jet_ski.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />
+                  {images.jet_ski.data.attributes.url && <img src={images.jet_ski.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />}
 
                 </div>
 
@@ -369,8 +364,6 @@ export default function Home({ courses, homepage, latestNews, activities, testim
                         </div>
 
                       }
-
-
 
 
                       <h4 className="uk-comment-title uk-margin-remove "><a className="uk-link-reset" href="#"> {item.attributes.name}</a></h4>

@@ -13,7 +13,9 @@ const Card = ({ data, slug, size }) => {
 
                 <div className="uk-inline-clip uk-margin uk-animation-slide-bottom uk-visible-toggle" tabIndex="-1">
 
-                    {data.attributes.image.data.attributes.url ?
+                    {data.attributes.image.data.attributes.url &&
+
+                        data.attributes.image.data.attributes.url ?
 
                         <div
                             data-src={data.attributes.image.data.attributes.url}
@@ -26,7 +28,16 @@ const Card = ({ data, slug, size }) => {
 
                         </div>
 
-                        : null}
+                        : <div
+                            data-src={data.attributes.image.data.attributes.formats.medium.url}
+                            data-srcset={data.attributes.image.data.attributes.formats.medium.url}
+                            data-uk-img
+
+                            className="uk-background-image uk-background-cover   uk-height-medium uk-width-medium uk-flex uk-flex-center uk-flex-middle"
+
+                        >
+
+                        </div>}
 
                     <div className="uk-position-cover uk-overlay uk-overlay-primary uk-hidden-hover cursor-pointer uk-flex uk-flex-center uk-flex-middle" >
 

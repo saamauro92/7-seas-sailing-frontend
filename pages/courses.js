@@ -12,8 +12,8 @@ const courses = ({ courses, homepage }) => {
 
 
             <div className='' >
-
-                <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small  uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
+                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Courses -" />}
+                {imgBanner && <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small  uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                     data-src={imgBanner}
                     data-srcset={imgBanner}
                     data-uk-img
@@ -21,11 +21,11 @@ const courses = ({ courses, homepage }) => {
                     uk-parallax="bgy: -100"
                     style={{ "zIndex": "9" }}
                 >
-                    {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Courses -" />}
+
 
                     <h3 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove " uk-toggle="cls: uk-heading-small;  mode: media; media: @s"  >Our Courses</h3>
 
-                </div>
+                </div>}
 
                 <div className='uk-container uk-container-medium  uk-padding-medium uk-animation-slide-bottom uk-background-muted  '>
 

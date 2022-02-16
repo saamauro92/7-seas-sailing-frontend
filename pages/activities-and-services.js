@@ -8,21 +8,22 @@ const ActivitiesAndServicesPage = ({ homepage, activities }) => {
 
 
         <>
-            <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small  uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
+            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Activities and Services" />}
+            {imgBanner && <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small  uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                 data-src={imgBanner}
                 data-srcset={imgBanner}
                 data-uk-img
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
                 uk-parallax="bgy: -100"
             >
-                {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Activities and Services" />}
+
                 <h3
                     className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove  "
                     uk-toggle="cls: uk-heading-small;  mode: media; media: @s"
                 > Activities {"&"} Services   </h3>
 
 
-            </div>
+            </div>}
 
 
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle="Activities and Services -" />}
