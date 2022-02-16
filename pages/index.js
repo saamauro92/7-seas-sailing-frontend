@@ -264,7 +264,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
               <div className="uk-flex uk-flex-column  uk-flex-start ">
 
                 <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
-                  <h3 className="uk-card-title text-primary-white"> Jet Ski </h3>
+                  <h3 className="uk-card-title text-primary-white"> Services For Superyachts </h3>
 
                   <img src={images.jet_ski.data.attributes.url} alt="hero_card_sail" width={200} height={250} uk-img />
 
@@ -306,13 +306,47 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
 
       </div>
+      <div className="uk-section  uk-dark uk-background-cover  uk-padding-large uk-padding-remove-horizontal  uk-margin-top" >
 
-      <div className=" uk-section uk-dark uk-background-cover  uk-padding-large uk-padding-remove-horizontal uk-margin  " >
+        <div className="uk-container uk-margin-top">
+
+
+          <h2 className='uk-text-center uk-text-bold  has-text-primary uk-text-uppercase'>Featured Courses</h2>
+          <div className="uk-position-relative uk-visible-toggle uk-dark" tabIndex="-1" uk-slider="sets: true; autoplay:true;autoplay-interval: 5000; ">
+
+            <ul className="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m">
+
+              {courses.map((course, i) =>
+                course.attributes.new_course === true &&
+
+                <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
+
+                  <li>
+
+                    <Card data={course} slug="courses" size={"uk-width-1-1"} />
+
+
+
+                  </li>
+
+
+                </Link>
+
+              )}
+
+            </ul>
+            <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div className=" uk-section uk-dark uk-section-muted uk-background-cover  uk-padding-large uk-padding-remove-horizontal uk-margin  " >
 
         <div className="uk-container ">
 
 
-          <h2 className='uk-text-center uk-text-muted  uk-text-bold'>What People Say About Us</h2>
+          <h2 className='uk-text-center uk-text-muted  uk-text-bold has-text-primary uk-text-uppercase'>What People Say About Us</h2>
           <div className="uk-position-relative uk-visible-toggle uk-dark" tabIndex="-1" uk-slider="sets: true; autoplay:true;autoplay-interval: 5000; ">
 
             <ul className="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m">
@@ -366,40 +400,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
         </div>
       </div>
 
-      <div className="uk-section uk-section-muted uk-dark uk-background-cover  uk-padding-large uk-padding-remove-horizontal  uk-margin-top" >
 
-        <div className="uk-container uk-margin-top">
-
-
-          <h2 className='uk-text-center uk-text-bold'>Featured Courses</h2>
-          <div className="uk-position-relative uk-visible-toggle uk-dark" tabIndex="-1" uk-slider="sets: true; autoplay:true;autoplay-interval: 5000; ">
-
-            <ul className="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m">
-
-              {courses.map((course, i) =>
-                course.attributes.new_course === true &&
-
-                <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
-
-                  <li>
-
-                    <Card data={course} slug="courses" size={"uk-width-1-1"} />
-
-
-
-                  </li>
-
-
-                </Link>
-
-              )}
-
-            </ul>
-            <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-
-          </div>
-        </div>
-      </div>
 
     </main >
 

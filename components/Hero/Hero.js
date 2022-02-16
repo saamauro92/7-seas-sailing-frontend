@@ -32,7 +32,7 @@ const Hero = ({ courses, images }) => {
                             <div className="uk-margin-top uk-padding-large " >
                                 {/* uk-flex uk-flex-column uk-flex-bottom */}
 
-                                <h2 className=" uk-heading-small uk-text-uppercase uk-text-bold  uk-animation-scale-up hero-title ">We start where the roads end! </h2>
+                                <h2 className=" uk-heading-small uk-text-uppercase uk-text-bold   uk-animation-scale-up hero-title ">{images.title} </h2>
 
                                 <Link href={"/#courses_section_banner"} passHref>
 

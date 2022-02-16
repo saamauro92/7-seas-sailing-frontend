@@ -306,7 +306,7 @@ function Nav({ courses, activities }) {
                                                 < li className="uk-parent uk-nav-divider ">
 
 
-                                                    <a href=" " className="nav-link responsive-link-font ">Jet Ski </a>
+                                                    <a href=" " className="nav-link responsive-link-font ">Services for Superyachts </a>
                                                     <ul className="uk-nav-sub  uk-nav-start  uk-nav-parent-icon   " hidden="">
 
                                                         {activities.map((activitie, i) =>
@@ -693,7 +693,7 @@ function Nav({ courses, activities }) {
                                             <li className="uk-parent " >
                                                 <div className="uk-position-absolute">
 
-                                                    <a className=" responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">  Jet Ski  </a>
+                                                    <a className=" responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">  Services for Superyachts  </a>
 
                                                 </div>
                                                 <a href=""></a>

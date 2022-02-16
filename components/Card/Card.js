@@ -47,8 +47,7 @@ const Card = ({ data, slug, size }) => {
                         <a href="" > {data.attributes.title}  </a>
                     </Link>
                     </strong>
-                    {data.attributes.new_course === true ? <span className="uk-margin-small-right uk-icon  " ><svg width="40" height="30" viewBox="0 2 20 20" xmlns="http://www.w3.org/2000/svg"><polygon fill="yellow" stroke="grey" strokeWidth="1.01" points="10 2 12.63 7.27 18.5 8.12 14.25 12.22 15.25 18 10 15.27 4.75 18 5.75 12.22 1.5 8.12 7.37 7.27"></polygon></svg></span>
-                        : null}
+
                 </p>
             </div>
         </>

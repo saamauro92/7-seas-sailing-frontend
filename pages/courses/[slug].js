@@ -96,15 +96,7 @@ const CourseSection = ({ course, homepage }) => {
                         <Link href={'/courses/coastal-skipper'} passHref>
                             <p className='uk-margin-top'> Coastal Skipper</p></Link>
                     </div>
-                    <span className="arrow-right"></span>
-                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>
 
-                        <Link href={'/courses/yachtmaster'} passHref>
-                            <p className={course.attributes.title === 'Yachtmaster' ? 'progression_button progression_button_active' : 'progression_button'}> YM</p>
-                        </Link>
-                        <Link href={'/courses/yachtmaster'} passHref>
-                            <p className='uk-margin-top'> Yachtmaster </p></Link>
-                    </div>
 
                 </div>
 
@@ -130,17 +122,7 @@ const CourseSection = ({ course, homepage }) => {
                         </Link>
                     </div>
 
-                    <span className="arrow-right"></span>
-                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>
 
-
-                        <Link href={'/courses/yachtmaster'} passHref>
-                            <p className={course.attributes.title === 'Yachtmaster' ? 'progression_button progression_button_active' : 'progression_button'}> YM</p>
-                        </Link>
-                        <Link href={'/courses/yachtmaster'} passHref>
-                            <p className='uk-margin-top'> Yachtmaster </p>
-                        </Link>
-                    </div>
 
                 </div>
 
@@ -176,16 +158,6 @@ const CourseSection = ({ course, homepage }) => {
                         </Link>
                     </div>
 
-                    <span className="arrow-right"></span>
-                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>
-                        <Link href={'/courses/yachtmaster'} passHref>
-
-                            <p className={course.attributes.title === 'Yachtmaster' ? 'progression_button progression_button_active' : 'progression_button'}> YMM</p>
-                        </Link>
-                        <Link href={'/courses/yachtmaster'} passHref>
-                            <p className='uk-margin-top'> Yachtmaster </p>
-                        </Link>
-                    </div>
 
                 </div>
 

@@ -38,6 +38,10 @@ a {
   transition: 0.3s;
 }
 
+.has-text-primary {
+  font-family: "Futura Md BT", sans-serif;
+}
+
 .hero-action:hover {
   background-color: #fff;
   color: #072251;

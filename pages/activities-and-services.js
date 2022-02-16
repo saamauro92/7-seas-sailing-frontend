@@ -75,8 +75,7 @@ const ActivitiesAndServicesPage = ({ homepage, activities }) => {
                         activitie.attributes.category === "Mile_Building" ?
 
                             <>
-                                <Card data={activitie} slug="activities-and-services" size={"uk-width-1-3"} />
-
+                                <Card data={activitie} slug="activities-and-services" />
 
                             </>
                             : null
@@ -84,7 +83,7 @@ const ActivitiesAndServicesPage = ({ homepage, activities }) => {
 
                     )}
                 </div>
-                <h4 className=' uk-padding   uk-text-bold uk-heading-line ' ><span>Jet Ski </span>  </h4>
+                <h4 className=' uk-padding   uk-text-bold uk-heading-line ' ><span>Services for Superyachts</span>  </h4>
                 <div className="uk-flex uk-flex-around uk-flex-wrap">
 
 
