@@ -243,7 +243,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
                     <li>
 
                       <p className='text-secondary-white '>
-                        Yachtmaster Prep Exam
+                        Yachtmaster Training Scheme
                       </p>
                     </li>
                   </ul>
