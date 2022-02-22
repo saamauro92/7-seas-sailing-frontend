@@ -22,7 +22,7 @@ const Hero = ({ courses, images }) => {
                     <li>
                         <div className="uk-position-cover hero-wrapper uk-animation-kenburns uk-transform-origin-bottom-center  hero_image_wrapper " >
 
-                            <img src={images.background.data.attributes.url} alt="" className="uk-cover  " />
+                            {images.background.data.attributes.url && <img src={images.background.data.attributes.url} alt=" " className="uk-cover  " />}
 
 
 
