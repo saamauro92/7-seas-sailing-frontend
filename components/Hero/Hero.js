@@ -7,19 +7,19 @@ import Image from "next/image"
 import NewsSidebar from "../NewsSidebar/NewsSidebar"
 
 
-const Hero = ({ courses, images }) => {
-
+const Hero = ({ courses, images, latestNews }) => {
 
     return (
         <>
 
-            <div className="uk-position-relative uk-visible-toggle " tabIndex="-1" uk-slideshow="autoplay: false; autoplay-interval: 8000; pause-on-hover: true; animation: push" >
+            <div className="uk-position-relative uk-visible-toggle  " tabIndex="-1" uk-slideshow="autoplay: false; autoplay-interval: 8000; pause-on-hover: true; animation: push" >
 
 
                 <ul className="uk-slideshow-items" uk-height-viewport="offset-top: true; offset-bottom:15">
 
 
                     <li>
+
                         <div className="uk-position-cover hero-wrapper uk-animation-kenburns uk-transform-origin-bottom-center  hero_image_wrapper " >
 
                             {images.background.data.attributes.url && <img src={images.background.data.attributes.url} alt=" " className="uk-cover  " />}
@@ -27,6 +27,7 @@ const Hero = ({ courses, images }) => {
 
 
                         </div>
+
                         <div className=" uk-container uk-container-large uk-flex uk-flex-right uk-padding uk-padding-remove-horizontal ">
 
                             <div className="uk-margin-top uk-padding-large " >
@@ -44,13 +45,18 @@ const Hero = ({ courses, images }) => {
                             </div>
 
                         </div>
+
+
+
+
                     </li>
+
                 </ul>
 
             </div>
 
 
-
+            <NewsSidebar latestNews={latestNews} courses={courses} />
         </>
     )
 }

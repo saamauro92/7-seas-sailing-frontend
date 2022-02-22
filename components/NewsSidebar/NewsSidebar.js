@@ -7,7 +7,7 @@ const NewsSidebar = ({ latestNews, courses }) => {
     return (
         <>
 
-            <div className="news_sidebar_wrapper " >
+            <div className="news_sidebar_wrapper uk-container uk-container-expand " >
 
                 {
 

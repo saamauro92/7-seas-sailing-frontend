@@ -319,19 +319,23 @@ p > strong {
 
 /* news Sidebar/ banner */
 .news_sidebar_wrapper {
-  background-color: rgba(53, 76, 113, 1);
+  background: rgb(0, 42, 116);
+  background: linear-gradient(
+    436deg,
+    rgba(0, 42, 116, 0.7922501764377626) 0%,
+    rgba(70, 94, 136, 1) 100%
+  );
 }
 
 .news_sidebar {
   display: flex;
   align-items: center;
   position: relative;
-  background-color: rgba(53, 76, 113, 1);
   height: 80px;
   gap: 20px;
 }
 .news-banner-title {
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 4px;
   font-weight: 700;
   padding: 3px 10px;
