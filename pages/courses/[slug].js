@@ -226,11 +226,12 @@ const CourseSection = ({ course, homepage }) => {
 
             </div>
 
+            <div className="uk-container ">
 
-            <div className="uk-light uk-background-cover  testimonials_section uk-padding-large uk-padding-remove-horizontal" data-src={testimonials_banner}
-                data-srcset={testimonials_banner} data-uk-img>
 
-                <div className="uk-container">
+                {testimonials_banner && <div className="uk-light uk-background-cover uk-background-blend-overlay  uk-background-secondary  uk-padding-large uk-padding-remove-horizontal" data-src={testimonials_banner}
+                    data-srcset={testimonials_banner} data-uk-img>
+
 
 
                     <h2 className='uk-text-center uk-text-italic  uk-text-bold'>HAPPY CLIENTS ABOUT US</h2>
@@ -276,10 +277,11 @@ const CourseSection = ({ course, homepage }) => {
 
                     </div>
                 </div>
+
+
+
+                }
             </div>
-
-
-
 
 
         </>
