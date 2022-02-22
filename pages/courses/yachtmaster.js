@@ -35,13 +35,13 @@ const Yachtmaster = ({ homepage, data }) => {
                 <h2
                     className="banner-titles  uk-text-bolder  uk-margin-remove uk-padding-remove "
                     uk-toggle="cls: uk-heading-small;  mode: media; media: @s"
-                >  Yachtmaster Exam Prep   </h2>
+                > Yachtmaster Training Scheme  </h2>
                 <h2
                     className="banner-titles  uk-text-bolder  uk-margin-remove uk-padding-remove "
                     uk-toggle="cls: uk-heading-small;  mode: media; media: @s"
 
                 >
-                    The Pinapple of Yachting!
+                    The Pinnacle  of Yachting!
 
 
                 </h2>
@@ -68,7 +68,7 @@ const Yachtmaster = ({ homepage, data }) => {
                         </Link>
                     </li>
                     <li>
-                        <span> Yachtmaster Preparation </span></li>
+                        <span> Yachtmaster Training Scheme  </span></li>
 
 
                 </ul>
@@ -98,12 +98,42 @@ const Yachtmaster = ({ homepage, data }) => {
 
 
                 </div>
+                <div className="uk-section uk-width-expand  uk-padding-remove-vertical uk-margin  " uk-toggle="cls: uk-flex; mode: media; media: @m ">
+
+                    {/*  OCEAN  */}
+                    <div className="uk-section  uk-width-1-1   ">
+                        <ReactMarkdown children={data.attributes.ocean_description} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+
+
+                    </div>
+
+                </div>
+
+                <div className="uk-section uk-width-expand  uk-padding-remove-vertical uk-margin  " uk-toggle="cls: uk-flex; mode: media; media: @m ">
+
+
+                    <div className=" fade-effect uk-width-1-1  uk-padding-small uk-padding-remove-horizontal" uk-scrollspy="cls: uk-animation-fade; delay:200; repeat: false">
+
+                        <ReactMarkdown children={data.attributes.ocean_theory} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+
+                    </div>
+
+
+                    <div className="fade-effect  uk-width-1-1    uk-padding-small " uk-scrollspy="cls: uk-animation-fade; delay:400; repeat: false">
+
+                        <ReactMarkdown children={data.attributes.ocean_practical} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+                    </div>
+
+
+                </div>
+
+
             </div>
 
 
             <div className="uk-container  uk-container-medium  uk-padding-remove uk-margin " uk-toggle="cls: uk-padding-small; mode: media; media: @m">
 
-                <h2 className='uk-padding'> <strong> Requisites and exam format for each level of Yachtmaster qualification:</strong> </h2>
+                <h2 className='uk-padding'> <strong> Prerequisites and exam format for each level of Yachtmaster qualification:</strong> </h2>
 
 
                 <div className="uk-child-width-expand uk-background-muted uk-margin-large-bottom uk-padding-small  " uk-grid uk-scrollspy="cls: uk-animation-fade;  delay: 300; repeat: false">

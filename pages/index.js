@@ -11,6 +11,7 @@ import Card from '../components/Card/Card'
 export async function getStaticProps() {
 
 
+
   const [coursesRes, homepageRes, latestNews] = await Promise.all([
     fetchAPI("/courses", { populate: "*" }),
     fetchAPI("/homepage", {
@@ -73,7 +74,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
 
               <div className="uk-card-body uk-padding-remove-horizontal  ">
-                {courses.map((course, i) =>
+                {courses.sort((a, b) => a.attributes.order > b.attributes.order ? 1 : -1).map((course, i) =>
                   course.attributes.courseCategory === 'Sail' &&
 
                   <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
@@ -90,6 +91,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
                   </Link>
 
                 )}
+
               </div>
 
             </div>
@@ -115,7 +117,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
               </div>
               <div className="uk-card-body ">
 
-                {courses.map((course, i) =>
+                {courses.sort((a, b) => a.attributes.order > b.attributes.order ? 1 : -1).map((course, i) =>
                   course.attributes.courseCategory === 'Motor' &&
 
                   <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
@@ -150,7 +152,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
               <div className="uk-card-body uk-padding-remove-horizontal  ">
 
-                {courses.map((course, i) =>
+                {courses.sort((a, b) => a.attributes.order > b.attributes.order ? 1 : -1).map((course, i) =>
                   course.attributes.courseCategory === 'Power' &&
 
                   <Link href={`/courses/${course.attributes.slug}`} passHref key={i}>
@@ -227,7 +229,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
               <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
 
 
-                <h3 className="uk-card-title text-primary-white"> Yachtmaster  </h3>
+                <h3 className="uk-card-title text-primary-white uk-text-center"> Yachtmaster Training Scheme  </h3>
 
                 {images.yachtmaster.data.attributes.url && <img src={images.yachtmaster.data.attributes.url} width={200} height={250} alt="hero_card_jet" uk-img />}
 
@@ -352,43 +354,45 @@ export default function Home({ courses, homepage, latestNews, activities, testim
                 <li key={i}>
                   <div className="uk-section uk-text-center uk-margin" >
                     <div className="uk-width-expand uk-flex uk-flex-around uk-flex-middle uk-flex-column">
-                      {item.attributes.image.data &&
+                      <div className="uk-margin-left" uk-grid>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" stroke="grey" fill="grey" viewBox="0 0 40 40"><path d="M19.092 6.863c-1.504 2.31-1.779 4.45-1.681 5.688 6.132-.101 5.696 6.449 1.39 6.449-1.83 0-3.801-1.338-3.801-4.275 0-2.724 1.412-5.845 4.092-7.862zm-13 0c-1.504 2.31-1.779 4.45-1.681 5.688 6.132-.101 5.696 6.449 1.39 6.449-1.83 0-3.801-1.338-3.801-4.275 0-2.724 1.412-5.845 4.092-7.862zm16.908-3.863c-6.108 1.206-10 6.584-10 11.725 0 3.97 2.786 6.275 5.801 6.275 2.615 0 5.199-1.797 5.199-4.979 0-2.601-1.905-4.757-4.396-5.149.217-2.004 2.165-4.911 4.38-5.746l-.984-2.126zm-13 0c-6.108 1.206-10 6.584-10 11.725 0 3.97 2.786 6.275 5.801 6.275 2.615 0 5.199-1.797 5.199-4.979 0-2.601-1.905-4.757-4.396-5.149.217-2.004 2.165-4.911 4.38-5.746l-.984-2.126z" /></svg>
 
-                        <div
-                          data-src={item.attributes.image.data.attributes.formats.small.url}
-                          data-srcset={item.attributes.image.data.attributes.formats.small.url}
-                          data-uk-img
-                          className=" uk-background-cover  comment_pic"
-                        >
-
-                        </div>
-
-                      }
+                      </div>
 
 
+                    </div>
+
+                    <div className="uk-grid-medium uk-flex-middle " uk-grid>
+                      <div className="uk-comment-body uk-padding-large   uk-margin-bottom">
+
+                        {item.attributes.description}
+
+                      </div>
+                    </div>
+
+                    <div className='uk-position-bottom'>
                       <h4 className="uk-comment-title uk-margin-remove "><a className="uk-link-reset" href="#"> {item.attributes.name}</a></h4>
                       <div className=" uk-margin-remove"><a className="uk-link-reset" href="#"> From {item.attributes.country}</a></div>
 
                     </div>
-                    <article className="uk-comment   uk-margin-bottom">
-                      <header className="uk-comment-header">
-                        <div className="uk-grid-medium uk-flex-middle " uk-grid>
-                          <div className="uk-comment-body uk-padding-large   uk-margin-bottom">
 
-                            {item.attributes.description}
-                          </div>
-                        </div>
-                      </header>
-
-                    </article>
 
                   </div>
                 </li>
               )
               }
             </ul>
-            <ul className="uk-slider-nav uk-dotnav uk-flex-center "></ul>
+            <ul className="uk-slider-nav uk-margin-top uk-padding uk-dotnav uk-flex-center "></ul>
+            <a className="uk-position-center-left uk-position-small " href="#" uk-slidenav-previous uk-slider-item="previous">
+              <svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#ccc" strokeWidth="1.33" points="13 16 7 10 13 4"></polyline></svg>
 
+
+            </a>
+            <a className="uk-position-center-right uk-position-small " href="#" uk-slidenav-next uk-slider-item="next">
+              <svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#ccc" strokeWidth="1.33" points="7 4 13 10 7 16"></polyline></svg>
+
+
+            </a>
           </div>
         </div>
       </div>

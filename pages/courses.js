@@ -45,7 +45,7 @@ const courses = ({ courses, homepage }) => {
                         <button className="uk-button uk-button-primary" type="button"> Sailing</button>
                         <button className="uk-button uk-button-primary " type="button" id='motor_'> Motor Cruising</button>
                         <button className="uk-button uk-button-primary" type="button">  Power</button>
-                        <button className="uk-button uk-button-primary" type="button"> Yachtmaster Exam Preparation</button>
+                        <button className="uk-button uk-button-primary" type="button">  Yachtmaster Training Scheme </button>
                     </div>
 
                     <ul className="uk-switcher uk-margin ">
@@ -148,7 +148,7 @@ const courses = ({ courses, homepage }) => {
                                     </div>
                                     <p className="uk-text-start">
 
-                                        <strong>Yachtmaster Exam Preparation </strong>
+                                        <strong> Yachtmaster Training Scheme  </strong>
                                     </p>
                                 </div>
                             </div>

@@ -100,7 +100,7 @@ const FooterStyleThree = (data) => {
 
                     <div className="uk-card  uk-card-small">
                         <div className="uk-card   uk-card-body ">
-                            <h3 className="uk-card-title">WE ARE PART OF  </h3>
+                            <h3 className="uk-card-title">PARTNERS  </h3>
                             <ul className="uk-list  ">
                                 <li>
 

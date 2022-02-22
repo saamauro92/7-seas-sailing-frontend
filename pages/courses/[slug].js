@@ -77,6 +77,7 @@ const CourseSection = ({ course, homepage }) => {
                         </Link>
                     </div>
 
+
                     <p className="arrow-right"></p>
                     <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>
 
@@ -103,6 +104,17 @@ const CourseSection = ({ course, homepage }) => {
                     : null
                 }
                 {course.attributes.courseCategory === 'Motor' ? <div className="progresion_wrapper uk-flex uk-flex-baseline uk-flex-center">
+                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>
+                        <Link href={'/courses/helmsman-course'} passHref>
+
+                            <p className={course.attributes.title === 'Helmsman Course ' ? 'progression_button progression_button_active' : 'progression_button'}> HC</p>
+                        </Link>
+                        <Link href={'/courses/helmsman-course'} passHref>
+                            <p className='uk-margin-top'> Helmsman Course     </p>
+                        </Link>
+                    </div>
+                    <span className="arrow-right"></span>
+
                     <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>
                         <Link href={'/courses/day-skipper-practical-motorcruising'} passHref>
 
@@ -131,7 +143,15 @@ const CourseSection = ({ course, homepage }) => {
                 {course.attributes.courseCategory === 'Power' ? <div className="progresion_wrapper uk-flex uk-flex-baseline uk-flex-center">
 
 
-
+                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>
+                        <Link href={'/courses/level-2-powerboat-handling-1'} passHref>
+                            <p className={course.attributes.title === 'Level 2 Powerboat Handling' ? 'progression_button progression_button_active' : 'progression_button'}> LVL2</p>
+                        </Link>
+                        <Link href={'/courses/level-2-powerboat-handling-1'} passHref>
+                            <p className='uk-margin-top'> Level 2 Powerboat Handling </p>
+                        </Link>
+                    </div>
+                    <span className="arrow-right"></span>
                     <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>
                         <Link href={'/courses/tender-operator'} passHref>
                             <p className={course.attributes.title === 'Tender Operator' ? 'progression_button progression_button_active' : 'progression_button'}> TO</p>
@@ -154,21 +174,13 @@ const CourseSection = ({ course, homepage }) => {
                     <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>
 
                         <Link href={'/courses/advanced-powerboat-handling'} passHref>
-                            <p className={course.attributes.title === 'Advanced Powerboat Handling' ? 'progression_button progression_button_active' : 'progression_button'}> ADV</p>
+                            <p className={course.attributes.title === 'Advanced Powerboat ' ? 'progression_button progression_button_active' : 'progression_button'}> ADV</p>
                         </Link>
                         <Link href={'/courses/advanced-powerboat-handling'} passHref>
-                            <p className='uk-margin-top'> Advanced Powerboat Handling </p>
+                            <p className='uk-margin-top'> Advanced Powerboat  </p>
                         </Link>
                     </div>
-                    <span className="arrow-right"></span>
-                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>
-                        <Link href={'/courses/level-2-powerboat-handling-1'} passHref>
-                            <p className={course.attributes.title === 'Level 2 Powerboat Handling' ? 'progression_button progression_button_active' : 'progression_button'}> LVL2</p>
-                        </Link>
-                        <Link href={'/courses/level-2-powerboat-handling-1'} passHref>
-                            <p className='uk-margin-top'> Level 2 Powerboat Handling </p>
-                        </Link>
-                    </div>
+
 
 
                 </div>
@@ -263,14 +275,15 @@ const CourseSection = ({ course, homepage }) => {
                                     </li>
                                 )
                                 }
+
                             </ul>
                             <a className="uk-position-bottom-left uk-position-small " href="#" uk-slidenav-previous uk-slider-item="previous">
-                                <svg width="60" height="80" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#ccc" strokeWidth="1.33" points="13 16 7 10 13 4"></polyline></svg>
+                                <svg width="40" height="40" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#fff" strokeWidth="1.33" points="13 16 7 10 13 4"></polyline></svg>
 
 
                             </a>
                             <a className="uk-position-bottom-right uk-position-small " href="#" uk-slidenav-next uk-slider-item="next">
-                                <svg width="60" height="80" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#ccc" strokeWidth="1.33" points="7 4 13 10 7 16"></polyline></svg>
+                                <svg width="40" height="40" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#ccc" strokeWidth="1.33" points="7 4 13 10 7 16"></polyline></svg>
 
 
                             </a>

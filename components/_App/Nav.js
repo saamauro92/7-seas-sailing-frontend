@@ -149,7 +149,7 @@ function Nav({ courses, activities }) {
 
                                                     <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon   " hidden="">
 
-                                                        {courses.map((course, i) =>
+                                                        {courses.sort((a, b) => a.attributes.order > b.attributes.order ? 1 : -1).map((course, i) =>
                                                             course.attributes.courseCategory === "Sail" ?
 
                                                                 <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
@@ -174,7 +174,7 @@ function Nav({ courses, activities }) {
 
                                                     <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
 
-                                                        {courses.map((course, i) =>
+                                                        {courses.sort((a, b) => a.attributes.order > b.attributes.order ? 1 : -1).map((course, i) =>
                                                             course.attributes.courseCategory === "Motor" ?
 
                                                                 <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
@@ -204,7 +204,7 @@ function Nav({ courses, activities }) {
 
                                                     <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
 
-                                                        {courses.map((course, i) =>
+                                                        {courses.sort((a, b) => a.attributes.order > b.attributes.order ? 1 : -1).map((course, i) =>
                                                             course.attributes.courseCategory === "Power" ?
 
                                                                 <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
@@ -227,7 +227,7 @@ function Nav({ courses, activities }) {
                                                     <div className="uk-nav-divider  ">
 
                                                         <Link href={`/courses/yachtmaster`} >
-                                                            <a href="" className="nav-link responsive-link-font ">  Yachtmaster Exam Preparation </a>
+                                                            <a href="" className="nav-link responsive-link-font ">  Yachtmaster Training Scheme  </a>
                                                         </Link>
 
                                                         <Link href="/courses">
@@ -624,7 +624,7 @@ function Nav({ courses, activities }) {
                                                 <div className="uk-position-absolute  ">
 
                                                     <Link href={`/courses/yachtmaster`} >
-                                                        <a className=" responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">  Yachtmaster Exam Preparation </a>
+                                                        <a className=" responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">  Yachtmaster Training Scheme  </a>
                                                     </Link>
 
                                                     <Link href="/courses">
