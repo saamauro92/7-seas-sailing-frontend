@@ -19,7 +19,7 @@ const CourseSection = ({ course, homepage }) => {
 
     const testimonials_banner = homepage.attributes.hero.testimonials_banner.data.attributes.formats.large.url;
 
-
+    const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
 
     return (
         <>
@@ -28,8 +28,8 @@ const CourseSection = ({ course, homepage }) => {
             <div
                 id="banner"
                 className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
-                data-src={imageUrl}
-                data-srcset={imageUrl}
+                data-src={imgBanner}
+                data-srcset={imgBanner}
                 data-uk-img
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
                 uk-parallax="bgy: -100"
@@ -129,16 +129,9 @@ const CourseSection = ({ course, homepage }) => {
                     : null
                 }
                 {course.attributes.courseCategory === 'Power' ? <div className="progresion_wrapper uk-flex uk-flex-baseline uk-flex-center">
-                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>
-                        <Link href={'/courses/pb-lvl-2-handling'} passHref>
-                            <p className={course.attributes.title === 'PB Lvl. 2 Handling' ? 'progression_button progression_button_active' : 'progression_button'}> LVL2</p>
-                        </Link>
-                        <Link href={'/courses/pb-lvl-2-handling'} passHref>
-                            <p className='uk-margin-top'> PB Lvl. 2 Handling </p>
-                        </Link>
-                    </div>
 
-                    <span className="arrow-right"></span>
+
+
                     <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>
                         <Link href={'/courses/tender-operator'} passHref>
                             <p className={course.attributes.title === 'Tender Operator' ? 'progression_button progression_button_active' : 'progression_button'}> TO</p>
@@ -150,11 +143,30 @@ const CourseSection = ({ course, homepage }) => {
                     <span className="arrow-right"></span>
                     <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>
 
-                        <Link href={'/courses/advanced-powerboat-'} passHref>
-                            <p className={course.attributes.title === 'Advanced Powerboat (CoC)' ? 'progression_button progression_button_active' : 'progression_button'}> ADV</p>
+                        <Link href={'/courses/intermediate-powerboat-1'} passHref>
+                            <p className={course.attributes.title === 'Intermediate Powerboat' ? 'progression_button progression_button_active' : 'progression_button'}> IP</p>
                         </Link>
-                        <Link href={'/courses/advanced-powerboat-'} passHref>
-                            <p className='uk-margin-top'> Advanced Powerboat (CoC) </p>
+                        <Link href={'/courses/intermediate-powerboat-1'} passHref>
+                            <p className='uk-margin-top'> Intermediate Powerboat </p>
+                        </Link>
+                    </div>
+                    <span className="arrow-right"></span>
+                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>
+
+                        <Link href={'/courses/advanced-powerboat-handling'} passHref>
+                            <p className={course.attributes.title === 'Advanced Powerboat Handling' ? 'progression_button progression_button_active' : 'progression_button'}> ADV</p>
+                        </Link>
+                        <Link href={'/courses/advanced-powerboat-handling'} passHref>
+                            <p className='uk-margin-top'> Advanced Powerboat Handling </p>
+                        </Link>
+                    </div>
+                    <span className="arrow-right"></span>
+                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>
+                        <Link href={'/courses/level-2-powerboat-handling-1'} passHref>
+                            <p className={course.attributes.title === 'Level 2 Powerboat Handling' ? 'progression_button progression_button_active' : 'progression_button'}> LVL2</p>
+                        </Link>
+                        <Link href={'/courses/level-2-powerboat-handling-1'} passHref>
+                            <p className='uk-margin-top'> Level 2 Powerboat Handling </p>
                         </Link>
                     </div>
 
@@ -186,7 +198,7 @@ const CourseSection = ({ course, homepage }) => {
                     </div>
                     <div className="uk-card uk-width-2-4  uk-width-1-2@m  uk-padding-medium ">
                         <div
-                            className="  uk-background-cover uk-height-large  "
+                            className="  uk-background-contain  uk-height-large  "
                             data-src={imageUrl}
                             data-srcset={imageUrl}
                             data-uk-img

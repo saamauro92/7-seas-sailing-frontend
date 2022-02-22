@@ -55,7 +55,7 @@ const courses = ({ courses, homepage }) => {
 
 
                                 <h4 className=' uk-padding   uk-text-bold uk-heading-line ' id="sailing" ><span> Sailing Courses </span>  </h4>
-                                <div uk-toggle="cls: uk-flex; mode: media; media: @m ">
+                                <div className="uk-flex uk-flex-wrap" uk-toggle="cls: uk-flex; mode: media; media: @m ">
 
                                     {courses && courses.length > 1 && courses.map((course) =>
                                         course.attributes.courseCategory === 'Sail' ?
@@ -74,7 +74,7 @@ const courses = ({ courses, homepage }) => {
                             <div className=" uk-padding-small ">
 
                                 <h4 className=' uk-padding   uk-text-bold uk-heading-line ' id="motor_courses" ><span> Motor Cruising Courses </span>  </h4>
-                                <div uk-toggle="cls: uk-flex; mode: media; media: @m ">
+                                <div className="uk-flex uk-flex-wrap" uk-toggle="cls: uk-flex; mode: media; media: @m ">
 
                                     {courses && courses.length > 1 && courses.map((course) =>
                                         course.attributes.courseCategory === 'Motor' ?
@@ -93,7 +93,7 @@ const courses = ({ courses, homepage }) => {
                             <div className=" uk-padding-small ">
 
                                 <h4 className=' uk-padding   uk-text-bold uk-heading-line ' id="power_courses"><span>   Power Courses </span>  </h4>
-                                <div uk-toggle="cls: uk-flex; mode: media; media: @m ">
+                                <div className="uk-flex uk-flex-wrap" uk-toggle="cls: uk-flex; mode: media; media: @m ">
 
                                     {courses && courses.length > 1 && courses.map((course) =>
                                         course.attributes.courseCategory === 'Power' ?

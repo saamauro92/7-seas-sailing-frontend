@@ -11,7 +11,7 @@ import ActionSection from '../../components/actionSection/ActionSection';
 
 const activitieSection = ({ activitie, homepage }) => {
     const imageUrl = activitie.attributes.image.data.attributes.url
-
+    const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
     return (
         <>
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={activitie.attributes.title} />}
@@ -19,8 +19,8 @@ const activitieSection = ({ activitie, homepage }) => {
             <div
                 id="banner"
                 className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
-                data-src={imageUrl}
-                data-srcset={imageUrl}
+                data-src={imgBanner}
+                data-srcset={imgBanner}
                 data-uk-img
                 uk-toggle="cls: uk-height-medium; mode: media; media: @l"
                 uk-parallax="bgy: -100"
@@ -56,7 +56,10 @@ const activitieSection = ({ activitie, homepage }) => {
 
                     }
                     <li>
-                        <span>{activitie.attributes.title}</span></li>
+                        <span>{activitie.attributes.title.length > 12 ? activitie.attributes.title.slice(0, 30) + '...' : activitie.attributes.title}    </span></li>
+
+
+
 
                 </ul>
 
@@ -72,7 +75,7 @@ const activitieSection = ({ activitie, homepage }) => {
 
                     <div className="uk-card uk-width-2-4  uk-width-1-2@m  ">
                         <div
-                            className=" uk-background-cover uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
+                            className="  uk-background-contain   uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                             data-src={imageUrl}
                             data-srcset={imageUrl}
                             data-uk-img
