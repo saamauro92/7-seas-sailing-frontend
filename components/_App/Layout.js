@@ -21,7 +21,7 @@ const Layout = ({ children, data, courses, activities, homepage, }) => {
                 {/* Required meta tags */}
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+                <link rel="icon" href="/favicon.ico" />
                 <title>7 Seas Sailing</title>
             </Head>
 
