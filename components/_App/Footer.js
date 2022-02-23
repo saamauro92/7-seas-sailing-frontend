@@ -106,28 +106,14 @@ const FooterStyleThree = (data) => {
 
 
 
-                                    <a href="https://www.rya.org.uk/" target='_blank' rel="noreferrer"> RYA Training Centre</a>
+                                    <a href="https://www.tailwindyachting.com/" target='_blank' rel="noreferrer"> Tailwind Yachting</a>
 
                                 </li>
                                 <li>
 
 
-                                    <a href="https://www.exadasyachts.com" target='_blank' rel="noreferrer">Exadas Yachts</a>
-
-
-                                </li>
-                                <li>
-
-
-
-                                    <a href="https://athenian-yachts.gr/en/" target='_blank' rel="noreferrer">Athenian Yachts</a>
-
-
-                                </li>
-                                <li>
-
-
-                                    <a href="https://technohull.com/" target='_blank' rel="noreferrer">Technohull</a>
+                                    <a href="http://www.cosmostraining.gr/" target='_blank' rel="noreferrer">
+                                        Cosmos Nautical Training Center</a>
 
 
                                 </li>
@@ -135,10 +121,11 @@ const FooterStyleThree = (data) => {
 
 
 
-                                    <a href="https://www.cosmostraining.gr/" target='_blank' rel="noreferrer"> Cosmos Training</a>
+                                    <a href="hwww.divingstore.gr" target='_blank' rel="noreferrer">Diving Store</a>
 
 
                                 </li>
+
 
 
                             </ul>
