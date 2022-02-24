@@ -219,41 +219,34 @@ export default function Home({ courses, homepage, latestNews, activities, testim
               </div>
 
             </div>
+            <div className="uk-card uk-flex uk-flex-start uk-flex-column">
+              <div className="uk-flex uk-flex-column  uk-flex-start ">
+
+                <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
+                  <h3 className="uk-card-title text-primary-white">Yachtmaster Training Scheme</h3>
+
+                  {images.yachtmaster.data.attributes.url && <img src={images.yachtmaster.data.attributes.url} width={200} height={250} alt="hero_card_jet" uk-img />}
+
+                </div>
 
 
+                <div className="uk-card-body uk-padding-remove-horizontal ">
 
+                  <Link href={`/courses/yachtmaster`} passHref>
+                    <ul>
+                      <li>
 
-
-            <div className="uk-card uk-width-medium yachtmaster_card_landing">
-
-              <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
-
-
-                <h3 className="uk-card-title text-primary-white uk-text-center"> Yachtmaster Training Scheme  </h3>
-
-                {images.yachtmaster.data.attributes.url && <img src={images.yachtmaster.data.attributes.url} width={200} height={250} alt="hero_card_jet" uk-img />}
+                        <p className='text-secondary-white '>
+                          Yachtmaster Training Scheme
+                        </p>
+                      </li>
+                    </ul>
+                  </Link>
+                </div>
 
               </div>
-
-
-              <div className="uk-card-body uk-padding-remove-horizontal ">
-
-                <Link href={`/courses/yachtmaster`} passHref>
-                  <ul>
-                    <li>
-
-                      <p className='text-secondary-white '>
-                        Yachtmaster Training Scheme
-                      </p>
-                    </li>
-                  </ul>
-                </Link>
-              </div>
-
-
-
-
             </div>
+
 
 
 

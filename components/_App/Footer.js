@@ -121,7 +121,7 @@ const FooterStyleThree = (data) => {
 
 
 
-                                    <a href="hwww.divingstore.gr" target='_blank' rel="noreferrer">Diving Store</a>
+                                    <a href="https://www.divingstore.gr/" target='_blank' rel="noreferrer">Diving Store</a>
 
 
                                 </li>

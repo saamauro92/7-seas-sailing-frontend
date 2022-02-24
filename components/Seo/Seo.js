@@ -5,11 +5,11 @@ const SEO = ({ data, metaTitle }) => {
     return (
         <Head>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-            <title>{metaTitle}  7 Seas - Yachting School</title>
+            <title>{metaTitle}  Seven Seas School of Yachting School</title>
             <meta name="description" content={data.metaDescription} />
-            <meta property="og:site_name" content={data.metaTitle + ' 7 Seas - Yachting School'} />
+            <meta property="og:site_name" content={data.metaTitle + ' Seven Seas School of Yachting School'} />
             <meta property="og:type" content="article" />
-            <meta property="og:title" content={data.metaTitle + ' 7 Seas - Yachting School'} />
+            <meta property="og:title" content={data.metaTitle + ' Seven Seas School of Yachting School'} />
             <meta property="og:description" content={data.metaDescription} />
             {/* <meta property="og:image" content={data.shareImage.media.url} /> */}
             <meta property="og:locale" content="en_US" />

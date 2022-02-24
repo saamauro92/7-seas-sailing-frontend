@@ -256,7 +256,7 @@ const AboutUsPage = ({ team, about, homepage }) => {
                 <div className="uk-container uk-container-medium uk-flex uk-flex-center ">
 
                     <div className="uk-container uk-container-large uk-slider-container-offset uk-padding  " uk-slider="finite: true" uk-slideshow uk-scrollspy="cls: uk-animation-slide-right; repeat: false" >
-                        <h1 className='uk-text-center' id="club">The 7 Seas Club</h1>
+                        <h1 className='uk-text-center' id="club">The Seven Seas Club</h1>
 
                         <ReactMarkdown className=' uk-padding-large'>
                             {about.attributes.club.description}
