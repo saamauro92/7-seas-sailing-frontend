@@ -343,7 +343,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
               {testimonials.length > 0 && testimonials.map((item, i) =>
 
-                item.attributes.image.data &&
+
                 <li key={i}>
                   <div className="uk-section uk-text-center uk-margin" >
                     <div className="uk-width-expand uk-flex uk-flex-around uk-flex-middle uk-flex-column">
