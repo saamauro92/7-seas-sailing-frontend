@@ -54,7 +54,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
 
         <div className="uk-section " id="courses_section_banner">
-          <div className="uk-container uk-container-large uk-flex uk-flex-around uk-flex-wrap  " uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: false">
+          <div className="uk-container uk-container-large uk-flex uk-flex-around uk-flex-wrap  " uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: false" >
 
             <div className="uk-card  uk-flex uk-flex-start uk-flex-column">
 
@@ -177,7 +177,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
 
         </div>
-        <div className="uk-section  section_banner " uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 400; repeat: false">
+        <div className="uk-section  section_banner " uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 400; repeat: false" >
 
           <div className="uk-container uk-container-large uk-flex uk-flex-around uk-flex-start uk-flex-wrap">
 
