@@ -53,7 +53,7 @@ const Yachtmaster = ({ homepage, data }) => {
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle='Yachtmaster preparation' />}
             <div className="uk-container uk-container-medium  uk-animation-slide-bottom  uk-background-muted" uk-toggle="cls: uk-padding-small; mode: media; media: @m">
 
-                <ul className="uk-breadcrumb uk-width-1-3@m uk-heading-medium  uk-text-bolder  uk-margin-remove uk-padding-small">
+                <ul className="uk-breadcrumb uk-width-1-3@m  uk-text-bolder  uk-margin-remove uk-padding-small">
                     <li>
                         <Link href={"/"}>
                             <a href="">Home</a>
@@ -107,7 +107,6 @@ const Yachtmaster = ({ homepage, data }) => {
 
 
                         <ReactMarkdown children={data.attributes.ocean_description} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
-
 
 
 

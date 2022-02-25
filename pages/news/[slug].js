@@ -33,7 +33,7 @@ const newsSection = ({ item, homepage }) => {
 
             </div>
             <div className="uk-container uk-container-large uk-padding-medium">
-                <ul className="uk-breadcrumb uk-width-1-2@m uk-width-1-2@l banner-titles uk-heading-medium  uk-text-bolder uk-margin-remove uk-padding-small">
+                <ul className="uk-breadcrumb uk-width-1-2@m uk-width-1-2@l banner-titles  uk-text-bolder uk-margin-remove uk-padding-small">
                     <li>
                         <Link href={"/"}>
                             <a href="">Home</a>

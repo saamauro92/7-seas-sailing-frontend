@@ -43,7 +43,7 @@ const CourseSection = ({ course, homepage }) => {
 
 
             <div className="uk-container uk-container-medium uk-padding-medium uk-animation-slide-bottom uk-background-muted" >
-                <ul className="uk-breadcrumb uk-width-1-2@m uk-width-1-2@l banner-titles uk-heading-medium  uk-text-bolder  uk-margin-remove uk-padding-small">
+                <ul className="uk-breadcrumb uk-width-1-2@m uk-width-1-2@l banner-titles uk-text-bolder  uk-margin-remove uk-padding-small">
                     <li>
                         <Link href={"/"}>
                             <a href="">Home</a>
@@ -104,7 +104,7 @@ const CourseSection = ({ course, homepage }) => {
                     : null
                 }
                 {course.attributes.courseCategory === 'Motor' ? <div className="progresion_wrapper uk-flex uk-flex-baseline uk-flex-center">
-                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>
+                    <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer '>
                         <Link href={'/courses/helmsman-course'} passHref>
 
                             <p className={course.attributes.title === 'Helmsman Course ' ? 'progression_button progression_button_active' : 'progression_button'}> HC</p>
