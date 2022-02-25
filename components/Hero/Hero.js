@@ -55,7 +55,6 @@ const Hero = ({ courses, images, latestNews }) => {
 
             </div>
 
-
             <NewsSidebar latestNews={latestNews} courses={courses} />
         </>
     )

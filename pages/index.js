@@ -49,9 +49,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
         {homepage && homepage.attributes.seo && <SEO data={homepage.attributes.seo} />}
 
-
         <Hero courses={courses} images={homepage.attributes.hero} latestNews={latestNews} />
-
 
         <div className="uk-section " id="courses_section_banner">
           <div className="uk-container uk-container-large uk-flex uk-flex-around uk-flex-wrap  " uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: false" >

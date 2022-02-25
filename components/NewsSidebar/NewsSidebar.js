@@ -16,7 +16,7 @@ const NewsSidebar = ({ latestNews, courses }) => {
                         {latestNews && latestNews.length > 0 &&
 
                             < >
-                                <span className="news-banner-title">News </span>
+                                <span className="news-banner-title ">News </span>
 
                                 <Link href={`/news/${latestNews[latestNews.length - 1].attributes.slug}`} passHref>
 
