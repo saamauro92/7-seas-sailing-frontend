@@ -50,7 +50,7 @@ const Yachtmaster = ({ homepage, data }) => {
             </div>
 
 
-            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle='Yachtmaster preparation' />}
+            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle='Yachtmaster Training Scheme' />}
             <div className="uk-container uk-container-medium  uk-animation-slide-bottom  uk-background-muted" uk-toggle="cls: uk-padding-small; mode: media; media: @m">
 
                 <ul className="uk-breadcrumb uk-width-1-3@m  uk-text-bolder  uk-margin-remove uk-padding-small">
