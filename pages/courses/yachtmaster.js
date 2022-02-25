@@ -92,7 +92,6 @@ const Yachtmaster = ({ homepage, data }) => {
                     <div className="fade-effect      uk-padding-small " uk-scrollspy="cls: uk-animation-fade; delay:400; repeat: false">
 
                         <ReactMarkdown children={data.attributes.practical} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
-                        <img src={data.attributes.image_three.data.attributes.formats.medium.url} className='uk-align-center uk-height-large uk-padding-small uk-align-left@m uk-margin-remove-adjacent' alt="" uk-image />
                     </div>
 
 
@@ -101,8 +100,15 @@ const Yachtmaster = ({ homepage, data }) => {
                 <div className="uk-section uk-width-expand  uk-padding-remove-vertical uk-margin  " uk-toggle="cls: uk-flex; mode: media; media: @m ">
 
                     {/*  OCEAN  */}
-                    <div className="uk-section  uk-width-1-1   ">
+                    <div className="uk-section uk-width-1-1   " uk-grid>
+
+
+                        <img src={data.attributes.image_three.data.attributes.formats.medium.url} className='uk-align-right@m uk-height-large uk-padding-small uk-align-left@m uk-margin-remove-adjacent' alt="" uk-image />
+
+
                         <ReactMarkdown children={data.attributes.ocean_description} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
+
+
 
 
                     </div>
