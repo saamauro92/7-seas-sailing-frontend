@@ -32,11 +32,11 @@ const Yachtmaster = ({ homepage, data }) => {
                 uk-parallax="bgy: -100"
             >
 
-                <h2
+                <h4
                     className="banner-titles  uk-text-bolder  uk-margin-remove uk-padding-remove "
                     uk-toggle="cls: uk-heading-small;  mode: media; media: @s"
-                > Yachtmaster Training Scheme  </h2>
-                <h2
+                > Yachtmaster Training Scheme  </h4>
+                <h4
                     className="banner-titles  uk-text-bolder  uk-margin-remove uk-padding-remove "
                     uk-toggle="cls: uk-heading-small;  mode: media; media: @s"
 
@@ -44,7 +44,7 @@ const Yachtmaster = ({ homepage, data }) => {
                     The Pinnacle  of Yachting!
 
 
-                </h2>
+                </h4>
 
 
             </div>
@@ -68,12 +68,21 @@ const Yachtmaster = ({ homepage, data }) => {
                         </Link>
                     </li>
                     <li>
-                        <span> Yachtmaster Training Scheme  </span></li>
+                        <span> ... </span></li>
 
 
                 </ul>
                 <div className="uk-section  ">
-                    <img src={data.attributes.image.data.attributes.formats.medium.url} className='uk-align-center uk-height-large uk-padding-small uk-align-right@m uk-margin-remove-adjacent' alt="" uk-image />
+                    <img src={data.attributes.image.data.attributes.formats.medium.url} className='uk-align-center  uk-height-large uk-padding-small uk-align-right@m uk-margin-remove-adjacent  uk-visible@m' alt="" uk-image />
+                    <div
+                        className="  uk-background-cover uk-align-center   uk-height-large  uk-hidden@m"
+                        data-src={data.attributes.image.data.attributes.formats.medium.url}
+                        data-srcset={data.attributes.image.data.attributes.formats.medium.url}
+                        data-uk-img
+
+
+                    ></div>
+
                     <ReactMarkdown children={data.attributes.description} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
 
 
@@ -103,8 +112,15 @@ const Yachtmaster = ({ homepage, data }) => {
                     <div className="uk-section uk-width-1-1   " uk-grid>
 
 
-                        <img src={data.attributes.image_three.data.attributes.formats.medium.url} className='uk-align-right@m uk-height-large uk-padding-small uk-align-left@m uk-margin-remove-adjacent' alt="" uk-image />
+                        <img src={data.attributes.image_three.data.attributes.formats.medium.url} className='uk-align-right@m uk-height-large uk-padding-small uk-align-left@m uk-margin-remove-adjacent  uk-visible@m' alt="" uk-image />
+                        <div
+                            className="  uk-background-cover uk-align-center   uk-height-large  uk-hidden@m"
+                            data-src={data.attributes.image_three.data.attributes.formats.medium.url}
+                            data-srcset={data.attributes.image_three.data.attributes.formats.medium.url}
+                            data-uk-img
 
+
+                        ></div>
 
                         <ReactMarkdown children={data.attributes.ocean_description} linkTarget="_blank" remarkPlugins={[remarkGfm]} />
 
