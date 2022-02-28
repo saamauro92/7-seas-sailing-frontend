@@ -173,10 +173,10 @@ const CourseSection = ({ course, homepage }) => {
                     <span className="arrow-right"></span>
                     <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>
 
-                        <Link href={'/courses/advanced-powerboat-handling'} passHref>
+                        <Link href={'/courses/advanced-powerboat'} passHref>
                             <p className={course.attributes.title === 'Advanced Powerboat ' ? 'progression_button progression_button_active' : 'progression_button'}> ADV</p>
                         </Link>
-                        <Link href={'/courses/advanced-powerboat-handling'} passHref>
+                        <Link href={'/courses/advanced-powerboat'} passHref>
                             <p className='uk-margin-top'> Advanced Powerboat  </p>
                         </Link>
                     </div>
