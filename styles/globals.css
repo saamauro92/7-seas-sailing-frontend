@@ -129,6 +129,13 @@ a {
   transform: translateY(-50%) rotate(-45deg);
 }
 
+/* Card Component */
+
+.card-overlay {
+  background: #fff;
+  opacity: 0.8;
+}
+
 /* navbar */
 
 .uk-navbar-container {

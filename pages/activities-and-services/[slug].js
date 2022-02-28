@@ -56,7 +56,7 @@ const activitieSection = ({ activitie, homepage }) => {
 
                     }
                     <li>
-                        <span>{activitie.attributes.title.length > 12 ? activitie.attributes.title.slice(0, 30) + '...' : activitie.attributes.title}    </span></li>
+                        <span>{activitie.attributes.title.length > 12 ? '...' : activitie.attributes.title}    </span></li>
 
 
 

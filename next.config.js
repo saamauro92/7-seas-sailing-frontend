@@ -1,8 +1,7 @@
 /* 
-
 const nextConfig = {
   images: {
-    loader: "defaul",
+    loader: "default",
     domains: [process.env.NEXT_IMAGES_DOMAIN],
     hostname: [process.env.NEXT_IMAGES_DOMAIN],
     deviceSizes: [640, 768, 1024, 1280, 1600],
@@ -21,8 +20,8 @@ const optimizedImages = require('next-optimized-images');
 
 
 
-
 const nextConfig = {
+  trailingSlash: true,
   webpack: (config, options) => {
     return config;
   },
@@ -33,6 +32,7 @@ const nextConfig = {
   images: {
     disableStaticImages: true,
   },
+
 };
 
 const config = withPlugins(

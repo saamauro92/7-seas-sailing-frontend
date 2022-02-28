@@ -39,11 +39,11 @@ const Card = ({ data, slug, size }) => {
 
                         </div>}
 
-                    <div className="uk-position-cover uk-overlay uk-overlay-primary uk-hidden-hover cursor-pointer uk-flex uk-flex-center uk-flex-middle" >
+                    <div className="uk-position-cover card-overlay uk-overlay  uk-hidden-hover cursor-pointer uk-flex uk-flex-center uk-flex-middle" >
 
 
                         <Link href={`/${slug}/${data.attributes.slug}`} passHref>
-                            <a href="" className="uk-icon" >
+                            <a href="" className="uk-icon uk-position-top-left uk-padding-small" >
                                 <svg width="40" height="40" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="10" r="2"></circle><circle cx="10" cy="10" r="2"></circle><circle cx="17" cy="10" r="2"></circle></svg>
 
                             </a>
