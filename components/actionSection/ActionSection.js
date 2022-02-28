@@ -11,7 +11,7 @@ function ActionSection({ children }) {
 
                     <div className="uk-section" >
                         <h2> <strong> For info and bookings</strong></h2>
-                        <Link href="https://7seassailing.com/booking-form.html" passHref>
+                        <Link href="/contact" passHref>
                             <button className='uk-button uk-button-danger'> {children} </button>
                         </Link>
 

@@ -88,7 +88,7 @@ const contact = ({ data, homepage }) => {
 
                 <div className="uk-section uk-text-center">
 
-                    <Link href="https://7seassailing.com/booking-form.html" passHref>
+                    <Link href="/contact" passHref>
 
                         <button className='uk-button uk-button-secondary'>   Send us a message</button>
                     </Link>
