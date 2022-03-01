@@ -73,7 +73,16 @@ const Yachtmaster = ({ homepage, data }) => {
 
                 </ul>
                 <div className="uk-section  ">
-                    <img src={data.attributes.image.data.attributes.formats.medium.url} className='uk-align-center  uk-height-large uk-padding-small uk-align-right@m uk-margin-remove-adjacent  uk-visible@m' alt="" uk-image />
+                    <div className="uk-section uk-width-xlarge  uk-align-right@m uk-visible@ " uk-grid>
+                        <div
+                            className="  uk-background-cover uk-align-center   uk-height-large uk-visible@m "
+                            data-src={data.attributes.image.data.attributes.formats.medium.url}
+                            data-srcset={data.attributes.image.data.attributes.formats.medium.url}
+                            data-uk-img
+
+
+                        ></div>
+                    </div>
                     <div
                         className="  uk-background-cover uk-align-center   uk-height-large  uk-hidden@m"
                         data-src={data.attributes.image.data.attributes.formats.medium.url}
@@ -110,9 +119,18 @@ const Yachtmaster = ({ homepage, data }) => {
 
                     {/*  OCEAN  */}
                     <div className="uk-section uk-width-1-1   " uk-grid>
+                        <div className="uk-section uk-width-1-2  uk-align-right@m uk-visible@ " uk-grid>
+                            <div
+                                className="  uk-background-cover uk-align-center   uk-height-large  uk-visible@m"
+                                data-src={data.attributes.image_three.data.attributes.formats.medium.url}
+                                data-srcset={data.attributes.image_three.data.attributes.formats.medium.url}
+                                data-uk-img
 
 
-                        <img src={data.attributes.image_three.data.attributes.formats.medium.url} className='uk-align-right@m uk-height-large uk-padding-small uk-align-left@m uk-margin-remove-adjacent  uk-visible@m' alt="" uk-image />
+                            ></div>
+
+                        </div>
+
                         <div
                             className="  uk-background-cover uk-align-center   uk-height-large  uk-hidden@m"
                             data-src={data.attributes.image_three.data.attributes.formats.medium.url}

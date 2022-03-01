@@ -2,7 +2,7 @@
   "name": "7ss-frontend",
   "description": "RYA yachting school based in Athens",
   "engines": {
-    "node": "16.14.0"
+    "node": "14.15.0" 
   },
   "private": true,
   "scripts": {

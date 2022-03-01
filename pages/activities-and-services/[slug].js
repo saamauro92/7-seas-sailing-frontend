@@ -44,7 +44,7 @@ const activitieSection = ({ activitie, homepage }) => {
                     <li >
 
 
-                        <Link href={"/news"}>
+                        <Link href={"/activities-and-services"}>
                             <a href="">Activities {"&"} Services</a>
                         </Link>
                     </li>
