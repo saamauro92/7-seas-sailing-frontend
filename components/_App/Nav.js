@@ -50,17 +50,17 @@ function Nav({ courses, activities }) {
 
 
                         <Link href="/">
-                            <a className="uk-navbar-item uk-logo" href="" >
+                            <a className="uk-navbar-item uk-logo" >
 
 
-                                <img src={logo} width="217" height="64" alt="logo" />
+                                <img src={logo} width="217" height="64" alt="logo" uk-img />
 
                             </a>
                         </Link>
                         <div className="uk-visible@s">
                             <Link href="/rya">
                                 <a href="">
-                                    <img src={rya} alt="logo" height={94} width={117} />
+                                    <img src={rya} alt="logo" height={94} width={117} uk-img />
 
                                 </a>
                             </Link>
@@ -75,14 +75,14 @@ function Nav({ courses, activities }) {
                             <li className="nav-item">
                                 <Link href="/aboutus" activeClassName="active">
 
-                                    <a className="nav-link" href="">
+                                    <a className="nav-link">
                                         About Us</a>
                                 </Link>
                                 <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2" style={{ "left": "0px", "top": "80px" }}>
                                     <ul className="uk-nav uk-navbar-dropdown-nav uk-nav-divider ">
                                         <Link href="/aboutus/#team" >
                                             <li className="uk-parent">
-                                                <a className="responsive-link-font nav-link" href="#team " data-uk-scroll>
+                                                <a className="responsive-link-font nav-link" href="#team " uk-scroll>
                                                     Our team
                                                 </a>
 
@@ -90,7 +90,7 @@ function Nav({ courses, activities }) {
                                         </Link>
                                         <Link href="/aboutus/#club" >
                                             <li className="uk-parent">
-                                                <a href="#club " className="nav-link responsive-link-font " data-uk-scroll>
+                                                <a href="#club " className="nav-link responsive-link-font " uk-scroll>
                                                     The Seven Seas Club
                                                 </a>
 
@@ -98,7 +98,7 @@ function Nav({ courses, activities }) {
                                         </Link>
                                         <Link href="/aboutus/#sailing_area" activeClassName="active">
                                             <li className="uk-parent">
-                                                <a href="#sailing_area" className="nav-link responsive-link-font " data-uk-scroll>
+                                                <a href="#sailing_area" className="nav-link responsive-link-font " uk-scroll>
                                                     Sailing Area
                                                 </a>
 
@@ -106,7 +106,7 @@ function Nav({ courses, activities }) {
                                         </Link>
                                         <Link href="/aboutus/#rya_section" activeClassName="active">
                                             <li className="uk-parent">
-                                                <a href="#rya_section " className="nav-link responsive-link-font " data-uk-scroll>
+                                                <a href="#rya_section " className="nav-link responsive-link-font " uk-scroll>
                                                     About the RYA
                                                 </a>
 
@@ -114,7 +114,7 @@ function Nav({ courses, activities }) {
                                         </Link>
                                         <Link href="/aboutus/#testimonials" activeClassName="active">
                                             <li className="uk-parent">
-                                                <a href="#testimonials " className="nav-link responsive-link-font " data-uk-scroll>
+                                                <a href="#testimonials " className="nav-link responsive-link-font " uk-scroll>
                                                     Testimonials
                                                 </a>
 
@@ -128,7 +128,7 @@ function Nav({ courses, activities }) {
 
 
                                 <Link href="/courses" activeClassName="active">
-                                    <a className="nav-link  " href="">Courses</a>
+                                    <a className="nav-link  ">Courses</a>
 
                                 </Link>
                                 <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2 " style={{ "left": "0px", "top": "80px" }}>
@@ -167,7 +167,7 @@ function Nav({ courses, activities }) {
 
 
                                                     <Link href="/courses" >
-                                                        <a className="nav-link responsive-link-font " href="">Motor</a>
+                                                        <a className="nav-link responsive-link-font " >Motor</a>
                                                     </Link>
 
 
@@ -179,7 +179,7 @@ function Nav({ courses, activities }) {
 
                                                                 <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
                                                                     <Link href={`/courses/${course.attributes.slug}`} >
-                                                                        <a href="">  {course.attributes.title} </a>
+                                                                        <a href=" ">  {course.attributes.title} </a>
                                                                     </Link></li>
 
                                                                 : null
@@ -194,7 +194,7 @@ function Nav({ courses, activities }) {
 
 
                                                     <Link href="/courses"  >
-                                                        <a className="nav-link responsive-link-font " href="">Power</a>
+                                                        <a className="nav-link responsive-link-font " >Power</a>
                                                     </Link>
 
 
@@ -231,7 +231,7 @@ function Nav({ courses, activities }) {
                                                         </Link>
 
                                                         <Link href="/courses">
-                                                            <a className="nav-link responsive-link-font " href="" >{ }</a>
+                                                            <a className="nav-link responsive-link-font " >{ }</a>
                                                         </Link>
 
 
@@ -256,7 +256,7 @@ function Nav({ courses, activities }) {
                             <li>
                                 <Link href="/activities-and-services" activeClassName="active">
 
-                                    <a className="nav-link " href=""> Activities {"&"} Services</a>
+                                    <a className="nav-link "> Activities {"&"} Services</a>
                                 </Link>
                                 <div className="uk-navbar-dropdown uk-navbar-dropdown-bottom-left uk-navbar-dropdown-width-2 " style={{ "left": "0px", "top": "80px" }}>
 
@@ -271,7 +271,7 @@ function Nav({ courses, activities }) {
                                                         null :
                                                         < li className={i === 0 ? "uk-flex uk-flex-start" : "uk-flex uk-flex-start uk-nav-divider"} key={i} >
                                                             <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
-                                                                <a className="nav-link responsive-link-font " href="">  {activitie.attributes.title} </a>
+                                                                <a className="nav-link responsive-link-font ">  {activitie.attributes.title} </a>
                                                             </Link></li>
 
 
@@ -291,7 +291,7 @@ function Nav({ courses, activities }) {
 
                                                                 < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >
                                                                     <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
-                                                                        <a href="" >  {activitie.attributes.title} </a>
+                                                                        <a  >  {activitie.attributes.title} </a>
                                                                     </Link></li>
 
                                                                 : null
@@ -315,7 +315,7 @@ function Nav({ courses, activities }) {
 
                                                                 < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >
                                                                     <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
-                                                                        <a href="" >  {activitie.attributes.title} </a>
+                                                                        <a  >  {activitie.attributes.title} </a>
                                                                     </Link></li>
 
                                                                 : null
@@ -340,7 +340,7 @@ function Nav({ courses, activities }) {
                             <li>
                                 <Link href="/news" activeClassName="active" >
 
-                                    <a className={currentRoute === "/news" ? 'active' : ''} href="">  Blog</a>
+                                    <a className={currentRoute === "/news" ? 'active' : ''}>  Blog</a>
                                 </Link>
 
                             </li>
@@ -348,7 +348,7 @@ function Nav({ courses, activities }) {
                             <li>
                                 <Link href="/contactus" activeClassName="active" >
 
-                                    <a className={currentRoute === "/contactus" ? 'active' : ''} href="">  Contact us</a>
+                                    <a className={currentRoute === "/contactus" ? 'active' : ''}>  Contact us</a>
                                 </Link>
 
                             </li>
@@ -374,14 +374,14 @@ function Nav({ courses, activities }) {
 
                 <a className="uk-navbar-item uk-logo  " href="">
                     <Link href="/">
-                        <img src={logo} alt="logo" width={217} height={64} className="uk-visible@s" />{/* big ss logo */}
+                        <img src={logo} alt="logo" width={217} height={64} uk-img className="uk-visible@s" />{/* big ss logo */}
 
 
                     </Link>
                 </a>
                 <a href="" >
                     <Link href="/" >
-                        <img src={logo} alt="logo" width={140} height={68} className="uk-hidden@s  " />{/* small ss logo */}
+                        <img src={logo} alt="logo" width={140} height={68} uk-img className="uk-hidden@s  " />{/* small ss logo */}
                     </Link>
 
                 </a>
@@ -389,12 +389,12 @@ function Nav({ courses, activities }) {
 
                 <Link href="/rya">
                     <a href="">
-                        <img src={rya} alt="rya-logo" width={97} height={64} className="uk-visible@s" />
+                        <img src={rya} alt="rya-logo" width={97} height={64} uk-img className="uk-visible@s" />
                     </a>
                 </Link>
                 <a href="" className="uk-margin-left  ">
                     <Link href="/rya">
-                        <img src={rya} alt="rya-logo" width={74} height={60} className="uk-hidden@s " />
+                        <img src={rya} alt="rya-logo" width={74} height={60} uk-img className="uk-hidden@s " />
                     </Link>
                 </a>
             </div>
@@ -409,7 +409,7 @@ function Nav({ courses, activities }) {
 
                         <li>
 
-                            <a className="uk-navbar-toggle uk-icon uk-navbar-toggle-icon" uk-toggle="target: #offcanvas-nav-primary" href="">
+                            <a className="uk-navbar-toggle uk-icon uk-navbar-toggle-icon" uk-toggle="target: #offcanvas-nav-primary" >
                                 <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <rect y="9" width="20" height="2"></rect><rect y="3" width="20" height="2">
                                     </rect><rect y="15" width="20" height="2">
@@ -430,7 +430,7 @@ function Nav({ courses, activities }) {
                                     <Link href="/">
                                         <a className="uk-navbar-item uk-logo" uk-toggle="target: #offcanvas-nav-primary" href="">
 
-                                            <img src={logo} alt="logo" width={140} height={68} />
+                                            <img src={logo} alt="logo" width={140} height={68} uk-img />
                                         </a>
                                     </Link>
 
@@ -438,7 +438,7 @@ function Nav({ courses, activities }) {
                                         <a className="uk-navbar-item uk-logo" uk-toggle="target: #offcanvas-nav-primary" href="">
 
 
-                                            <img src={rya} alt="rya-logo" width={74} height={60} />
+                                            <img src={rya} alt="rya-logo" width={74} height={60} uk-img />
                                         </a>
                                     </Link>
 
@@ -454,7 +454,7 @@ function Nav({ courses, activities }) {
                                     <li className="uk-parent ">
                                         <div className=" uk-position-absolute ">
                                             <Link href="/aboutus">
-                                                <a className="nav-link responsive-link-font uk-margin" uk-toggle="target: #offcanvas-nav-primary" href="">About us</a>
+                                                <a className="nav-link responsive-link-font uk-margin" uk-toggle="target: #offcanvas-nav-primary">About us</a>
                                             </Link>
 
                                         </div>
@@ -466,7 +466,7 @@ function Nav({ courses, activities }) {
                                             <li className="uk-margin  ">
 
                                                 <Link href="/aboutus#team">
-                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary" href="">The Team</a>
+                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">The Team</a>
                                                 </Link>
 
 
@@ -476,7 +476,7 @@ function Nav({ courses, activities }) {
 
 
                                                 <Link href="/aboutus#club">
-                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary" href="">The Seven Seas Club</a>
+                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">The Seven Seas Club</a>
                                                 </Link>
 
 
@@ -486,7 +486,7 @@ function Nav({ courses, activities }) {
 
 
                                                 <Link href="/aboutus#sailing_area">
-                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary" href="">Sailing Area   </a>
+                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Sailing Area   </a>
                                                 </Link>
 
 
@@ -495,7 +495,7 @@ function Nav({ courses, activities }) {
 
 
                                                 <Link href="/aboutus#rya_section">
-                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary" href=""> About The RYA   </a>
+                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary"> About The RYA   </a>
                                                 </Link>
 
 
@@ -505,7 +505,7 @@ function Nav({ courses, activities }) {
 
 
                                                 <Link href="/aboutus#testimonials">
-                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary" href="">Testimonials    </a>
+                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Testimonials    </a>
                                                 </Link>
 
 
@@ -518,7 +518,7 @@ function Nav({ courses, activities }) {
                                         <div className=" uk-position-absolute ">
 
                                             <Link href="/courses"  >
-                                                <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary" href="">Courses</a>
+                                                <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Courses</a>
                                             </Link>
 
                                         </div>
@@ -531,7 +531,7 @@ function Nav({ courses, activities }) {
                                                 <div className=" uk-position-absolute ">
 
                                                     <Link href="/courses">
-                                                        <a className=" responsive-link-font " uk-toggle="target: #offcanvas-nav-primary" href="">Sail</a>
+                                                        <a className=" responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Sail</a>
                                                     </Link>
 
 
@@ -547,7 +547,7 @@ function Nav({ courses, activities }) {
 
                                                             <li className="uk-flex uk-flex-start uk-nav-divider" key={i}>
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
-                                                                    <a uk-toggle="target: #offcanvas-nav-primary" href="">  {course.attributes.title} </a>
+                                                                    <a uk-toggle="target: #offcanvas-nav-primary">  {course.attributes.title} </a>
                                                                 </Link></li>
 
                                                             : null
@@ -561,7 +561,7 @@ function Nav({ courses, activities }) {
                                                 <div className=" uk-position-absolute ">
 
                                                     <Link href="/courses" >
-                                                        <a className="responsive-link-font " uk-toggle="target: #offcanvas-nav-primary" href="">Motor</a>
+                                                        <a className="responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Motor</a>
                                                     </Link>
 
 
@@ -577,7 +577,7 @@ function Nav({ courses, activities }) {
 
                                                             <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
-                                                                    <a uk-toggle="target: #offcanvas-nav-primary" href="">  {course.attributes.title} </a>
+                                                                    <a uk-toggle="target: #offcanvas-nav-primary">  {course.attributes.title} </a>
                                                                 </Link></li>
 
                                                             : null
@@ -591,7 +591,7 @@ function Nav({ courses, activities }) {
                                                 <div className=" uk-position-absolute ">
 
                                                     <Link href="/courses"  >
-                                                        <a className="responsive-link-font " uk-toggle="target: #offcanvas-nav-primary" href="">Power</a>
+                                                        <a className="responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Power</a>
                                                     </Link>
 
 
@@ -607,7 +607,7 @@ function Nav({ courses, activities }) {
 
                                                             <li className="uk-flex uk-flex-start uk-nav-divider" >
                                                                 <Link href={`/courses/${course.attributes.slug}`} >
-                                                                    <a uk-toggle="target: #offcanvas-nav-primary" href="">  {course.attributes.title} </a>
+                                                                    <a uk-toggle="target: #offcanvas-nav-primary">  {course.attributes.title} </a>
                                                                 </Link></li>
 
                                                             : null
@@ -624,11 +624,11 @@ function Nav({ courses, activities }) {
                                                 <div className="uk-position-absolute  ">
 
                                                     <Link href={`/courses/yachtmaster`} >
-                                                        <a className=" responsive-link-font " uk-toggle="target: #offcanvas-nav-primary" href="">  Yachtmaster Training Scheme  </a>
+                                                        <a className=" responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">  Yachtmaster Training Scheme  </a>
                                                     </Link>
 
                                                     <Link href="/courses">
-                                                        <a className="nav-link responsive-link-font " href="" >{ }</a>
+                                                        <a className="nav-link responsive-link-font " >{ }</a>
                                                     </Link>
 
 
@@ -642,7 +642,7 @@ function Nav({ courses, activities }) {
                                         <div className=" uk-position-absolute ">
 
                                             <Link href="/activities-and-services">
-                                                <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary" href="">Activities {"&"} Services</a>
+                                                <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Activities {"&"} Services</a>
                                             </Link>
 
                                         </div>
@@ -656,7 +656,7 @@ function Nav({ courses, activities }) {
                                                     null :
                                                     < li className={i === 0 ? "uk-flex uk-flex-start " : "uk-flex uk-flex-start "} key={i} >
                                                         <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
-                                                            <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary" href="">  {activitie.attributes.title} </a>
+                                                            <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">  {activitie.attributes.title} </a>
                                                         </Link></li>
 
 
@@ -667,7 +667,7 @@ function Nav({ courses, activities }) {
                                             <li className="uk-parent " >
                                                 <div className="uk-position-absolute">
 
-                                                    <a className=" responsive-link-font " uk-toggle="target: #offcanvas-nav-primary" href="">  Mile Building </a>
+                                                    <a className=" responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">  Mile Building </a>
 
                                                 </div>
                                                 <a href=""></a>
@@ -680,7 +680,7 @@ function Nav({ courses, activities }) {
 
                                                             < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >
                                                                 <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
-                                                                    <a uk-toggle="target: #offcanvas-nav-primary" href="">  {activitie.attributes.title} </a>
+                                                                    <a uk-toggle="target: #offcanvas-nav-primary">  {activitie.attributes.title} </a>
                                                                 </Link></li>
 
                                                             : null
@@ -693,7 +693,7 @@ function Nav({ courses, activities }) {
                                             <li className="uk-parent " >
                                                 <div className="uk-position-absolute">
 
-                                                    <a className=" responsive-link-font " uk-toggle="target: #offcanvas-nav-primary" href="">  Services for Superyachts  </a>
+                                                    <a className=" responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">  Services for Superyachts  </a>
 
                                                 </div>
                                                 <a href=""></a>
@@ -706,7 +706,7 @@ function Nav({ courses, activities }) {
 
                                                             < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >
                                                                 <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
-                                                                    <a uk-toggle="target: #offcanvas-nav-primary" href="">  {activitie.attributes.title} </a>
+                                                                    <a uk-toggle="target: #offcanvas-nav-primary">  {activitie.attributes.title} </a>
                                                                 </Link></li>
 
                                                             : null
@@ -727,7 +727,7 @@ function Nav({ courses, activities }) {
                                         <div className="uk-position-absolute">
 
                                             <Link href="/news">
-                                                <a className="nav-link responsive-link-font uk-margin" uk-toggle="target: #offcanvas-nav-primary" href="">Blog </a>
+                                                <a className="nav-link responsive-link-font uk-margin" uk-toggle="target: #offcanvas-nav-primary">Blog </a>
                                             </Link>
                                         </div>
 
@@ -738,7 +738,7 @@ function Nav({ courses, activities }) {
                                     <li className="">
                                         <div className="uk-position-absolute">
                                             <Link href="/contactus">
-                                                <a className="nav-link responsive-link-font uk-margin" uk-toggle="target: #offcanvas-nav-primary" href="">Contact us </a>
+                                                <a className="nav-link responsive-link-font uk-margin" uk-toggle="target: #offcanvas-nav-primary">Contact us </a>
                                             </Link>
                                         </div>
 
