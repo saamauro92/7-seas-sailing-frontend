@@ -1,142 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>https://7seassailing.com/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>1.00</priority>
+	<loc>https://7seassailing.com/</loc>
+	<lastmod>2022-03-03T16:48:12+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/aboutus/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://7seassailing.com/news/new-season-starts-on-march-19th-2022/</loc>
+	<lastmod>2022-03-03T16:48:12+01:00</lastmod>
+	<priority>0.1</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/courses/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://7seassailing.com/courses/tender-operator/</loc>
+	<lastmod>2022-03-03T16:48:12+01:00</lastmod>
+	<priority>0.1</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/activities-and-services/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://7seassailing.com/courses/advanced-powerboat/</loc>
+	<lastmod>2022-03-03T16:48:12+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/activities-and-services/learning-holidays-1/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://7seassailing.com/aboutus/</loc>
+	<lastmod>2022-03-03T16:48:12+01:00</lastmod>
+	<priority>0.2</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/activities-and-services/own-boat-tuition/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://7seassailing.com/courses/</loc>
+	<lastmod>2022-03-03T16:48:12+01:00</lastmod>
+	<priority>0.2</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/activities-and-services/yacht-deliveries-assited-sailing/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://7seassailing.com/activities-and-services/</loc>
+	<lastmod>2022-03-03T16:48:12+01:00</lastmod>
+	<priority>0.2</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/activities-and-services/catamaran-mile-building-with-kitesurf-or-wingfoil/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://7seassailing.com/news/</loc>
+	<lastmod>2022-03-03T16:48:12+01:00</lastmod>
+	<priority>0.2</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/activities-and-services/classic-monohaul-or-catamaran/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://7seassailing.com/contactus/</loc>
+	<lastmod>2022-03-03T16:48:12+01:00</lastmod>
+	<priority>0.2</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/activities-and-services/catamaran-milebuilding-with-diving/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://7seassailing.com/activities-and-services/learning-holidays-1/</loc>
+	<lastmod>2022-03-03T16:48:20+01:00</lastmod>
+	<priority>0.1</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/activities-and-services/pwc-training-centre-set-up-for-superyachts/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://7seassailing.com/activities-and-services/own-boat-tuition/</loc>
+	<lastmod>2022-03-03T16:48:20+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/news/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://7seassailing.com/activities-and-services/yacht-deliveries-assited-sailing/</loc>
+	<lastmod>2022-03-03T16:48:20+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/contactus/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://7seassailing.com/activities-and-services/catamaran-mile-building-with-kitesurf-or-wingfoil/</loc>
+	<lastmod>2022-03-03T16:48:20+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/news/new-season-starts-on-march-19th-2022/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://7seassailing.com/activities-and-services/classic-monohaul-or-catamaran/</loc>
+	<lastmod>2022-03-03T16:48:20+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/courses/tender-operator/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://7seassailing.com/activities-and-services/catamaran-milebuilding-with-diving/</loc>
+	<lastmod>2022-03-03T16:48:20+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/courses/advanced-powerboat/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://7seassailing.com/activities-and-services/pwc-training-centre-set-up-for-superyachts/</loc>
+	<lastmod>2022-03-03T16:48:20+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/courses/competent-crew/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://7seassailing.com/news/how-did-all-begin/</loc>
+	<lastmod>2022-03-03T16:48:22+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/courses/day-skipper/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://7seassailing.com/courses/competent-crew/</loc>
+	<lastmod>2022-03-03T16:48:22+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/courses/coastal-skipper/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://7seassailing.com/courses/day-skipper/</loc>
+	<lastmod>2022-03-03T16:48:22+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/courses/helmsman-course/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://7seassailing.com/courses/coastal-skipper/</loc>
+	<lastmod>2022-03-03T16:48:22+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/courses/day-skipper-practical-motorcruising/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://7seassailing.com/courses/helmsman-course/</loc>
+	<lastmod>2022-03-03T16:48:22+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/courses/coastal-skipper-practical-motorcruising/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://7seassailing.com/courses/day-skipper-practical-motorcruising/</loc>
+	<lastmod>2022-03-03T16:48:22+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/courses/level-2-powerboat-handling-1/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://7seassailing.com/courses/coastal-skipper-practical-motorcruising/</loc>
+	<lastmod>2022-03-03T16:48:22+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/courses/intermediate-powerboat-1/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://7seassailing.com/courses/level-2-powerboat-handling-1/</loc>
+	<lastmod>2022-03-03T16:48:22+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/courses/yachtmaster/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://7seassailing.com/courses/intermediate-powerboat-1/</loc>
+	<lastmod>2022-03-03T16:48:22+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>https://7seassailing.com/news/how-did-all-begin/</loc>
-  <lastmod>2022-03-03T12:39:24+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>https://7seassailing.com/courses/yachtmaster/</loc>
+	<lastmod>2022-03-03T16:48:22+01:00</lastmod>
+	<priority>0.1</priority>
 </url>
-
-
 </urlset>
