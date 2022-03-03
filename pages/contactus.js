@@ -47,7 +47,7 @@ const contact = ({ data, homepage }) => {
                 <h2>Find us </h2>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9163.841776984542!2d23.71308931698944!3d37.91469711233857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1be7e8c128af7%3A0x1c00bd30206d14b0!2sAlimos%20174%2055%2C%20Grecia!5e0!3m2!1ses!2ses!4v1642844332808!5m2!1ses!2ses" width="100%" height="450" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
 
-                <div className="uk-section">
+                <div className="uk-section uk-text-center">
 
 
 
