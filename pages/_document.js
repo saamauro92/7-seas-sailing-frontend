@@ -6,6 +6,7 @@ class MyDocument extends Document {
             <Html lang="en">
                 <Head>
                     {/* eslint-disable-next-line */}
+
                     <script
                         async
                         src={`https://www.googletagmanager.com/gtag/js?id=G-7K5WWJY30P`}
@@ -16,12 +17,15 @@ class MyDocument extends Document {
                                 window.dataLayer = window.dataLayer || [];
                                 function gtag(){dataLayer.push(arguments);}
                                 gtag('js', new Date());
-                                gtag('config', 'G-7K5WWJY30P', {
+                                gtag('config', 'G-7K5WWJY30P', {cookie_flags: 'SameSite=None;Secure',
                                 page_path: window.location.pathname,
                                 });
                             `,
                         }}
                     />
+                    <meta charSet="utf-8" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    <link rel="icon" href="/favicon.ico" />
                     <link
                         rel="stylesheet"
                         href="https://fonts.googleapis.com/css?family=Staatliches&display=optional"
