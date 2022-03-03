@@ -54,12 +54,12 @@ export default function Home({ courses, homepage, latestNews, activities, testim
         <div className="uk-section " id="courses_section_banner">
           <div className="uk-container uk-container-large uk-flex uk-flex-around uk-flex-wrap  " uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: false" >
 
-            <div className="uk-card  uk-flex uk-flex-start uk-flex-column">
+            <div className="uk-card  uk-flex uk-flex-start uk-flex-column landing-cards">
 
               <div className="uk-flex uk-flex-column  uk-flex-start ">
 
 
-                <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
+                <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle ">
 
                   <h3 className="uk-card-title  text-primary-blue"> Sailing Courses </h3>
 
@@ -96,7 +96,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
 
 
-            <div className="uk-card  uk-flex uk-flex-start uk-flex-column">
+            <div className="uk-card  uk-flex uk-flex-start uk-flex-column  landing-cards">
               <div className="uk-flex uk-flex-column  uk-flex-start ">
 
                 <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
@@ -113,7 +113,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
 
               </div>
-              <div className="uk-card-body ">
+              <div className="uk-card-body  ">
 
                 {courses.sort((a, b) => a.attributes.order > b.attributes.order ? 1 : -1).map((course, i) =>
                   course.attributes.courseCategory === 'Motor' &&
@@ -122,7 +122,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
                     <ul >
                       <li>
 
-                        <p className='text-secondary-blue-light' >
+                        <p className='text-secondary-blue-light ' >
                           {course.attributes.title}
                         </p>
                       </li>
@@ -135,11 +135,11 @@ export default function Home({ courses, homepage, latestNews, activities, testim
               </div>
             </div>
 
-            <div className="uk-card  uk-width-medium">
+            <div className="uk-card  uk-width-medium landing-cards" >
 
 
 
-              <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
+              <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle ">
                 <h3 className="uk-card-title text-primary-blue"> Power Courses </h3>
 
 
@@ -181,7 +181,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
 
 
-            <div className="uk-card  uk-width-medium uk-flex uk-flex-start uk-flex-column">
+            <div className="uk-card  uk-width-medium uk-flex uk-flex-start uk-flex-column landing-cards">
 
               <div className="uk-flex uk-flex-column  uk-flex-start ">
                 <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
@@ -217,7 +217,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
               </div>
 
             </div>
-            <div className="uk-card uk-flex uk-flex-start uk-flex-column">
+            <div className="uk-card uk-flex uk-flex-start uk-flex-column  landing-cards">
               <div className="uk-flex uk-flex-column  uk-flex-start ">
 
                 <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
@@ -248,7 +248,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
 
 
-            <div className="uk-card uk-flex uk-flex-start uk-flex-column">
+            <div className="uk-card uk-flex uk-flex-start uk-flex-column  landing-cards">
               <div className="uk-flex uk-flex-column  uk-flex-start ">
 
                 <div className="uk-flex uk-flex-column uk-flex-around uk-flex-middle">
@@ -374,7 +374,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
               }
             </ul>
             <ul className="uk-slider-nav uk-margin-top uk-padding uk-dotnav uk-flex-center "></ul>
-            <a className="uk-position-center-left uk-position-small " href="#" uk-slidenav-previous uk-slider-item="previous">
+            <a className="uk-position-center-left uk-position-small " href="#" uk-slidenav-previous uk-slider-item="previous" >
               <svg width="30" height="30" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" stroke="#ccc" strokeWidth="1.33" points="13 16 7 10 13 4"></polyline></svg>
 
 
