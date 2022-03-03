@@ -7,12 +7,15 @@ import {
     fetchAPI,
 } from "../../lib/api"
 import ActionSection from '../../components/actionSection/ActionSection';
-
+import NextNProgress from "nextjs-progressbar";
 
 const activitieSection = ({ activitie, homepage }) => {
     const imageUrl = activitie.attributes.image.data.attributes.url
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
-    return (
+
+    const data = { activitie, homepage }
+
+    return data ? (
         <>
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={activitie.attributes.title} />}
 
@@ -56,7 +59,7 @@ const activitieSection = ({ activitie, homepage }) => {
 
                     }
                     <li>
-                        <span>{activitie.attributes.title.length > 12 ? '...' : activitie.attributes.title}    </span></li>
+                        <span>...  </span></li>
 
 
 
@@ -95,7 +98,7 @@ const activitieSection = ({ activitie, homepage }) => {
 
             </div>
         </>
-    )
+    ) : <>  <NextNProgress /></>
 }
 
 export async function getStaticPaths() {

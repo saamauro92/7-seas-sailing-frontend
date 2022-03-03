@@ -51,7 +51,7 @@ const MemberProfile = ({ member, homepage }) => {
                         </Link>
                     </li>
                     <li>
-                        <span>{member.attributes.name}</span></li>
+                        <span>...</span></li>
 
 
                 </ul>

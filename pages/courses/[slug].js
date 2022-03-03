@@ -58,7 +58,7 @@ const CourseSection = ({ course, homepage }) => {
                     </li>
                     <li>
                         <span>{course.attributes.courseCategory}</span></li>
-                    <li > <span > {course.attributes.title}  </span></li>
+                    <li > <span > ...  </span></li>
 
                 </ul>
 

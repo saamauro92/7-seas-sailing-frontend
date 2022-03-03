@@ -112,14 +112,6 @@ function Nav({ courses, activities }) {
 
                                             </li>
                                         </Link>
-                                        <Link passHref href="/aboutus/#testimonials" activeClassName="active">
-                                            <li className="uk-parent">
-                                                <a href="#testimonials " className="nav-link responsive-link-font " uk-scroll>
-                                                    Testimonials
-                                                </a>
-
-                                            </li>
-                                        </Link>
 
                                     </ul>
                                 </div>
@@ -282,7 +274,7 @@ function Nav({ courses, activities }) {
                                                 < li className="uk-parent uk-nav-divider ">
 
 
-                                                    <a href=" " className="nav-link responsive-link-font ">Mile Building</a>
+                                                    <a href="#" className="nav-link responsive-link-font ">Mile Building</a>
                                                     <ul className="uk-nav-sub  uk-nav-start  uk-nav-parent-icon   " hidden="">
 
                                                         {activities.map((activitie, i) =>
@@ -306,7 +298,7 @@ function Nav({ courses, activities }) {
                                                 < li className="uk-parent uk-nav-divider ">
 
 
-                                                    <a href=" " className="nav-link responsive-link-font ">Services for Superyachts </a>
+                                                    <a href="#" className="nav-link responsive-link-font ">Services for Superyachts </a>
                                                     <ul className="uk-nav-sub  uk-nav-start  uk-nav-parent-icon   " hidden="">
 
                                                         {activities.map((activitie, i) =>
@@ -496,16 +488,6 @@ function Nav({ courses, activities }) {
 
                                                 <Link passHref href="/aboutus#rya_section">
                                                     <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary"> About The RYA   </a>
-                                                </Link>
-
-
-                                            </li>
-                                            <li className="uk-margin  ">
-
-
-
-                                                <Link passHref href="/aboutus#testimonials">
-                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Testimonials    </a>
                                                 </Link>
 
 
