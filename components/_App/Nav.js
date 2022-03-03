@@ -73,7 +73,7 @@ function Nav({ courses, activities }) {
 
                         <ul className="uk-navbar-nav  " uk-nav="multiple: false">
                             <li className="nav-item">
-                                <Link passHref href="/aboutus" activeClassName="active">
+                                <Link passHref href="/aboutus" as="/aboutus" activeClassName="active">
 
                                     <a className="nav-link">
                                         About Us</a>
@@ -166,7 +166,7 @@ function Nav({ courses, activities }) {
                                                 <li className="uk-parent uk-nav-divider ">
 
 
-                                                    <Link passHref href="/courses" >
+                                                    <Link passHref href="/courses" as={"/courses"} >
                                                         <a className="nav-link responsive-link-font " >Motor</a>
                                                     </Link>
 
