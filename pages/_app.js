@@ -40,6 +40,9 @@ MyApp.getInitialProps = async (ctx) => {
       activities: activitiesRes.data,
       testimonials: testiRes.data,
     },
+    revalidate: 1,
   }
 }
+
+
 
