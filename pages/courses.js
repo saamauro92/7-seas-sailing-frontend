@@ -4,8 +4,11 @@ import Card from '../components/Card/Card'
 import SEO from '../components/Seo/Seo'
 import Link from 'next/link'
 import Nav from '../components/_App/Nav';
+import { fetchAPI } from '../lib/api';
+
 const courses = ({ courses, homepage }) => {
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
+
     return (
         <>
 
@@ -174,3 +177,30 @@ const courses = ({ courses, homepage }) => {
 export default courses
 
 
+
+
+export async function getStaticProps() {
+
+
+
+    const [coursesRes, homepageRes, latestNews] = await Promise.all([
+        fetchAPI("/courses", { populate: "*" }),
+        fetchAPI("/homepage", {
+            populate: {
+                hero: { populate: "*" },
+                seo: { populate: "*" },
+            },
+        }),
+
+    ])
+
+    return {
+        props: {
+            courses: coursesRes?.data,
+            homepage: homepageRes?.data,
+
+        },
+        revalidate: 1,
+    }
+
+}
