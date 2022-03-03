@@ -265,7 +265,7 @@ const CourseSection = ({ course, homepage }) => {
                                                     </div>
                                                 </header>
                                                 <div className="uk-width-expand">
-                                                    <h4 className="uk-comment-title uk-margin-remove "><a className="uk-link-reset" href="#"> {item.attributes.name}</a></h4>
+                                                    <p className="uk-comment-title uk-margin-remove uk-text-bold"><a className="uk-link-reset" href="#"> {item.attributes.name}</a></p>
                                                     <div className=" uk-margin-remove"><a className="uk-link-reset" href="#"> From {item.attributes.country}</a></div>
 
                                                 </div>
