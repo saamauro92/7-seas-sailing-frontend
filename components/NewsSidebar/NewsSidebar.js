@@ -9,6 +9,7 @@ const NewsSidebar = ({ latestNews, courses }) => {
 
             <div className="news_sidebar_wrapper uk-container uk-container-expand " >
 
+
                 {
 
                     <div className="uk-container uk-container-large news_sidebar "  >
@@ -18,10 +19,10 @@ const NewsSidebar = ({ latestNews, courses }) => {
                             < >
                                 <span className="news-banner-title ">News </span>
 
-                                <Link href={`/news/${latestNews[latestNews.length - 1].attributes.slug}`} passHref>
+                                <Link href={`/news/${latestNews[0].attributes.slug}`} passHref>
 
 
-                                    <a href="">   {" "}{latestNews[latestNews.length - 1].attributes.title}</a >
+                                    <a href="">   {" "}{latestNews[0].attributes.title}</a >
                                 </Link>
                             </>
 
