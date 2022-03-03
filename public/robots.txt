@@ -1,3 +1,4 @@
 User-Agent: *
 Allow: /
 Sitemap: https://7seassailing.com/
+Sitemap: https://7seassailing.com/sitemap.xml
