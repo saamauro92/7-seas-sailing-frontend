@@ -42,7 +42,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
   return (
 
-    <main>
+    <>
 
       <div className="uk-cover-containe uk-light">
 
@@ -390,7 +390,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
 
 
-    </main >
+    </ >
 
   )
 }

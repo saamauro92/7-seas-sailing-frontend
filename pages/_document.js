@@ -6,7 +6,7 @@ class MyDocument extends Document {
             <Html lang="en">
                 <Head>
                     {/* eslint-disable-next-line */}
-
+                    {/* 
                     <script
                         async
                         src={`https://www.googletagmanager.com/gtag/js?id=G-7K5WWJY30P`}
@@ -22,7 +22,7 @@ class MyDocument extends Document {
                                 });
                             `,
                         }}
-                    />
+                    /> */}
                     <meta charSet="utf-8" />
 
                     <link rel="icon" href="/favicon.ico" />
