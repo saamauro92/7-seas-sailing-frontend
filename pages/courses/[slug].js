@@ -12,7 +12,7 @@ import React from 'react'
 import ReactMarkdown from "react-markdown"
 import remarkGfm from 'remark-gfm'
 import ActionSection from '../../components/actionSection/ActionSection';
-
+import NextNProgress from "nextjs-progressbar";
 
 const CourseSection = ({ course, homepage }) => {
     const imageUrl = course.attributes.image.data.attributes.url
@@ -21,7 +21,8 @@ const CourseSection = ({ course, homepage }) => {
 
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
 
-    return (
+    const data = { course, homepage };
+    return data ? (
         <>
             {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={course.attributes.title} />}
 
@@ -62,7 +63,7 @@ const CourseSection = ({ course, homepage }) => {
 
                 </ul>
 
-                {/*  PROGRESSION TIMELINES FOR EACH CATEGORY */}
+
                 <h3 className='uk-padding uk-padding-remove-horizontal uk-text-center'> <strong> Courses Progression</strong> </h3>
                 {course.attributes.courseCategory === 'Sail' ? <div className="progresion_wrapper uk-flex uk-flex-baseline uk-flex-center">
 
@@ -298,7 +299,7 @@ const CourseSection = ({ course, homepage }) => {
 
 
         </>
-    )
+    ) : <> No data</>
 }
 
 export async function getStaticPaths() {
