@@ -23,8 +23,11 @@ const Layout = ({ children, data, courses, activities, homepage, }) => {
             {/*   <NextNProgress /> */}
             {/*        {loader ? <NextNProgress /> : null} */}
             <Nav courses={courses} activities={activities} homepage={homepage} />
+            <main>
 
-            {children}
+
+                {children}
+            </main>
 
             <GoTop scrollStepInPx="100" delayInMs="10.50" />
             <div className=' uk-background-secondary footer_bg' >
