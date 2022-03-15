@@ -305,7 +305,7 @@ const AboutUsPage = ({ team, about, homepage, boats }) => {
                 <h1 className='uk-text-center' id="club">Our Boats</h1>
 
 
-                <div className="uk-flex">
+                <div className="uk-flex uk-flex-around uk-flex-wrap">
 
                     {boats &&
 
