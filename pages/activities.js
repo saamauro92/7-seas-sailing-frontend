@@ -55,7 +55,7 @@ const ActivitiesAndServicesPage = ({ homepage, activities }) => {
                         activitie.attributes.category === "Mile_Building" || activitie.attributes.category === "jetski" ? null :
 
                             <>
-                                <Card data={activitie} slug="activities-and-services" />
+                                <Card data={activitie} slug="activities" />
 
 
 
@@ -76,7 +76,7 @@ const ActivitiesAndServicesPage = ({ homepage, activities }) => {
                         activitie.attributes.category === "Mile_Building" ?
 
                             <>
-                                <Card data={activitie} slug="activities-and-services" />
+                                <Card data={activitie} slug="activities" />
 
                             </>
                             : null
@@ -96,7 +96,7 @@ const ActivitiesAndServicesPage = ({ homepage, activities }) => {
                         activitie.attributes.category === "jetski" ?
 
                             <>
-                                <Card data={activitie} slug="activities-and-services" />
+                                <Card data={activitie} slug="activities" />
 
 
 
