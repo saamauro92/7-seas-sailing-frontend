@@ -199,7 +199,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
                   {activities.map((activitie, i) =>
                     activitie.attributes.category === 'Mile_Building' &&
 
-                    <Link href={`/activities-and-services/${activitie.attributes.slug}`} passHref key={i}>
+                    <Link href={`/activities/${activitie.attributes.slug}`} passHref key={i}>
                       <ul>
                         <li>
 
@@ -264,7 +264,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
                   {activities.map((activitie, i) =>
                     activitie.attributes.category === 'jetski' &&
 
-                    <Link href={`/activities-and-services/${activitie.attributes.slug}`} passHref key={i}>
+                    <Link href={`/activities/${activitie.attributes.slug}`} passHref key={i}>
                       <ul>
                         <li>
 
