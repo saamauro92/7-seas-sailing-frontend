@@ -246,7 +246,7 @@ function Nav({ courses, activities }) {
 
 
                             <li>
-                                <Link passHref href="/activities-and-services" activeClassName="active">
+                                <Link passHref href="/activities" activeClassName="active">
 
                                     <a className="nav-link "> Activities {"&"} Services</a>
                                 </Link>
@@ -262,7 +262,7 @@ function Nav({ courses, activities }) {
 
                                                         null :
                                                         < li className={i === 0 ? "uk-flex uk-flex-start" : "uk-flex uk-flex-start uk-nav-divider"} key={i} >
-                                                            <Link passHref href={`/activities-and-services/${activitie.attributes.slug}`} >
+                                                            <Link passHref href={`/activities/${activitie.attributes.slug}`} >
                                                                 <a className="nav-link responsive-link-font ">  {activitie.attributes.title} </a>
                                                             </Link></li>
 
@@ -282,7 +282,7 @@ function Nav({ courses, activities }) {
 
 
                                                                 < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >
-                                                                    <Link passHref href={`/activities-and-services/${activitie.attributes.slug}`} >
+                                                                    <Link passHref href={`/activities/${activitie.attributes.slug}`} >
                                                                         <a  >  {activitie.attributes.title} </a>
                                                                     </Link></li>
 
@@ -306,7 +306,7 @@ function Nav({ courses, activities }) {
 
 
                                                                 < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >
-                                                                    <Link passHref href={`/activities-and-services/${activitie.attributes.slug}`} >
+                                                                    <Link passHref href={`/activities/${activitie.attributes.slug}`} >
                                                                         <a  >  {activitie.attributes.title} </a>
                                                                     </Link></li>
 
@@ -623,7 +623,7 @@ function Nav({ courses, activities }) {
                                     <li className="uk-parent">
                                         <div className=" uk-position-absolute ">
 
-                                            <Link passHref href="/activities-and-services">
+                                            <Link passHref href="/activities">
                                                 <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Activities {"&"} Services</a>
                                             </Link>
 
@@ -637,7 +637,7 @@ function Nav({ courses, activities }) {
 
                                                     null :
                                                     < li className={i === 0 ? "uk-flex uk-flex-start " : "uk-flex uk-flex-start "} key={i} >
-                                                        <Link passHref href={`/activities-and-services/${activitie.attributes.slug}`} >
+                                                        <Link passHref href={`/activities/${activitie.attributes.slug}`} >
                                                             <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">  {activitie.attributes.title} </a>
                                                         </Link></li>
 
@@ -661,7 +661,7 @@ function Nav({ courses, activities }) {
 
 
                                                             < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >
-                                                                <Link passHref href={`/activities-and-services/${activitie.attributes.slug}`} >
+                                                                <Link passHref href={`/activities/${activitie.attributes.slug}`} >
                                                                     <a uk-toggle="target: #offcanvas-nav-primary">  {activitie.attributes.title} </a>
                                                                 </Link></li>
 
@@ -687,7 +687,7 @@ function Nav({ courses, activities }) {
 
 
                                                             < li className="uk-flex uk-flex-start uk-nav-divider " key={i} >
-                                                                <Link href={`/activities-and-services/${activitie.attributes.slug}`} >
+                                                                <Link href={`/activities/${activitie.attributes.slug}`} >
                                                                     <a uk-toggle="target: #offcanvas-nav-primary">  {activitie.attributes.title} </a>
                                                                 </Link></li>
 
