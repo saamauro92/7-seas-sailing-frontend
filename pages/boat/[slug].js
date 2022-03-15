@@ -9,12 +9,12 @@ import {
 } from "../../lib/api"
 
 
-const MemberProfile = ({ member, homepage }) => {
-    const imageUrl = member.attributes.image.data.attributes.url
+const BoatPage = ({ boat, homepage }) => {
+    const imageUrl = boat.attributes.image.data.attributes.url
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
     return (
         <>
-            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={member.attributes.name} />}
+            {homepage && homepage.attributes && <SEO data={homepage.attributes.seo} metaTitle={boat.attributes.name} />}
 
 
             <div
@@ -29,14 +29,14 @@ const MemberProfile = ({ member, homepage }) => {
 
 
 
-                <h2 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove" uk-toggle="cls: uk-heading-small;  mode: media; media: @s">  {member.attributes.name}   </h2>
+                <h2 className="banner-titles  uk-text-bolder uk-margin-remove uk-padding-remove" uk-toggle="cls: uk-heading-small;  mode: media; media: @s">  {boat.attributes.title}   </h2>
 
 
 
 
             </div>
 
-            <div className="uk-container uk-container-medium uk-background-muted  uk-padding-medium uk-animation-slide-bottom">
+            <div className="uk-container uk-container-medium  uk-background-muted uk-padding-medium uk-animation-slide-bottom">
                 <ul className="uk-breadcrumb uk-width-1-2@m uk-width-1-2@l banner-titles uk-text-bolder   uk-margin-remove uk-padding-small">
                     <li>
                         <Link href={"/"}>
@@ -45,8 +45,7 @@ const MemberProfile = ({ member, homepage }) => {
                     </li>
                     <li >
 
-
-                        <Link href={"/aboutus/#team"}>
+                        <Link href={"/aboutus#boats"}>
                             <a href=""> About</a>
                         </Link>
                     </li>
@@ -65,9 +64,12 @@ const MemberProfile = ({ member, homepage }) => {
 
 
                     <ReactMarkdown>
-                        {member.attributes.description}
+
+                        {boat.attributes.description}
 
                     </ReactMarkdown>
+
+
 
                 </div>
                 <hr />
@@ -77,13 +79,13 @@ const MemberProfile = ({ member, homepage }) => {
 }
 
 export async function getStaticPaths() {
-    const teamsRes = await fetchAPI("/teams", { fields: ["slug"] })
+    const boatRes = await fetchAPI("/boats", { fields: ["slug"] })
 
 
     return {
-        paths: teamsRes.data.map((member) => ({
+        paths: boatRes.data.map((boat) => ({
             params: {
-                slug: member.attributes.slug,
+                slug: boat.attributes.slug,
             },
         })),
         fallback: false,
@@ -91,7 +93,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const teamsRes = await fetchAPI("/teams", {
+    const boatRes = await fetchAPI("/boats", {
         filters: {
             slug: params.slug,
         },
@@ -101,10 +103,10 @@ export async function getStaticProps({ params }) {
 
     return {
         props: {
-            member: teamsRes.data[0],
+            boat: boatRes.data[0],
         },
         revalidate: 1,
     }
 }
 
-export default MemberProfile
+export default BoatPage;

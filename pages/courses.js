@@ -49,6 +49,10 @@ const courses = ({ courses, homepage }) => {
                         <button className="uk-button uk-button-primary " type="button" id='motor_'> Motor Cruising</button>
                         <button className="uk-button uk-button-primary" type="button">  Power</button>
                         <button className="uk-button uk-button-primary" type="button">  Yachtmaster Training Scheme </button>
+
+                        <button className="uk-button uk-button-primary" type="button">  Online Courses</button>
+
+
                     </div>
 
                     <ul className="uk-switcher uk-margin ">
@@ -156,6 +160,28 @@ const courses = ({ courses, homepage }) => {
                                 </div>
                             </div>
 
+
+                        </li>
+
+                        <li>
+                            <div className=" uk-padding-small ">
+
+                                <h4 className=' uk-padding   uk-text-bold uk-heading-line ' id="power_courses"><span>   Online Courses </span>  </h4>
+                                <div className="uk-flex uk-flex-wrap" uk-toggle="cls: uk-flex; mode: media; media: @m ">
+
+                                    {courses && courses.length > 1 && courses.map((course) =>
+                                        course.attributes.courseCategory === 'Online' ?
+
+                                            < Card data={course} slug="courses" />
+
+                                            : null
+
+
+                                    )}
+
+                                </div>
+
+                            </div>
 
                         </li>
 

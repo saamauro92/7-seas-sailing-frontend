@@ -104,6 +104,15 @@ function Nav({ courses, activities }) {
 
                                             </li>
                                         </Link>
+                                        <Link passHref href="/aboutus/#boats" activeClassName="active">
+                                            <li className="uk-parent">
+                                                <a href="#rya_section " className="nav-link responsive-link-font " uk-scroll>
+                                                    Our boats
+                                                </a>
+
+                                            </li>
+                                        </Link>
+
                                         <Link passHref href="/aboutus/#rya_section" activeClassName="active">
                                             <li className="uk-parent">
                                                 <a href="#rya_section " className="nav-link responsive-link-font " uk-scroll>
@@ -212,7 +221,32 @@ function Nav({ courses, activities }) {
 
                                                 </li>
 
+                                                <li className="uk-parent uk-nav-divider ">
 
+
+                                                    <Link passHref href="/courses" as={"/courses"} >
+                                                        <a className="nav-link responsive-link-font " >Online</a>
+                                                    </Link>
+
+
+
+                                                    <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  " hidden="">
+
+                                                        {courses.sort((a, b) => a.attributes.order > b.attributes.order ? 1 : -1).map((course, i) =>
+                                                            course.attributes.courseCategory === "Online" ?
+
+                                                                <li className="uk-flex uk-flex-start uk-nav-divider" key={i} >
+                                                                    <Link passHref href={`/courses/${course.attributes.slug}`} >
+                                                                        <a href=" ">  {course.attributes.title} </a>
+                                                                    </Link></li>
+
+                                                                : null
+
+
+                                                        )}
+                                                    </ul>
+
+                                                </li>
 
                                                 <li className=" ">
 
@@ -233,6 +267,7 @@ function Nav({ courses, activities }) {
 
 
                                             </ul >
+
 
 
 
@@ -486,6 +521,15 @@ function Nav({ courses, activities }) {
                                             <li className="uk-margin  ">
 
 
+                                                <Link passHref href="/aboutus#boats">
+                                                    <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary"> Our Boats   </a>
+                                                </Link>
+
+
+                                            </li>
+                                            <li className="uk-margin  ">
+
+
                                                 <Link passHref href="/aboutus#rya_section">
                                                     <a className="nav-link responsive-link-font " uk-toggle="target: #offcanvas-nav-primary"> About The RYA   </a>
                                                 </Link>
@@ -601,6 +645,36 @@ function Nav({ courses, activities }) {
                                             </li>
 
 
+                                            <li className="uk-parent  ">
+                                                <div className=" uk-position-absolute ">
+
+                                                    <Link passHref href="/courses"  >
+                                                        <a className="responsive-link-font " uk-toggle="target: #offcanvas-nav-primary">Online</a>
+                                                    </Link>
+
+
+                                                </div>
+                                                <a className="nav-link responsive-link-font " >{ }</a>
+
+
+
+                                                <ul className="uk-nav-sub  uk-nav-start uk-margin-auto-vertical uk-nav-parent-icon  uk-list-large" hidden="">
+
+                                                    {courses.map((course, index) =>
+                                                        course.attributes.courseCategory === "Online" ?
+
+                                                            <li className="uk-flex uk-flex-start uk-nav-divider" >
+                                                                <Link passHref href={`/courses/${course.attributes.slug}`} >
+                                                                    <a uk-toggle="target: #offcanvas-nav-primary">  {course.attributes.title} </a>
+                                                                </Link></li>
+
+                                                            : null
+
+
+                                                    )}
+                                                </ul>
+
+                                            </li>
                                             <li className=" uk-parent">
 
                                                 <div className="uk-position-absolute  ">
@@ -617,6 +691,9 @@ function Nav({ courses, activities }) {
                                                 </div>
 
                                             </li>
+
+
+
 
                                         </ul>
                                     </li>

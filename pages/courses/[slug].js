@@ -64,7 +64,7 @@ const CourseSection = ({ course, homepage }) => {
                 </ul>
 
 
-                <h3 className='uk-padding uk-padding-remove-horizontal uk-text-center'> <strong> Courses Progression</strong> </h3>
+                {course.attributes.courseCategory !== "Online" && <h3 className='uk-padding uk-padding-remove-horizontal uk-text-center'> <strong> Courses Progression</strong> </h3>}
                 {course.attributes.courseCategory === 'Sail' ? <div className="progresion_wrapper uk-flex uk-flex-baseline uk-flex-center">
 
                     <div className='uk-flex uk-flex-column uk-flex-center uk-flex-middle cursor-pointer'>

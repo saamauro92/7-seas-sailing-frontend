@@ -6,9 +6,10 @@ import Member from '../components/Member/Member'
 import SEO from '../components/Seo/Seo'
 import ReactMarkdown from "react-markdown"
 import Link from 'next/link'
+import Card from '../components/Card/Card'
 
 
-const AboutUsPage = ({ team, about, homepage }) => {
+const AboutUsPage = ({ team, about, homepage, boats }) => {
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
 
 
@@ -300,6 +301,24 @@ const AboutUsPage = ({ team, about, homepage }) => {
                 </div>
             </div>
 
+            <div className="uk-container uk-container-medium  uk-background-muted uk-padding-large   " id="boats">
+                <h1 className='uk-text-center' id="club">Our Boats</h1>
+
+
+                <div className="uk-flex">
+
+                    {boats &&
+
+                        boats.map((boat) => <>
+
+                            <Card data={boat} size='small' slug="boat" />
+                        </>)
+                    }
+                </div>
+
+
+            </div>
+
 
         </ >
     )
@@ -314,12 +333,13 @@ export async function getStaticProps() {
 
     const aboutRes = await fetchAPI("/about-section", { populate: "*" });
 
-
+    const boatRes = await fetchAPI("/boats", { populate: "*" });
     return {
         props: {
 
             team: teamRes.data,
             about: aboutRes.data,
+            boats: boatRes.data,
 
         },
         revalidate: 1,
