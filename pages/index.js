@@ -175,7 +175,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
 
         </div>
-        <div className="uk-section  section_banner " uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 400; repeat: false" >
+        <div className="uk-section  section_banner  " uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 400; repeat: false" >
 
           <div className="uk-container uk-container-large uk-flex uk-flex-around uk-flex-start uk-flex-wrap">
 
