@@ -394,6 +394,47 @@ p > strong {
   }
 }
 
+/* online courses section */
+
+.online-courses-container {
+  margin-bottom: 25px;
+  margin-top: -90px;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.online-courses::before {
+  display: table;
+  content: " ";
+}
+
+.online-courses {
+  margin: 0 auto;
+  margin-right: 5%;
+  margin-left: 5%;
+  position: relative;
+  background-color: #fff;
+}
+.flex_full {
+  flex: 50%;
+}
+
+.online_card {
+  width: 100%;
+  height: 250px;
+}
+
+@media only screen and (max-width: 960px) {
+  .online-courses-container {
+    margin-bottom: 25px;
+    margin-top: -50px;
+  }
+  .online_card {
+    width: 100%;
+    height: 350px;
+  }
+}
+
 /* RYA PROGRESSION BUTTON */
 
 .progresion_wrapper {

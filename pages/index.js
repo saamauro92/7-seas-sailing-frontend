@@ -289,17 +289,47 @@ export default function Home({ courses, homepage, latestNews, activities, testim
         </div>
 
 
-
-
-
-
       </div>
+
+
+      {/* ONLINE COURSES SECTION */}
+      <div className="online-courses-container">
+
+        <div className="online-courses  ">
+
+          <div className='uk-flex uk-flex-wrap uk-flex-center '>
+
+            {
+              courses && courses.map((course, i) => course.attributes.courseCategory === "Online" &&
+
+
+                <div className='flex_full '>
+                  <div data-srcset={course.attributes.image.data.attributes.url}
+                    data-src={course.attributes.image.data.attributes.url}
+                    data-uk-img
+                    className=" uk-background-cover online_card  uk-flex uk-flex-center uk-flex-middle"
+
+                  >
+                    <Link href={`/courses/${course.attributes.slug}`} passHref>
+                      <button className="uk-margin-top align-self-left uk-button-large uk-animation-scale-up uk-button uk-text-bold hero-action " href="#courses_section_banner " uk-scroll>Online {course.attributes.title}  </button>
+                    </Link>
+
+                  </div>
+
+                </div>
+              )}
+
+
+          </div>
+        </div>
+      </div>
+
       <div className="uk-section  uk-dark uk-background-cover  uk-padding-large uk-padding-remove-horizontal  uk-margin-top" >
 
         <div className="uk-container uk-margin-top">
 
 
-          <h2 className='uk-text-center uk-text-bold  has-text-primary uk-text-uppercase'>Featured Courses</h2>
+          <h2 className='uk-text-center uk-text-bold  has-text-primary '>Featured Courses</h2>
           <div className="uk-position-relative uk-visible-toggle uk-dark" tabIndex="-1" uk-slider="sets: true; autoplay:true;autoplay-interval: 5000; ">
 
             <ul className="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m">
@@ -334,7 +364,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
         <div className="uk-container ">
 
 
-          <h2 className='uk-text-center uk-text-muted  uk-text-bold has-text-primary uk-text-uppercase'>What People Say About Us</h2>
+          <h2 className='uk-text-center uk-text-muted  uk-text-bold has-text-primary '>What People Say About Us</h2>
           <div className="uk-position-relative uk-visible-toggle uk-dark" tabIndex="-1" uk-slider="sets: true; autoplay:true;autoplay-interval: 5000; ">
 
             <ul className="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m">
