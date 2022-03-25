@@ -224,7 +224,7 @@ const CourseSection = ({ course, homepage }) => {
                             children={course.attributes.more_content} />
 
 
-                        <ActionSection>Contact us</ActionSection>
+                        <ActionSection />
 
                     </div>
 

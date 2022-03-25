@@ -87,7 +87,7 @@ const activitieSection = ({ activitie, homepage }) => {
                         <ReactMarkdown
                             children={activitie.attributes.more_content} />
 
-                        <ActionSection>Contact us</ActionSection>
+                        <ActionSection />
                     </div>
 
                 </div>
