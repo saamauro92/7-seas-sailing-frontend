@@ -364,7 +364,7 @@ const Yachtmaster = ({ homepage, data }) => {
                     <ReactMarkdown children={data.attributes.price} />
                 </div>
 
-                <ActionSection > Contact us </ActionSection>
+                <ActionSection />
 
 
 
