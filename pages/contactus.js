@@ -90,7 +90,7 @@ const contact = ({ data, homepage }) => {
 
                     <Link href="/contact" passHref>
 
-                        <button className='uk-button uk-button-secondary'>   Send us a message</button>
+                        <a className='uk-button uk-button-secondary' href="">   Send us a message</a>
                     </Link>
                 </div>
 
