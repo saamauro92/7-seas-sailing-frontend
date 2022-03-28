@@ -1,12 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import React from 'react'
+import React, { useState } from 'react'
 import SEO from '../components/Seo/Seo'
 import { fetchAPI } from '../lib/api';
 
 
-const contact = ({ data, homepage }) => {
+const Contact = ({ data, homepage }) => {
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
+
+    const [loading, setLoading] = useState(false);
     return (
 
         <div className='' >
@@ -86,11 +88,10 @@ const contact = ({ data, homepage }) => {
                 </div>
 
 
-                <div className="uk-section uk-text-center">
+                <div className="uk-section uk-text-center" >
 
-                    <Link href="/contact" passHref>
-
-                        <a className='uk-button uk-button-secondary' href="">   Send us a message</a>
+                    <Link href="/contact" passHref >
+                        <a className='uk-button uk-button-secondary' href="" onClick={() => setLoading(true)}>  {loading ? " LOADING... " : "Send us a message"}</a>
                     </Link>
                 </div>
 
@@ -102,7 +103,7 @@ const contact = ({ data, homepage }) => {
     )
 }
 
-export default contact
+export default Contact
 
 
 export async function getStaticProps() {
