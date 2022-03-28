@@ -1,7 +1,9 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 
-function ActionSection({ children }) {
+function ActionSection() {
+
+    const [loading, setLoading] = useState(false);
     return (
         <>
 
@@ -12,7 +14,7 @@ function ActionSection({ children }) {
                     <div className="uk-section" >
                         <h2> <strong> For info and bookings</strong></h2>
                         <Link href="/contact" passHref>
-                            <a className='uk-button uk-button-danger' href=""> Contact us </a>
+                            <a className='uk-button uk-button-danger' href="" onClick={() => setLoading(true)}> {loading ? "LOADING..." : "Contact us"} </a>
                         </Link>
 
                     </div>
