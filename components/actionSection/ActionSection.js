@@ -14,10 +14,26 @@ function ActionSection() {
                     <div className="uk-section" >
                         <h2> <strong> For info and bookings</strong></h2>
                         <Link href="/contact" passHref>
-                            <a className='uk-button uk-button-danger' href="" onClick={() => setLoading(true)}> {loading ? "LOADING..." : "Contact us"} </a>
+                            <a className='uk-button uk-button-danger' href="" onClick={() => setLoading(true)}> {loading ?
+
+                                <>
+
+                                    Loading
+                                    <span className="dot1">.</span>
+                                    <span className="dot2">.</span>
+                                    <span className="dot3">.</span>
+                                </>
+
+
+                                : "Contact us"} </a>
                         </Link>
 
+
+
                     </div>
+
+
+
                 </div>
             </div>
 

@@ -91,7 +91,13 @@ const Contact = ({ data, homepage }) => {
                 <div className="uk-section uk-text-center" >
 
                     <Link href="/contact" passHref >
-                        <a className='uk-button uk-button-secondary' href="" onClick={() => setLoading(true)}>  {loading ? " LOADING... " : "Send us a message"}</a>
+                        <a className='uk-button uk-button-secondary' href="" onClick={() => setLoading(true)}>  {loading ? <>
+
+                            Loading
+                            <span className="dot1">.</span>
+                            <span className="dot2">.</span>
+                            <span className="dot3">.</span>
+                        </> : "Send us a message"}</a>
                     </Link>
                 </div>
 
