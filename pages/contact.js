@@ -1,22 +1,36 @@
-/* eslint-disable @next/next/no-img-element */
-import Link from 'next/link';
-import React from 'react'
-import SEO from '../components/Seo/Seo'
-import { fetchAPI } from '../lib/api';
+import dynamic from 'next/dynamic'
 
 
-const contact = ({ data, homepage }) => {
+const ContactForm = dynamic(() => import('../components/ContactForm/ContactForm'), {
+    loading: () => <div className='uk-background-muted uk-flex  uk-flex-around ' uk-height-viewport="offset-bottom: 20">
+
+        <div className='loading-box uk-text-center uk-text-bold'>
+            Loading {" "}
+            <span className="dot1">.</span>
+            <span className="dot2">.</span>
+            <span className="dot3">.</span>
+
+        </div>
+    </div>
+
+})
+
+
+
+const FormContact = ({ homepage }) => {
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
-    return (
 
-        <div className='' >
-            <iframe src="https://form.typeform.com/to/ewqegeai" frameBorder="0" style={{ width: "100%", height: "600px" }}></iframe>
+
+    return imgBanner ? (
+
+        <div>
+            <ContactForm />
 
         </div>
 
-    )
+    ) : <>...</>
 }
 
-export default contact
+export default FormContact
 
 
