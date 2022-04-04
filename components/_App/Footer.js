@@ -2,8 +2,8 @@
 import React from 'react';
 import Link from 'next/link';
 import CookieConsent from "react-cookie-consent";
-import logo from '../../assets/seven-seas-logo.webp'
-import rya from '../../assets/rya.webp'
+
+import whatsapp from '../../assets/whatsap.svg'
 
 const FooterStyleThree = (data) => {
 
@@ -203,7 +203,19 @@ const FooterStyleThree = (data) => {
                     This website uses cookies to enhance the user experience.{" "}
                     {/* <span style={{ fontSize: "10px" }}>This bit of text is smaller :O</span> */}
                 </CookieConsent>
+                <a
+                    href="https://wa.me/+306986764740"
+                    className="whatsapp_float"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <img src={whatsapp} alt="wp" />
+
+                </a>
+
             </div>
+
 
         </>
     );
