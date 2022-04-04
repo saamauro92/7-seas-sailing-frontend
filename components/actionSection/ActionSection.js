@@ -13,7 +13,7 @@ function ActionSection() {
 
                     <div className="uk-section" >
                         <h2> <strong> For info and bookings</strong></h2>
-                        <Link href="/contact" passHref>
+                        <Link href="/contactus" passHref>
                             <a className='uk-button uk-button-danger' href="" onClick={() => setLoading(true)}> {loading ?
 
                                 <>
