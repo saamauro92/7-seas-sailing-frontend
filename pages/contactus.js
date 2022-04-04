@@ -64,7 +64,9 @@ const Contact = ({ data, homepage }) => {
 
                 <ul className="uk-switcher">
                     <li>
-
+                        <h3 className='uk-text-center'>
+                            We Speak Greek, English, German and French!
+                        </h3>
 
                         <div className="uk-flex uk-flex-middle uk-padding-small">
 
