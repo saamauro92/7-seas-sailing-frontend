@@ -1,17 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import { React, useState, useEffect } from "react";
 import Link from "../../utils/ActiveLink";
-import logo from '../../assets/seven-seas-logo.webp'
-import rya from '../../assets/rya.webp'
 import { useRouter } from 'next/router';
 
 
-function Nav({ courses, activities }) {
+function Nav({ courses, activities, homepage }) {
     const router = useRouter();
 
-
     const currentRoute = router.pathname
-
 
     const [showBar, setShowBar] = useState(true);
 
@@ -53,14 +49,14 @@ function Nav({ courses, activities }) {
                             <a className="uk-navbar-item uk-logo" >
 
 
-                                <img src={logo} width="217" height="64" alt="logo" uk-img />
+                                {homepage.attributes.hero.seven_logo.data.attributes.url && <img src={homepage.attributes.hero.seven_logo.data.attributes.url} width="217" height="64" alt="logo" uk-img />}
 
                             </a>
                         </Link>
                         <div className="uk-visible@s">
                             <Link passHref href="/rya">
                                 <a href="">
-                                    <img src={rya} alt="logo" height={94} width={117} uk-img />
+                                    {homepage.attributes.hero.rya_training.data.attributes.url && <img src={homepage.attributes.hero.rya_training.data.attributes.url} alt="logo" height={94} width={117} uk-img />}
 
                                 </a>
                             </Link>
@@ -366,14 +362,14 @@ function Nav({ courses, activities }) {
 
                 <a className="uk-navbar-item uk-logo  " href="">
                     <Link passHref href="/">
-                        <img src={logo} alt="logo" width={217} height={64} uk-img className="uk-visible@s" />{/* big ss logo */}
+                        {homepage.attributes.hero.seven_logo.data.attributes.url && <img src={homepage.attributes.hero.seven_logo.data.attributes.url} alt="logo" width={217} height={64} uk-img className="uk-visible@s" />}{/* big ss logo */}
 
 
                     </Link>
                 </a>
                 <a href="" >
                     <Link passHref href="/" >
-                        <img src={logo} alt="logo" width={140} height={68} uk-img className="uk-hidden@s  " />{/* small ss logo */}
+                        {homepage.attributes.hero.seven_logo.data.attributes.url && <img src={homepage.attributes.hero.seven_logo.data.attributes.url} alt="logo" width={140} height={68} uk-img className="uk-hidden@s  " />}{/* small ss logo */}
                     </Link>
 
                 </a>
@@ -381,12 +377,12 @@ function Nav({ courses, activities }) {
 
                 <Link passHref href="/rya">
                     <a href="">
-                        <img src={rya} alt="rya-logo" width={97} height={64} uk-img className="uk-visible@s" />
+                        {homepage.attributes.hero.rya_training.data.attributes.url && <img src={homepage.attributes.hero.rya_training.data.attributes.url} alt="rya-logo" width={97} height={64} uk-img className="uk-visible@s" />}
                     </a>
                 </Link>
                 <a href="" className="uk-margin-left  ">
                     <Link passHref href="/rya">
-                        <img src={rya} alt="rya-logo" width={74} height={60} uk-img className="uk-hidden@s " />
+                        {homepage.attributes.hero.rya_training.data.attributes.url && <img src={homepage.attributes.hero.rya_training.data.attributes.url} alt="rya-logo" width={74} height={60} uk-img className="uk-hidden@s " />}
                     </Link>
                 </a>
             </div>
