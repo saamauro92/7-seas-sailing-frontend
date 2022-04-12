@@ -30,14 +30,14 @@ const Hero = ({ courses, images, latestNews }) => {
                         <div className=" uk-container uk-container-large uk-flex uk-flex-right uk-padding uk-padding-remove-horizontal ">
 
                             <div className="uk-margin-top uk-padding-large " >
-                                {/* uk-flex uk-flex-column uk-flex-bottom */}
-
-                                <h2 className=" uk-heading-small uk-text-uppercase uk-text-bold   uk-animation-scale-up hero-title ">{images.title} </h2>
-
-                                <Link href={"/#courses_section_banner"} passHref>
 
 
-                                    <button className="uk-margin-top align-self-left uk-button-large uk-animation-scale-up uk-button  uk-text-bold hero-action " href="#courses_section_banner " uk-scroll>Join us</button>
+                                <h2 className=" uk-heading-small uk-text-bold   uk-animation-scale-up hero-title ">{images.title} </h2>
+
+                                <Link href={`/news/${latestNews[latestNews.length - 1].attributes.slug}`} passHref>
+
+
+                                    <button className="uk-margin-top align-self-left uk-button-large uk-animation-scale-up uk-button  uk-text-bold hero-action " href="#courses_section_banner " uk-scroll>Learn More</button>
                                 </Link>
 
 
