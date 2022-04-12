@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-children-prop */
 import Link from 'next/link'
 import SEO from '../../components/Seo/Seo'
@@ -6,6 +7,7 @@ import Moment from 'react-moment';
 import {
     fetchAPI,
 } from "../../lib/api"
+import ActionSection from '../../components/actionSection/ActionSection';
 
 
 const newsSection = ({ item, homepage }) => {
@@ -17,7 +19,7 @@ const newsSection = ({ item, homepage }) => {
 
             <div
                 id="banner"
-                className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
+                className="uk-background-blend-soft-light uk-background-primary uk-background-cover  uk-background-bottom-center uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                 data-src={imageUrl}
                 data-srcset={imageUrl}
                 data-uk-img
@@ -52,7 +54,7 @@ const newsSection = ({ item, homepage }) => {
 
                 </ul>
                 <div className="uk-section">
-
+                    <img src={imageUrl} alt="profile_pic" className='uk-align-right@m uk-margin-remove-adjacent uk-height-large ' uk-img />
 
                     <p className='uk-text-bolder'>
                         <ReactMarkdown
@@ -80,6 +82,7 @@ const newsSection = ({ item, homepage }) => {
 
                     </div>
                 </div>
+                <ActionSection />
             </div>
         </>
     )

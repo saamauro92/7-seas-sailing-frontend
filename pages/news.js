@@ -10,7 +10,7 @@ const NewsPage = ({ homepage, news }) => {
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
     return (
         <>
-            <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
+            {imgBanner && <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                 data-src={imgBanner}
                 data-srcset={imgBanner}
                 data-uk-img
@@ -24,7 +24,7 @@ const NewsPage = ({ homepage, news }) => {
                     Blog
                 </h3>
 
-            </div>
+            </div>}
             <div className="uk-container uk-container-medium uk-padding-medium ">
 
                 <ul className="uk-breadcrumb uk-width-1-4@m uk-width-1-4@l banner-titles  uk-text-bolder uk-margin-remove uk-padding-small">
