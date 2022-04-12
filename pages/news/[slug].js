@@ -17,7 +17,7 @@ const newsSection = ({ item, homepage }) => {
 
             <div
                 id="banner"
-                className=" uk-background-cover uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
+                className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-medium uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
                 data-src={imageUrl}
                 data-srcset={imageUrl}
                 data-uk-img
@@ -25,7 +25,7 @@ const newsSection = ({ item, homepage }) => {
             >
 
 
-                <h2 className="banner-titles uk-heading-medium uk-text-bolder uk-text-center  uk-margin-remove uk-padding-remove"> {item.attributes.title} </h2>
+                <h2 className="banner-titles uk-text-bolder uk-text-center  uk-margin-remove uk-padding-remove">  {item.attributes.title} </h2>
 
 
 
