@@ -438,7 +438,8 @@ p > strong {
     flex-direction: column;
     transition: 1s smooth;
     overflow: hidden;
-    padding-top: 10px;
+    padding: 10px;
+    height: auto;
   }
 
   .news_sidebar:hover,
