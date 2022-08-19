@@ -11,6 +11,7 @@ const NewsPage = ({ homepage, news }) => {
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
 
     sort(news);
+    console.log(news)
     return (
         <>
             {imgBanner && <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
