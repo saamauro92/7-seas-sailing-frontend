@@ -1,9 +1,16 @@
 import React from "react"
 import Link from "next/link"
 
+function sort(arr) {
+    arr.sort((a, b) => {
+        return new Date(b.attributes.date) - new Date(a.attributes.date);
+    })
+}
 
-const NewsSidebar = ({ latestNews, courses }) => {
 
+const NewsSidebar = ({ latestNews }) => {
+
+    sort(latestNews)
     return (
         <>
 
@@ -19,10 +26,10 @@ const NewsSidebar = ({ latestNews, courses }) => {
                             < >
                                 <span className="news-banner-title ">News </span>
 
-                                <Link href={`/news/${latestNews[latestNews.length - 1].attributes.slug}`} passHref>
+                                <Link href={`/news/${latestNews[0].attributes.slug}`} passHref>
 
 
-                                    <a href="">   {" "}{latestNews[latestNews.length - 1].attributes.title}</a >
+                                    <a href="">   {" "}{latestNews[0].attributes.title}</a >
                                 </Link>
                             </>
 
