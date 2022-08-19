@@ -5,9 +5,16 @@ import { fetchAPI } from '../lib/api'
 import SEO from '../components/Seo/Seo'
 import Link from 'next/link'
 
+function sort(arr) {
+    arr.sort((a, b) => {
+        return new Date(b.attributes.date) - new Date(a.attributes.date);
+    })
+}
 const NewsPage = ({ homepage, news }) => {
 
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
+
+    sort(news);
     return (
         <>
             {imgBanner && <div className="uk-background-blend-soft-light uk-background-primary uk-background-cover uk-height-small uk-panel uk-flex-wrap uk-flex-column uk-flex uk-flex-center uk-flex-middle"
@@ -39,7 +46,7 @@ const NewsPage = ({ homepage, news }) => {
                 </ul>
 
                 <div className="uk-container uk-container-large uk-padding uk-animation-slide-bottom ">
-                    {news && news.length > 0 && news.slice(0).reverse().map((item, index) =>
+                    {news && news.length > 0 && news.map((item, index) =>
 
 
                         <Link href={`/news/${item.attributes.slug}`} key={index} passHref>
