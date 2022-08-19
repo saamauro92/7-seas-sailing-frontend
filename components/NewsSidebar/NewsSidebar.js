@@ -1,11 +1,6 @@
 import React from "react"
 import Link from "next/link"
-
-function sort(arr) {
-    arr.sort((a, b) => {
-        return new Date(b.attributes.date) - new Date(a.attributes.date);
-    })
-}
+import sort from "../../utils/helpers"
 
 
 const NewsSidebar = ({ latestNews }) => {

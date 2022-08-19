@@ -4,12 +4,8 @@ import React from 'react'
 import { fetchAPI } from '../lib/api'
 import SEO from '../components/Seo/Seo'
 import Link from 'next/link'
+import sort from '../utils/helpers'
 
-function sort(arr) {
-    arr.sort((a, b) => {
-        return new Date(b.attributes.date) - new Date(a.attributes.date);
-    })
-}
 const NewsPage = ({ homepage, news }) => {
 
     const imgBanner = homepage.attributes.hero.banner.data.attributes.url;
