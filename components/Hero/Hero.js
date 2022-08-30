@@ -16,7 +16,6 @@ const Hero = ({ courses, images, latestNews }) => {
 
                 <ul className="uk-slideshow-items" uk-height-viewport="offset-top: true; offset-bottom:15">
 
-
                     <li>
 
                         <div className="uk-position-cover hero-wrapper uk-animation-kenburns uk-transform-origin-bottom-center  hero_image_wrapper " >
