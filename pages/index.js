@@ -293,9 +293,11 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
 
       {/* ONLINE COURSES SECTION */}
-      <div className="online-courses-container">
+      <div className="online-courses-container  uk-text-center">
 
+        <h2 className='uk-text-center uk-text-bold  online-text '>Online Courses</h2>
         <div className="online-courses  ">
+
 
           <div className='uk-flex uk-flex-wrap uk-flex-center '>
 
@@ -311,7 +313,7 @@ export default function Home({ courses, homepage, latestNews, activities, testim
 
                   >
                     <Link href={`/courses/${course.attributes.slug}`} passHref>
-                      <button className="uk-margin-top align-self-left uk-button-large uk-animation-scale-up uk-button uk-text-bold hero-action " href="#courses_section_banner " uk-scroll>Online {course.attributes.title}  </button>
+                      <button className="uk-margin-top align-self-left uk-button-large uk-animation-scale-up uk-button uk-text-bold hero-action " href="#courses_section_banner " uk-scroll> {course.attributes.title}  </button>
                     </Link>
                     <p className='online-text uk-padding-small uk-text-bold ' >
                       Provided By {" "}
