@@ -288,6 +288,47 @@ export default function Home({ courses, homepage, latestNews, activities, testim
           </div>
         </div>
 
+        {/* ONLINE COURSES SECTION */}
+        <div className="online-courses-container  uk-text-center">
+
+          <h2 className='uk-text-center uk-text-bold  online-text '>Online Courses</h2>
+          <div className="online-courses  ">
+
+
+            <div className='uk-flex uk-flex-wrap uk-flex-center '>
+
+              {
+                courses && courses.map((course, i) => course.attributes.courseCategory === "Online" &&
+
+
+                  <div className='flex_full '>
+                    <div data-srcset={course.attributes.image.data.attributes.url}
+                      data-src={course.attributes.image.data.attributes.url}
+                      data-uk-img
+                      className=" uk-background-cover online_card  uk-flex uk-flex-center uk-flex-column uk-flex-middle uk-flex-wrap"
+
+                    >
+                      <Link href={`/courses/${course.attributes.slug}`} passHref>
+                        <button className="uk-margin-top align-self-left uk-button-large uk-animation-scale-up uk-button uk-text-bold hero-action " href="#courses_section_banner " uk-scroll> {course.attributes.title}  </button>
+                      </Link>
+                      <p className='online-text uk-padding-small uk-text-bold ' >
+                        Provided By {" "}
+
+                        <a href="https://www.navathome.com/" target="_blank" rel="noreferrer">
+
+                          Navathome.com
+                        </a>
+
+                      </p>
+                    </div>
+
+                  </div>
+                )}
+
+
+            </div>
+          </div>
+        </div>
 
 
 
