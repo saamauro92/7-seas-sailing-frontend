@@ -104,7 +104,7 @@ const Contact = ({ data, homepage }) => {
 
 
                     </li>
-                    <li>
+                    <li className='uk-height-match'>
                         <ContactForm />
                     </li>
                     <li>
