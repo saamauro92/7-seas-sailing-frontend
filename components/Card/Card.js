@@ -53,7 +53,7 @@ const Card = ({ data, slug, size }) => {
                     </div>
 
                 </div>
-                <p className=" uk-text-start">
+                <p className=" uk-text-start card-text-width">
                     <strong>   <Link href={`/${slug}/${data.attributes.slug}`} passHref>
                         <a href="" > {data.attributes.title}  </a>
                     </Link>
